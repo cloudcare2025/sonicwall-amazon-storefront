@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicWall Amazon Channel Acceleration Proposal - Cloud Care LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sonicwall-orange: #F26522;
+            --dark-navy: #1B2A4A;
+            --success-green: #00C389;
+            --cloudcare-teal: #2BBCB3;
+            --text-dark: #1a1a2e;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-gray: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-white);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* ========================================
+           COVER PAGE
+           ======================================== */
+        .cover-page {
+            min-height: 100vh;
+            display: flex;
+            position: relative;
+            page-break-after: always;
+        }
+
+        .cover-main {
+            flex: 1;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cover-sidebar {
+            width: 20%;
+            background: var(--dark-navy);
+        }
+
+        .logo-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .cloudcare-logo img {
+            height: 36px;
+            width: auto;
+        }
+
+        .sonicwall-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .cover-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--dark-navy);
+            margin-bottom: 20px;
+        }
+
+        .cover-title {
+            font-size: 56px;
+            color: var(--dark-navy);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .cover-title span {
+            color: var(--sonicwall-orange);
+            display: block;
+            font-size: 48px;
+        }
+
+        .cover-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .tag-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            background: var(--bg-light);
+            color: var(--dark-navy);
+            border: 2px solid var(--border-gray);
+        }
+
+        .cover-footer {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .cover-footer strong {
+            color: var(--dark-navy);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* ========================================
+           PAGE SECTIONS
+           ======================================== */
+        .page-section {
+            padding: 80px 60px;
+            page-break-before: always;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--dark-navy);
+            padding: 8px 16px;
+            background: var(--bg-light);
+            border: 2px solid var(--border-gray);
+            border-radius: 4px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .section-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--cloudcare-teal);
+            margin-bottom: 15px;
+        }
+
+        .section-heading {
+            font-size: 36px;
+            color: var(--cloudcare-teal);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--sonicwall-orange);
+        }
+
+        /* ========================================
+           STAT BOXES
+           ======================================== */
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-box {
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 3px solid;
+        }
+
+        .stat-box.opportunity {
+            border-color: var(--sonicwall-orange);
+            background: #fff8f3;
+        }
+
+        .stat-box.success {
+            border-color: var(--success-green);
+            background: #f0fdf4;
+        }
+
+        .stat-box.navy {
+            border-color: var(--dark-navy);
+            background: #f0f3f8;
+        }
+
+        .stat-label {
+            font-size: 32px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-box.opportunity .stat-label {
+            color: var(--sonicwall-orange);
+        }
+
+        .stat-box.success .stat-label {
+            color: var(--success-green);
+        }
+
+        .stat-box.navy .stat-label {
+            color: var(--dark-navy);
+        }
+
+        .stat-desc {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-dark);
+        }
+
+        /* ========================================
+           OPPORTUNITY CARDS
+           ======================================== */
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .opportunity-card {
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--sonicwall-orange);
+        }
+
+        .opportunity-card h3 {
+            font-size: 20px;
+            color: var(--dark-navy);
+            margin-bottom: 12px;
+        }
+
+        .opportunity-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           CALLOUT BOX
+           ======================================== */
+        .callout-box {
+            padding: 30px;
+            background: #f0fdfa;
+            border-left: 6px solid var(--cloudcare-teal);
+            border-radius: 4px;
+            margin-top: 40px;
+        }
+
+        .callout-box strong {
+            font-size: 18px;
+            color: var(--dark-navy);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .callout-box p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           SOLUTION CARDS
+           ======================================== */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .solution-card {
+            padding: 40px;
+            background: var(--bg-white);
+            border-radius: 8px;
+            border: 3px solid var(--border-gray);
+        }
+
+        .solution-card-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--cloudcare-teal);
+            margin-bottom: 15px;
+        }
+
+        .solution-card h3 {
+            font-size: 24px;
+            color: var(--dark-navy);
+            margin-bottom: 15px;
+        }
+
+        .solution-card p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .checkmarks {
+            list-style: none;
+        }
+
+        .checkmarks li {
+            padding-left: 28px;
+            margin-bottom: 10px;
+            position: relative;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .checkmarks li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* ========================================
+           CONTENT BEFORE/AFTER
+           ======================================== */
+        .content-comparison {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .content-box {
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .content-box.before {
+            background: #fff5f5;
+            border: 2px solid #E53E3E;
+        }
+
+        .content-box.after {
+            background: #f0fdf4;
+            border: 2px solid var(--success-green);
+        }
+
+        .content-box h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content-box.before h4 {
+            color: #E53E3E;
+        }
+
+        .content-box.after h4 {
+            color: var(--success-green);
+        }
+
+        .content-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-box ul li {
+            padding: 6px 0 6px 24px;
+            position: relative;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .content-box.before ul li::before {
+            content: '\2717';
+            position: absolute;
+            left: 0;
+            color: #E53E3E;
+            font-weight: 700;
+        }
+
+        .content-box.after ul li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: 700;
+        }
+
+        /* ========================================
+           CONTENT PILLARS
+           ======================================== */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .pillar-card {
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-top: 4px solid var(--cloudcare-teal);
+        }
+
+        .pillar-card h3 {
+            font-size: 20px;
+            color: var(--dark-navy);
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           COMPARISON TABLE
+           ======================================== */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        .comparison-table th {
+            padding: 15px;
+            background: var(--dark-navy);
+            color: white;
+            text-align: left;
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border: 1px solid var(--border-gray);
+            font-size: 14px;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .comparison-table .check {
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .comparison-table .cross {
+            color: #E53E3E;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .comparison-table .limited {
+            color: var(--sonicwall-orange);
+            font-weight: 600;
+        }
+
+        /* ========================================
+           APPROACH BOXES
+           ======================================== */
+        .approach-boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .approach-box {
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .approach-box.their {
+            background: #fff8f3;
+            border: 3px solid var(--sonicwall-orange);
+        }
+
+        .approach-box.our {
+            background: #f0fdf4;
+            border: 3px solid var(--success-green);
+        }
+
+        .approach-box h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .approach-box.their h3 {
+            color: var(--sonicwall-orange);
+        }
+
+        .approach-box.our h3 {
+            color: var(--success-green);
+        }
+
+        .approach-box p {
+            font-size: 15px;
+            font-style: italic;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           DASHBOARD FEATURE CARDS
+           ======================================== */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-card {
+            padding: 30px;
+            background: var(--bg-white);
+            border-radius: 8px;
+            border: 2px solid var(--border-gray);
+            border-top: 4px solid var(--sonicwall-orange);
+        }
+
+        .dashboard-card h3 {
+            font-size: 18px;
+            color: var(--dark-navy);
+            margin-bottom: 12px;
+        }
+
+        .dashboard-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           CASE STUDY
+           ======================================== */
+        .case-study-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .strategic-badge {
+            padding: 10px 20px;
+            background: var(--success-green);
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            padding: 25px;
+            background: var(--dark-navy);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-card-value {
+            font-size: 42px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            color: var(--sonicwall-orange);
+            margin-bottom: 8px;
+        }
+
+        .stat-card-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .results-list {
+            margin-top: 30px;
+        }
+
+        .results-list h3 {
+            font-size: 20px;
+            color: var(--dark-navy);
+            margin-bottom: 20px;
+        }
+
+        .quote-box {
+            padding: 30px;
+            background: var(--dark-navy);
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 17px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '\201C';
+            font-size: 80px;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            color: var(--sonicwall-orange);
+            opacity: 0.3;
+            font-style: normal;
+        }
+
+        .quote-author {
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--sonicwall-orange);
+        }
+
+        /* ========================================
+           BENEFIT CARDS
+           ======================================== */
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .benefit-card {
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            border: 3px solid var(--success-green);
+        }
+
+        .benefit-card h3 {
+            font-size: 22px;
+            color: var(--success-green);
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           PRODUCT PORTFOLIO
+           ======================================== */
+        .product-portfolio {
+            padding: 40px;
+            background: var(--dark-navy);
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .product-portfolio h3 {
+            font-size: 26px;
+            color: var(--sonicwall-orange);
+            margin-bottom: 25px;
+        }
+
+        .product-category {
+            margin-bottom: 20px;
+        }
+
+        .product-category strong {
+            color: var(--sonicwall-orange);
+            font-size: 16px;
+        }
+
+        .product-category p {
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* ========================================
+           PARTNERSHIP PILLARS
+           ======================================== */
+        .pillar-banner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-bottom: 50px;
+            background: var(--border-gray);
+        }
+
+        .pillar-banner-item {
+            padding: 30px;
+            background: var(--dark-navy);
+            color: white;
+            text-align: center;
+        }
+
+        .pillar-banner-item h3 {
+            font-size: 16px;
+            color: var(--sonicwall-orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ========================================
+           OPERATIONS GRID
+           ======================================== */
+        .operations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .operations-column h3 {
+            font-size: 24px;
+            color: var(--dark-navy);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--sonicwall-orange);
+        }
+
+        .guarantees-box {
+            padding: 30px;
+            background: var(--success-green);
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .guarantees-box h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .guarantees-box .checkmarks li {
+            color: white;
+        }
+
+        .guarantees-box .checkmarks li::before {
+            color: white;
+        }
+
+        /* ========================================
+           WHY NOW STATS
+           ======================================== */
+        .why-now-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .why-now-stat {
+            padding: 30px;
+            background: var(--dark-navy);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .why-now-stat h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--sonicwall-orange);
+            margin-bottom: 10px;
+        }
+
+        .why-now-stat p {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        /* ========================================
+           NEXT STEPS
+           ======================================== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .step-card {
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--cloudcare-teal);
+        }
+
+        .step-card h4 {
+            font-size: 20px;
+            color: var(--dark-navy);
+            margin-bottom: 12px;
+        }
+
+        .step-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           CTA & FINAL
+           ======================================== */
+        .cta-box {
+            padding: 50px;
+            background: var(--sonicwall-orange);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cta-box h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .cta-box .signature {
+            font-size: 16px;
+            margin-top: 20px;
+            opacity: 0.95;
+        }
+
+        .final-quote {
+            padding: 40px;
+            background: var(--dark-navy);
+            color: white;
+            border-radius: 8px;
+            font-size: 17px;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* ========================================
+           PRINT STYLES
+           ======================================== */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page-section {
+                page-break-before: always;
+            }
+
+            .cover-page {
+                page-break-after: always;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            @page {
+                margin: 0.5in;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 768px) {
+            .cover-main {
+                padding: 40px 30px;
+            }
+
+            .page-section {
+                padding: 40px 30px;
+            }
+
+            .cover-title {
+                font-size: 36px;
+            }
+
+            .cover-title span {
+                font-size: 32px;
+            }
+
+            .stat-row,
+            .opportunity-grid,
+            .solution-grid,
+            .content-comparison,
+            .benefit-grid,
+            .operations-grid,
+            .approach-boxes,
+            .steps-grid,
+            .why-now-stats,
+            .pillar-banner,
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-grid,
+            .pillar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ============================================================
+             COVER PAGE
+             ============================================================ -->
+        <div class="cover-page">
+            <div class="cover-main">
+                <div>
+                    <div class="logo-row">
+                        <div class="cloudcare-logo">
+                            <img src="logos/cloudcare-logo.svg" alt="Cloud Care">
+                        </div>
+                        <div class="sonicwall-logo">
+                            <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall">
+                        </div>
+                    </div>
+
+                    <div class="cover-label">AMAZON CHANNEL ACCELERATION PROPOSAL</div>
+
+                    <h1 class="cover-title">
+                        Amazon Channel
+                        <span>Acceleration</span>
+                    </h1>
+
+                    <p class="cover-subtitle">
+                        A strategic proposal for SonicWall to transform their Amazon presence with premium content, a world-class storefront, and advanced omnichannel intelligence that drives growth.
+                    </p>
+
+                    <div class="tag-badges">
+                        <span class="badge">Channel Shield</span>
+                        <span class="badge">Strategic 3P Seller</span>
+                        <span class="badge">Storefront Revamp</span>
+                        <span class="badge">Advanced Insights</span>
+                    </div>
+                </div>
+
+                <div class="cover-footer">
+                    <strong>CC-SONICWALL-2026</strong>
+                    <div>Prepared for: SonicWall Leadership</div>
+                    <div>Cloud Care LLC | 254 Chapman Rd Ste 208, Newark, DE 19702</div>
+                </div>
+            </div>
+            <div class="cover-sidebar"></div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 2 - THE OPPORTUNITY IN FRONT OF YOU
+             ============================================================ -->
+        <div class="page-section">
+            <div class="page-header">
+                <div></div>
+                <span class="header-label">FOR SONICWALL LEADERSHIP</span>
+            </div>
+
+            <p class="intro-text">
+                SonicWall has done the hard work. Transparency is enrolled. BlueAlly manages the channel. MAP violations are minimal. But the real question isn't about protection anymore &mdash; it's about growth. Your Amazon presence is leaving millions on the table.
+            </p>
+
+            <div class="stat-row">
+                <div class="stat-box opportunity">
+                    <div class="stat-label">Stale</div>
+                    <div class="stat-desc">Storefront Experience</div>
+                </div>
+                <div class="stat-box opportunity">
+                    <div class="stat-label">Basic</div>
+                    <div class="stat-desc">Product Content</div>
+                </div>
+                <div class="stat-box opportunity">
+                    <div class="stat-label">Limited</div>
+                    <div class="stat-desc">Channel Intelligence</div>
+                </div>
+            </div>
+
+            <div class="section-number">SECTION 01</div>
+            <h2 class="section-heading">Where the Real Opportunity Lives</h2>
+
+            <p class="intro-text">
+                SonicWall's Gen 8 portfolio represents cutting-edge cybersecurity backed by 30+ years of innovation and 500,000+ customers across 215 countries. But your Amazon storefront hasn't kept pace. Buyers researching firewalls see competitors with rich A+ content, professional imagery, and compelling storefronts &mdash; while SonicWall's presence feels dated. That gap is costing you conversions every single day.
+            </p>
+
+            <div class="opportunity-grid">
+                <div class="opportunity-card">
+                    <h3>Outdated Storefront Experience</h3>
+                    <p>Your Amazon storefront doesn't reflect the innovation of your Gen 8 portfolio. First impressions matter, and right now competitors like Fortinet are winning the visual battle on the world's largest marketplace.</p>
+                </div>
+
+                <div class="opportunity-card">
+                    <h3>Missing A+ Content</h3>
+                    <p>Products listed with basic descriptions and stock images. No comparison charts, no feature callouts, no lifestyle imagery. Every product deserves premium content that converts browsers into buyers.</p>
+                </div>
+
+                <div class="opportunity-card">
+                    <h3>Limited Channel Visibility</h3>
+                    <p>You see Amazon. But what about Walmart, Newegg, eBay, and the hundreds of web retailers? Without omnichannel monitoring, pricing violations and unauthorized activity happen in your blind spots.</p>
+                </div>
+
+                <div class="opportunity-card">
+                    <h3>Untapped Buying Signals</h3>
+                    <p>Pattern offers data, but are you getting the full picture? Search term trends, competitor pricing intelligence, demand forecasting, and conversion optimization require deeper marketplace expertise.</p>
+                </div>
+            </div>
+
+            <div class="callout-box">
+                <strong>The Core Opportunity:</strong>
+                <p>Your channel is protected. Now it's time to make it perform. The difference between a protected Amazon channel and a high-performing one is content, experience, and intelligence.</p>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 3 - WHAT CLOUD CARE DELIVERS
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 02</div>
+            <h2 class="section-heading">What Cloud Care Delivers</h2>
+
+            <p class="intro-text">
+                Cloud Care is not just another marketplace partner. We combine premium content creation, storefront design, strategic 3P selling, and omnichannel intelligence into a single partnership &mdash; everything SonicWall needs to transform Amazon from a protected channel into a growth engine.
+            </p>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-card-label">CONTENT EXCELLENCE</div>
+                    <h3>A+ Content & Product Imagery</h3>
+                    <p>Every SonicWall product gets premium A+ content with professional imagery, comparison charts, feature callouts, and technical specifications. Included &mdash; not an add-on.</p>
+                    <ul class="checkmarks">
+                        <li>Professional product photography</li>
+                        <li>A+ content for every SKU</li>
+                        <li>Comparison charts and feature highlights</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card-label">STOREFRONT TRANSFORMATION</div>
+                    <h3>World-Class Brand Experience</h3>
+                    <p>Complete Amazon storefront redesign that matches the innovation of your Gen 8 portfolio. Rich category navigation, hero banners, video integration, and organized product discovery.</p>
+                    <ul class="checkmarks">
+                        <li>Custom storefront design</li>
+                        <li>Category-organized navigation</li>
+                        <li>Video and multimedia integration</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card-label">CHANNEL SHIELD</div>
+                    <h3>Omnichannel MAP Monitoring</h3>
+                    <p>Real-time MAP dashboard covering every channel &mdash; Amazon, Walmart, Newegg, eBay, and the entire web. Not just detection &mdash; automated enforcement with C&D letters.</p>
+                    <ul class="checkmarks">
+                        <li>Real-time MAP dashboard</li>
+                        <li>Amazon + Walmart + Newegg + eBay + Web</li>
+                        <li>Automated C&D enforcement</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-card-label">ADVANCED INTELLIGENCE</div>
+                    <h3>Buying Signals & Market Data</h3>
+                    <p>Deeper insights than Pattern.com. Search term intelligence, competitor pricing trends, demand forecasting, conversion analytics, and category performance &mdash; all in real-time.</p>
+                    <ul class="checkmarks">
+                        <li>Search term & keyword intelligence</li>
+                        <li>Competitor pricing and positioning</li>
+                        <li>Predictive demand forecasting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 4 - CONTENT THAT CONVERTS
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 03</div>
+            <h2 class="section-heading">Content That Converts</h2>
+
+            <p class="intro-text">
+                Every product in your Gen 8 portfolio deserves content that matches its engineering excellence. Here's what Cloud Care delivers for every single SKU.
+            </p>
+
+            <div class="content-comparison">
+                <div class="content-box before">
+                    <h4>Before: Basic Listing</h4>
+                    <ul>
+                        <li>Generic product title</li>
+                        <li>Stock manufacturer image</li>
+                        <li>Bullet-point specs only</li>
+                        <li>No A+ content</li>
+                        <li>No comparison charts</li>
+                        <li>No lifestyle imagery</li>
+                    </ul>
+                </div>
+
+                <div class="content-box after">
+                    <h4>After: Cloud Care Listing</h4>
+                    <ul>
+                        <li>SEO-optimized title with keywords</li>
+                        <li>Professional photography, multiple angles</li>
+                        <li>Rich A+ content with feature callouts</li>
+                        <li>Interactive comparison charts</li>
+                        <li>Lifestyle and deployment imagery</li>
+                        <li>Video integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pillar-grid">
+                <div class="pillar-card">
+                    <h3>Product Photography</h3>
+                    <p>Professional studio photography, 360-degree views, lifestyle and deployment shots, infographics showing key specs and differentiators. Every image designed to build confidence and drive conversion.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>A+ Content Pages</h3>
+                    <p>Premium below-the-fold content for every product: feature comparison modules, technical specification tables, use-case scenarios, and brand story integration. A+ content increases conversion rates by 3-10%.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>SEO & Search Optimization</h3>
+                    <p>Backend keyword optimization, search term analysis, title and bullet point optimization to ensure your products appear for the right searches. More visibility means more sales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 5 - OMNICHANNEL INTELLIGENCE: BEYOND WHAT PATTERN OFFERS
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 04</div>
+            <h2 class="section-heading">Omnichannel Intelligence: Beyond What Pattern Offers</h2>
+
+            <p class="intro-text">
+                SonicWall needs more than Amazon data. You need a complete picture of your brand's presence across every marketplace and every website. Cloud Care's intelligence platform delivers the buying signals and channel visibility that other providers &mdash; including Pattern &mdash; simply cannot match.
+            </p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Capability</th>
+                        <th>Pattern.com</th>
+                        <th>Cloud Care</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Amazon Analytics</td>
+                        <td><span class="check">&check;</span> Yes</td>
+                        <td><span class="check">&check;</span> Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Walmart Monitoring</td>
+                        <td><span class="limited">Limited</span></td>
+                        <td><span class="check">&check;</span> Yes &mdash; Real-Time</td>
+                    </tr>
+                    <tr>
+                        <td>Newegg Monitoring</td>
+                        <td><span class="cross">&cross;</span> No</td>
+                        <td><span class="check">&check;</span> Yes &mdash; Real-Time</td>
+                    </tr>
+                    <tr>
+                        <td>eBay Monitoring</td>
+                        <td><span class="cross">&cross;</span> No</td>
+                        <td><span class="check">&check;</span> Yes &mdash; Real-Time</td>
+                    </tr>
+                    <tr>
+                        <td>Full Web MAP Scanning</td>
+                        <td><span class="cross">&cross;</span> No</td>
+                        <td><span class="check">&check;</span> Yes &mdash; Every Website</td>
+                    </tr>
+                    <tr>
+                        <td>Real-Time MAP Dashboard</td>
+                        <td><span class="limited">Basic</span></td>
+                        <td><span class="check">&check;</span> Advanced &mdash; All Channels</td>
+                    </tr>
+                    <tr>
+                        <td>Automated C&D Enforcement</td>
+                        <td><span class="cross">&cross;</span> No</td>
+                        <td><span class="check">&check;</span> Yes &mdash; Automated</td>
+                    </tr>
+                    <tr>
+                        <td>Search Term Intelligence</td>
+                        <td><span class="check">&check;</span> Yes</td>
+                        <td><span class="check">&check;</span> Yes &mdash; Enhanced</td>
+                    </tr>
+                    <tr>
+                        <td>Competitor Pricing Intel</td>
+                        <td><span class="check">&check;</span> Yes</td>
+                        <td><span class="check">&check;</span> Yes &mdash; Omnichannel</td>
+                    </tr>
+                    <tr>
+                        <td>Demand Forecasting</td>
+                        <td><span class="check">&check;</span> Yes</td>
+                        <td><span class="check">&check;</span> Yes &mdash; AI-Powered</td>
+                    </tr>
+                    <tr>
+                        <td>Product Content Creation</td>
+                        <td><span class="limited">Extra Cost</span></td>
+                        <td><span class="check">&check;</span> Included</td>
+                    </tr>
+                    <tr>
+                        <td>Storefront Design</td>
+                        <td><span class="limited">Extra Cost</span></td>
+                        <td><span class="check">&check;</span> Included</td>
+                    </tr>
+                    <tr>
+                        <td>Transparency Management</td>
+                        <td><span class="cross">&cross;</span> No</td>
+                        <td><span class="check">&check;</span> Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="approach-boxes">
+                <div class="approach-box their">
+                    <h3>Pattern's Approach</h3>
+                    <p>"Great data, but Amazon-focused. Content and design are add-ons. No enforcement capabilities."</p>
+                </div>
+
+                <div class="approach-box our">
+                    <h3>Cloud Care's Approach</h3>
+                    <p>"Everything Pattern does PLUS omnichannel coverage, automated enforcement, premium content included, and storefront design &mdash; all in one partnership."</p>
+                </div>
+            </div>
+
+            <div class="callout-box">
+                <strong>The Key Difference:</strong>
+                <p>Pattern gives you a dashboard. Cloud Care gives you a dashboard AND the team that acts on the data &mdash; creating content, optimizing listings, enforcing MAP, and driving growth across every channel.</p>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 6 - REAL-TIME MAP DASHBOARD
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 05</div>
+            <h2 class="section-heading">Real-Time MAP Dashboard</h2>
+
+            <p class="intro-text">
+                Channel Shield isn't just monitoring &mdash; it's a command center for your entire brand presence across the internet.
+            </p>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Live Price Tracking</h3>
+                    <p>Real-time price monitoring across Amazon, Walmart, Newegg, eBay, and every authorized and unauthorized web retailer. Instant alerts when prices deviate from MAP.</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Seller Identification</h3>
+                    <p>Automated identification of every seller listing SonicWall products anywhere online. Know who's selling, at what price, and where they're sourcing inventory.</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Automated Enforcement</h3>
+                    <p>When violations are detected, Channel Shield automatically generates and sends C&D letters. No manual intervention. Problems resolved before they escalate.</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Historical Analytics</h3>
+                    <p>Track pricing trends over time. Identify repeat offenders. Measure enforcement effectiveness. Data-driven decisions for your channel strategy.</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Competitive Benchmarking</h3>
+                    <p>See how Fortinet, Palo Alto, and Cisco price on every channel. Understand your competitive position in real-time across every marketplace.</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Executive Reporting</h3>
+                    <p>Weekly and monthly reports with actionable insights delivered to your team. No login required &mdash; the intelligence comes to you.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 7 - PROVEN RESULTS: NETGEAR AV
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 06</div>
+            <h2 class="section-heading">Proven Results: NETGEAR AV</h2>
+
+            <div class="case-study-header">
+                <div></div>
+                <span class="strategic-badge">Strategic 3P Amazon Partner</span>
+            </div>
+
+            <p class="intro-text">
+                NETGEAR AV partnered with Cloud Care as their strategic 3P Amazon partner. We transformed their Amazon presence with premium content, professional storefront design, and comprehensive channel intelligence.
+            </p>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-card-value">+Sales</div>
+                    <div class="stat-card-label">Revenue Growth</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value">+ROAS</div>
+                    <div class="stat-card-label">Ad Performance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value">0</div>
+                    <div class="stat-card-label">MAP Violations</div>
+                </div>
+            </div>
+
+            <div class="results-list">
+                <h3>Key Results Achieved</h3>
+                <ul class="checkmarks">
+                    <li>Complete content transformation with A+ content for every product</li>
+                    <li>Professional storefront driving higher engagement and conversion</li>
+                    <li>Real-time channel intelligence informing strategic decisions</li>
+                    <li>Zero MAP violations maintained across all monitored channels</li>
+                </ul>
+            </div>
+
+            <div class="quote-box">
+                Cloud Care didn't just protect our brand &mdash; they transformed our Amazon channel into a strategic growth engine. The combination of premium content, storefront design, and marketplace intelligence gave us visibility and performance we never had before.
+                <div class="quote-author">&mdash; NETGEAR AV Leadership</div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 8 - WHAT THIS MEANS FOR SONICWALL
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 07</div>
+            <h2 class="section-heading">What This Means for SonicWall</h2>
+
+            <p class="intro-text">
+                SonicWall has built the most innovative cybersecurity portfolio in the market. Here's what partnership with Cloud Care unlocks for your Amazon channel.
+            </p>
+
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <h3>Premium Brand Experience</h3>
+                    <p>Every SonicWall product represented with professional content that matches the quality of your Gen 8 engineering. Your Amazon presence finally matches your brand.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Complete Channel Visibility</h3>
+                    <p>See every seller, every price, every violation &mdash; not just on Amazon but across Walmart, Newegg, eBay, and the entire web. No more blind spots.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Actionable Intelligence</h3>
+                    <p>Buying signals, search trends, competitive pricing, demand forecasting &mdash; the data SonicWall needs to make strategic decisions about product positioning and channel strategy.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>Content That Converts</h3>
+                    <p>A+ content, professional imagery, and an optimized storefront that turns browsers into buyers. Higher conversion rates mean more revenue from existing traffic.</p>
+                </div>
+            </div>
+
+            <div class="product-portfolio">
+                <h3>Your Entire Gen 8 Portfolio &mdash; Elevated</h3>
+
+                <div class="product-category">
+                    <strong>Firewalls:</strong>
+                    <p>TZ280, TZ380, TZ480, TZ580, TZ680, NSa 2800, NSa 3800, NSa 4800, NSa 5800 &mdash; every model gets premium A+ content and professional imagery.</p>
+                </div>
+
+                <div class="product-category">
+                    <strong>Wireless:</strong>
+                    <p>SonicWave 621, 641, 681 &mdash; complete content packages with deployment imagery and feature comparison charts.</p>
+                </div>
+
+                <div class="product-category">
+                    <strong>Switches:</strong>
+                    <p>SWS12 and SWS14 series &mdash; full product content with technical specifications and use-case scenarios.</p>
+                </div>
+
+                <div class="product-category">
+                    <strong>Security Services:</strong>
+                    <p>Capture ATP, Cloud App Security, Capture Client &mdash; subscription content optimized for Amazon conversion.</p>
+                </div>
+
+                <div class="product-category">
+                    <strong>Management:</strong>
+                    <p>NSM, WNM licenses &mdash; service listing optimization with clear value proposition content.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 9 - THE PARTNERSHIP MODEL
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 08</div>
+            <h2 class="section-heading">The Partnership Model</h2>
+
+            <div class="pillar-banner">
+                <div class="pillar-banner-item">
+                    <h3>Strategic 3P Amazon Seller</h3>
+                </div>
+                <div class="pillar-banner-item">
+                    <h3>Channel Shield Omnichannel Protection</h3>
+                </div>
+                <div class="pillar-banner-item">
+                    <h3>Content & Intelligence Platform</h3>
+                </div>
+            </div>
+
+            <h3 style="font-size: 28px; color: var(--dark-navy); margin-bottom: 30px; font-family: 'Oswald', sans-serif;">What We Handle</h3>
+
+            <div class="operations-grid">
+                <div class="operations-column">
+                    <h3>Amazon Excellence</h3>
+                    <ul class="checkmarks">
+                        <li>Listing optimization & A+ content</li>
+                        <li>Professional product imagery</li>
+                        <li>Storefront design & management</li>
+                        <li>Inventory management & FBA</li>
+                        <li>Pricing control & compliance</li>
+                        <li>Advertising strategy</li>
+                        <li>Buy box optimization</li>
+                        <li>Review management</li>
+                    </ul>
+                </div>
+
+                <div class="operations-column">
+                    <h3>Channel Intelligence</h3>
+                    <ul class="checkmarks">
+                        <li>Real-time MAP dashboard (all channels)</li>
+                        <li>Omnichannel seller monitoring</li>
+                        <li>Automated C&D enforcement</li>
+                        <li>Search term & buying signal analytics</li>
+                        <li>Competitor pricing intelligence</li>
+                        <li>Demand forecasting</li>
+                        <li>Competitive benchmarking</li>
+                        <li>Executive reporting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guarantees-box">
+                <h3>Performance Guarantees</h3>
+                <ul class="checkmarks">
+                    <li><strong>We guarantee measurable improvement in content quality scores, conversion rates, and channel visibility within 90 days.</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PAGE 10 - WHY ACT NOW + NEXT STEPS
+             ============================================================ -->
+        <div class="page-section">
+            <div class="section-number">SECTION 09</div>
+            <h2 class="section-heading">Why Act Now</h2>
+
+            <div class="why-now-stats">
+                <div class="why-now-stat">
+                    <h3>Gen 8 Launch</h3>
+                    <p>New Products Need New Content</p>
+                </div>
+                <div class="why-now-stat">
+                    <h3>Competitors Moving</h3>
+                    <p>Fortinet Is Investing In Amazon</p>
+                </div>
+                <div class="why-now-stat">
+                    <h3>Data Advantage</h3>
+                    <p>Insights Drive Revenue Growth</p>
+                </div>
+            </div>
+
+            <div class="section-number">SECTION 10</div>
+            <h2 class="section-heading">Proposed Next Steps</h2>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <h4>1. Discovery Call</h4>
+                    <p>30-minute discussion on content priorities, channel visibility needs, and intelligence requirements.</p>
+                </div>
+
+                <div class="step-card">
+                    <h4>2. Channel Audit</h4>
+                    <p>Complimentary omnichannel audit: every seller, every price, every channel &mdash; delivered as a report showing what you're missing.</p>
+                </div>
+
+                <div class="step-card">
+                    <h4>3. Content & Storefront Mockup</h4>
+                    <p>We'll create sample A+ content and storefront designs for your top-selling TZ Series products.</p>
+                </div>
+
+                <div class="step-card">
+                    <h4>4. Partnership Launch</h4>
+                    <p>Content creation begins, storefront goes live, Channel Shield monitoring activates, intelligence platform connects.</p>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h2>Let's Elevate SonicWall's Amazon Presence</h2>
+                <p><strong>Nick Pitzaferro</strong></p>
+                <p>CEO, Cloud Care LLC</p>
+                <p class="signature">254 Chapman Rd Ste 208, Newark, DE 19702</p>
+            </div>
+
+            <div class="final-quote">
+                SonicWall has built the most innovative cybersecurity portfolio in the market. Your Amazon channel should reflect that same level of excellence. Let Cloud Care transform your presence from protected to performant &mdash; with world-class content, a stunning storefront, and intelligence that drives growth.
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

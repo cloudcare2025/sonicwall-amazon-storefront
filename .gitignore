@@ -1,2 +1,5 @@
 .DS_Store
 screenshots/
+node_modules/
+dist/
+*.mp4

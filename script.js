@@ -891,191 +891,17 @@
   }
 
   // ============================================================================
-  // HERO WAVE BACKGROUND — Sine-wave displacement on background image
+  // HERO VIDEO BACKGROUND — Auto-playing looping video
   // ============================================================================
 
-  function initHeroWaveBackground() {
-    const hero = document.querySelector('.hero');
-    const canvas = document.querySelector('.hero__wave-canvas');
-    const bgImage = document.querySelector('.hero__bg-image');
+  function initHeroVideo() {
+    const video = document.querySelector('.hero__bg-video');
+    if (!video) return;
 
-    if (!canvas || !hero || !bgImage) return;
-
-    // Skip if reduced motion preferred
-    if (prefersReducedMotion) {
-      canvas.style.display = 'none';
-      return;
-    }
-
-    const ctx = canvas.getContext('2d');
-    let animFrameId = null;
-    let img = new Image();
-    img.crossOrigin = 'anonymous';
-    let imageLoaded = false;
-
-    // Wave parameters
-    const WAVE_AMPLITUDE = 6;       // How far pixels shift (px)
-    const WAVE_FREQUENCY = 0.012;    // Wave tightness
-    const WAVE_SPEED = 0.0015;       // How fast waves move
-    const SLICE_HEIGHT = 2;          // Draw in 2px horizontal strips
-    let time = 0;
-
-    // Mouse interaction — waves intensify near cursor
-    let mouseX = 0.5;
-    let mouseY = 0.5;
-    let targetMouseX = 0.5;
-    let targetMouseY = 0.5;
-    let mouseAmplitudeBoost = 0;
-    let targetMouseBoost = 0;
-
-    // Size canvas to hero
-    function resizeCanvas() {
-      const rect = hero.getBoundingClientRect();
-      canvas.width = rect.width;
-      canvas.height = rect.height;
-    }
-
-    resizeCanvas();
-    window.addEventListener('resize', debounce(resizeCanvas, 200));
-
-    // Load the hero image for canvas drawing
-    // Try crossOrigin first, fall back to non-CORS
-    function loadImage() {
-      img = new Image();
-      img.crossOrigin = 'anonymous';
-
-      img.onload = function() {
-        imageLoaded = true;
-        hero.classList.add('hero--wave-active');
-        if (!animFrameId) animate();
-      };
-
-      img.onerror = function() {
-        // Retry without crossOrigin (some CDNs don't support it)
-        const fallbackImg = new Image();
-        fallbackImg.onload = function() {
-          img = fallbackImg;
-          imageLoaded = true;
-          hero.classList.add('hero--wave-active');
-          if (!animFrameId) animate();
-        };
-        fallbackImg.onerror = function() {
-          // Canvas wave won't work — static image stays visible
-          canvas.style.display = 'none';
-        };
-        fallbackImg.src = bgImage.src;
-      };
-
-      img.src = bgImage.src;
-    }
-
-    // Wait for the original image to load first
-    if (bgImage.complete && bgImage.naturalHeight > 0) {
-      loadImage();
-    } else {
-      bgImage.addEventListener('load', loadImage, { once: true });
-      bgImage.addEventListener('error', () => {
-        canvas.style.display = 'none';
-      }, { once: true });
-    }
-
-    // Animation loop — draws image in horizontal slices offset by sine wave
-    function animate() {
-      if (!imageLoaded) return;
-
-      const w = canvas.width;
-      const h = canvas.height;
-
-      ctx.clearRect(0, 0, w, h);
-
-      // Smooth mouse tracking
-      mouseX += (targetMouseX - mouseX) * 0.03;
-      mouseY += (targetMouseY - mouseY) * 0.03;
-      mouseAmplitudeBoost += (targetMouseBoost - mouseAmplitudeBoost) * 0.05;
-
-      time += WAVE_SPEED;
-
-      // Calculate image draw dimensions (cover behavior)
-      const imgAspect = img.naturalWidth / img.naturalHeight;
-      const canvasAspect = w / h;
-      let drawW, drawH, offsetX, offsetY;
-
-      if (canvasAspect > imgAspect) {
-        drawW = w;
-        drawH = w / imgAspect;
-        offsetX = 0;
-        offsetY = (h - drawH) / 2;
-      } else {
-        drawH = h;
-        drawW = h * imgAspect;
-        offsetX = (w - drawW) / 2;
-        offsetY = 0;
-      }
-
-      // Draw image in horizontal slices with sine displacement
-      const totalSlices = Math.ceil(h / SLICE_HEIGHT);
-
-      for (let i = 0; i < totalSlices; i++) {
-        const y = i * SLICE_HEIGHT;
-
-        // Multiple wave layers for organic motion
-        const wave1 = Math.sin(y * WAVE_FREQUENCY + time * 40) * WAVE_AMPLITUDE;
-        const wave2 = Math.sin(y * WAVE_FREQUENCY * 0.7 + time * 25 + 1.5) * (WAVE_AMPLITUDE * 0.5);
-        const wave3 = Math.sin(y * WAVE_FREQUENCY * 1.3 + time * 55 + 3.0) * (WAVE_AMPLITUDE * 0.3);
-
-        // Mouse proximity boost — waves get stronger near cursor
-        const distFromMouse = Math.abs((y / h) - mouseY);
-        const proximityFactor = 1 + mouseAmplitudeBoost * (1 - Math.min(distFromMouse * 2.5, 1));
-
-        const xOffset = (wave1 + wave2 + wave3) * proximityFactor;
-
-        // Source rectangle from original image
-        const srcY = ((y - offsetY) / drawH) * img.naturalHeight;
-        const srcH = (SLICE_HEIGHT / drawH) * img.naturalHeight;
-
-        // Only draw if source is within image bounds
-        if (srcY >= 0 && srcY + srcH <= img.naturalHeight) {
-          ctx.drawImage(
-            img,
-            0, srcY, img.naturalWidth, srcH,                          // source
-            offsetX + xOffset, y, drawW, SLICE_HEIGHT + 1             // dest (+1 to avoid gaps)
-          );
-        }
-      }
-
-      animFrameId = requestAnimationFrame(animate);
-    }
-
-    // Mouse interaction
-    hero.addEventListener('mousemove', (e) => {
-      const rect = hero.getBoundingClientRect();
-      targetMouseX = (e.clientX - rect.left) / rect.width;
-      targetMouseY = (e.clientY - rect.top) / rect.height;
-      targetMouseBoost = 1.5; // Amplify waves on hover
+    // Ensure video plays (some browsers block autoplay)
+    video.play().catch(() => {
+      // Autoplay blocked — poster image shown as fallback
     });
-
-    hero.addEventListener('mouseleave', () => {
-      targetMouseX = 0.5;
-      targetMouseY = 0.5;
-      targetMouseBoost = 0;
-    });
-
-    // Pause when hero not visible (performance)
-    const heroObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (!animFrameId && imageLoaded) animate();
-        } else {
-          if (animFrameId) {
-            cancelAnimationFrame(animFrameId);
-            animFrameId = null;
-          }
-        }
-      });
-    }, { threshold: 0 });
-
-    heroObserver.observe(hero);
-    observers.push(heroObserver);
   }
 
   // ============================================================================
@@ -1483,7 +1309,7 @@
     initLazyLoading();
     initButtonHoverPolish();
     initButtonRippleEffect();
-    initHeroWaveBackground();
+    initHeroVideo();
     initComparisonTable();
     initFrequentlyBoughtTogether();
     initProductCardEnhancements();

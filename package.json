@@ -1,0 +1,14 @@
+{
+  "name": "sonicwall-amazon-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SonicWall Amazon Storefront landing page",
+  "scripts": {
+    "build": "tsc && bash build.sh",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "sass": "^1.71.0",
+    "typescript": "^5.3.3"
+  }
+}
