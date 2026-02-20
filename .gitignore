@@ -2,4 +2,5 @@
 screenshots/
 node_modules/
 dist/
-*.mp4
+# Only ignore the original uncompressed video
+hero-video.mp4
