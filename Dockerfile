@@ -17,7 +17,7 @@ COPY *.html ./
 COPY *.pdf ./
 
 # Run build (compiles TS + copies assets to dist/)
-RUN chmod +x build.sh && bash build.sh
+RUN chmod +x build.sh && sh build.sh
 
 # Stage 2: Serve
 FROM nginx:alpine
