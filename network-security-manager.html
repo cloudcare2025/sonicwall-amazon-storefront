@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWall Network Security Manager (NSM) - Cloud-native centralized management for your entire SonicWall firewall fleet with single-pane visibility and real-time analytics.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="Network Security Manager (NSM) | SonicWall Official Store on Amazon">
+    <meta property="og:description" content="Cloud-native centralized management for your entire SonicWall firewall fleet. Single-pane visibility, policy orchestration, and real-time analytics.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Network Security Manager (NSM) | SonicWall Official Store on Amazon">
+    <meta name="twitter:description" content="Cloud-native centralized management for your entire SonicWall firewall fleet.">
+    <title>Network Security Manager (NSM) | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* ============================================
+           NSM PAGE - HERO
+           ============================================ */
+
+        .nsm-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .nsm-hero__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .nsm-hero__bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nsm-hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.93) 0%, rgba(31, 41, 41, 0.89) 50%, rgba(22, 33, 62, 0.86) 100%);
+        }
+
+        .nsm-hero__pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L55 17.5V42.5L30 55L5 42.5V17.5L30 5z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+
+        .nsm-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            padding: 80px 0;
+        }
+
+        .nsm-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 110, 66, 0.15);
+            border: 1px solid rgba(255, 110, 66, 0.3);
+            color: #ff6e42;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nsm-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .nsm-hero__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            max-width: 560px;
+        }
+
+        .nsm-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nsm-hero__cta:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+
+        .nsm-hero__graphic {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            opacity: 0.08;
+        }
+
+        @media (max-width: 1024px) {
+            .nsm-hero__title { font-size: 42px; }
+            .nsm-hero__graphic { display: none; }
+            .nsm-hero { min-height: 440px; }
+        }
+
+        @media (max-width: 768px) {
+            .nsm-hero__title { font-size: 34px; }
+            .nsm-hero__subtitle { font-size: 17px; }
+            .nsm-hero__content { padding: 60px 0; }
+            .nsm-hero { min-height: 380px; }
+        }
+
+        @media (max-width: 480px) {
+            .nsm-hero__title { font-size: 28px; }
+            .nsm-hero__subtitle { font-size: 15px; }
+        }
+
+        /* ============================================
+           OVERVIEW SECTION
+           ============================================ */
+
+        .nsm-overview {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .nsm-overview__content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .nsm-overview__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        /* ============================================
+           KEY FEATURES (6 CARDS)
+           ============================================ */
+
+        .nsm-features {
+            padding: 80px 0;
+            background: #f7f8fa;
+        }
+
+        .nsm-features__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .nsm-features__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .nsm-feature-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 36px 28px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nsm-feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .nsm-feature-card__icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 12px;
+        }
+
+        .nsm-feature-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+        }
+
+        .nsm-feature-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .nsm-features__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .nsm-features__grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           DEPLOYMENT OPTIONS (2 CARDS)
+           ============================================ */
+
+        .nsm-deploy {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .nsm-deploy__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .nsm-deploy__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nsm-deploy-card {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 48px 36px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nsm-deploy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .nsm-deploy-card--featured {
+            border-color: #ff6e42;
+            position: relative;
+        }
+
+        .nsm-deploy-card__badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 20px;
+            border-radius: 50px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .nsm-deploy-card__icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 16px;
+        }
+
+        .nsm-deploy-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .nsm-deploy-card__tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #ff6e42;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .nsm-deploy-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .nsm-deploy-card__features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .nsm-deploy-card__features li {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #2b333f;
+            line-height: 1.5;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .nsm-deploy-card__features li:last-child {
+            border-bottom: none;
+        }
+
+        .nsm-deploy-card__features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23f0fdf4'/%3E%3Cpath d='M6 9l2 2 4-4' stroke='%2322c55e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center center;
+            background-size: contain;
+        }
+
+        @media (max-width: 768px) {
+            .nsm-deploy__grid { grid-template-columns: 1fr; max-width: 480px; }
+        }
+
+        /* ============================================
+           HOW IT WORKS (3 STEPS)
+           ============================================ */
+
+        .nsm-how {
+            padding: 80px 0;
+            background: #f7f8fa;
+        }
+
+        .nsm-how__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .nsm-how__steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .nsm-how__steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 16.66%;
+            right: 16.66%;
+            height: 2px;
+            background: linear-gradient(90deg, #e5e7eb 0%, #ff6e42 50%, #e5e7eb 100%);
+        }
+
+        .nsm-how__step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nsm-how__number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 16px rgba(26, 26, 46, 0.2);
+        }
+
+        .nsm-how__step-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .nsm-how__step-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .nsm-how__steps {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                max-width: 360px;
+            }
+            .nsm-how__steps::before { display: none; }
+        }
+
+        /* ============================================
+           INTEGRATION SECTION
+           ============================================ */
+
+        .nsm-integration {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .nsm-integration__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .nsm-integration__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nsm-integration__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(31, 41, 41, 0.93) 100%);
+        }
+
+        .nsm-integration__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .nsm-integration__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .nsm-integration__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .nsm-integration__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .nsm-integration__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .nsm-integration__card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(4px);
+        }
+
+        .nsm-integration__card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nsm-integration__card-icon {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.15);
+            border-radius: 12px;
+        }
+
+        .nsm-integration__card-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+            line-height: 1.3;
+        }
+
+        .nsm-integration__card-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .nsm-integration__grid { grid-template-columns: repeat(2, 1fr); }
+            .nsm-integration__title { font-size: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            .nsm-integration__grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           STATS BAR
+           ============================================ */
+
+        .nsm-stats {
+            padding: 60px 0;
+            background: #ffffff;
+        }
+
+        .nsm-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .nsm-stat {
+            padding: 0 16px;
+        }
+
+        .nsm-stat__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .nsm-stat__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .nsm-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+
+        @media (max-width: 480px) {
+            .nsm-stats__grid { grid-template-columns: 1fr; }
+            .nsm-stat__number { font-size: 36px; }
+        }
+
+        /* ============================================
+           CONTACT CTA
+           ============================================ */
+
+        .nsm-cta {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .nsm-cta__content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nsm-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .nsm-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 540px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .nsm-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nsm-cta__btn:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab brand-nav__tab--active" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">SonicWall</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Network Security Manager</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. HERO SECTION -->
+        <section class="nsm-hero" aria-label="Network Security Manager hero">
+            <div class="nsm-hero__background">
+                <img class="nsm-hero__bg-image" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <div class="nsm-hero__overlay"></div>
+                <div class="nsm-hero__pattern" aria-hidden="true"></div>
+            </div>
+            <div class="nsm-hero__graphic" aria-hidden="true">
+                <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="30" width="200" height="140" rx="12" stroke="#ffffff" stroke-width="2" fill="none"/>
+                    <rect x="70" y="50" width="70" height="40" rx="4" stroke="#ffffff" stroke-width="1" fill="none"/>
+                    <rect x="160" y="50" width="70" height="40" rx="4" stroke="#ffffff" stroke-width="1" fill="none"/>
+                    <rect x="70" y="110" width="160" height="40" rx="4" stroke="#ffffff" stroke-width="1" fill="none"/>
+                    <line x1="150" y1="170" x2="150" y2="210" stroke="#ffffff" stroke-width="2"/>
+                    <line x1="80" y1="210" x2="220" y2="210" stroke="#ffffff" stroke-width="2"/>
+                    <line x1="80" y1="210" x2="80" y2="240" stroke="#ffffff" stroke-width="2"/>
+                    <line x1="150" y1="210" x2="150" y2="240" stroke="#ffffff" stroke-width="2"/>
+                    <line x1="220" y1="210" x2="220" y2="240" stroke="#ffffff" stroke-width="2"/>
+                    <rect x="65" y="240" width="30" height="24" rx="3" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                    <rect x="135" y="240" width="30" height="24" rx="3" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                    <rect x="205" y="240" width="30" height="24" rx="3" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="nsm-hero__content">
+                    <span class="nsm-hero__badge">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L9 5h4l-3 2.5 1 4.5L7 9l-4 3 1-4.5L1 5h4z" fill="currentColor"/></svg>
+                        Centralized Management
+                    </span>
+                    <h1 class="nsm-hero__title">NETWORK SECURITY MANAGER</h1>
+                    <p class="nsm-hero__subtitle">Cloud-native centralized management for your entire SonicWall firewall fleet. Single-pane visibility, policy orchestration, and real-time analytics.</p>
+                    <a href="#features" class="nsm-hero__cta">
+                        Explore NSM
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. OVERVIEW -->
+        <section class="nsm-overview" aria-label="NSM overview">
+            <div class="container">
+                <div class="nsm-overview__content">
+                    <h2 class="section-title">One Dashboard. Total Control.</h2>
+                    <p class="nsm-overview__text">Network Security Manager is SonicWall's cloud-based management platform for centralized firewall governance. Deploy, manage, and monitor hundreds of firewalls from a single dashboard. Whether you operate a single office or a distributed enterprise with thousands of endpoints, NSM gives you unified visibility and control over every SonicWall appliance in your fleet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. KEY FEATURES -->
+        <section id="features" class="nsm-features" aria-label="Key features">
+            <div class="container">
+                <div class="nsm-features__header">
+                    <h2 class="section-title">Key Features</h2>
+                    <p class="section-subtitle">Everything you need to manage your firewall fleet at scale</p>
+                </div>
+
+                <div class="nsm-features__grid">
+                    <!-- Centralized Policy Management -->
+                    <div class="nsm-feature-card">
+                        <div class="nsm-feature-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M4 10h20" stroke="#ff6e42" stroke-width="2"/><path d="M10 10v14" stroke="#ff6e42" stroke-width="2"/><circle cx="7" cy="7" r="1" fill="#ff6e42"/></svg>
+                        </div>
+                        <h3 class="nsm-feature-card__name">Centralized Policy Management</h3>
+                        <p class="nsm-feature-card__desc">Create, push, and enforce unified security policies across every firewall in your fleet from a single console. Eliminate configuration drift and ensure consistent protection.</p>
+                    </div>
+
+                    <!-- Real-Time Monitoring -->
+                    <div class="nsm-feature-card">
+                        <div class="nsm-feature-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="4" width="22" height="16" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M8 24h12M14 20v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><path d="M8 14l3-4 3 2 4-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="nsm-feature-card__name">Real-Time Monitoring &amp; Alerts</h3>
+                        <p class="nsm-feature-card__desc">Live dashboards with threat intelligence, bandwidth analytics, and instant alerting. Know exactly what is happening across every location in real time.</p>
+                    </div>
+
+                    <!-- Automated Firmware Updates -->
+                    <div class="nsm-feature-card">
+                        <div class="nsm-feature-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v10" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><path d="M10 10l4 4 4-4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18v4a2 2 0 002 2h16a2 2 0 002-2v-4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><circle cx="21" cy="21" r="1" fill="#ff6e42"/></svg>
+                        </div>
+                        <h3 class="nsm-feature-card__name">Automated Firmware Updates</h3>
+                        <p class="nsm-feature-card__desc">Schedule and deploy firmware updates across your entire fleet with zero-touch automation. Maintain compliance without on-site visits or manual intervention.</p>
+                    </div>
+
+                    <!-- Compliance & Audit Reporting -->
+                    <div class="nsm-feature-card">
+                        <div class="nsm-feature-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="3" width="16" height="22" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M10 9h8M10 13h8M10 17h5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><path d="M18 17l2 2 4-4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="nsm-feature-card__name">Compliance &amp; Audit Reporting</h3>
+                        <p class="nsm-feature-card__desc">Generate detailed audit trails and compliance reports with a single click. Track every policy change, user action, and security event for regulatory requirements.</p>
+                    </div>
+
+                    <!-- Multi-Tenant Support -->
+                    <div class="nsm-feature-card">
+                        <div class="nsm-feature-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="10" width="10" height="14" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><rect x="15" y="4" width="10" height="20" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M6 14h4M6 18h4M18 8h4M18 12h4M18 16h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="nsm-feature-card__name">Multi-Tenant Support</h3>
+                        <p class="nsm-feature-card__desc">Manage multiple customers or business units from a single NSM instance with full tenant isolation. Ideal for MSSPs, MSPs, and large distributed enterprises.</p>
+                    </div>
+
+                    <!-- Template-Based Deployment -->
+                    <div class="nsm-feature-card">
+                        <div class="nsm-feature-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="9" height="9" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><rect x="15" y="4" width="9" height="9" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><rect x="4" y="15" width="9" height="9" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M19.5 17v5M17 19.5h5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="nsm-feature-card__name">Template-Based Deployment</h3>
+                        <p class="nsm-feature-card__desc">Define security policy templates once and deploy them to new firewalls instantly. Accelerate site deployments from days to minutes with consistent configurations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DEPLOYMENT OPTIONS -->
+        <section class="nsm-deploy" aria-label="Deployment options">
+            <div class="container">
+                <div class="nsm-deploy__header">
+                    <h2 class="section-title">Deployment Options</h2>
+                    <p class="section-subtitle">Choose the deployment model that fits your infrastructure requirements</p>
+                </div>
+
+                <div class="nsm-deploy__grid">
+                    <!-- NSM SaaS -->
+                    <div class="nsm-deploy-card nsm-deploy-card--featured">
+                        <span class="nsm-deploy-card__badge">Recommended</span>
+                        <div class="nsm-deploy-card__icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M10 24a6 6 0 01-.6-11.95A8.5 8.5 0 0125 14a5 5 0 01-1 9.88" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M16 16v8M13 21l3 3 3-3" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="nsm-deploy-card__name">NSM SaaS</h3>
+                        <p class="nsm-deploy-card__tagline">Cloud-hosted, zero infrastructure</p>
+                        <p class="nsm-deploy-card__desc">Fully hosted in the SonicWall cloud. No servers to provision, no databases to manage, no software to install. Get started in minutes with automatic updates and elastic scalability.</p>
+                        <ul class="nsm-deploy-card__features">
+                            <li>Zero infrastructure required</li>
+                            <li>Automatic platform updates</li>
+                            <li>Elastic scalability</li>
+                            <li>Globally accessible dashboard</li>
+                            <li>Built-in redundancy &amp; backups</li>
+                            <li>SOC 2 Type II compliant</li>
+                        </ul>
+                    </div>
+
+                    <!-- NSM On-Prem -->
+                    <div class="nsm-deploy-card">
+                        <div class="nsm-deploy-card__icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="6" width="20" height="20" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/><rect x="10" y="10" width="12" height="5" rx="1" stroke="#ff6e42" stroke-width="1.5" fill="none"/><rect x="10" y="18" width="12" height="5" rx="1" stroke="#ff6e42" stroke-width="1.5" fill="none"/><circle cx="13" cy="12.5" r="1" fill="#ff6e42"/><circle cx="13" cy="20.5" r="1" fill="#ff6e42"/></svg>
+                        </div>
+                        <h3 class="nsm-deploy-card__name">NSM On-Prem</h3>
+                        <p class="nsm-deploy-card__tagline">Self-hosted for air-gapped environments</p>
+                        <p class="nsm-deploy-card__desc">Deploy NSM on your own infrastructure for organizations with strict data sovereignty requirements, air-gapped networks, or regulatory mandates that prohibit cloud connectivity.</p>
+                        <ul class="nsm-deploy-card__features">
+                            <li>Full data sovereignty</li>
+                            <li>Air-gapped network support</li>
+                            <li>On-premises data retention</li>
+                            <li>Custom integration support</li>
+                            <li>Regulatory compliance control</li>
+                            <li>VMware &amp; Hyper-V compatible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. HOW IT WORKS -->
+        <section class="nsm-how" aria-label="How it works">
+            <div class="container">
+                <div class="nsm-how__header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">Three steps from deployment to unified firewall management</p>
+                </div>
+
+                <div class="nsm-how__steps">
+                    <div class="nsm-how__step">
+                        <div class="nsm-how__number">1</div>
+                        <h3 class="nsm-how__step-title">Connect Firewalls</h3>
+                        <p class="nsm-how__step-text">Register your SonicWall firewalls with NSM using zero-touch provisioning. New and existing appliances connect automatically via serial number or token.</p>
+                    </div>
+                    <div class="nsm-how__step">
+                        <div class="nsm-how__number">2</div>
+                        <h3 class="nsm-how__step-title">Define Policies</h3>
+                        <p class="nsm-how__step-text">Create security policies, access rules, and firewall configurations from centralized templates. Push consistent policies to one device or your entire fleet.</p>
+                    </div>
+                    <div class="nsm-how__step">
+                        <div class="nsm-how__number">3</div>
+                        <h3 class="nsm-how__step-title">Monitor &amp; Optimize</h3>
+                        <p class="nsm-how__step-text">Track real-time threat intelligence, bandwidth usage, and device health across every location. Receive instant alerts and drill into granular analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. INTEGRATION / COMPATIBILITY -->
+        <section class="nsm-integration" aria-label="Firewall compatibility">
+            <div class="nsm-integration__background" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="lazy">
+                <div class="nsm-integration__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="nsm-integration__content">
+                    <div class="nsm-integration__header">
+                        <h2 class="nsm-integration__title">Works with ALL SonicWall Firewalls</h2>
+                        <p class="nsm-integration__subtitle">NSM supports every SonicWall firewall series for unified management across your entire network</p>
+                    </div>
+
+                    <div class="nsm-integration__grid">
+                        <div class="nsm-integration__card">
+                            <div class="nsm-integration__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="8" width="20" height="12" rx="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M7 12h3M7 16h3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/><circle cx="19" cy="14" r="1.5" fill="#ff6e42"/></svg>
+                            </div>
+                            <h3 class="nsm-integration__card-title">TZ Series</h3>
+                            <p class="nsm-integration__card-text">Small office and branch firewalls. Ideal for remote locations and distributed retail environments.</p>
+                        </div>
+
+                        <div class="nsm-integration__card">
+                            <div class="nsm-integration__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="2" y="7" width="22" height="14" rx="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M6 11h4M6 15h4M6 19h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="14" r="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/></svg>
+                            </div>
+                            <h3 class="nsm-integration__card-title">NSa Series</h3>
+                            <p class="nsm-integration__card-text">Mid-range firewalls for growing enterprises and campus networks requiring high throughput.</p>
+                        </div>
+
+                        <div class="nsm-integration__card">
+                            <div class="nsm-integration__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="1" y="6" width="24" height="16" rx="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M5 10h5M5 14h5M5 18h5M14 10h5M14 14h5M14 18h5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            </div>
+                            <h3 class="nsm-integration__card-title">NSsp Series</h3>
+                            <p class="nsm-integration__card-text">High-performance firewalls for data centers, large enterprises, and service providers.</p>
+                        </div>
+
+                        <div class="nsm-integration__card">
+                            <div class="nsm-integration__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 20a5 5 0 01-.5-9.96A7 7 0 0121 12a4 4 0 01-1 7.92" stroke="#ff6e42" stroke-width="1.5" fill="none" stroke-linecap="round"/><rect x="10" y="14" width="6" height="5" rx="1" stroke="#ff6e42" stroke-width="1.5" fill="none"/></svg>
+                            </div>
+                            <h3 class="nsm-integration__card-title">NSv Series</h3>
+                            <p class="nsm-integration__card-text">Virtual firewalls for cloud and hybrid environments including AWS, Azure, and private cloud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. STATS BAR -->
+        <section class="nsm-stats" aria-label="NSM statistics">
+            <div class="container">
+                <div class="nsm-stats__grid">
+                    <div class="nsm-stat">
+                        <div class="nsm-stat__number">Unlimited</div>
+                        <p class="nsm-stat__label">Firewalls Managed</p>
+                    </div>
+                    <div class="nsm-stat">
+                        <div class="nsm-stat__number">Cloud-Native</div>
+                        <p class="nsm-stat__label">Architecture</p>
+                    </div>
+                    <div class="nsm-stat">
+                        <div class="nsm-stat__number">Real-Time</div>
+                        <p class="nsm-stat__label">Analytics</p>
+                    </div>
+                    <div class="nsm-stat">
+                        <div class="nsm-stat__number">Multi-Tenant</div>
+                        <p class="nsm-stat__label">Ready</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT CTA -->
+        <section class="nsm-cta" aria-label="Contact sales">
+            <div class="container">
+                <div class="nsm-cta__content">
+                    <h2 class="nsm-cta__title">Unify Your Firewall Management</h2>
+                    <p class="nsm-cta__text">See how Network Security Manager can simplify operations, reduce overhead, and give you total visibility across your entire SonicWall deployment.</p>
+                    <a href="#" class="nsm-cta__btn">
+                        Contact Sales
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

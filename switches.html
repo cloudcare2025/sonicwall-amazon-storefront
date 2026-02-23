@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWall Switches - High-speed managed and PoE+ network switches from 8 to 48 ports. SD-Branch ready with SonicWall firewall integration.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicWall Switches | Official Store on Amazon">
+    <meta property="og:description" content="Managed and PoE+ switches for secure, high-performance networks. 8 to 48 ports with 10G SFP+ uplinks.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicWall Switches | Official Store on Amazon">
+    <meta name="twitter:description" content="High-speed switching with enterprise-grade security integration.">
+    <title>Switches | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ============================================
+           SWITCHES PAGE - SPECIFIC STYLES
+           ============================================ */
+
+        /* Hero Section */
+        .sw-hero {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .sw-hero__bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+        }
+        .sw-hero__bg img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .sw-hero__overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(26,26,46,0.94) 0%, rgba(31,41,41,0.88) 50%, rgba(26,26,46,0.80) 100%);
+            z-index: 1;
+        }
+        .sw-hero__grid {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,110,66,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,110,66,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 2;
+        }
+        .sw-hero__content {
+            position: relative;
+            z-index: 3;
+            max-width: 720px;
+            padding: 80px 0;
+        }
+        .sw-hero__label {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ff6e42;
+            margin-bottom: 16px;
+        }
+        .sw-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+        }
+        .sw-hero__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 560px;
+        }
+
+        /* Product Grid Overrides */
+        .sw-products {
+            padding: 60px 0 80px;
+            background: var(--color-bg-light, #f7f8fa);
+            font-family: 'Inter', sans-serif;
+        }
+        .sw-products .product-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .sw-product-img {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+        .sw-product-img img {
+            max-height: 140px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .sw-product-specs {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin: 12px 0 16px;
+            padding: 12px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+        .sw-product-spec {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            font-size: 12px;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+        .sw-product-spec__label {
+            font-weight: 600;
+            color: #1f2929;
+            white-space: nowrap;
+            min-width: 70px;
+        }
+        .sw-product-use {
+            font-size: 12px;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+        .sw-product-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .sw-product-badge--poe {
+            background: rgba(255,110,66,0.1);
+            color: #ff6e42;
+        }
+        .sw-product-badge--managed {
+            background: rgba(31,41,41,0.08);
+            color: #1f2929;
+        }
+
+        /* Features Section */
+        .sw-features {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #1f2929 100%);
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .sw-features::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(255,110,66,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .sw-features__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .sw-feature-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .sw-feature-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.08);
+        }
+        .sw-feature-card__icon {
+            width: 56px; height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,110,66,0.12);
+            border-radius: 12px;
+        }
+        .sw-feature-card__title {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .sw-feature-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.6;
+        }
+
+        /* Comparison Table */
+        .sw-compare {
+            padding: 80px 0;
+            background: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+        .sw-compare-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 40px;
+        }
+        .sw-compare-table {
+            width: 100%;
+            min-width: 900px;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .sw-compare-table thead th {
+            background: #1f2929;
+            color: #fff;
+            font-weight: 600;
+            padding: 16px 12px;
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        .sw-compare-table thead th:first-child {
+            text-align: left;
+            background: #1a1a2e;
+            min-width: 160px;
+        }
+        .sw-compare-table tbody td {
+            padding: 14px 12px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+            color: #4b5563;
+        }
+        .sw-compare-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #1f2929;
+            background: #f9fafb;
+        }
+        .sw-compare-table tbody tr:hover td {
+            background: rgba(255,110,66,0.03);
+        }
+        .sw-compare-table tbody tr:hover td:first-child {
+            background: rgba(255,110,66,0.06);
+        }
+        .sw-compare-table .sw-compare-highlight {
+            background: rgba(255,110,66,0.04);
+            font-weight: 600;
+            color: #1f2929;
+        }
+
+        /* Accessories Section */
+        .sw-accessories {
+            padding: 60px 0 80px;
+            background: var(--color-bg-light, #f7f8fa);
+            font-family: 'Inter', sans-serif;
+        }
+        .sw-accessories__grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-top: 32px;
+        }
+        .sw-accessory-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .sw-accessory-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+        }
+        .sw-accessory-card__icon {
+            width: 56px; height: 56px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f7f8fa 0%, #eef0f4 100%);
+            border-radius: 10px;
+        }
+        .sw-accessory-card__name {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1f2929;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .sw-accessory-card__desc {
+            font-size: 11px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Stats Section */
+        .sw-stats {
+            padding: 60px 0;
+            background: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+        .sw-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+        .sw-stat {
+            text-align: center;
+            padding: 32px 16px;
+        }
+        .sw-stat__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .sw-stat__label {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .sw-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1f2929 0%, #1a1a2e 100%);
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+        .sw-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .sw-cta__text {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        .sw-cta__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .sw-cta__btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), border-color 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .sw-cta__btn-secondary:hover {
+            border-color: #ff6e42;
+            background: rgba(255,110,66,0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sw-products .product-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 1024px) {
+            .sw-hero__title { font-size: 44px; }
+            .sw-products .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-features__grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-stats__grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-accessories__grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .sw-hero { min-height: 400px; }
+            .sw-hero__title { font-size: 36px; }
+            .sw-hero__content { padding: 60px 0; }
+            .sw-products .product-grid { grid-template-columns: 1fr; }
+            .sw-features__grid { grid-template-columns: 1fr; }
+            .sw-accessories__grid { grid-template-columns: repeat(2, 1fr); }
+            .sw-stats__grid { grid-template-columns: 1fr 1fr; }
+            .sw-stat__number { font-size: 40px; }
+        }
+        @media (max-width: 480px) {
+            .sw-hero__title { font-size: 28px; }
+            .sw-hero__sub { font-size: 15px; }
+            .sw-stats__grid { grid-template-columns: 1fr; }
+            .sw-accessories__grid { grid-template-columns: 1fr; }
+            .sw-cta__title { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account &amp; Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">&amp; Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab brand-nav__tab--active" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking Products</a></li>
+                    <li class="breadcrumb__item"><a href="networking.html">SonicWall Networking</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Switches</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. Hero Section -->
+        <section class="sw-hero" aria-label="Switches hero banner">
+            <div class="sw-hero__bg">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+            </div>
+            <div class="sw-hero__overlay"></div>
+            <div class="sw-hero__grid" aria-hidden="true"></div>
+            <div class="container">
+                <div class="sw-hero__content">
+                    <span class="sw-hero__label">Networking &amp; Access</span>
+                    <h1 class="sw-hero__title">SonicWall Switches</h1>
+                    <p class="sw-hero__sub">High-speed switching. Feature-rich performance. Secure connectivity for the modern business.</p>
+                    <a href="#switch-products" class="btn btn--modern btn--primary btn--large">Explore Switches &darr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Product Grid -->
+        <section id="switch-products" class="sw-products" aria-label="SonicWall Switch Products">
+            <div class="container">
+                <h2 class="section-title">SonicWall Switch Lineup</h2>
+                <p class="section-subtitle">From compact 8-port to enterprise 48-port with full PoE+ and 10G SFP+ uplinks</p>
+
+                <div class="product-grid">
+                    <!-- SWS12-8 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <div class="sw-product-img">
+                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltca74fe7500fe45c5/6677cc429f54af42f5f174a7/SWS_12_8POE_Front-1.png" alt="SonicWall SWS12-8 Compact Switch" loading="lazy">
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">SonicWall SWS12-8</h3>
+                        <span class="sw-product-badge sw-product-badge--managed">Compact</span>
+                        <div class="sw-product-specs">
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Ports:</span>
+                                <span>8x 1GbE</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Switching:</span>
+                                <span>20 Gbps</span>
+                            </div>
+                        </div>
+                        <p class="sw-product-use">Best for: Small office / branch</p>
+                        <a href="#" class="btn btn--modern btn--amazon btn--small">Request Quote &rarr;</a>
+                    </article>
+
+                    <!-- SWS12-8POE -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <div class="sw-product-img">
+                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltca74fe7500fe45c5/6677cc429f54af42f5f174a7/SWS_12_8POE_Front-1.png" alt="SonicWall SWS12-8POE PoE Switch" loading="lazy">
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">SonicWall SWS12-8POE</h3>
+                        <span class="sw-product-badge sw-product-badge--poe">PoE+ 130W</span>
+                        <div class="sw-product-specs">
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Ports:</span>
+                                <span>8x 1GbE PoE+, 2x SFP</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Switching:</span>
+                                <span>20 Gbps</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">PoE Budget:</span>
+                                <span>130W</span>
+                            </div>
+                        </div>
+                        <p class="sw-product-use">Best for: Powering APs and IP phones</p>
+                        <a href="#" class="btn btn--modern btn--amazon btn--small">Request Quote &rarr;</a>
+                    </article>
+
+                    <!-- SWS12-10FPOE -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <div class="sw-product-img">
+                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt450a3eebff0a8c02/6677cc4babd83648090f0192/SWS_12_10FPOE_Front-1.png" alt="SonicWall SWS12-10FPOE Full PoE Switch" loading="lazy">
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">SonicWall SWS12-10FPOE</h3>
+                        <span class="sw-product-badge sw-product-badge--poe">Full PoE+ 130W</span>
+                        <div class="sw-product-specs">
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Ports:</span>
+                                <span>8x 1GbE PoE+, 2x SFP</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Switching:</span>
+                                <span>20 Gbps</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">PoE Budget:</span>
+                                <span>130W</span>
+                            </div>
+                        </div>
+                        <p class="sw-product-use">Best for: Full PoE deployment</p>
+                        <a href="#" class="btn btn--modern btn--amazon btn--small">Request Quote &rarr;</a>
+                    </article>
+
+                    <!-- SWS14-24 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <div class="sw-product-img">
+                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb5395ff84a6eae55/6677cc3d5cfc948c43a65565/SWS_14_24_Front.png" alt="SonicWall SWS14-24 Managed Switch" loading="lazy">
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">SonicWall SWS14-24</h3>
+                        <span class="sw-product-badge sw-product-badge--managed">Managed</span>
+                        <div class="sw-product-specs">
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Ports:</span>
+                                <span>24x 1GbE, 4x SFP+</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Switching:</span>
+                                <span>128 Gbps</span>
+                            </div>
+                        </div>
+                        <p class="sw-product-use">Best for: Growing networks</p>
+                        <a href="#" class="btn btn--modern btn--amazon btn--small">Request Quote &rarr;</a>
+                    </article>
+
+                    <!-- SWS14-24FPOE -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <div class="sw-product-img">
+                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltdcf297786f83a443/6677cc398328141f7c6ea931/SWS_14_24FPOE_Front.png" alt="SonicWall SWS14-24FPOE Full PoE Managed Switch" loading="lazy">
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">SonicWall SWS14-24FPOE</h3>
+                        <span class="sw-product-badge sw-product-badge--poe">Full PoE+ 370W</span>
+                        <div class="sw-product-specs">
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Ports:</span>
+                                <span>24x 1GbE PoE+, 4x SFP+</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Switching:</span>
+                                <span>128 Gbps</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">PoE Budget:</span>
+                                <span>370W</span>
+                            </div>
+                        </div>
+                        <p class="sw-product-use">Best for: High-density PoE</p>
+                        <a href="#" class="btn btn--modern btn--amazon btn--small">Request Quote &rarr;</a>
+                    </article>
+
+                    <!-- SWS14-48 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <div class="sw-product-img">
+                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt90a3ec6dda6ce184/6677cc3394c67f00facafc78/SWS_14_48_Front.png" alt="SonicWall SWS14-48 Managed Switch" loading="lazy">
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">SonicWall SWS14-48</h3>
+                        <span class="sw-product-badge sw-product-badge--managed">Managed</span>
+                        <div class="sw-product-specs">
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Ports:</span>
+                                <span>48x 1GbE, 4x SFP+</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Switching:</span>
+                                <span>176 Gbps</span>
+                            </div>
+                        </div>
+                        <p class="sw-product-use">Best for: Large deployments</p>
+                        <a href="#" class="btn btn--modern btn--amazon btn--small">Request Quote &rarr;</a>
+                    </article>
+
+                    <!-- SWS14-48FPOE -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <div class="sw-product-img">
+                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt7d2b558533698364/6677cc2f0a774855225db5c9/SWS_14_48FPOE_Front.png" alt="SonicWall SWS14-48FPOE Full PoE Managed Switch" loading="lazy">
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">SonicWall SWS14-48FPOE</h3>
+                        <span class="sw-product-badge sw-product-badge--poe">Full PoE+ 740W</span>
+                        <div class="sw-product-specs">
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Ports:</span>
+                                <span>48x 1GbE PoE+, 4x SFP+</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">Switching:</span>
+                                <span>176 Gbps</span>
+                            </div>
+                            <div class="sw-product-spec">
+                                <span class="sw-product-spec__label">PoE Budget:</span>
+                                <span>740W</span>
+                            </div>
+                        </div>
+                        <p class="sw-product-use">Best for: Enterprise campus</p>
+                        <a href="#" class="btn btn--modern btn--amazon btn--small">Contact Sales &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Features Section -->
+        <section class="sw-features" aria-label="Switch features">
+            <div class="container">
+                <h2 class="section-title section-title--white">Built for the Modern Network</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.6);">Enterprise-grade switching engineered to work seamlessly with SonicWall security</p>
+                <div class="sw-features__grid">
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <path d="M14 4v6M4 14h6M18 14h6M14 18v6" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="14" cy="14" r="4" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <rect x="2" y="2" width="8" height="6" rx="1.5" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                                <rect x="18" y="2" width="8" height="6" rx="1.5" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                                <rect x="2" y="20" width="8" height="6" rx="1.5" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                                <rect x="18" y="20" width="8" height="6" rx="1.5" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-feature-card__title">SD-Branch Ready</h3>
+                        <p class="sw-feature-card__text">Integrated with SonicWall firewalls for unified SD-Branch management. Deploy and manage your entire branch infrastructure from a single pane of glass.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <path d="M4 20l6-6 4 4 6-8 4 4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="24" cy="14" r="2" fill="#ff6e42"/>
+                                <path d="M4 24h20" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-feature-card__title">10 Gigabit Connectivity</h3>
+                        <p class="sw-feature-card__text">SFP+ uplinks deliver high-speed backbone connections for demanding network environments. Up to 176 Gbps aggregate switching capacity.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <rect x="3" y="6" width="22" height="16" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <path d="M9 12h10M9 16h6" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="22" cy="9" r="2" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-feature-card__title">Flexible Management</h3>
+                        <p class="sw-feature-card__text">Manage via SonicWall firewall, cloud, or standalone CLI. Choose the management model that fits your operations and scale as needed.</p>
+                    </div>
+                    <div class="sw-feature-card">
+                        <div class="sw-feature-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <path d="M14 4l8 6v8l-8 6-8-6V10l8-6z" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                                <path d="M10 14l3 3 5-6" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-feature-card__title">Zero-Touch Deployment</h3>
+                        <p class="sw-feature-card__text">Auto-configure switches directly from SonicWall firewalls. Plug in, power on, and your switch is provisioned and secured automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Comparison Table -->
+        <section class="sw-compare" aria-label="Switch comparison table">
+            <div class="container">
+                <h2 class="section-title">Compare SonicWall Switches</h2>
+                <p class="section-subtitle">All 7 models side by side. Find the right switch for your network.</p>
+
+                <div class="sw-compare-wrapper">
+                    <table class="sw-compare-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Specification</th>
+                                <th scope="col">SWS12-8</th>
+                                <th scope="col">SWS12-8POE</th>
+                                <th scope="col">SWS12-10FPOE</th>
+                                <th scope="col">SWS14-24</th>
+                                <th scope="col">SWS14-24FPOE</th>
+                                <th scope="col">SWS14-48</th>
+                                <th scope="col">SWS14-48FPOE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Total Interfaces</td>
+                                <td>8</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>28</td>
+                                <td>28</td>
+                                <td>52</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>1G Copper Ports</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>24</td>
+                                <td>24</td>
+                                <td>48</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>SFP Ports</td>
+                                <td>&mdash;</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td>SFP+ (10G) Ports</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>PoE / PoE+ Ports</td>
+                                <td>&mdash;</td>
+                                <td>8</td>
+                                <td>8</td>
+                                <td>&mdash;</td>
+                                <td>24</td>
+                                <td>&mdash;</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>Switching Capacity</td>
+                                <td>20 Gbps</td>
+                                <td>20 Gbps</td>
+                                <td>20 Gbps</td>
+                                <td>128 Gbps</td>
+                                <td>128 Gbps</td>
+                                <td class="sw-compare-highlight">176 Gbps</td>
+                                <td class="sw-compare-highlight">176 Gbps</td>
+                            </tr>
+                            <tr>
+                                <td>PoE Budget</td>
+                                <td>&mdash;</td>
+                                <td>130W</td>
+                                <td>130W</td>
+                                <td>&mdash;</td>
+                                <td>370W</td>
+                                <td>&mdash;</td>
+                                <td class="sw-compare-highlight">740W</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Accessories Section -->
+        <section class="sw-accessories" aria-label="SFP modules and accessories">
+            <div class="container">
+                <h2 class="section-title">SFP &amp; SFP+ Modules</h2>
+                <p class="section-subtitle">Compatible transceiver modules for SonicWall switches</p>
+
+                <div class="sw-accessories__grid">
+                    <div class="sw-accessory-card">
+                        <div class="sw-accessory-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <rect x="4" y="10" width="24" height="12" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <rect x="8" y="14" width="4" height="4" rx="1" fill="#ff6e42"/>
+                                <path d="M16 14h8M16 18h6" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-accessory-card__name">10GBASE-SR SFP+ Module</h3>
+                        <p class="sw-accessory-card__desc">10G short-range multimode fiber, up to 300m</p>
+                    </div>
+                    <div class="sw-accessory-card">
+                        <div class="sw-accessory-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <rect x="4" y="10" width="24" height="12" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <rect x="8" y="14" width="4" height="4" rx="1" fill="#ff6e42"/>
+                                <path d="M16 14h8M16 18h6" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-accessory-card__name">10GBASE-LR SFP+ Module</h3>
+                        <p class="sw-accessory-card__desc">10G long-range single-mode fiber, up to 10km</p>
+                    </div>
+                    <div class="sw-accessory-card">
+                        <div class="sw-accessory-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <rect x="4" y="10" width="24" height="12" rx="3" stroke="#1f2929" stroke-width="2" fill="none"/>
+                                <rect x="8" y="14" width="4" height="4" rx="1" fill="#1f2929"/>
+                                <path d="M16 14h8M16 18h6" stroke="#1f2929" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-accessory-card__name">1000BASE-SX SFP Module</h3>
+                        <p class="sw-accessory-card__desc">1G short-range multimode fiber, up to 550m</p>
+                    </div>
+                    <div class="sw-accessory-card">
+                        <div class="sw-accessory-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <rect x="4" y="10" width="24" height="12" rx="3" stroke="#1f2929" stroke-width="2" fill="none"/>
+                                <rect x="8" y="14" width="4" height="4" rx="1" fill="#1f2929"/>
+                                <path d="M16 14h8M16 18h6" stroke="#1f2929" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-accessory-card__name">1000BASE-LX SFP Module</h3>
+                        <p class="sw-accessory-card__desc">1G long-range single-mode fiber, up to 10km</p>
+                    </div>
+                    <div class="sw-accessory-card">
+                        <div class="sw-accessory-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                <rect x="4" y="10" width="24" height="12" rx="3" stroke="#1f2929" stroke-width="2" fill="none"/>
+                                <rect x="8" y="14" width="4" height="4" rx="1" fill="#1f2929"/>
+                                <path d="M16 14h8M16 18h6" stroke="#1f2929" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sw-accessory-card__name">1000BASE-T SFP Copper</h3>
+                        <p class="sw-accessory-card__desc">1G copper RJ45 transceiver, up to 100m</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Stats Section -->
+        <section class="stats-section" aria-label="Switch performance statistics">
+            <div class="container">
+                <h2 class="section-title section-title--white">Performance At Scale</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-item__number">176 Gbps</div>
+                        <div class="stat-item__desc">Max switching capacity across the SonicWall switch portfolio.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">740W</div>
+                        <div class="stat-item__desc">Max PoE budget to power APs, cameras, and IP phones.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">48</div>
+                        <div class="stat-item__desc">Max ports per switch for high-density deployments.</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">10G</div>
+                        <div class="stat-item__desc">SFP+ uplinks for high-speed backbone connections.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA Section -->
+        <section class="sw-cta" aria-label="Contact and consultation">
+            <div class="container">
+                <h2 class="sw-cta__title">Build Your Secure Network Infrastructure</h2>
+                <p class="sw-cta__text">Talk to a SonicWall network specialist. Get tailored recommendations for switches, PoE budgets, and firewall integration for your specific deployment.</p>
+                <div class="sw-cta__buttons">
+                    <a href="#" class="btn btn--modern btn--primary btn--large">Contact Sales &rarr;</a>
+                    <a href="networking.html" class="sw-cta__btn-secondary">View All Networking Products &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

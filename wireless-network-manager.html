@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWall Wireless Network Manager (WNM) - Cloud-based management platform for centralized visibility and control of SonicWave access points and SonicWall switches.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicWall Wireless Network Manager | Official Store on Amazon">
+    <meta property="og:description" content="Intuitive cloud-based management for SonicWall access points and switches. Deploy, monitor, and manage from a single dashboard.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicWall Wireless Network Manager | Official Store on Amazon">
+    <meta name="twitter:description" content="Cloud-based management for SonicWall access points and switches.">
+    <title>Wireless Network Manager | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ============================================
+           WIRELESS NETWORK MANAGER - PAGE-SPECIFIC STYLES
+           ============================================ */
+
+        /* HERO */
+        .wnm-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .wnm-hero__bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+        }
+
+        .wnm-hero__bg img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+
+        .wnm-hero__overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background:
+                radial-gradient(ellipse 700px 500px at 25% 40%, rgba(255, 110, 66, 0.07) 0%, transparent 70%),
+                radial-gradient(ellipse 500px 400px at 75% 60%, rgba(255, 110, 66, 0.05) 0%, transparent 70%),
+                radial-gradient(circle 3px at 12% 20%, rgba(255, 110, 66, 0.3) 0%, transparent 100%),
+                radial-gradient(circle 2px at 35% 75%, rgba(255, 255, 255, 0.18) 0%, transparent 100%),
+                radial-gradient(circle 2.5px at 55% 15%, rgba(255, 110, 66, 0.25) 0%, transparent 100%),
+                radial-gradient(circle 2px at 72% 55%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+                radial-gradient(circle 3px at 88% 30%, rgba(255, 110, 66, 0.2) 0%, transparent 100%),
+                radial-gradient(circle 1.5px at 45% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+                radial-gradient(circle 2px at 65% 85%, rgba(255, 110, 66, 0.18) 0%, transparent 100%),
+                radial-gradient(circle 1.5px at 20% 60%, rgba(255, 255, 255, 0.12) 0%, transparent 100%),
+                linear-gradient(180deg, rgba(26, 26, 46, 0.94) 0%, rgba(31, 41, 41, 0.96) 100%);
+            z-index: 1;
+        }
+
+        .wnm-hero__grid {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,110,66,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,110,66,0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+            z-index: 2;
+        }
+
+        .wnm-hero__content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            padding: 80px 20px;
+        }
+
+        .wnm-hero__label {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ff6e42;
+            margin-bottom: 16px;
+        }
+
+        .wnm-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.08;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .wnm-hero__title span {
+            color: #ff6e42;
+        }
+
+        .wnm-hero__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            max-width: 620px;
+            margin: 0 auto 36px;
+        }
+
+        .wnm-hero__ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* PLATFORM OVERVIEW */
+        .wnm-overview {
+            padding: 80px 0;
+            background: var(--color-bg-light, #f7f8fa);
+        }
+
+        .wnm-overview__inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .wnm-overview__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.7;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .wnm-overview__badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 36px;
+        }
+
+        .wnm-overview__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1f2929;
+            transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .wnm-overview__badge:hover {
+            border-color: rgba(255, 110, 66, 0.4);
+            box-shadow: 0 2px 8px rgba(255, 110, 66, 0.08);
+        }
+
+        .wnm-overview__badge svg {
+            flex-shrink: 0;
+        }
+
+        /* KEY CAPABILITIES */
+        .wnm-capabilities {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .wnm-capabilities__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 48px;
+        }
+
+        .wnm-cap-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 36px 28px;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .wnm-cap-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+            border-color: rgba(255, 110, 66, 0.3);
+        }
+
+        .wnm-cap-card__icon {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 14px;
+        }
+
+        .wnm-cap-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+        }
+
+        .wnm-cap-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* HOW IT WORKS */
+        .wnm-how {
+            padding: 80px 0;
+            background: #1a1a2e;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wnm-how::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -15%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(255, 110, 66, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .wnm-how__steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+            position: relative;
+        }
+
+        .wnm-step {
+            text-align: center;
+            position: relative;
+            padding: 0 16px;
+        }
+
+        .wnm-step__number {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.1);
+            border: 2px solid rgba(255, 110, 66, 0.3);
+            border-radius: 50%;
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #ff6e42;
+        }
+
+        .wnm-step__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .wnm-step__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.6;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .wnm-step__connector {
+            position: absolute;
+            top: 32px;
+            right: -16px;
+            width: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* INTEGRATION SECTION */
+        .wnm-integration {
+            padding: 80px 0;
+            background: var(--color-bg-light, #f7f8fa);
+        }
+
+        .wnm-integration__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 48px;
+        }
+
+        .wnm-int-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 40px 28px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .wnm-int-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(255, 110, 66, 0.12);
+        }
+
+        .wnm-int-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6e42, #1f2929);
+            opacity: 0;
+            transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .wnm-int-card:hover::after {
+            opacity: 1;
+        }
+
+        .wnm-int-card__icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(255, 110, 66, 0.08) 0%, rgba(26, 26, 46, 0.04) 100%);
+            border-radius: 50%;
+        }
+
+        .wnm-int-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .wnm-int-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        /* STATS */
+        .wnm-stats {
+            background: linear-gradient(135deg, #1a1a2e 0%, #1f2929 100%);
+            padding: 64px 0;
+        }
+
+        .wnm-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .wnm-stat {
+            padding: 20px 16px;
+        }
+
+        .wnm-stat__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .wnm-stat__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+        }
+
+        /* CTA SECTION */
+        .wnm-cta {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .wnm-cta__bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+        }
+
+        .wnm-cta__bg img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+
+        .wnm-cta__overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(31, 41, 41, 0.92) 100%);
+        }
+
+        .wnm-cta__inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .wnm-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .wnm-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+
+        .wnm-cta__buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* SECTION TITLES (local overrides) */
+        .wnm-section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #1f2929;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .wnm-section-title--white {
+            color: #ffffff;
+        }
+
+        .wnm-section-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #6b7280;
+            text-align: center;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .wnm-section-subtitle--white {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+
+        @media (max-width: 1024px) {
+            .wnm-hero__title {
+                font-size: 48px;
+            }
+
+            .wnm-capabilities__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .wnm-how__steps {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+
+            .wnm-integration__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .wnm-stats__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wnm-hero {
+                min-height: 420px;
+            }
+
+            .wnm-hero__title {
+                font-size: 36px;
+            }
+
+            .wnm-hero__sub {
+                font-size: 16px;
+            }
+
+            .wnm-capabilities__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wnm-how__steps {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .wnm-step__connector {
+                display: none;
+            }
+
+            .wnm-integration__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .wnm-stats__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .wnm-section-title {
+                font-size: 28px;
+            }
+
+            .wnm-cta__title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wnm-hero__title {
+                font-size: 28px;
+            }
+
+            .wnm-hero__content {
+                padding: 60px 16px;
+            }
+
+            .wnm-hero__ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .wnm-stats__grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .wnm-stat__number {
+                font-size: 36px;
+            }
+
+            .wnm-cta__buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .wnm-overview__badges {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab brand-nav__tab--active" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking</a></li>
+                    <li class="breadcrumb__item"><a href="networking.html">SonicWall Networking</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Wireless Network Manager</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. HERO -->
+        <section class="wnm-hero" aria-label="Wireless Network Manager hero">
+            <div class="wnm-hero__bg" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <div class="wnm-hero__overlay"></div>
+                <div class="wnm-hero__grid"></div>
+            </div>
+            <div class="wnm-hero__content">
+                <span class="wnm-hero__label">Networking & Access</span>
+                <h1 class="wnm-hero__title">WIRELESS NETWORK <span>MANAGER</span></h1>
+                <p class="wnm-hero__sub">Intuitive cloud-based management for SonicWall access points and switches. Deploy, monitor, and manage your wireless infrastructure from a single dashboard.</p>
+                <div class="wnm-hero__ctas">
+                    <a href="#" class="btn btn--modern btn--primary btn--large">Contact Sales &rarr;</a>
+                    <a href="#" class="btn btn--modern btn--outline btn--large">Start Free Trial</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PLATFORM OVERVIEW -->
+        <section class="wnm-overview" aria-label="Platform overview">
+            <div class="container">
+                <div class="wnm-overview__inner">
+                    <h2 class="wnm-section-title">Single-Pane-of-Glass Management</h2>
+                    <p class="wnm-section-subtitle" style="margin-bottom: 28px;">Cloud-native wireless management built for distributed networks</p>
+                    <p class="wnm-overview__text">Wireless Network Manager (WNM) is SonicWall's cloud-based management platform for centralized visibility and control of SonicWave access points and SonicWall switches. Manage your entire wireless infrastructure across distributed locations from a single console, eliminating the complexity of site-by-site configuration and monitoring.</p>
+                    <div class="wnm-overview__badges">
+                        <div class="wnm-overview__badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Cloud-Native Platform
+                        </div>
+                        <div class="wnm-overview__badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Secure by Design
+                        </div>
+                        <div class="wnm-overview__badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 019-9" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Multi-Tenant Ready
+                        </div>
+                        <div class="wnm-overview__badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            API Integrations
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. KEY CAPABILITIES -->
+        <section class="wnm-capabilities" aria-label="Key capabilities">
+            <div class="container">
+                <h2 class="wnm-section-title">Key Capabilities</h2>
+                <p class="wnm-section-subtitle">Everything you need to deploy, manage, and optimize your wireless network</p>
+                <div class="wnm-capabilities__grid">
+                    <!-- Card 1: Centralized Dashboard -->
+                    <div class="wnm-cap-card">
+                        <div class="wnm-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-cap-card__title">Centralized Dashboard</h3>
+                        <p class="wnm-cap-card__text">Monitor all access points and switches across every location from one cloud console. Real-time health, status, and performance at a glance.</p>
+                    </div>
+
+                    <!-- Card 2: Zero-Touch Deployment -->
+                    <div class="wnm-cap-card">
+                        <div class="wnm-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-cap-card__title">Zero-Touch Deployment</h3>
+                        <p class="wnm-cap-card__text">Access points auto-register and pull their configuration when powered on. No on-site IT required. Ship, plug in, done.</p>
+                    </div>
+
+                    <!-- Card 3: WiFi Planner -->
+                    <div class="wnm-cap-card">
+                        <div class="wnm-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M3 3h18v18H3zM3 9h18M9 3v18" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-cap-card__title">WiFi Planner</h3>
+                        <p class="wnm-cap-card__text">RF planning tool to optimize AP placement before deployment. Upload floor plans, simulate coverage, and eliminate dead zones before installing a single device.</p>
+                    </div>
+
+                    <!-- Card 4: Guest Portal -->
+                    <div class="wnm-cap-card">
+                        <div class="wnm-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9" cy="7" r="4" stroke="#ff6e42" stroke-width="2"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-cap-card__title">Guest Portal</h3>
+                        <p class="wnm-cap-card__text">Customizable captive portal for guest wireless access. Brand your login page, set bandwidth limits, enforce acceptable use, and track guest activity.</p>
+                    </div>
+
+                    <!-- Card 5: Rich Analytics -->
+                    <div class="wnm-cap-card">
+                        <div class="wnm-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M18 20V10M12 20V4M6 20v-6" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-cap-card__title">Rich Analytics</h3>
+                        <p class="wnm-cap-card__text">Real-time and historical data on client connections, traffic patterns, and network performance. Identify issues before users notice them.</p>
+                    </div>
+
+                    <!-- Card 6: Firmware Management -->
+                    <div class="wnm-cap-card">
+                        <div class="wnm-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-cap-card__title">Firmware Management</h3>
+                        <p class="wnm-cap-card__text">Schedule and push firmware updates across all devices from the cloud. Maintain security compliance without touching a single device on site.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. HOW IT WORKS -->
+        <section class="wnm-how" aria-label="How it works">
+            <div class="container">
+                <h2 class="wnm-section-title wnm-section-title--white">How It Works</h2>
+                <p class="wnm-section-subtitle wnm-section-subtitle--white">From unboxing to full management in three steps</p>
+                <div class="wnm-how__steps">
+                    <!-- Step 1 -->
+                    <div class="wnm-step">
+                        <div class="wnm-step__number">1</div>
+                        <h3 class="wnm-step__title">Connect</h3>
+                        <p class="wnm-step__text">Plug in SonicWave access points or SonicWall switches at any location. Power on and connect to the network.</p>
+                        <div class="wnm-step__connector" aria-hidden="true">
+                            <svg width="32" height="12" viewBox="0 0 32 12" fill="none"><path d="M0 6h28M24 1l5 5-5 5" stroke="rgba(255,110,66,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="wnm-step">
+                        <div class="wnm-step__number">2</div>
+                        <h3 class="wnm-step__title">Configure</h3>
+                        <p class="wnm-step__text">Devices auto-register in the WNM cloud dashboard. Pre-staged policies and configurations apply automatically.</p>
+                        <div class="wnm-step__connector" aria-hidden="true">
+                            <svg width="32" height="12" viewBox="0 0 32 12" fill="none"><path d="M0 6h28M24 1l5 5-5 5" stroke="rgba(255,110,66,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="wnm-step">
+                        <div class="wnm-step__number">3</div>
+                        <h3 class="wnm-step__title">Manage</h3>
+                        <p class="wnm-step__text">Monitor, troubleshoot, and optimize your entire wireless infrastructure from anywhere with a browser.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. INTEGRATION -->
+        <section class="wnm-integration" aria-label="Supported devices">
+            <div class="container">
+                <h2 class="wnm-section-title">Managed Devices</h2>
+                <p class="wnm-section-subtitle">Unified management for the full SonicWall networking portfolio</p>
+                <div class="wnm-integration__grid">
+                    <!-- SonicWave 600 -->
+                    <div class="wnm-int-card">
+                        <div class="wnm-int-card__icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-int-card__title">SonicWave 600 Series</h3>
+                        <p class="wnm-int-card__text">Full management of indoor Wi-Fi 6 access points. Configure SSIDs, security policies, band steering, and airtime fairness from the cloud.</p>
+                        <a href="access-points.html" class="btn btn--modern btn--secondary">View Access Points &rarr;</a>
+                    </div>
+
+                    <!-- SonicWave 400 -->
+                    <div class="wnm-int-card">
+                        <div class="wnm-int-card__icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 22h20" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-int-card__title">SonicWave 400 Series</h3>
+                        <p class="wnm-int-card__text">Manage outdoor access points remotely. Monitor environmental conditions, signal strength, and client connectivity across campus and outdoor deployments.</p>
+                        <a href="outdoor-access-points.html" class="btn btn--modern btn--secondary">View Outdoor APs &rarr;</a>
+                    </div>
+
+                    <!-- SonicWall Switches -->
+                    <div class="wnm-int-card">
+                        <div class="wnm-int-card__icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="2" y="6" width="20" height="12" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <circle cx="7" cy="12" r="1.5" fill="#ff6e42"/>
+                                <circle cx="12" cy="12" r="1.5" fill="#ff6e42"/>
+                                <circle cx="17" cy="12" r="1.5" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnm-int-card__title">SonicWall Switches</h3>
+                        <p class="wnm-int-card__text">Unified switch and AP management from a single dashboard. Configure VLANs, PoE policies, port settings, and monitor switch health alongside your wireless network.</p>
+                        <a href="switches.html" class="btn btn--modern btn--secondary">View Switches &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. STATS -->
+        <section class="wnm-stats" aria-label="Wireless Network Manager statistics">
+            <div class="container">
+                <div class="wnm-stats__grid">
+                    <div class="wnm-stat">
+                        <div class="wnm-stat__number">Cloud</div>
+                        <div class="wnm-stat__label">Management Platform</div>
+                    </div>
+                    <div class="wnm-stat">
+                        <div class="wnm-stat__number">Zero-Touch</div>
+                        <div class="wnm-stat__label">Deployment</div>
+                    </div>
+                    <div class="wnm-stat">
+                        <div class="wnm-stat__number">Multi-Site</div>
+                        <div class="wnm-stat__label">Visibility</div>
+                    </div>
+                    <div class="wnm-stat">
+                        <div class="wnm-stat__number">Real-Time</div>
+                        <div class="wnm-stat__label">Analytics</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class="wnm-cta" aria-label="Simplify wireless management call to action">
+            <div class="wnm-cta__bg" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
+                <div class="wnm-cta__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="wnm-cta__inner">
+                    <h2 class="wnm-cta__title">Simplify Wireless Management</h2>
+                    <p class="wnm-cta__text">Stop managing access points one at a time. Get centralized cloud visibility, zero-touch deployment, and real-time analytics for your entire wireless infrastructure. Talk to a SonicWall networking specialist.</p>
+                    <div class="wnm-cta__buttons">
+                        <a href="#" class="btn btn--modern btn--primary btn--large">Contact Sales &rarr;</a>
+                        <a href="access-points.html" class="btn btn--modern btn--outline btn--large">View Access Points</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

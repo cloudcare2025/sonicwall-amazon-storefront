@@ -3904,5 +3904,110 @@ ul {
 }
 
 /* ============================================
+   NEW DROPDOWN NAV STRUCTURE
+   .brand-nav__dropdown > .brand-nav__tab + .brand-nav__dropdown-menu
+   ============================================ */
+
+.brand-nav__dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-nav__dropdown > .brand-nav__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.brand-nav__caret {
+  width: 10px;
+  height: 6px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.brand-nav__dropdown:hover .brand-nav__caret {
+  transform: rotate(180deg);
+}
+
+.brand-nav__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 240px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.brand-nav__dropdown:hover .brand-nav__dropdown-menu,
+.brand-nav__dropdown.active .brand-nav__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.brand-nav__dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.brand-nav__dropdown-item:hover {
+  background: #f5f5f5;
+  color: var(--color-brand-orange);
+}
+
+@media (max-width: 1024px) {
+  .brand-nav__dropdown-menu {
+    min-width: 200px;
+  }
+  .brand-nav__dropdown-item {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-header__nav .brand-header__container {
+    flex-wrap: wrap;
+  }
+  .brand-nav__dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    min-width: 100%;
+    background: #f5f5f5;
+  }
+  .brand-nav__dropdown:hover .brand-nav__dropdown-menu,
+  .brand-nav__dropdown.active .brand-nav__dropdown-menu {
+    display: block;
+  }
+  .brand-nav__dropdown-item {
+    padding: 10px 24px;
+  }
+}
+
+/* ============================================
    END OF STYLESHEET
    ============================================ */

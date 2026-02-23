@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWave 600 Series Indoor Access Points - Always-on, always-secure Wi-Fi 6 connectivity with WPA3, Capture ATP, and Zero-Touch Deployment for complex multi-device environments.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicWave 600 Series Access Points | SonicWall Official Store on Amazon">
+    <meta property="og:description" content="Wi-Fi 6 indoor access points with dedicated security radio, MU-MIMO, and cloud management for enterprise wireless networks.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte2b91db7fd2dc179/68406be47f9f732ded7dfb49/SonicWave_641_v2.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicWave 600 Series Access Points | SonicWall Official Store on Amazon">
+    <meta name="twitter:description" content="Always-on, always-secure Wi-Fi 6 access points for enterprise environments.">
+    <title>Access Points | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ============================================
+           ACCESS POINTS PAGE - SPECIFIC STYLES
+           ============================================ */
+
+        /* Hero */
+        .ap-hero {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .ap-hero__overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(26,26,46,0.95) 0%, rgba(31,41,41,0.90) 40%, rgba(255,110,66,0.12) 100%);
+            z-index: 1;
+        }
+        .ap-hero__grid {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,110,66,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,110,66,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 2;
+        }
+        .ap-hero__content {
+            position: relative;
+            z-index: 3;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            width: 100%;
+            max-width: 1440px;
+        }
+        .ap-hero__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ff6e42;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        .ap-hero__headline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.08;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .ap-hero__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 19px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+        .ap-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 36px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            background: #ff6e42;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .ap-hero__cta:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,110,66,0.3);
+        }
+
+        /* Product Grid */
+        .ap-products {
+            padding: 64px 0 48px;
+            background: #f7f8fa;
+        }
+        .ap-products__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 40px;
+        }
+        .ap-card {
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            padding: 32px 24px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .ap-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+        }
+        .ap-card__badge {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #ff6e42;
+            background: rgba(255,110,66,0.08);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .ap-card__img {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .ap-card__img img {
+            max-height: 150px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .ap-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 8px;
+        }
+        .ap-card__wifi {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+        .ap-card__specs {
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px;
+            text-align: left;
+        }
+        .ap-card__specs li {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #4b5563;
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f3f5;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.4;
+        }
+        .ap-card__specs li:last-child {
+            border-bottom: none;
+        }
+        .ap-card__specs li svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .ap-card__best-for {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: #6b7280;
+            background: #f7f8fa;
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+        .ap-card__best-for strong {
+            color: #1f2929;
+        }
+        .ap-card__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            background: #ff6e42;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1), background 0.2s cubic-bezier(0.4,0,0.2,1);
+            margin-top: auto;
+        }
+        .ap-card__cta:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,110,66,0.25);
+        }
+
+        /* Key Features Section */
+        .ap-features {
+            padding: 80px 0;
+            background: #1a1a2e;
+            position: relative;
+            overflow: hidden;
+        }
+        .ap-features::before {
+            content: '';
+            position: absolute;
+            top: -40%; right: -15%;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(255,110,66,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .ap-features__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .ap-feature-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 36px 28px;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .ap-feature-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.08);
+        }
+        .ap-feature-card__icon {
+            width: 52px; height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,110,66,0.12);
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .ap-feature-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .ap-feature-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.65;
+        }
+
+        /* Comparison Table */
+        .ap-comparison {
+            padding: 72px 0;
+            background: #fff;
+        }
+        .ap-table-wrapper {
+            overflow-x: auto;
+            margin-top: 40px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+        .ap-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Inter', sans-serif;
+            min-width: 680px;
+        }
+        .ap-table thead th {
+            background: #1f2929;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 16px 20px;
+            text-align: left;
+            white-space: nowrap;
+        }
+        .ap-table thead th:first-child {
+            border-radius: 11px 0 0 0;
+        }
+        .ap-table thead th:last-child {
+            border-radius: 0 11px 0 0;
+        }
+        .ap-table tbody td {
+            padding: 14px 20px;
+            font-size: 13px;
+            color: #374151;
+            border-bottom: 1px solid #f1f3f5;
+            line-height: 1.5;
+        }
+        .ap-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .ap-table tbody tr:hover {
+            background: #f9fafb;
+        }
+        .ap-table tbody td:first-child {
+            font-weight: 600;
+            color: #1f2929;
+            white-space: nowrap;
+        }
+
+        /* Technology Highlights */
+        .ap-tech {
+            padding: 72px 0;
+            background: #f7f8fa;
+        }
+        .ap-tech__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .ap-tech-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px 22px;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .ap-tech-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        .ap-tech-card__icon {
+            width: 48px; height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,110,66,0.08);
+            border-radius: 10px;
+            margin-bottom: 18px;
+        }
+        .ap-tech-card__title {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .ap-tech-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Stats Override for 4 columns */
+        .ap-stats .stats-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .ap-stats .stat-item__number {
+            font-size: 40px;
+        }
+
+        /* Bottom CTA */
+        .ap-cta-section {
+            position: relative;
+            padding: 80px 0;
+            background: #1a1a2e;
+            overflow: hidden;
+        }
+        .ap-cta-section::before {
+            content: '';
+            position: absolute;
+            bottom: -30%; left: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(255,110,66,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .ap-cta-section::after {
+            content: '';
+            position: absolute;
+            top: -30%; right: -10%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(255,110,66,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .ap-cta {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+        .ap-cta__headline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .ap-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        .ap-cta__buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .ap-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1), background 0.2s cubic-bezier(0.4,0,0.2,1);
+        }
+        .ap-cta__btn--primary {
+            background: #ff6e42;
+            color: #fff;
+        }
+        .ap-cta__btn--primary:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,110,66,0.3);
+        }
+        .ap-cta__btn--secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .ap-cta__btn--secondary:hover {
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,255,255,0.08);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .ap-products__grid { grid-template-columns: repeat(2, 1fr); }
+            .ap-features__grid { grid-template-columns: repeat(2, 1fr); }
+            .ap-tech__grid { grid-template-columns: repeat(2, 1fr); }
+            .ap-stats .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .ap-hero__headline { font-size: 42px; }
+        }
+        @media (max-width: 768px) {
+            .ap-products__grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+            .ap-features__grid { grid-template-columns: 1fr; }
+            .ap-tech__grid { grid-template-columns: 1fr; }
+            .ap-stats .stats-grid { grid-template-columns: 1fr; }
+            .ap-hero { min-height: 400px; }
+            .ap-hero__headline { font-size: 34px; }
+            .ap-hero__sub { font-size: 16px; }
+            .ap-hero__content { padding: 60px 20px; }
+            .ap-cta__headline { font-size: 30px; }
+            .ap-cta__buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account &amp; Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">&amp; Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab brand-nav__tab--active" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="#">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking Products</a></li>
+                    <li class="breadcrumb__item"><a href="networking.html">SonicWall Networking</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Access Points</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="ap-hero" aria-label="SonicWave 600 Series hero banner">
+            <div class="ap-hero__overlay"></div>
+            <div class="ap-hero__grid" aria-hidden="true"></div>
+            <div class="ap-hero__content">
+                <span class="ap-hero__label">Networking &amp; Access</span>
+                <h1 class="ap-hero__headline">SonicWave 600 Series Access Points</h1>
+                <p class="ap-hero__sub">Always-on, always-secure Wi-Fi 6 connectivity for complex, multi-device environments.</p>
+                <a href="#ap-products" class="ap-hero__cta">Explore Models &darr;</a>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section id="ap-products" class="ap-products" aria-label="SonicWave 600 Series access point models">
+            <div class="container">
+                <h2 class="section-title">Indoor Access Points</h2>
+                <p class="section-subtitle">Three performance tiers, one unified management platform. Every model includes a dedicated security radio for threat detection without impacting wireless performance.</p>
+                <div class="ap-products__grid">
+
+                    <!-- SonicWave 621 -->
+                    <div class="ap-card">
+                        <span class="ap-card__badge">Small Office</span>
+                        <div class="ap-card__img">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt22a75a2557940926/683056c25a5aac9a1fd318dd/SonicWave_621.png" alt="SonicWave 621 Indoor Access Point" loading="lazy">
+                        </div>
+                        <h3 class="ap-card__name">SonicWave 621</h3>
+                        <p class="ap-card__wifi">Wi-Fi 6 (802.11ax) &middot; 2x2 MU-MIMO</p>
+                        <ul class="ap-card__specs">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                4 internal antennas
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                1x 2.5GbE Ethernet uplink
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Dedicated security radio
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Max clients: 256 (150 per radio)
+                            </li>
+                        </ul>
+                        <div class="ap-card__best-for"><strong>Best for:</strong> Small offices, retail locations</div>
+                        <a href="#" class="ap-card__cta">Contact Sales &rarr;</a>
+                    </div>
+
+                    <!-- SonicWave 641 -->
+                    <div class="ap-card">
+                        <span class="ap-card__badge">Mid-Range</span>
+                        <div class="ap-card__img">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte2b91db7fd2dc179/68406be47f9f732ded7dfb49/SonicWave_641_v2.png" alt="SonicWave 641 Indoor Access Point" loading="lazy">
+                        </div>
+                        <h3 class="ap-card__name">SonicWave 641</h3>
+                        <p class="ap-card__wifi">Wi-Fi 6 (802.11ax) &middot; 4x4 MU-MIMO</p>
+                        <ul class="ap-card__specs">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                8 internal antennas
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                1x 2.5GbE Ethernet uplink
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Dedicated security radio
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Max clients: 256 (150 per radio)
+                            </li>
+                        </ul>
+                        <div class="ap-card__best-for"><strong>Best for:</strong> Medium offices, education, healthcare</div>
+                        <a href="#" class="ap-card__cta">Contact Sales &rarr;</a>
+                    </div>
+
+                    <!-- SonicWave 681 -->
+                    <div class="ap-card">
+                        <span class="ap-card__badge">High-Density</span>
+                        <div class="ap-card__img">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt46b40ff9a0721773/68305795b065e97d401edd68/SonicWave_681.png" alt="SonicWave 681 Indoor Access Point" loading="lazy">
+                        </div>
+                        <h3 class="ap-card__name">SonicWave 681</h3>
+                        <p class="ap-card__wifi">Wi-Fi 6 (802.11ax) &middot; 8x8 MU-MIMO</p>
+                        <ul class="ap-card__specs">
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                12 internal antennas
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                1x 5GbE Ethernet uplink
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Dedicated security radio
+                            </li>
+                            <li>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#ff6e42" stroke-width="1.5"/><path d="M4.5 7l2 2 3.5-3.5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                Max clients: 256 (150 per radio)
+                            </li>
+                        </ul>
+                        <div class="ap-card__best-for"><strong>Best for:</strong> High-density venues, large enterprise</div>
+                        <a href="#" class="ap-card__cta">Contact Sales &rarr;</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="ap-features" aria-label="Key features of SonicWave 600 Series">
+            <div class="container">
+                <h2 class="section-title section-title--white">Built for Performance, Security, and Simplicity</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.75);">Every SonicWave access point is engineered around three core pillars.</p>
+                <div class="ap-features__grid">
+
+                    <!-- Performance -->
+                    <div class="ap-feature-card">
+                        <div class="ap-feature-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                                <path d="M13 3v4M13 19v4M3 13h4M19 13h4M5.93 5.93l2.83 2.83M17.24 17.24l2.83 2.83M5.93 20.07l2.83-2.83M17.24 8.76l2.83-2.83" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="13" cy="13" r="4" stroke="#ff6e42" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="ap-feature-card__title">Performance</h3>
+                        <p class="ap-feature-card__text">802.11ax with OFDMA and MU-MIMO delivers maximum throughput and efficiency. Up to 8x8 spatial streams and 5GbE uplink eliminate bottlenecks even in the most demanding environments.</p>
+                    </div>
+
+                    <!-- Security -->
+                    <div class="ap-feature-card">
+                        <div class="ap-feature-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                                <path d="M13 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 13l3 3 5-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="ap-feature-card__title">Security</h3>
+                        <p class="ap-feature-card__text">WPA3 encryption, Capture ATP cloud sandbox, and Real-Time Deep Memory Inspection (RTDMI) work together to detect and block advanced threats at the wireless edge.</p>
+                    </div>
+
+                    <!-- Management -->
+                    <div class="ap-feature-card">
+                        <div class="ap-feature-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                                <rect x="3" y="4" width="20" height="14" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <path d="M8 22h10M13 18v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="13" cy="11" r="3" stroke="#ff6e42" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="ap-feature-card__title">Management</h3>
+                        <p class="ap-feature-card__text">Wireless Network Manager cloud dashboard, WiFi Planner tool, and Zero-Touch Deployment simplify provisioning, monitoring, and management across every site.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="ap-comparison" aria-label="SonicWave 600 Series model comparison">
+            <div class="container">
+                <h2 class="section-title">Compare Models</h2>
+                <p class="section-subtitle">Side-by-side specifications to find the right access point for your environment.</p>
+                <div class="ap-table-wrapper">
+                    <table class="ap-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Specification</th>
+                                <th scope="col">SonicWave 621</th>
+                                <th scope="col">SonicWave 641</th>
+                                <th scope="col">SonicWave 681</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wi-Fi Standard</td>
+                                <td>802.11ax (Wi-Fi 6)</td>
+                                <td>802.11ax (Wi-Fi 6)</td>
+                                <td>802.11ax (Wi-Fi 6)</td>
+                            </tr>
+                            <tr>
+                                <td>MU-MIMO</td>
+                                <td>2x2</td>
+                                <td>4x4</td>
+                                <td>8x8</td>
+                            </tr>
+                            <tr>
+                                <td>Antennas</td>
+                                <td>4 internal</td>
+                                <td>8 internal</td>
+                                <td>12 internal</td>
+                            </tr>
+                            <tr>
+                                <td>Ethernet Uplink</td>
+                                <td>1x 2.5GbE</td>
+                                <td>1x 2.5GbE</td>
+                                <td>1x 5GbE</td>
+                            </tr>
+                            <tr>
+                                <td>Max Clients</td>
+                                <td>256 (150/radio)</td>
+                                <td>256 (150/radio)</td>
+                                <td>256 (150/radio)</td>
+                            </tr>
+                            <tr>
+                                <td>Security Radio</td>
+                                <td>Dedicated</td>
+                                <td>Dedicated</td>
+                                <td>Dedicated</td>
+                            </tr>
+                            <tr>
+                                <td>Best For</td>
+                                <td>Small offices, retail</td>
+                                <td>Medium offices, education, healthcare</td>
+                                <td>High-density venues, large enterprise</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Highlights -->
+        <section class="ap-tech" aria-label="Technology highlights">
+            <div class="container">
+                <h2 class="section-title">Technology Highlights</h2>
+                <p class="section-subtitle">Enterprise-grade wireless technologies that keep your network fast, secure, and manageable.</p>
+                <div class="ap-tech__grid">
+
+                    <!-- Wi-Fi 6 -->
+                    <div class="ap-tech-card">
+                        <div class="ap-tech-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 20h.01M8.53 16.11a6 6 0 016.95 0M5.06 12.64a10 10 0 0113.88 0M1.59 9.17a14 14 0 0120.82 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="ap-tech-card__title">Wi-Fi 6 (802.11ax)</h3>
+                        <p class="ap-tech-card__text">OFDMA, BSS Coloring, and Target Wake Time deliver higher efficiency, lower latency, and better battery life for connected devices.</p>
+                    </div>
+
+                    <!-- WPA3 -->
+                    <div class="ap-tech-card">
+                        <div class="ap-tech-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="5" y="11" width="14" height="10" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <path d="M8 11V7a4 4 0 118 0v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="16" r="1.5" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="ap-tech-card__title">WPA3 Security</h3>
+                        <p class="ap-tech-card__text">The latest encryption standard with Simultaneous Authentication of Equals (SAE) provides enhanced protection against offline dictionary attacks.</p>
+                    </div>
+
+                    <!-- Capture ATP -->
+                    <div class="ap-tech-card">
+                        <div class="ap-tech-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8v4M12 16h.01" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="ap-tech-card__title">Capture ATP</h3>
+                        <p class="ap-tech-card__text">Cloud-based multi-engine sandbox analyzes suspicious files and detects advanced threats, including zero-day exploits and ransomware.</p>
+                    </div>
+
+                    <!-- Zero-Touch Deployment -->
+                    <div class="ap-tech-card">
+                        <div class="ap-tech-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 4L12 14.01l-3-3" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="ap-tech-card__title">Zero-Touch Deployment</h3>
+                        <p class="ap-tech-card__text">Automatic provisioning and configuration through the cloud. Connect, power on, and access points self-configure with your saved policies.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section ap-stats" aria-label="SonicWave access point key specifications">
+            <div class="container">
+                <h2 class="section-title section-title--white">Key Specifications</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-item__number">802.11ax</div>
+                        <div class="stat-item__desc">Wi-Fi 6 Standard</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">8x8</div>
+                        <div class="stat-item__desc">Max MU-MIMO</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">5 GbE</div>
+                        <div class="stat-item__desc">Max Uplink Speed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">256</div>
+                        <div class="stat-item__desc">Max Connected Clients</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="ap-cta-section" aria-label="Contact sales and explore outdoor access points">
+            <div class="container">
+                <div class="ap-cta">
+                    <h2 class="ap-cta__headline">Secure Your Wireless Network</h2>
+                    <p class="ap-cta__text">Connect with a SonicWall wireless specialist to design the right access point deployment for your environment, or explore outdoor models for campus and exterior coverage.</p>
+                    <div class="ap-cta__buttons">
+                        <a href="#" class="ap-cta__btn ap-cta__btn--primary">Contact Sales &rarr;</a>
+                        <a href="outdoor-access-points.html" class="ap-cta__btn ap-cta__btn--secondary">View Outdoor APs &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

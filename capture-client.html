@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWall Capture Client - Next-gen endpoint protection powered by SentinelOne. AI-driven threat prevention, EDR, and rollback for Windows, macOS, and Linux.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicWall | Capture Client">
+    <meta property="og:description" content="Next-gen endpoint protection powered by SentinelOne. AI-driven threat prevention, EDR, and ransomware rollback.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicWall | Capture Client">
+    <meta name="twitter:description" content="Next-gen endpoint protection with AI-driven prevention, EDR, and ransomware rollback.">
+    <title>Capture Client - Endpoint Protection & EDR | SonicWall on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* ============================================
+           CAPTURE CLIENT - HERO
+           ============================================ */
+        .cc-hero {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cc-hero__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .cc-hero__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cc-hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse 500px 400px at 50% 50%, rgba(255, 110, 66, 0.06) 0%, transparent 70%),
+                linear-gradient(135deg, rgba(26, 26, 46, 0.94) 0%, rgba(31, 41, 41, 0.90) 50%, rgba(22, 33, 62, 0.92) 100%);
+        }
+
+        .cc-hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+            padding: 80px 20px;
+        }
+
+        .cc-hero__badge {
+            display: inline-block;
+            background: rgba(255, 110, 66, 0.15);
+            color: #ff6e42;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 110, 66, 0.25);
+        }
+
+        .cc-hero__headline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 58px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cc-hero__headline span { color: #ff6e42; }
+
+        .cc-hero__subheadline {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.88);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 660px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cc-hero__ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           OVERVIEW - TIERS
+           ============================================ */
+        .cc-overview {
+            padding: 80px 0;
+            background: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cc-overview__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .cc-overview__content h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #020817;
+            margin-bottom: 16px;
+            letter-spacing: 0.3px;
+        }
+
+        .cc-overview__content p {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .cc-fw-integration {
+            background: #f7f8fa;
+            border-radius: 12px;
+            padding: 28px;
+            margin-top: 24px;
+            border-left: 4px solid #ff6e42;
+        }
+
+        .cc-fw-integration h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 12px;
+        }
+
+        .cc-fw-integration ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cc-fw-integration li {
+            font-size: 14px;
+            color: #4b5563;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .cc-fw-integration li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #ff6e42;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* TIERS COMPARISON */
+        .cc-tiers {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .cc-tier-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 32px;
+            position: relative;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cc-tier-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .cc-tier-card--featured {
+            border-color: #ff6e42;
+            border-width: 2px;
+            box-shadow: 0 4px 16px rgba(255, 110, 66, 0.12);
+        }
+
+        .cc-tier-card--featured:hover {
+            box-shadow: 0 8px 28px rgba(255, 110, 66, 0.2);
+        }
+
+        .cc-tier-card__badge {
+            position: absolute;
+            top: -11px;
+            left: 24px;
+            background: #ff6e42;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 3px 14px;
+            border-radius: 12px;
+        }
+
+        .cc-tier-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #020817;
+            margin-bottom: 8px;
+        }
+
+        .cc-tier-card__desc {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .cc-tier-card__features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cc-tier-card__features li {
+            font-size: 14px;
+            color: #2b333f;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.4;
+        }
+
+        .cc-tier-card__check {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            background: rgba(255, 110, 66, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cc-tier-card__price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ff6e42;
+            margin-top: 16px;
+        }
+
+        /* ============================================
+           FEATURES SECTION
+           ============================================ */
+        .cc-features {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cc-features__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .cc-features__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cc-features__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(31, 41, 41, 0.95) 0%, rgba(26, 35, 50, 0.92) 100%);
+        }
+
+        .cc-features .container { position: relative; z-index: 2; }
+
+        .cc-features__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cc-feature-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 32px;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @supports (backdrop-filter: blur(8px)) {
+            .cc-feature-card {
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+            }
+        }
+
+        .cc-feature-card:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .cc-feature-card__icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 110, 66, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .cc-feature-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .cc-feature-card__text {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           STATS SECTION
+           ============================================ */
+        .cc-stats {
+            padding: 80px 0;
+            background: #f7f8fa;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cc-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .cc-stat {
+            text-align: center;
+            padding: 32px 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .cc-stat__value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .cc-stat__label {
+            font-size: 14px;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cc-cta {
+            position: relative;
+            padding: 100px 0;
+            text-align: center;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cc-cta__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .cc-cta__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cc-cta__background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.68);
+            z-index: 1;
+        }
+
+        .cc-cta__content {
+            position: relative;
+            z-index: 2;
+            max-width: 620px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cc-cta__headline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .cc-cta__subtext {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .cc-cta__buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .cc-hero__headline { font-size: 46px; }
+            .cc-overview__grid { grid-template-columns: 1fr; gap: 40px; }
+            .cc-stats__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .cc-hero { min-height: 380px; }
+            .cc-hero__headline { font-size: 36px; }
+            .cc-hero__subheadline { font-size: 16px; }
+            .cc-features__grid { grid-template-columns: 1fr; }
+            .cc-stats__grid { grid-template-columns: 1fr; }
+            .cc-cta__headline { font-size: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            .cc-hero__headline { font-size: 28px; }
+            .cc-hero__content { padding: 60px 16px; }
+            .cc-cta__buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab brand-nav__tab--active" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="#">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Security</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">SonicWall</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Capture Client</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. Hero Section -->
+        <section class="cc-hero" aria-label="Capture Client hero">
+            <div class="cc-hero__background">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <div class="cc-hero__overlay"></div>
+            </div>
+            <div class="cc-hero__content">
+                <span class="cc-hero__badge">Endpoint Protection</span>
+                <h1 class="cc-hero__headline">CAPTURE <span>CLIENT</span></h1>
+                <p class="cc-hero__subheadline">Next-gen endpoint protection powered by SentinelOne. AI-driven threat prevention, EDR, and rollback for Windows, macOS, and Linux.</p>
+                <div class="cc-hero__ctas">
+                    <a href="#features" class="btn btn--primary btn--large">Explore Capabilities &rarr;</a>
+                    <a href="#cta" class="btn btn--secondary btn--large">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Overview & Tiers Section -->
+        <section class="cc-overview" aria-label="Capture Client overview">
+            <div class="container">
+                <div class="cc-overview__grid">
+                    <div class="cc-overview__content">
+                        <h2>Endpoint Security That Integrates With Your Firewall</h2>
+                        <p>Capture Client delivers next-generation endpoint protection using SentinelOne's autonomous AI engine. It prevents, detects, and responds to threats across Windows, macOS, and Linux &mdash; all managed from a single cloud console.</p>
+                        <p>Unlike standalone endpoint products, Capture Client integrates directly with SonicWall firewalls to enforce VPN connectivity, verify endpoint health before granting network access, and share threat intelligence across the security stack.</p>
+
+                        <div class="cc-fw-integration">
+                            <h3>Firewall Integration</h3>
+                            <ul>
+                                <li>Enforce always-on VPN connectivity through the firewall</li>
+                                <li>Verify endpoint health status before network access</li>
+                                <li>Share threat intelligence between endpoint and firewall</li>
+                                <li>Centralized policy management across both platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cc-tiers">
+                        <div class="cc-tier-card">
+                            <h3 class="cc-tier-card__name">Capture Client Basic</h3>
+                            <p class="cc-tier-card__desc">Prevention-focused endpoint protection for organizations that need core threat blocking.</p>
+                            <ul class="cc-tier-card__features">
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>AI-powered malware prevention</li>
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Web content filtering</li>
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Device control (USB management)</li>
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>SonicWall firewall enforcement</li>
+                            </ul>
+                            <div class="cc-tier-card__price">Contact Sales</div>
+                        </div>
+
+                        <div class="cc-tier-card cc-tier-card--featured">
+                            <span class="cc-tier-card__badge">Recommended</span>
+                            <h3 class="cc-tier-card__name">Capture Client Advanced</h3>
+                            <p class="cc-tier-card__desc">Full EDR with ransomware rollback for complete endpoint visibility and response.</p>
+                            <ul class="cc-tier-card__features">
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Everything in Basic</li>
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full Endpoint Detection &amp; Response (EDR)</li>
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ransomware rollback &amp; recovery</li>
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Attack visualization &amp; forensics</li>
+                                <li><span class="cc-tier-card__check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Remote shell &amp; quarantine</li>
+                            </ul>
+                            <div class="cc-tier-card__price">Contact Sales</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Features Section -->
+        <section id="features" class="cc-features" aria-label="Capture Client key features">
+            <div class="cc-features__background" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="lazy">
+                <div class="cc-features__overlay"></div>
+            </div>
+            <div class="container">
+                <h2 class="section-title section-title--white" style="text-align:center;">Core Endpoint Capabilities</h2>
+                <p style="text-align:center;color:rgba(255,255,255,0.82);font-size:17px;font-family:'Inter',sans-serif;max-width:600px;margin:0 auto;font-weight:300;line-height:1.6;">AI-powered endpoint protection that stops threats before they execute</p>
+
+                <div class="cc-features__grid">
+                    <div class="cc-feature-card">
+                        <div class="cc-feature-card__icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M12 6v6l3 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/><path d="M8 2h8" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="cc-feature-card__title">AI-Powered Prevention</h3>
+                        <p class="cc-feature-card__text">Static and behavioral AI models identify and block malware, fileless attacks, and exploits in real time &mdash; without relying on signature databases.</p>
+                    </div>
+
+                    <div class="cc-feature-card">
+                        <div class="cc-feature-card__icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" stroke="#ff6e42" stroke-width="1.5" fill="none"/></svg>
+                        </div>
+                        <h3 class="cc-feature-card__title">Endpoint Detection &amp; Response</h3>
+                        <p class="cc-feature-card__text">Full EDR with attack storyline visualization, threat hunting, remote shell access, and deep forensic investigation capabilities.</p>
+                    </div>
+
+                    <div class="cc-feature-card">
+                        <div class="cc-feature-card__icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-9 4 18 3-9h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="cc-feature-card__title">Ransomware Rollback</h3>
+                        <p class="cc-feature-card__text">Automatically roll back endpoints to pre-attack state after ransomware incidents. Recover encrypted files without paying ransom or restoring from backup.</p>
+                    </div>
+
+                    <div class="cc-feature-card">
+                        <div class="cc-feature-card__icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="18" rx="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M10 17h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="cc-feature-card__title">Device Control</h3>
+                        <p class="cc-feature-card__text">Manage USB and peripheral device access across endpoints. Block unauthorized storage devices, prevent data theft, and enforce device policies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Stats Section -->
+        <section class="cc-stats" aria-label="Capture Client statistics">
+            <div class="container">
+                <h2 class="section-title" style="text-align:center;">Capture Client By The Numbers</h2>
+                <p class="section-subtitle" style="text-align:center;">Next-gen endpoint protection metrics</p>
+
+                <div class="cc-stats__grid">
+                    <div class="cc-stat">
+                        <div class="cc-stat__value">AI-Powered</div>
+                        <div class="cc-stat__label">Prevention</div>
+                    </div>
+                    <div class="cc-stat">
+                        <div class="cc-stat__value">Rollback</div>
+                        <div class="cc-stat__label">Ransomware Recovery</div>
+                    </div>
+                    <div class="cc-stat">
+                        <div class="cc-stat__value">Multi-OS</div>
+                        <div class="cc-stat__label">Coverage</div>
+                    </div>
+                    <div class="cc-stat">
+                        <div class="cc-stat__value">EDR</div>
+                        <div class="cc-stat__label">Built-In</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CTA Section -->
+        <section id="cta" class="cc-cta" aria-label="Contact sales for Capture Client">
+            <div class="cc-cta__background" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
+            </div>
+            <div class="cc-cta__content">
+                <h2 class="cc-cta__headline">Protect Every Endpoint in Your Organization</h2>
+                <p class="cc-cta__subtext">Deploy AI-powered endpoint protection with firewall integration and ransomware rollback.</p>
+                <div class="cc-cta__buttons">
+                    <button class="btn btn--primary btn--large">Contact Sales &rarr;</button>
+                    <a href="more.html" class="btn btn--secondary btn--large">Back to Managed XDR</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

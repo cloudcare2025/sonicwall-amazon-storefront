@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWave 432o Outdoor Access Point - Enterprise-grade outdoor wireless with IP67-rated weatherproof durability and 802.11ac Wave 2 performance.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicWave 432o Outdoor Access Point | SonicWall Official Store on Amazon">
+    <meta property="og:description" content="IP67-rated outdoor wireless access point with 802.11ac Wave 2, 4x4 MU-MIMO, and integrated security scanning.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.contentstack.io/v3/assets/blt281ecbfc2563bf9b/blt4d795ca303a99bd0/682f55227252414e1e8d2119/SonicWave-432o-Straight.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicWave 432o Outdoor Access Point | SonicWall Official Store on Amazon">
+    <meta name="twitter:description" content="IP67 weatherproof outdoor access point with 802.11ac Wave 2 and integrated security.">
+    <title>Outdoor Access Points | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* ============================================
+           OUTDOOR ACCESS POINTS PAGE - SPECIFIC STYLES
+           ============================================ */
+
+        /* Hero Section */
+        .oap-hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .oap-hero__bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(160deg, #0d1117 0%, #1a1a2e 40%, #1f2929 100%);
+            z-index: 0;
+        }
+        .oap-hero__grid {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,110,66,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,110,66,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 1;
+        }
+        .oap-hero__glow {
+            position: absolute;
+            top: -20%; right: -10%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(255,110,66,0.08) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .oap-hero__container {
+            position: relative;
+            z-index: 2;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .oap-hero__content {
+            max-width: 560px;
+        }
+        .oap-hero__label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ff6e42;
+            margin-bottom: 16px;
+        }
+        .oap-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.08;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .oap-hero__sub {
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        .oap-hero__badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+        .oap-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 6px;
+        }
+        .oap-hero__badge svg {
+            flex-shrink: 0;
+        }
+        .oap-hero__ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .oap-hero__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .oap-hero__image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(0,0,0,0.4));
+        }
+
+        /* Shared Button Styles */
+        .oap-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1), background 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .oap-btn--primary {
+            background: #ff6e42;
+            color: #fff;
+        }
+        .oap-btn--primary:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(255,110,66,0.35);
+        }
+        .oap-btn--ghost {
+            background: transparent;
+            color: rgba(255,255,255,0.9);
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+        .oap-btn--ghost:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-2px);
+        }
+        .oap-btn--dark {
+            background: transparent;
+            color: #1f2929;
+            border: 1px solid #d1d5db;
+        }
+        .oap-btn--dark:hover {
+            background: #f3f4f6;
+            border-color: #9ca3af;
+            transform: translateY(-2px);
+        }
+
+        /* Key Specifications */
+        .oap-specs {
+            padding: 80px 0;
+            background: #f7f8fa;
+            font-family: 'Inter', sans-serif;
+        }
+        .oap-specs__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .oap-spec-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 36px 32px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .oap-spec-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .oap-spec-card__icon {
+            width: 56px; height: 56px;
+            margin: 0 auto 20px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255,110,66,0.08);
+            border-radius: 50%;
+        }
+        .oap-spec-card__value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2929;
+            margin-bottom: 6px;
+        }
+        .oap-spec-card__label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .oap-spec-card__desc {
+            font-size: 13px;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+
+        /* Use Cases */
+        .oap-usecases {
+            padding: 80px 0;
+            background: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+        .oap-usecases__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+        .oap-usecase {
+            background: #f7f8fa;
+            border-radius: 12px;
+            padding: 40px 32px;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        .oap-usecase:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .oap-usecase__icon {
+            width: 60px; height: 60px;
+            margin-bottom: 24px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255,110,66,0.08);
+            border-radius: 12px;
+        }
+        .oap-usecase__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 12px;
+        }
+        .oap-usecase__desc {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Features Section (dark) */
+        .oap-features {
+            padding: 80px 0;
+            background: linear-gradient(160deg, #0d1117 0%, #1a1a2e 40%, #1f2929 100%);
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .oap-features__grid-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,110,66,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,110,66,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+        .oap-features__inner {
+            position: relative;
+            z-index: 1;
+        }
+        .oap-features__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .oap-feature {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 36px 32px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: background 0.25s ease, border-color 0.25s ease;
+        }
+        .oap-feature:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(255,110,66,0.2);
+        }
+        .oap-feature__icon {
+            width: 48px; height: 48px;
+            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255,110,66,0.12);
+            border-radius: 10px;
+        }
+        .oap-feature__title {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .oap-feature__desc {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .oap-stats {
+            padding: 60px 0;
+            background: #ff6e42;
+            font-family: 'Inter', sans-serif;
+        }
+        .oap-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .oap-stat {
+            text-align: center;
+            padding: 24px 16px;
+        }
+        .oap-stat__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .oap-stat__label {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* CTA Section */
+        .oap-cta {
+            padding: 100px 0;
+            background: #fff;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+        .oap-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #1f2929;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .oap-cta__text {
+            font-size: 16px;
+            font-weight: 300;
+            color: #6b7280;
+            line-height: 1.6;
+            max-width: 560px;
+            margin: 0 auto 40px;
+        }
+        .oap-cta__buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Section Titles */
+        .oap-section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #1f2929;
+            text-transform: uppercase;
+            letter-spacing: -0.3px;
+            text-align: center;
+        }
+        .oap-section-title--white {
+            color: #fff;
+        }
+        .oap-section-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            color: #6b7280;
+            text-align: center;
+            max-width: 600px;
+            margin: 12px auto 0;
+            line-height: 1.6;
+        }
+        .oap-section-sub--white {
+            color: rgba(255,255,255,0.65);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .oap-hero__container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 60px 24px;
+            }
+            .oap-hero__content {
+                max-width: 100%;
+            }
+            .oap-hero__badges {
+                justify-content: center;
+            }
+            .oap-hero__ctas {
+                justify-content: center;
+            }
+            .oap-hero__image {
+                order: -1;
+            }
+            .oap-hero__image img {
+                max-height: 300px;
+            }
+            .oap-specs__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .oap-features__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .oap-hero__title {
+                font-size: 36px;
+            }
+            .oap-hero {
+                min-height: auto;
+            }
+            .oap-specs__grid,
+            .oap-usecases__grid {
+                grid-template-columns: 1fr;
+            }
+            .oap-stats__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .oap-section-title {
+                font-size: 28px;
+            }
+            .oap-stat__number {
+                font-size: 36px;
+            }
+            .oap-cta__title {
+                font-size: 30px;
+            }
+        }
+        @media (max-width: 480px) {
+            .oap-hero__container {
+                padding: 40px 16px;
+            }
+            .oap-stats__grid {
+                grid-template-columns: 1fr;
+            }
+            .oap-hero__ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab brand-nav__tab--active" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking</a></li>
+                    <li class="breadcrumb__item"><a href="networking.html">SonicWall Networking</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Outdoor Access Points</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. Hero Section - Large Product Showcase -->
+        <section class="oap-hero" aria-label="SonicWave 432o outdoor access point hero">
+            <div class="oap-hero__bg"></div>
+            <div class="oap-hero__grid"></div>
+            <div class="oap-hero__glow"></div>
+            <div class="oap-hero__container">
+                <div class="oap-hero__content">
+                    <span class="oap-hero__label">Networking & Access</span>
+                    <h1 class="oap-hero__title">SonicWave 432o Outdoor Access Point</h1>
+                    <p class="oap-hero__sub">Enterprise-grade outdoor wireless with IP67-rated weatherproof durability and 802.11ac Wave 2 performance.</p>
+                    <div class="oap-hero__badges">
+                        <span class="oap-hero__badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            IP67 Rated
+                        </span>
+                        <span class="oap-hero__badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            802.11ac Wave 2
+                        </span>
+                        <span class="oap-hero__badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9h6v6H9z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            4x4 MU-MIMO
+                        </span>
+                        <span class="oap-hero__badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            124 Max Clients
+                        </span>
+                    </div>
+                    <div class="oap-hero__ctas">
+                        <a href="#" class="oap-btn oap-btn--primary">Contact Sales</a>
+                        <a href="#" class="oap-btn oap-btn--ghost">Request a Quote</a>
+                    </div>
+                </div>
+                <div class="oap-hero__image">
+                    <img src="https://images.contentstack.io/v3/assets/blt281ecbfc2563bf9b/blt4d795ca303a99bd0/682f55227252414e1e8d2119/SonicWave-432o-Straight.png" alt="SonicWave 432o Outdoor Access Point - IP67 weatherproof enterprise wireless" width="480" height="480" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Key Specifications -->
+        <section class="oap-specs" aria-label="Key specifications">
+            <div class="container">
+                <h2 class="oap-section-title">Key Specifications</h2>
+                <p class="oap-section-sub">Built for the elements. Engineered for enterprise performance.</p>
+                <div class="oap-specs__grid">
+                    <div class="oap-spec-card">
+                        <div class="oap-spec-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="oap-spec-card__value">802.11ac</div>
+                        <div class="oap-spec-card__label">Wave 2 Standard</div>
+                        <div class="oap-spec-card__desc">High-speed dual-band wireless with advanced Wave 2 capabilities</div>
+                    </div>
+                    <div class="oap-spec-card">
+                        <div class="oap-spec-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9h6v6H9z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="oap-spec-card__value">4x4</div>
+                        <div class="oap-spec-card__label">MU-MIMO</div>
+                        <div class="oap-spec-card__desc">Multi-user simultaneous data streaming for high-density environments</div>
+                    </div>
+                    <div class="oap-spec-card">
+                        <div class="oap-spec-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2 20h20M6 16v4M10 12v8M14 8v12M18 4v16" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="oap-spec-card__value">8</div>
+                        <div class="oap-spec-card__label">N-Type External Dipole Antennas</div>
+                        <div class="oap-spec-card__desc">High-gain directional antennas for maximum outdoor coverage</div>
+                    </div>
+                    <div class="oap-spec-card">
+                        <div class="oap-spec-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="oap-spec-card__value">IP67</div>
+                        <div class="oap-spec-card__label">Protection Rating</div>
+                        <div class="oap-spec-card__desc">Dust-tight and waterproof enclosure for extreme outdoor conditions</div>
+                    </div>
+                    <div class="oap-spec-card">
+                        <div class="oap-spec-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="oap-spec-card__value">124</div>
+                        <div class="oap-spec-card__label">Max Clients (48/Radio)</div>
+                        <div class="oap-spec-card__desc">Support up to 124 concurrent wireless clients across radios</div>
+                    </div>
+                    <div class="oap-spec-card">
+                        <div class="oap-spec-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ff6e42" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="oap-spec-card__value">Dual-Band</div>
+                        <div class="oap-spec-card__label">2.4 GHz + 5 GHz Simultaneous</div>
+                        <div class="oap-spec-card__desc">Concurrent dual-band operation for maximum flexibility and throughput</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Use Cases -->
+        <section class="oap-usecases" aria-label="Deployment use cases">
+            <div class="container">
+                <h2 class="oap-section-title">Where It Deploys</h2>
+                <p class="oap-section-sub">Purpose-built for environments where indoor access points cannot survive.</p>
+                <div class="oap-usecases__grid">
+                    <div class="oap-usecase">
+                        <div class="oap-usecase__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="oap-usecase__title">Campus Grounds</h3>
+                        <p class="oap-usecase__desc">Extend secure Wi-Fi coverage to outdoor campus areas, courtyards, and walkways. Maintain the same security policies and management from indoors to outdoors with zero coverage gaps.</p>
+                    </div>
+                    <div class="oap-usecase">
+                        <div class="oap-usecase__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2 20h20M4 20V10l4-6h8l4 6v10M10 20v-4h4v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="oap-usecase__title">Warehouses & Yards</h3>
+                        <p class="oap-usecase__desc">Weather-resistant connectivity for industrial staging areas, loading docks, and shipping yards. IP67 protection means reliable operation in rain, dust, and extreme temperatures.</p>
+                    </div>
+                    <div class="oap-usecase">
+                        <div class="oap-usecase__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 8h1a4 4 0 010 8h-1M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8zM6 1v3M10 1v3M14 1v3" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="oap-usecase__title">Hospitality</h3>
+                        <p class="oap-usecase__desc">Deliver guest Wi-Fi to pool areas, patios, rooftop terraces, and outdoor dining spaces. Band steering and airtime fairness keep every guest connected.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Features Section (dark background) -->
+        <section class="oap-features" aria-label="Key features">
+            <div class="oap-features__grid-bg"></div>
+            <div class="container oap-features__inner">
+                <h2 class="oap-section-title oap-section-title--white">Built for the Real World</h2>
+                <p class="oap-section-sub oap-section-sub--white">Enterprise security and manageability that follows your network beyond the walls.</p>
+                <div class="oap-features__grid">
+                    <div class="oap-feature">
+                        <div class="oap-feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="oap-feature__title">IP67 Weatherproof</h3>
+                            <p class="oap-feature__desc">Dust-tight, waterproof enclosure rated for operation in extreme temperatures ranging from -40 to 65 degrees Celsius. No shelter required.</p>
+                        </div>
+                    </div>
+                    <div class="oap-feature">
+                        <div class="oap-feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0-6h18m-18 0v6m18-6v6" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="oap-feature__title">Capture ATP Integration</h3>
+                            <p class="oap-feature__desc">Cloud-based sandbox engine scans wireless traffic for advanced threats, ransomware, and zero-day exploits directly at the access point layer.</p>
+                        </div>
+                    </div>
+                    <div class="oap-feature">
+                        <div class="oap-feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#ff6e42" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="oap-feature__title">Wireless Network Manager</h3>
+                            <p class="oap-feature__desc">Single-pane-of-glass cloud management across all indoor and outdoor access points. Deploy, monitor, and troubleshoot from anywhere.</p>
+                        </div>
+                    </div>
+                    <div class="oap-feature">
+                        <div class="oap-feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="oap-feature__title">Beamforming & Band Steering</h3>
+                            <p class="oap-feature__desc">Intelligent signal focusing directs energy toward connected clients while band steering automatically moves dual-band devices to the optimal frequency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Stats Section -->
+        <section class="oap-stats" aria-label="Product statistics">
+            <div class="container">
+                <div class="oap-stats__grid">
+                    <div class="oap-stat">
+                        <div class="oap-stat__number">IP67</div>
+                        <div class="oap-stat__label">Weatherproof Rating</div>
+                    </div>
+                    <div class="oap-stat">
+                        <div class="oap-stat__number">4x4</div>
+                        <div class="oap-stat__label">MU-MIMO Streams</div>
+                    </div>
+                    <div class="oap-stat">
+                        <div class="oap-stat__number">124</div>
+                        <div class="oap-stat__label">Max Clients</div>
+                    </div>
+                    <div class="oap-stat">
+                        <div class="oap-stat__number">Wave 2</div>
+                        <div class="oap-stat__label">802.11ac Standard</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CTA Section -->
+        <section class="oap-cta" aria-label="Call to action">
+            <div class="container">
+                <h2 class="oap-cta__title">Deploy Outdoor Wireless Security</h2>
+                <p class="oap-cta__text">Extend enterprise-grade security and connectivity beyond your walls. Talk to a SonicWall specialist about outdoor wireless deployment for your environment.</p>
+                <div class="oap-cta__buttons">
+                    <a href="#" class="oap-btn oap-btn--primary">Contact Sales</a>
+                    <a href="access-points.html" class="oap-btn oap-btn--dark">View Indoor Access Points</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

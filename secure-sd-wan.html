@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWall Secure SD-WAN - Integrated SD-WAN built into every Gen 7 firewall. Replace MPLS, reduce costs, and simplify branch connectivity with no additional hardware.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="Secure SD-WAN | SonicWall Official Store on Amazon">
+    <meta property="og:description" content="Integrated SD-WAN built into every SonicWall firewall. Reduce costs, improve performance, and simplify branch connectivity.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Secure SD-WAN | SonicWall Official Store on Amazon">
+    <meta name="twitter:description" content="Integrated SD-WAN built into every SonicWall firewall. Replace MPLS, reduce costs, simplify branch connectivity.">
+    <title>Secure SD-WAN | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* ============================================
+           SECURE SD-WAN - PAGE STYLES
+           ============================================ */
+
+        /* Hero Section */
+        .sdwan-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .sdwan-hero__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .sdwan-hero__bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sdwan-hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.94) 0%, rgba(31, 41, 41, 0.90) 50%, rgba(22, 33, 62, 0.87) 100%);
+        }
+
+        .sdwan-hero__pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L55 17.5V42.5L30 55L5 42.5V17.5L30 5z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+
+        .sdwan-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            padding: 80px 0;
+        }
+
+        .sdwan-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 110, 66, 0.15);
+            border: 1px solid rgba(255, 110, 66, 0.3);
+            color: #ff6e42;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .sdwan-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .sdwan-hero__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            max-width: 580px;
+        }
+
+        .sdwan-hero__actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .sdwan-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sdwan-hero__cta:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+
+        .sdwan-hero__cta--secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+        }
+
+        .sdwan-hero__cta--secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+        }
+
+        .sdwan-hero__shield {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            opacity: 0.08;
+        }
+
+        @media (max-width: 1024px) {
+            .sdwan-hero__title { font-size: 42px; }
+            .sdwan-hero__shield { display: none; }
+            .sdwan-hero { min-height: 440px; }
+        }
+
+        @media (max-width: 768px) {
+            .sdwan-hero__title { font-size: 34px; }
+            .sdwan-hero__subtitle { font-size: 17px; }
+            .sdwan-hero__content { padding: 60px 0; }
+            .sdwan-hero { min-height: 380px; }
+        }
+
+        @media (max-width: 480px) {
+            .sdwan-hero__title { font-size: 28px; }
+            .sdwan-hero__subtitle { font-size: 15px; }
+            .sdwan-hero__actions { flex-direction: column; }
+        }
+
+        /* ============================================
+           OVERVIEW
+           ============================================ */
+
+        .sdwan-overview {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .sdwan-overview__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .sdwan-overview__content h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #020817;
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .sdwan-overview__content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .sdwan-overview__highlight {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 110, 66, 0.06);
+            border-left: 4px solid #ff6e42;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 24px;
+        }
+
+        .sdwan-overview__highlight-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #020817;
+            line-height: 1.5;
+        }
+
+        .sdwan-overview__visual {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 16px;
+            padding: 48px 32px;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .sdwan-overview__diagram-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sdwan-overview__diagram-nodes {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sdwan-overview__node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sdwan-overview__node-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.12);
+            border: 1px solid rgba(255, 110, 66, 0.3);
+        }
+
+        .sdwan-overview__node-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            max-width: 80px;
+        }
+
+        .sdwan-overview__connector {
+            width: 32px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 110, 66, 0.3), #ff6e42, rgba(255, 110, 66, 0.3));
+            position: relative;
+        }
+
+        .sdwan-overview__connector::after {
+            content: '';
+            position: absolute;
+            right: -3px;
+            top: -3px;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #ff6e42;
+            border-top: 2px solid #ff6e42;
+            transform: rotate(45deg);
+        }
+
+        @media (max-width: 1024px) {
+            .sdwan-overview__inner { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .sdwan-overview__content h2 { font-size: 28px; }
+        }
+
+        /* ============================================
+           KEY CAPABILITIES - 4 CARDS
+           ============================================ */
+
+        .capabilities-section {
+            padding: 80px 0;
+            background: #f7f8fa;
+        }
+
+        .capabilities-section__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .capability-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .capability-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .capability-card__icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 12px;
+        }
+
+        .capability-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+        }
+
+        .capability-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .capabilities-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           COMPARISON GRID: SD-WAN vs TRADITIONAL
+           ============================================ */
+
+        .comparison-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .comparison-section__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .comparison-table-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .comparison-table thead th {
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #020817;
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+            letter-spacing: 0.3px;
+        }
+
+        .comparison-table thead th:first-child {
+            width: 30%;
+        }
+
+        .comparison-table thead th.comparison-table__header--old {
+            background: #f9fafb;
+            color: #6b7280;
+        }
+
+        .comparison-table thead th.comparison-table__header--new {
+            background: rgba(255, 110, 66, 0.06);
+            color: #ff6e42;
+        }
+
+        .comparison-table tbody td {
+            font-size: 14px;
+            color: #2b333f;
+            padding: 16px 24px;
+            border-bottom: 1px solid #f3f4f6;
+            line-height: 1.5;
+        }
+
+        .comparison-table tbody td:first-child {
+            font-weight: 600;
+            color: #020817;
+        }
+
+        .comparison-table tbody td.comparison-table__cell--old {
+            background: #f9fafb;
+            color: #6b7280;
+        }
+
+        .comparison-table tbody td.comparison-table__cell--new {
+            background: rgba(255, 110, 66, 0.04);
+            color: #020817;
+            font-weight: 500;
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        @media (max-width: 640px) {
+            .comparison-table thead th,
+            .comparison-table tbody td { padding: 12px 16px; font-size: 13px; }
+        }
+
+        /* ============================================
+           ARCHITECTURE DIAGRAM SECTION
+           ============================================ */
+
+        .architecture-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .architecture-section__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .architecture-section__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: 0.3px;
+        }
+
+        .architecture-section__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .architecture-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .arch-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            min-width: 120px;
+        }
+
+        .arch-node__box {
+            width: 100px;
+            height: 100px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .arch-node__box:hover {
+            transform: scale(1.05);
+        }
+
+        .arch-node__box--branch {
+            background: rgba(255, 110, 66, 0.12);
+            border: 1px solid rgba(255, 110, 66, 0.4);
+        }
+
+        .arch-node__box--firewall {
+            background: rgba(255, 110, 66, 0.2);
+            border: 2px solid #ff6e42;
+        }
+
+        .arch-node__box--cloud {
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.4);
+        }
+
+        .arch-node__box--datacenter {
+            background: rgba(74, 222, 128, 0.12);
+            border: 1px solid rgba(74, 222, 128, 0.4);
+        }
+
+        .arch-node__box--saas {
+            background: rgba(251, 191, 36, 0.12);
+            border: 1px solid rgba(251, 191, 36, 0.4);
+        }
+
+        .arch-node__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            text-align: center;
+        }
+
+        .arch-node__sublabel {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+
+        .arch-connector {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .arch-connector__line {
+            width: 48px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 110, 66, 0.2), #ff6e42, rgba(255, 110, 66, 0.2));
+        }
+
+        .arch-connector__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .arch-destinations {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .architecture-diagram { flex-direction: column; gap: 16px; }
+            .arch-connector__line { width: 2px; height: 32px; }
+            .arch-destinations { flex-direction: row; gap: 12px; flex-wrap: wrap; justify-content: center; }
+            .architecture-section__title { font-size: 28px; }
+        }
+
+        /* ============================================
+           USE CASES
+           ============================================ */
+
+        .use-cases-section {
+            padding: 80px 0;
+            background: #f7f8fa;
+        }
+
+        .use-cases-section__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        .use-case-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 36px 28px;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .use-case-card__icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 10px;
+        }
+
+        .use-case-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 12px;
+            letter-spacing: 0.2px;
+        }
+
+        .use-case-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .use-cases-grid { grid-template-columns: 1fr; max-width: 480px; }
+        }
+
+        /* ============================================
+           STATS BAR
+           ============================================ */
+
+        .stats-section {
+            padding: 64px 0;
+            background: #ffffff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 24px 0;
+        }
+
+        .stat-item__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-item__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .stat-item__number { font-size: 40px; }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           CONTACT CTA
+           ============================================ */
+
+        .sdwan-contact-cta {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .sdwan-contact-cta__content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sdwan-contact-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .sdwan-contact-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 540px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .sdwan-contact-cta__actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .sdwan-contact-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sdwan-contact-cta__btn--primary {
+            background: #ff6e42;
+            color: #ffffff;
+        }
+
+        .sdwan-contact-cta__btn--primary:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+
+        .sdwan-contact-cta__btn--secondary {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+        }
+
+        .sdwan-contact-cta__btn--secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation" data-active-category="network-security">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab brand-nav__tab--active" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">SonicWall</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Secure SD-WAN</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. HERO SECTION -->
+        <section class="sdwan-hero" aria-label="Secure SD-WAN hero">
+            <div class="sdwan-hero__background">
+                <img class="sdwan-hero__bg-image" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <div class="sdwan-hero__overlay"></div>
+                <div class="sdwan-hero__pattern" aria-hidden="true"></div>
+            </div>
+            <div class="sdwan-hero__shield" aria-hidden="true">
+                <svg width="320" height="380" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M160 10L300 70V190C300 290 240 350 160 370C80 350 20 290 20 190V70L160 10Z" stroke="#ffffff" stroke-width="2" fill="none"/>
+                    <path d="M160 50L270 100V190C270 270 220 320 160 340C100 320 50 270 50 190V100L160 50Z" stroke="#ffffff" stroke-width="1" fill="none"/>
+                    <path d="M100 200h120M160 140v120" stroke="#ff6e42" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="160" cy="200" r="12" fill="none" stroke="#ff6e42" stroke-width="3"/>
+                    <circle cx="100" cy="200" r="6" fill="#ff6e42"/>
+                    <circle cx="220" cy="200" r="6" fill="#ff6e42"/>
+                    <circle cx="160" cy="140" r="6" fill="#ff6e42"/>
+                    <circle cx="160" cy="260" r="6" fill="#ff6e42"/>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="sdwan-hero__content">
+                    <span class="sdwan-hero__badge">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L9 5h4l-3 2.5 1 4.5L7 9l-4 3 1-4.5L1 5h4z" fill="currentColor"/></svg>
+                        Built-In SD-WAN
+                    </span>
+                    <h1 class="sdwan-hero__title">Secure SD-WAN</h1>
+                    <p class="sdwan-hero__subtitle">Integrated SD-WAN built into every SonicWall firewall. Reduce costs, improve performance, and simplify branch connectivity &mdash; no additional hardware required.</p>
+                    <div class="sdwan-hero__actions">
+                        <a href="#capabilities" class="sdwan-hero__cta">
+                            Explore Capabilities
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="firewalls.html" class="sdwan-hero__cta sdwan-hero__cta--secondary">
+                            View Firewalls
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. OVERVIEW -->
+        <section class="sdwan-overview" aria-label="SD-WAN overview">
+            <div class="container">
+                <div class="sdwan-overview__inner">
+                    <div class="sdwan-overview__content">
+                        <h2>Replace MPLS with Intelligent, Secure Routing</h2>
+                        <p>SonicWall's Secure SD-WAN is built into every Gen 7 firewall. Replace expensive MPLS circuits with intelligent, application-aware routing across broadband, LTE, and multi-cloud connections &mdash; all without deploying additional hardware or software.</p>
+                        <p>Unlike bolt-on SD-WAN solutions, SonicWall delivers security and SD-WAN on a single platform. Deep packet inspection, intrusion prevention, and malware analysis run inline on every connection &mdash; without performance tradeoffs.</p>
+                        <div class="sdwan-overview__highlight">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L22 7v5c0 7.5-4.5 11.5-10 14C6.5 23.5 2 19.5 2 12V7L12 2z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M8 12l3 3 5-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span class="sdwan-overview__highlight-text">Security and SD-WAN on a single appliance. No additional licensing required on Gen 7 firewalls.</span>
+                        </div>
+                    </div>
+                    <div class="sdwan-overview__visual" aria-hidden="true">
+                        <div class="sdwan-overview__diagram-label">SD-WAN Traffic Flow</div>
+                        <div class="sdwan-overview__diagram-nodes">
+                            <div class="sdwan-overview__node">
+                                <div class="sdwan-overview__node-icon">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="6" width="20" height="14" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M4 10h20" stroke="#ff6e42" stroke-width="2"/><circle cx="8" cy="16" r="1.5" fill="#ff6e42"/></svg>
+                                </div>
+                                <span class="sdwan-overview__node-label">Branch Office</span>
+                            </div>
+                            <div class="sdwan-overview__connector"></div>
+                            <div class="sdwan-overview__node">
+                                <div class="sdwan-overview__node-icon" style="background: rgba(255, 110, 66, 0.2); border-color: #ff6e42;">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L24 7v7c0 7-4.5 11-10 13C8.5 25 4 21 4 14V7L14 3z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M10 14l3 3 5-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="sdwan-overview__node-label">SonicWall Firewall</span>
+                            </div>
+                            <div class="sdwan-overview__connector"></div>
+                            <div class="sdwan-overview__node">
+                                <div class="sdwan-overview__node-icon">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><ellipse cx="14" cy="10" rx="10" ry="5" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M4 10v8c0 2.76 4.48 5 10 5s10-2.24 10-5v-8" stroke="#ff6e42" stroke-width="2" fill="none"/></svg>
+                                </div>
+                                <span class="sdwan-overview__node-label">Cloud / Data Center</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. KEY CAPABILITIES -->
+        <section id="capabilities" class="capabilities-section" aria-label="SD-WAN key capabilities">
+            <div class="container">
+                <div class="capabilities-section__header">
+                    <h2 class="section-title">Key Capabilities</h2>
+                    <p class="section-subtitle">Enterprise SD-WAN features built into every SonicWall Gen 7 firewall</p>
+                </div>
+
+                <div class="capabilities-grid">
+                    <!-- Zero-Touch Deployment -->
+                    <div class="capability-card">
+                        <div class="capability-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M10 14l3 3 5-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="capability-card__name">Zero-Touch Deployment</h3>
+                        <p class="capability-card__desc">Ship firewalls to remote sites and provision them automatically through SonicWall's cloud management platform. No on-site IT required.</p>
+                    </div>
+
+                    <!-- Application-Aware Routing -->
+                    <div class="capability-card">
+                        <div class="capability-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 8h8v8H4V8zM16 4h8v8h-8V4zM16 16h8v8h-8v-8z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M12 12l4-4M12 16l4 4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="capability-card__name">Application-Aware Routing</h3>
+                        <p class="capability-card__desc">Identify and route application traffic by type. Prioritize business-critical apps like VoIP and video while offloading general traffic to broadband.</p>
+                    </div>
+
+                    <!-- Multi-WAN Failover -->
+                    <div class="capability-card">
+                        <div class="capability-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14h14" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><path d="M14 7v14" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="14" r="10" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M7 10h14M7 18h14" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/></svg>
+                        </div>
+                        <h3 class="capability-card__name">Multi-WAN Failover</h3>
+                        <p class="capability-card__desc">Automatic failover across broadband, LTE, and MPLS connections. Sub-second switchover ensures continuous uptime for critical operations.</p>
+                    </div>
+
+                    <!-- Centralized Management -->
+                    <div class="capability-card">
+                        <div class="capability-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="22" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/><rect x="7" y="7" width="6" height="6" rx="1" stroke="#ff6e42" stroke-width="1.5" fill="none"/><rect x="15" y="7" width="6" height="6" rx="1" stroke="#ff6e42" stroke-width="1.5" fill="none"/><rect x="7" y="15" width="6" height="6" rx="1" stroke="#ff6e42" stroke-width="1.5" fill="none"/><rect x="15" y="15" width="6" height="6" rx="1" stroke="#ff6e42" stroke-width="1.5" fill="none"/></svg>
+                        </div>
+                        <h3 class="capability-card__name">Centralized Management</h3>
+                        <p class="capability-card__desc">Manage all SD-WAN policies, monitoring, and analytics from a single pane of glass through Network Security Manager (NSM).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. COMPARISON GRID -->
+        <section class="comparison-section" aria-label="SD-WAN vs Traditional WAN comparison">
+            <div class="container">
+                <div class="comparison-section__header">
+                    <h2 class="section-title">SD-WAN vs. Traditional WAN</h2>
+                    <p class="section-subtitle">See how Secure SD-WAN compares to legacy MPLS-based connectivity</p>
+                </div>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Capability</th>
+                                <th class="comparison-table__header--old">Traditional WAN</th>
+                                <th class="comparison-table__header--new">SonicWall SD-WAN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cost</td>
+                                <td class="comparison-table__cell--old">MPLS circuits: $$$</td>
+                                <td class="comparison-table__cell--new">Broadband + LTE: $</td>
+                            </tr>
+                            <tr>
+                                <td>Deployment Time</td>
+                                <td class="comparison-table__cell--old">Weeks to months</td>
+                                <td class="comparison-table__cell--new">Minutes with zero-touch</td>
+                            </tr>
+                            <tr>
+                                <td>Security</td>
+                                <td class="comparison-table__cell--old">Bolt-on, separate appliance</td>
+                                <td class="comparison-table__cell--new">Built-in, inline inspection</td>
+                            </tr>
+                            <tr>
+                                <td>Management</td>
+                                <td class="comparison-table__cell--old">Per-device, CLI-based</td>
+                                <td class="comparison-table__cell--new">Centralized via NSM</td>
+                            </tr>
+                            <tr>
+                                <td>Failover</td>
+                                <td class="comparison-table__cell--old">Manual or slow</td>
+                                <td class="comparison-table__cell--new">Sub-second, automatic</td>
+                            </tr>
+                            <tr>
+                                <td>Application Routing</td>
+                                <td class="comparison-table__cell--old">Static path selection</td>
+                                <td class="comparison-table__cell--new">Dynamic, application-aware</td>
+                            </tr>
+                            <tr>
+                                <td>Scalability</td>
+                                <td class="comparison-table__cell--old">New circuits per site</td>
+                                <td class="comparison-table__cell--new">Any connection, any site</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ARCHITECTURE DIAGRAM -->
+        <section class="architecture-section" aria-label="SD-WAN architecture">
+            <div class="container">
+                <div class="architecture-section__header">
+                    <h2 class="architecture-section__title">Secure SD-WAN Architecture</h2>
+                    <p class="architecture-section__subtitle">Branch offices connect through SonicWall firewalls to cloud, data center, and SaaS destinations over any connection type.</p>
+                </div>
+
+                <div class="architecture-diagram">
+                    <!-- Branch -->
+                    <div class="arch-node">
+                        <div class="arch-node__box arch-node__box--branch">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 28V16l12-8 12 8v12" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M15 28v-8h10v8" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                        <span class="arch-node__label">Branch Office</span>
+                        <span class="arch-node__sublabel">Users &amp; Devices</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="arch-connector">
+                        <div class="arch-connector__line"></div>
+                        <span class="arch-connector__label">Broadband / LTE</span>
+                    </div>
+
+                    <!-- Firewall -->
+                    <div class="arch-node">
+                        <div class="arch-node__box arch-node__box--firewall">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6L32 12v8c0 8.8-5.4 13.2-12 15.6C13.4 33.2 8 28.8 8 20v-8L20 6z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M15 20l3 3 7-7" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <span class="arch-node__label">SonicWall Firewall</span>
+                        <span class="arch-node__sublabel">SD-WAN + Security</span>
+                    </div>
+
+                    <!-- Connector -->
+                    <div class="arch-connector">
+                        <div class="arch-connector__line"></div>
+                        <span class="arch-connector__label">Secure Tunnels</span>
+                    </div>
+
+                    <!-- Destinations -->
+                    <div class="arch-destinations">
+                        <div class="arch-node">
+                            <div class="arch-node__box arch-node__box--cloud">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M10 26h16a7 7 0 10-2-13.7A9 9 0 107 19.3 5 5 0 0010 26z" stroke="#60a5fa" stroke-width="2" fill="none"/></svg>
+                            </div>
+                            <span class="arch-node__label">Public Cloud</span>
+                        </div>
+                        <div class="arch-node">
+                            <div class="arch-node__box arch-node__box--datacenter">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="8" y="6" width="20" height="8" rx="2" stroke="#4ade80" stroke-width="2" fill="none"/><rect x="8" y="18" width="20" height="8" rx="2" stroke="#4ade80" stroke-width="2" fill="none"/><circle cx="13" cy="10" r="1.5" fill="#4ade80"/><circle cx="13" cy="22" r="1.5" fill="#4ade80"/><path d="M17 10h7M17 22h7" stroke="#4ade80" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                            <span class="arch-node__label">Data Center</span>
+                        </div>
+                        <div class="arch-node">
+                            <div class="arch-node__box arch-node__box--saas">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="6" y="8" width="24" height="16" rx="3" stroke="#fbbf24" stroke-width="2" fill="none"/><path d="M6 14h24" stroke="#fbbf24" stroke-width="2"/><circle cx="10" cy="11" r="1" fill="#fbbf24"/><circle cx="14" cy="11" r="1" fill="#fbbf24"/><circle cx="18" cy="11" r="1" fill="#fbbf24"/></svg>
+                            </div>
+                            <span class="arch-node__label">SaaS Apps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. USE CASES -->
+        <section class="use-cases-section" aria-label="SD-WAN use cases">
+            <div class="container">
+                <div class="use-cases-section__header">
+                    <h2 class="section-title">Use Cases</h2>
+                    <p class="section-subtitle">How organizations deploy SonicWall Secure SD-WAN to solve real connectivity challenges</p>
+                </div>
+
+                <div class="use-cases-grid">
+                    <!-- Distributed Retail -->
+                    <div class="use-case-card">
+                        <div class="use-case-card__icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-5 9 5v10H3V9z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M9 19v-6h6v6" stroke="#ff6e42" stroke-width="2"/></svg>
+                        </div>
+                        <h3 class="use-case-card__name">Distributed Retail</h3>
+                        <p class="use-case-card__desc">Replace costly MPLS at hundreds of retail locations with broadband + LTE failover. Zero-touch deployment means new stores go live in minutes, not weeks. PCI compliance built in.</p>
+                    </div>
+
+                    <!-- Multi-Branch Enterprise -->
+                    <div class="use-case-card">
+                        <div class="use-case-card__icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="8" width="8" height="12" rx="1" stroke="#ff6e42" stroke-width="2" fill="none"/><rect x="14" y="4" width="8" height="16" rx="1" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M6 12h0M6 15h0M18 8h0M18 11h0M18 14h0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="use-case-card__name">Multi-Branch Enterprise</h3>
+                        <p class="use-case-card__desc">Centralize management of 50+ branch offices from a single NSM console. Application-aware routing ensures VoIP quality while non-critical traffic uses lower-cost paths.</p>
+                    </div>
+
+                    <!-- Cloud-First Organizations -->
+                    <div class="use-case-card">
+                        <div class="use-case-card__icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 20h12a5.5 5.5 0 10-1.5-10.8A7 7 0 105 15.5 4 4 0 006 20z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M12 12v5M10 15l2 2 2-2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="use-case-card__name">Cloud-First Organizations</h3>
+                        <p class="use-case-card__desc">Direct internet breakout for SaaS traffic like Microsoft 365 and Salesforce. No more backhauling cloud traffic through the data center. Secure, fast, and cost-effective.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. STATS -->
+        <section class="stats-section" aria-label="SD-WAN statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-item__number">Zero</div>
+                        <div class="stat-item__label">Additional Hardware</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">40%</div>
+                        <div class="stat-item__label">Avg WAN Cost Reduction</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">99.99%</div>
+                        <div class="stat-item__label">Uptime with Failover</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">4G/LTE</div>
+                        <div class="stat-item__label">Backup Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT CTA -->
+        <section class="sdwan-contact-cta" aria-label="Contact sales">
+            <div class="container">
+                <div class="sdwan-contact-cta__content">
+                    <h2 class="sdwan-contact-cta__title">Simplify Your Branch Connectivity</h2>
+                    <p class="sdwan-contact-cta__text">Replace expensive MPLS with secure, intelligent SD-WAN built into every SonicWall firewall. Get started with a consultation or explore our firewall lineup.</p>
+                    <div class="sdwan-contact-cta__actions">
+                        <a href="#" class="sdwan-contact-cta__btn sdwan-contact-cta__btn--primary">
+                            Contact Sales
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="firewalls.html" class="sdwan-contact-cta__btn sdwan-contact-cta__btn--secondary">
+                            View Firewalls
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

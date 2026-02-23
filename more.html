@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SonicWall Managed Security Services, XDR, and Support - 24/7 threat monitoring, expert support, and managed detection & response for businesses of all sizes.">
+    <meta name="description" content="SonicWall Managed XDR - SonicSentry MXDR, MDR, Capture Client endpoint protection, and Capture ATP cloud sandbox for 24/7 threat detection and response.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="SonicWall">
-    <meta property="og:title" content="SonicWall | Managed Security & Support">
-    <meta property="og:description" content="24/7 threat monitoring, expert support, and managed detection & response for businesses of all sizes.">
+    <meta property="og:title" content="SonicWall | Managed XDR">
+    <meta property="og:description" content="24/7 extended detection and response across endpoints, network, cloud, and email -- powered by SonicSentry.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SonicWall | Managed Security & Support">
-    <meta name="twitter:description" content="24/7 threat monitoring, expert support, and managed detection & response for businesses of all sizes.">
-    <title>SonicWall | Managed Security & Support - Official Store on Amazon</title>
+    <meta name="twitter:title" content="SonicWall | Managed XDR">
+    <meta name="twitter:description" content="24/7 extended detection and response across endpoints, network, cloud, and email -- powered by SonicSentry.">
+    <title>SonicWall | Managed XDR - Official Store on Amazon</title>
     <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
 
     <!-- Google Fonts -->
@@ -27,20 +27,21 @@
     <!-- Page-Specific Styles -->
     <style>
         /* ============================================
-           MORE PAGE - HERO
+           MANAGED XDR - PAGE-SPECIFIC STYLES
            ============================================ */
-        .more-hero {
+
+        /* HERO */
+        .mxdr-hero {
             position: relative;
-            min-height: 420px;
+            min-height: 520px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             overflow: hidden;
-            font-family: 'Inter', sans-serif;
         }
 
-        .more-hero__background {
+        .mxdr-hero__background {
             position: absolute;
             top: 0;
             left: 0;
@@ -49,22 +50,22 @@
             z-index: 0;
         }
 
-        .more-hero__background img {
+        .mxdr-hero__background img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .more-hero__overlay {
+        .mxdr-hero__overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.92) 0%, rgba(31, 41, 41, 0.88) 50%, rgba(22, 33, 62, 0.90) 100%);
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.93) 0%, rgba(31, 41, 41, 0.90) 50%, rgba(22, 33, 62, 0.92) 100%);
         }
 
-        .more-hero__radar {
+        .mxdr-hero__radar {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -76,8 +77,8 @@
             pointer-events: none;
         }
 
-        .more-hero__radar::before,
-        .more-hero__radar::after {
+        .mxdr-hero__radar::before,
+        .mxdr-hero__radar::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -87,631 +88,343 @@
             border: 1px solid rgba(255, 110, 66, 0.04);
         }
 
-        .more-hero__radar::before {
+        .mxdr-hero__radar::before {
             width: 400px;
             height: 400px;
         }
 
-        .more-hero__radar::after {
+        .mxdr-hero__radar::after {
             width: 200px;
             height: 200px;
             border-color: rgba(255, 110, 66, 0.08);
         }
 
-        .more-hero__content {
+        .mxdr-hero__content {
             position: relative;
             z-index: 2;
-            max-width: 720px;
+            max-width: 760px;
             padding: 80px 20px;
         }
 
-        .more-hero__headline {
+        .mxdr-hero__badge {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff6e42;
+            background: rgba(255, 110, 66, 0.1);
+            border: 1px solid rgba(255, 110, 66, 0.25);
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin-bottom: 24px;
+        }
+
+        .mxdr-hero__title {
             font-family: 'Oswald', sans-serif;
-            font-size: 56px;
+            font-size: 60px;
             font-weight: 700;
             color: #ffffff;
             line-height: 1.1;
             letter-spacing: 0.5px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
-        .more-hero__subheadline {
+        .mxdr-hero__title span {
+            color: #ff6e42;
+        }
+
+        .mxdr-hero__subtitle {
             font-family: 'Inter', sans-serif;
             font-size: 18px;
             font-weight: 300;
             color: rgba(255, 255, 255, 0.88);
             line-height: 1.6;
-            margin-bottom: 32px;
+            margin-bottom: 36px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* ============================================
-           SERVICES OVERVIEW - 3 LARGE CARDS
-           ============================================ */
-        .services-overview {
+        .mxdr-hero__ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* XDR OVERVIEW */
+        .mxdr-overview {
             padding: 80px 0;
             background: #ffffff;
+        }
+
+        .mxdr-overview__intro {
+            max-width: 720px;
+            margin: 0 auto 56px;
+            text-align: center;
+        }
+
+        .mxdr-overview__text {
             font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.7;
         }
 
-        .services-overview .section-title {
-            text-align: center;
-            margin-bottom: 8px;
+        /* PRODUCT CATEGORY CARDS */
+        .mxdr-categories {
+            padding: 0 0 80px;
+            background: #ffffff;
         }
 
-        .services-overview .section-subtitle {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .services-grid {
+        .mxdr-categories-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            max-width: 1440px;
-            margin: 0 auto;
+            gap: 28px;
         }
 
-        .service-card {
+        .mxdr-category-card {
             background: #ffffff;
             border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 40px 32px;
-            text-align: center;
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .service-card__icon {
-            width: 72px;
-            height: 72px;
-            background: rgba(255, 110, 66, 0.08);
             border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mxdr-category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        }
+
+        .mxdr-category-card__image {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a2e 0%, #1f2929 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 24px;
         }
 
-        .service-card__title {
+        .mxdr-category-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .mxdr-category-card__image-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 72px;
+            height: 72px;
+            background: rgba(255, 110, 66, 0.15);
+            border: 2px solid rgba(255, 110, 66, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .mxdr-category-card__body {
+            padding: 28px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mxdr-category-card__tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #ff6e42;
+            margin-bottom: 10px;
+        }
+
+        .mxdr-category-card__title {
             font-family: 'Oswald', sans-serif;
             font-size: 22px;
             font-weight: 600;
-            color: #020817;
+            color: #1f2929;
             margin-bottom: 12px;
             letter-spacing: 0.3px;
         }
 
-        .service-card__desc {
-            font-size: 15px;
+        .mxdr-category-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
             color: #4b5563;
             line-height: 1.6;
-            margin-bottom: 8px;
-        }
-
-        .service-card__detail {
-            font-size: 14px;
-            color: #6b7280;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .service-card__price {
-            font-family: 'Oswald', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            color: #ff6e42;
-            margin-bottom: 24px;
-            display: block;
-        }
-
-        .service-card__price span {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-            color: #6b7280;
-            display: block;
-            margin-top: 2px;
-        }
-
-        /* ============================================
-           MANAGED XDR DEEP DIVE
-           ============================================ */
-        .xdr-section {
-            position: relative;
-            padding: 100px 0;
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .xdr-section__background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .xdr-section__background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .xdr-section__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(31, 41, 41, 0.94) 0%, rgba(26, 35, 50, 0.90) 100%);
-        }
-
-        .xdr-section .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .xdr-section .section-title--white {
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .xdr-subtitle {
-            font-family: 'Inter', sans-serif;
-            font-size: 18px;
-            font-weight: 300;
-            color: rgba(255, 255, 255, 0.85);
-            text-align: center;
-            max-width: 680px;
-            margin: 0 auto 48px;
-            line-height: 1.6;
-        }
-
-        .xdr-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .xdr-card {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 12px;
-            padding: 32px;
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        @supports (backdrop-filter: blur(8px)) {
-            .xdr-card {
-                backdrop-filter: blur(8px);
-                -webkit-backdrop-filter: blur(8px);
-            }
-        }
-
-        .xdr-card:hover {
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        .xdr-card__icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 110, 66, 0.15);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 16px;
         }
 
-        .xdr-card__title {
+        .mxdr-category-card__features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+
+        .mxdr-category-card__features li {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #4b5563;
+            line-height: 1.5;
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .mxdr-category-card__features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M3 6l2 2L9 4' stroke='%23ff6e42' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .mxdr-category-card__footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mxdr-category-card__price {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        /* XDR PLATFORM SECTION */
+        .mxdr-platform {
+            background: linear-gradient(135deg, #1a1a2e 0%, #1f2929 100%);
+            padding: 80px 0;
+        }
+
+        .mxdr-platform__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .mxdr-platform__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            margin-bottom: 56px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mxdr-pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .mxdr-pillar-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mxdr-pillar-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 110, 66, 0.3);
+        }
+
+        .mxdr-pillar-card__icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            background: rgba(255, 110, 66, 0.12);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mxdr-pillar-card__title {
             font-family: 'Oswald', sans-serif;
             font-size: 20px;
             font-weight: 600;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: 0.3px;
         }
 
-        .xdr-card__text {
-            font-size: 15px;
-            color: rgba(255, 255, 255, 0.85);
+        .mxdr-pillar-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.65);
             line-height: 1.6;
         }
 
-        /* ============================================
-           SOC DASHBOARD PREVIEW
-           ============================================ */
-        .soc-section {
-            padding: 80px 0;
-            background: #f7f8fa;
-            font-family: 'Inter', sans-serif;
+        /* STATS */
+        .mxdr-stats-section {
+            background: linear-gradient(135deg, #1f2929 0%, #1a1a2e 100%);
+            padding: 64px 0;
         }
 
-        .soc-section .section-title {
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .soc-section .section-subtitle {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .soc-dashboard {
-            max-width: 960px;
-            margin: 0 auto;
-            background: #1a1a2e;
-            border-radius: 16px;
-            padding: 32px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .soc-dashboard__header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 28px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .soc-dashboard__title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-        }
-
-        .soc-dashboard__status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .soc-dashboard__status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #22c55e;
-            display: inline-block;
-            box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
-        }
-
-        .soc-metrics {
+        .mxdr-stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 28px;
-        }
-
-        .soc-metric {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
             text-align: center;
         }
 
-        .soc-metric__value {
+        .mxdr-stat {
+            padding: 20px 16px;
+        }
+
+        .mxdr-stat__number {
             font-family: 'Oswald', sans-serif;
-            font-size: 36px;
+            font-size: 48px;
             font-weight: 700;
             color: #ff6e42;
             line-height: 1.1;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
-        .soc-metric__label {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.65);
-            font-weight: 400;
-        }
-
-        .soc-chart {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-        }
-
-        .soc-chart__title {
-            font-size: 14px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 20px;
-        }
-
-        .soc-chart__bars {
-            display: flex;
-            align-items: flex-end;
-            gap: 12px;
-            height: 120px;
-        }
-
-        .soc-chart__bar-group {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100%;
-            justify-content: flex-end;
-        }
-
-        .soc-chart__bar {
-            width: 100%;
-            max-width: 40px;
-            border-radius: 4px 4px 0 0;
-            transition: background 0.3s ease;
-        }
-
-        .soc-chart__bar--orange {
-            background: linear-gradient(180deg, #ff6e42 0%, rgba(255, 110, 66, 0.6) 100%);
-        }
-
-        .soc-chart__bar-label {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: 8px;
-            text-align: center;
-        }
-
-        .soc-services {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .soc-service {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 14px;
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .soc-service__dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #22c55e;
-            flex-shrink: 0;
-        }
-
-        .soc-service__name {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* ============================================
-           SUPPORT TIERS
-           ============================================ */
-        .support-tiers {
-            padding: 80px 0;
-            background: #ffffff;
+        .mxdr-stat__label {
             font-family: 'Inter', sans-serif;
-        }
-
-        .support-tiers .section-title {
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .support-tiers .section-subtitle {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .tiers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            max-width: 1100px;
-            margin: 0 auto;
-            align-items: start;
-        }
-
-        .tier-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 40px 28px;
-            text-align: center;
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .tier-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .tier-card--featured {
-            border-color: #ff6e42;
-            border-width: 2px;
-            box-shadow: 0 4px 20px rgba(255, 110, 66, 0.15);
-        }
-
-        .tier-card--featured:hover {
-            box-shadow: 0 8px 32px rgba(255, 110, 66, 0.25);
-        }
-
-        .tier-card__badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #ff6e42;
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 4px 16px;
-            border-radius: 20px;
-        }
-
-        .tier-card__name {
-            font-family: 'Oswald', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #020817;
-            margin-bottom: 8px;
-            letter-spacing: 0.3px;
-        }
-
-        .tier-card__price {
-            font-family: 'Oswald', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: #ff6e42;
-            margin-bottom: 4px;
-        }
-
-        .tier-card__price-sub {
-            font-size: 13px;
-            color: #6b7280;
-            margin-bottom: 24px;
-        }
-
-        .tier-card__divider {
-            width: 40px;
-            height: 2px;
-            background: #e5e7eb;
-            margin: 0 auto 24px;
-            border: none;
-        }
-
-        .tier-card--featured .tier-card__divider {
-            background: rgba(255, 110, 66, 0.3);
-        }
-
-        .tier-card__features {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 28px;
-            text-align: left;
-        }
-
-        .tier-card__features li {
             font-size: 14px;
-            color: #2b333f;
-            padding: 8px 0;
-            border-bottom: 1px solid #f3f4f6;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.4;
         }
 
-        .tier-card__features li:last-child {
-            border-bottom: none;
-        }
-
-        .tier-card__check {
-            flex-shrink: 0;
-            width: 18px;
-            height: 18px;
-            background: rgba(255, 110, 66, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .tier-card--featured .tier-card__check {
-            background: rgba(255, 110, 66, 0.15);
-        }
-
-        /* ============================================
-           PROFESSIONAL SERVICES
-           ============================================ */
-        .psa-section {
-            padding: 80px 0;
-            background: #f7f8fa;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .psa-section .section-title {
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .psa-section .section-subtitle {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .psa-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .psa-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .psa-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .psa-card__icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(255, 110, 66, 0.08);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-
-        .psa-card__title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: #020817;
-            margin-bottom: 8px;
-            letter-spacing: 0.3px;
-        }
-
-        .psa-card__text {
-            font-size: 14px;
-            color: #4b5563;
-            line-height: 1.6;
-        }
-
-        /* ============================================
-           MANAGED SERVICES CTA
-           ============================================ */
-        .managed-cta-section {
+        /* CTA */
+        .mxdr-cta-section {
             position: relative;
             padding: 100px 0;
             text-align: center;
             overflow: hidden;
-            font-family: 'Inter', sans-serif;
         }
 
-        .managed-cta-section__background {
+        .mxdr-cta-section__background {
             position: absolute;
             top: 0;
             left: 0;
@@ -720,42 +433,50 @@
             z-index: 0;
         }
 
-        .managed-cta-section__background img {
+        .mxdr-cta-section__background img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .managed-cta-section__background::after {
+        .mxdr-cta-section__background::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.65);
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(31, 41, 41, 0.92) 100%);
             z-index: 1;
         }
 
-        .managed-cta {
+        .mxdr-cta {
             position: relative;
             z-index: 2;
-            max-width: 600px;
+            max-width: 640px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .managed-cta__headline {
+        .mxdr-cta__headline {
             font-family: 'Oswald', sans-serif;
             font-size: 40px;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             line-height: 1.2;
             letter-spacing: 0.5px;
         }
 
-        .managed-cta__buttons {
+        .mxdr-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+
+        .mxdr-cta__buttons {
             display: flex;
             justify-content: center;
             gap: 16px;
@@ -766,31 +487,19 @@
            RESPONSIVE - TABLET (1024px)
            ============================================ */
         @media (max-width: 1024px) {
-            .more-hero__headline {
-                font-size: 44px;
+            .mxdr-hero__title {
+                font-size: 48px;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-                max-width: 480px;
-                margin: 0 auto;
-            }
-
-            .xdr-grid {
+            .mxdr-categories-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .soc-metrics {
-                grid-template-columns: repeat(3, 1fr);
+            .mxdr-pillars-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .tiers-grid {
-                grid-template-columns: 1fr;
-                max-width: 420px;
-                margin: 0 auto;
-            }
-
-            .psa-grid {
+            .mxdr-stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -799,50 +508,38 @@
            RESPONSIVE - TABLET PORTRAIT (768px)
            ============================================ */
         @media (max-width: 768px) {
-            .more-hero {
-                min-height: 340px;
+            .mxdr-hero {
+                min-height: 420px;
             }
 
-            .more-hero__headline {
+            .mxdr-hero__title {
                 font-size: 36px;
             }
 
-            .more-hero__subheadline {
+            .mxdr-hero__subtitle {
                 font-size: 16px;
             }
 
-            .xdr-grid {
+            .mxdr-categories-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .mxdr-pillars-grid {
                 grid-template-columns: 1fr;
             }
 
-            .soc-metrics {
-                grid-template-columns: 1fr;
+            .mxdr-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .soc-services {
-                grid-template-columns: 1fr;
-            }
-
-            .soc-dashboard {
-                padding: 20px;
-            }
-
-            .soc-dashboard__header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-
-            .psa-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .managed-cta__headline {
+            .mxdr-platform__title {
                 font-size: 32px;
             }
 
-            .stats-grid {
-                grid-template-columns: 1fr;
+            .mxdr-cta__headline {
+                font-size: 32px;
             }
         }
 
@@ -850,20 +547,29 @@
            RESPONSIVE - MOBILE (480px)
            ============================================ */
         @media (max-width: 480px) {
-            .more-hero__headline {
+            .mxdr-hero__title {
                 font-size: 28px;
             }
 
-            .more-hero__content {
+            .mxdr-hero__content {
                 padding: 60px 16px;
             }
 
-            .soc-chart__bars {
-                height: 80px;
-                gap: 6px;
+            .mxdr-hero__ctas {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .managed-cta__buttons {
+            .mxdr-stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .mxdr-stat__number {
+                font-size: 36px;
+            }
+
+            .mxdr-cta__buttons {
                 flex-direction: column;
                 align-items: center;
             }
@@ -881,12 +587,10 @@
                 <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
                     <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
                 </a>
-
                 <div class="amazon-header__deliver">
                     <span class="amazon-header__deliver-label">Deliver to</span>
                     <span class="amazon-header__deliver-location">New York 10001</span>
                 </div>
-
                 <div class="amazon-header__search" role="search">
                     <select class="amazon-header__search-category" aria-label="Search category">
                         <option>All Departments</option>
@@ -901,7 +605,6 @@
                         </svg>
                     </button>
                 </div>
-
                 <div class="amazon-header__nav-right">
                     <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
                         <span class="amazon-header__nav-label">EN</span>
@@ -923,7 +626,6 @@
                 </div>
             </div>
         </div>
-
         <nav class="amazon-header__subnav" aria-label="Amazon departments">
             <div class="amazon-header__container">
                 <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
@@ -958,7 +660,6 @@
                         Share
                     </button>
                 </div>
-
                 <div class="brand-header__search" role="search">
                     <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
                     <button aria-label="Search SonicWall store">
@@ -973,11 +674,59 @@
         <nav class="brand-header__nav" aria-label="SonicWall store navigation">
             <div class="brand-header__container">
                 <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
-                <a href="firewalls.html" class="brand-nav__tab" data-section="firewalls">FIREWALLS</a>
-                <a href="networking.html" class="brand-nav__tab" data-section="networking">NETWORKING</a>
-                <a href="security-services.html" class="brand-nav__tab" data-section="security-services">SECURITY SERVICES</a>
-                <a href="cloud-edge.html" class="brand-nav__tab" data-section="cloud-edge">CLOUD & EDGE</a>
-                <a href="more.html" class="brand-nav__tab brand-nav__tab--active" data-section="managed-xdr">MORE</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab brand-nav__tab--active" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
@@ -987,505 +736,325 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <div class="container">
                 <ol class="breadcrumb__list">
-                    <li class="breadcrumb__item"><a href="#">Home</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb__item"><a href="#">Electronics</a></li>
-                    <li class="breadcrumb__item"><a href="#">Computers & Accessories</a></li>
-                    <li class="breadcrumb__item"><a href="index.html">SonicWall Official Store</a></li>
-                    <li class="breadcrumb__item" aria-current="page">Managed Security & Support</li>
+                    <li class="breadcrumb__item"><a href="#">Security</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">SonicWall</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Managed XDR</li>
                 </ol>
             </div>
         </nav>
 
-        <!-- 1. Hero Section -->
-        <section class="more-hero" aria-label="Managed security and support hero">
-            <div class="more-hero__background">
+        <!-- 1. HERO SECTION -->
+        <section class="mxdr-hero" aria-label="Managed XDR hero">
+            <div class="mxdr-hero__background" aria-hidden="true">
                 <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
-                <div class="more-hero__overlay"></div>
-                <div class="more-hero__radar" aria-hidden="true"></div>
+                <div class="mxdr-hero__overlay"></div>
+                <div class="mxdr-hero__radar" aria-hidden="true"></div>
             </div>
-            <div class="more-hero__content">
-                <h1 class="more-hero__headline">Managed Security & Support</h1>
-                <p class="more-hero__subheadline">24/7 threat monitoring, expert support, and managed detection & response to keep your organization protected around the clock.</p>
-                <a href="#services" class="btn btn--primary btn--large">Explore Managed Services &rarr;</a>
-            </div>
-        </section>
-
-        <!-- 2. Services Overview -->
-        <section id="services" class="services-overview" aria-label="Managed services overview">
-            <div class="container">
-                <h2 class="section-title">Managed Security Services</h2>
-                <p class="section-subtitle">Enterprise-grade security operations, delivered as a service</p>
-
-                <div class="services-grid">
-                    <!-- MDR Card -->
-                    <div class="service-card">
-                        <div class="service-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <path d="M18 3C11 3 6 8 6 14v4c0 6 5 11 12 11s12-5 12-11v-4c0-6-5-11-12-11z" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <circle cx="18" cy="16" r="4" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <path d="M18 12v-3M18 23v-3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M22.5 16h3M10.5 16h3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Managed Detection & Response (MDR)</h3>
-                        <p class="service-card__desc">24/7 SOC monitoring with SonicWall's expert security analysts</p>
-                        <p class="service-card__detail">Threat hunting, incident response, and automated remediation</p>
-                        <div class="service-card__price">$15<span>/endpoint/month</span></div>
-                        <a href="#xdr" class="btn btn--modern btn--amazon">Learn More &rarr;</a>
-                    </div>
-
-                    <!-- Managed Firewall Card -->
-                    <div class="service-card">
-                        <div class="service-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <rect x="4" y="8" width="28" height="20" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <path d="M4 14h28" stroke="#ff6e42" stroke-width="1.5"/>
-                                <circle cx="8" cy="11" r="1.5" fill="#ff6e42"/>
-                                <circle cx="13" cy="11" r="1.5" fill="#ff6e42"/>
-                                <path d="M26 20l-2 2-2-2M22 24l2-2 2 2" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Managed Firewall Services</h3>
-                        <p class="service-card__desc">Let SonicWall experts manage your firewall infrastructure</p>
-                        <p class="service-card__detail">Configuration, monitoring, patching, and optimization</p>
-                        <div class="service-card__price">$299<span>/firewall/month</span></div>
-                        <a href="#support-tiers" class="btn btn--modern btn--amazon">Learn More &rarr;</a>
-                    </div>
-
-                    <!-- Support Services Card -->
-                    <div class="service-card">
-                        <div class="service-card__icon" aria-hidden="true">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                                <path d="M10 18c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                <rect x="6" y="17" width="5" height="9" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <rect x="25" y="17" width="5" height="9" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <path d="M30 26c0 2.8-2.2 5-5 5h-4" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                <circle cx="19" cy="31" r="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
-                            </svg>
-                        </div>
-                        <h3 class="service-card__title">Support Services</h3>
-                        <p class="service-card__desc">24/7/365 global technical support with guaranteed response times</p>
-                        <p class="service-card__detail">Phone, email, chat, and on-site support options</p>
-                        <div class="service-card__price">$199<span>/year per appliance</span></div>
-                        <a href="#support-tiers" class="btn btn--modern btn--amazon">Learn More &rarr;</a>
-                    </div>
+            <div class="mxdr-hero__content">
+                <span class="mxdr-hero__badge">SonicSentry Platform</span>
+                <h1 class="mxdr-hero__title">Managed <span>XDR</span></h1>
+                <p class="mxdr-hero__subtitle">24/7 threat detection, investigation, and response across your entire attack surface -- endpoints, network, cloud, and email -- delivered by SonicWall security experts.</p>
+                <div class="mxdr-hero__ctas">
+                    <a href="#mxdr-products" class="btn btn--modern btn--primary btn--large">Explore XDR Solutions</a>
+                    <a href="#" class="btn btn--modern btn--secondary btn--large">Contact Sales</a>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Managed XDR Deep Dive -->
-        <section id="xdr" class="xdr-section" aria-label="SonicWall Managed XDR">
-            <div class="xdr-section__background" aria-hidden="true">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="lazy">
-                <div class="xdr-section__overlay"></div>
-            </div>
+        <!-- 2. XDR OVERVIEW -->
+        <section class="mxdr-overview" aria-label="Managed XDR overview">
             <div class="container">
-                <h2 class="section-title section-title--white">SonicWall Managed XDR</h2>
-                <p class="xdr-subtitle">Extended Detection & Response across your entire security ecosystem</p>
-
-                <div class="xdr-grid">
-                    <div class="xdr-card">
-                        <div class="xdr-card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect x="5" y="2" width="14" height="20" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <circle cx="12" cy="18" r="1" fill="#ff6e42"/>
-                                <path d="M9 6h6M9 9h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="xdr-card__title">Endpoint Detection</h3>
-                        <p class="xdr-card__text">Monitor and protect every device across your network with real-time behavioral analysis and threat correlation.</p>
-                    </div>
-
-                    <div class="xdr-card">
-                        <div class="xdr-card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M4 12h4l3-8 4 16 3-8h4" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="xdr-card__title">Network Detection</h3>
-                        <p class="xdr-card__text">Analyze traffic patterns for anomalies using deep packet inspection and machine learning-driven threat identification.</p>
-                    </div>
-
-                    <div class="xdr-card">
-                        <div class="xdr-card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect x="3" y="5" width="18" height="14" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <path d="M3 9h18M7 13h5M7 16h3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="xdr-card__title">Email Security</h3>
-                        <p class="xdr-card__text">Block phishing, business email compromise, and malware delivery before threats reach your users' inboxes.</p>
-                    </div>
-
-                    <div class="xdr-card">
-                        <div class="xdr-card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 4C8 4 4 6 4 10c0 3 2 5 5 6" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                <path d="M20 10c0-4-4-6-8-6" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                <path d="M15 16c3-1 5-3 5-6" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                <path d="M9 16h6v4H9z" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="xdr-card__title">Cloud Workload Protection</h3>
-                        <p class="xdr-card__text">Secure cloud instances and containers with continuous monitoring and automated compliance enforcement.</p>
-                    </div>
-
-                    <div class="xdr-card">
-                        <div class="xdr-card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M13 3l-1 7h6l-7 11 1-7H6l7-11z" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="xdr-card__title">Automated Response</h3>
-                        <p class="xdr-card__text">SOAR-powered incident remediation that isolates threats, contains breaches, and restores systems automatically.</p>
-                    </div>
-
-                    <div class="xdr-card">
-                        <div class="xdr-card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="9" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <circle cx="12" cy="12" r="4" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
-                                <circle cx="12" cy="12" r="1" fill="#ff6e42"/>
-                            </svg>
-                        </div>
-                        <h3 class="xdr-card__title">Threat Intelligence</h3>
-                        <p class="xdr-card__text">SonicWall Capture Labs real-time feeds delivering actionable intelligence on emerging threats and zero-day exploits.</p>
-                    </div>
+                <h2 class="section-title" style="text-align: center;">Why Managed XDR?</h2>
+                <p class="section-subtitle" style="text-align: center; margin-bottom: 24px;">Security operations expertise, without building a SOC</p>
+                <div class="mxdr-overview__intro">
+                    <p class="mxdr-overview__text">Most organizations lack the staff, tools, and expertise to operate a 24/7 security operations center. SonicWall's Managed XDR platform -- powered by SonicSentry -- correlates telemetry from endpoints, firewalls, cloud workloads, and email into a unified threat detection and response engine. Our expert analysts investigate every alert, contain active threats, and remediate incidents so your team can focus on the business.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 4. SOC Dashboard Preview -->
-        <section class="soc-section" aria-label="SOC dashboard preview">
+        <!-- 3. PRODUCT CATEGORY CARDS -->
+        <section id="mxdr-products" class="mxdr-categories" aria-label="Managed XDR product categories">
             <div class="container">
-                <h2 class="section-title">Your Security Operations Center</h2>
-                <p class="section-subtitle">Without building one. Full SOC visibility, managed by SonicWall experts.</p>
+                <div class="mxdr-categories-grid">
+                    <!-- SonicSentry MXDR -->
+                    <article class="mxdr-category-card">
+                        <div class="mxdr-category-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicSentry MXDR" loading="lazy">
+                            <div class="mxdr-category-card__image-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M16 3C9 3 4 8 4 14v4c0 6 5 11 12 11s12-5 12-11v-4c0-6-5-11-12-11z" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                    <circle cx="16" cy="15" r="4" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                    <path d="M16 11v-3M16 22v-3M21 15h3M8 15h3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mxdr-category-card__body">
+                            <span class="mxdr-category-card__tag">Premium XDR</span>
+                            <h3 class="mxdr-category-card__title">SonicSentry MXDR</h3>
+                            <p class="mxdr-category-card__desc">Premium 24/7 extended detection and response across endpoints, network, cloud, and email.</p>
+                            <ul class="mxdr-category-card__features">
+                                <li>Full-spectrum threat correlation</li>
+                                <li>Dedicated security analyst team</li>
+                                <li>Automated containment and remediation</li>
+                            </ul>
+                            <div class="mxdr-category-card__footer">
+                                <span class="mxdr-category-card__price">Contact Sales</span>
+                                <a href="sonicsentry-mxdr.html" class="btn btn--modern btn--amazon btn--small">Explore &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
 
-                <div class="soc-dashboard" role="img" aria-label="Security Operations Center dashboard showing 6 active alerts, 2,847 endpoints monitored, and less than 15 minute mean time to respond">
-                    <div class="soc-dashboard__header">
-                        <div class="soc-dashboard__title">SOC COMMAND CENTER</div>
-                        <div class="soc-dashboard__status">
-                            <span class="soc-dashboard__status-dot"></span>
-                            All Systems Operational
+                    <!-- SonicSentry MDR -->
+                    <article class="mxdr-category-card">
+                        <div class="mxdr-category-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicSentry MDR" loading="lazy">
+                            <div class="mxdr-category-card__image-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M16 4l-10 5v8c0 6 4 11 10 13 6-2 10-7 10-13V9L16 4z" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                    <path d="M12 16l3 3 5-5" stroke="#ff6e42" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
                         </div>
-                    </div>
+                        <div class="mxdr-category-card__body">
+                            <span class="mxdr-category-card__tag">Managed Detection</span>
+                            <h3 class="mxdr-category-card__title">SonicSentry MDR</h3>
+                            <p class="mxdr-category-card__desc">Expert-led managed detection and response for organizations without a dedicated SOC.</p>
+                            <ul class="mxdr-category-card__features">
+                                <li>24/7 SOC analyst monitoring</li>
+                                <li>Threat hunting and investigation</li>
+                                <li>Guided incident response</li>
+                            </ul>
+                            <div class="mxdr-category-card__footer">
+                                <span class="mxdr-category-card__price">Contact Sales</span>
+                                <a href="sonicsentry-mdr.html" class="btn btn--modern btn--amazon btn--small">Explore &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div class="soc-metrics">
-                        <div class="soc-metric">
-                            <div class="soc-metric__value">6</div>
-                            <div class="soc-metric__label">Active Alerts</div>
+                    <!-- MDR for Cloud -->
+                    <article class="mxdr-category-card">
+                        <div class="mxdr-category-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="MDR for Cloud" loading="lazy">
+                            <div class="mxdr-category-card__image-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M8 20c0-2 1-4 3-5 1-3 4-5 7-5h2c3 0 5 2 6 5 2 1 3 3 3 5 0 3-3 6-6 6H14c-4 0-6-3-6-6z" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                    <path d="M14 18v4M18 16v6M22 18v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="soc-metric">
-                            <div class="soc-metric__value">2,847</div>
-                            <div class="soc-metric__label">Endpoints Monitored</div>
+                        <div class="mxdr-category-card__body">
+                            <span class="mxdr-category-card__tag">Cloud Security</span>
+                            <h3 class="mxdr-category-card__title">MDR for Cloud</h3>
+                            <p class="mxdr-category-card__desc">Cloud-native MDR for AWS, Azure, and GCP workloads with CSPM and container security.</p>
+                            <ul class="mxdr-category-card__features">
+                                <li>Multi-cloud workload protection</li>
+                                <li>Cloud security posture management</li>
+                                <li>Container and serverless monitoring</li>
+                            </ul>
+                            <div class="mxdr-category-card__footer">
+                                <span class="mxdr-category-card__price">Contact Sales</span>
+                                <a href="sonicsentry-mdr-cloud.html" class="btn btn--modern btn--amazon btn--small">Explore &rarr;</a>
+                            </div>
                         </div>
-                        <div class="soc-metric">
-                            <div class="soc-metric__value">&lt; 15 min</div>
-                            <div class="soc-metric__label">Mean Time to Respond</div>
-                        </div>
-                    </div>
+                    </article>
 
-                    <div class="soc-chart">
-                        <div class="soc-chart__title">Threats Blocked This Week</div>
-                        <div class="soc-chart__bars">
-                            <div class="soc-chart__bar-group">
-                                <div class="soc-chart__bar soc-chart__bar--orange" style="height: 65%;"></div>
-                                <div class="soc-chart__bar-label">Mon</div>
-                            </div>
-                            <div class="soc-chart__bar-group">
-                                <div class="soc-chart__bar soc-chart__bar--orange" style="height: 80%;"></div>
-                                <div class="soc-chart__bar-label">Tue</div>
-                            </div>
-                            <div class="soc-chart__bar-group">
-                                <div class="soc-chart__bar soc-chart__bar--orange" style="height: 45%;"></div>
-                                <div class="soc-chart__bar-label">Wed</div>
-                            </div>
-                            <div class="soc-chart__bar-group">
-                                <div class="soc-chart__bar soc-chart__bar--orange" style="height: 92%;"></div>
-                                <div class="soc-chart__bar-label">Thu</div>
-                            </div>
-                            <div class="soc-chart__bar-group">
-                                <div class="soc-chart__bar soc-chart__bar--orange" style="height: 58%;"></div>
-                                <div class="soc-chart__bar-label">Fri</div>
-                            </div>
-                            <div class="soc-chart__bar-group">
-                                <div class="soc-chart__bar soc-chart__bar--orange" style="height: 35%;"></div>
-                                <div class="soc-chart__bar-label">Sat</div>
-                            </div>
-                            <div class="soc-chart__bar-group">
-                                <div class="soc-chart__bar soc-chart__bar--orange" style="height: 28%;"></div>
-                                <div class="soc-chart__bar-label">Sun</div>
+                    <!-- MDR for Network -->
+                    <article class="mxdr-category-card">
+                        <div class="mxdr-category-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="MDR for Network" loading="lazy">
+                            <div class="mxdr-category-card__image-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M4 16h6l3-8 4 16 3-8h6" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
                         </div>
-                    </div>
+                        <div class="mxdr-category-card__body">
+                            <span class="mxdr-category-card__tag">Network Detection</span>
+                            <h3 class="mxdr-category-card__title">MDR for Network</h3>
+                            <p class="mxdr-category-card__desc">Network-focused MDR leveraging SonicWall firewall telemetry for threat detection.</p>
+                            <ul class="mxdr-category-card__features">
+                                <li>Deep packet inspection analytics</li>
+                                <li>Firewall telemetry correlation</li>
+                                <li>Lateral movement detection</li>
+                            </ul>
+                            <div class="mxdr-category-card__footer">
+                                <span class="mxdr-category-card__price">Contact Sales</span>
+                                <a href="sonicsentry-mdr-network.html" class="btn btn--modern btn--amazon btn--small">Explore &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div class="soc-services">
-                        <div class="soc-service">
-                            <span class="soc-service__dot"></span>
-                            <span class="soc-service__name">Firewall Monitoring</span>
+                    <!-- Capture Client -->
+                    <article class="mxdr-category-card">
+                        <div class="mxdr-category-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Capture Client" loading="lazy">
+                            <div class="mxdr-category-card__image-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <rect x="7" y="4" width="18" height="24" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                    <circle cx="16" cy="14" r="4" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                    <path d="M11 24c0-3 2-5 5-5s5 2 5 5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="soc-service">
-                            <span class="soc-service__dot"></span>
-                            <span class="soc-service__name">Endpoint Protection</span>
+                        <div class="mxdr-category-card__body">
+                            <span class="mxdr-category-card__tag">Endpoint Protection</span>
+                            <h3 class="mxdr-category-card__title">Capture Client</h3>
+                            <p class="mxdr-category-card__desc">Next-gen endpoint protection with AI-driven prevention, EDR, and ransomware rollback.</p>
+                            <ul class="mxdr-category-card__features">
+                                <li>AI-powered threat prevention</li>
+                                <li>Ransomware rollback capability</li>
+                                <li>Endpoint detection and response</li>
+                            </ul>
+                            <div class="mxdr-category-card__footer">
+                                <span class="mxdr-category-card__price">Contact Sales</span>
+                                <a href="capture-client.html" class="btn btn--modern btn--amazon btn--small">Explore &rarr;</a>
+                            </div>
                         </div>
-                        <div class="soc-service">
-                            <span class="soc-service__dot"></span>
-                            <span class="soc-service__name">Email Gateway</span>
+                    </article>
+
+                    <!-- Capture ATP -->
+                    <article class="mxdr-category-card">
+                        <div class="mxdr-category-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Capture ATP" loading="lazy">
+                            <div class="mxdr-category-card__image-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M14 5l-1 7h6l-7 11 1-7H7l7-11z" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="16" cy="16" r="12" stroke="#ff6e42" stroke-width="1.5" fill="none" opacity="0.4"/>
+                                </svg>
+                            </div>
                         </div>
-                        <div class="soc-service">
-                            <span class="soc-service__dot"></span>
-                            <span class="soc-service__name">Cloud Workloads</span>
+                        <div class="mxdr-category-card__body">
+                            <span class="mxdr-category-card__tag">Cloud Sandbox</span>
+                            <h3 class="mxdr-category-card__title">Capture ATP</h3>
+                            <p class="mxdr-category-card__desc">Cloud sandbox with patented RTDMI technology for zero-day and advanced threat detection.</p>
+                            <ul class="mxdr-category-card__features">
+                                <li>Real-Time Deep Memory Inspection</li>
+                                <li>Multi-engine sandboxing</li>
+                                <li>Zero-day threat discovery</li>
+                            </ul>
+                            <div class="mxdr-category-card__footer">
+                                <span class="mxdr-category-card__price">Contact Sales</span>
+                                <a href="capture-atp.html" class="btn btn--modern btn--amazon btn--small">Explore &rarr;</a>
+                            </div>
                         </div>
-                        <div class="soc-service">
-                            <span class="soc-service__dot"></span>
-                            <span class="soc-service__name">Threat Intelligence</span>
-                        </div>
-                        <div class="soc-service">
-                            <span class="soc-service__dot"></span>
-                            <span class="soc-service__name">SIEM Integration</span>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Support Tiers -->
-        <section id="support-tiers" class="support-tiers" aria-label="Support tier pricing">
+        <!-- 4. XDR PLATFORM CAPABILITIES -->
+        <section class="mxdr-platform" aria-label="XDR platform capabilities">
             <div class="container">
-                <h2 class="section-title">Support Plans</h2>
-                <p class="section-subtitle">Choose the support level that matches your business requirements</p>
+                <h2 class="mxdr-platform__title">The SonicSentry Advantage</h2>
+                <p class="mxdr-platform__subtitle">One platform correlating signals from every layer of your security stack into a unified detection and response engine.</p>
 
-                <div class="tiers-grid">
-                    <!-- Standard -->
-                    <div class="tier-card">
-                        <h3 class="tier-card__name">Standard Support</h3>
-                        <div class="tier-card__price">$199</div>
-                        <p class="tier-card__price-sub">per year / per appliance</p>
-                        <hr class="tier-card__divider">
-                        <ul class="tier-card__features">
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                8x5 phone & email support
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                4-hour response time
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                Firmware updates
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                Knowledge base access
-                            </li>
-                        </ul>
-                        <button class="btn btn--modern btn--amazon">Select Plan &rarr;</button>
-                    </div>
-
-                    <!-- Enhanced (Featured) -->
-                    <div class="tier-card tier-card--featured">
-                        <span class="tier-card__badge">Most Popular</span>
-                        <h3 class="tier-card__name">Enhanced Support</h3>
-                        <div class="tier-card__price">$399</div>
-                        <p class="tier-card__price-sub">per year / per appliance</p>
-                        <hr class="tier-card__divider">
-                        <ul class="tier-card__features">
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                24/7 phone, email & chat
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                1-hour response time
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                Priority firmware updates
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                Dedicated support engineer
-                            </li>
-                        </ul>
-                        <button class="btn btn--primary btn--large" style="width: 100%; max-width: 220px;">Select Plan &rarr;</button>
-                    </div>
-
-                    <!-- Premium -->
-                    <div class="tier-card">
-                        <h3 class="tier-card__name">Premium Support</h3>
-                        <div class="tier-card__price">$799</div>
-                        <p class="tier-card__price-sub">per year / per appliance</p>
-                        <hr class="tier-card__divider">
-                        <ul class="tier-card__features">
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                24/7/365 priority support
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                30-minute response time
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                On-site support available
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                Quarterly health checks
-                            </li>
-                            <li>
-                                <span class="tier-card__check" aria-hidden="true">
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </span>
-                                Custom training sessions
-                            </li>
-                        </ul>
-                        <button class="btn btn--modern btn--amazon">Select Plan &rarr;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. Professional Services -->
-        <section class="psa-section" aria-label="Professional services">
-            <div class="container">
-                <h2 class="section-title">Professional Services</h2>
-                <p class="section-subtitle">Expert-led services to maximize your SonicWall investment</p>
-
-                <div class="psa-grid">
-                    <div class="psa-card">
-                        <div class="psa-card__icon" aria-hidden="true">
+                <div class="mxdr-pillars-grid">
+                    <div class="mxdr-pillar-card">
+                        <div class="mxdr-pillar-card__icon" aria-hidden="true">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <circle cx="14" cy="14" r="11" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <path d="M14 7v7l4 3" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M10 3l-2-1M18 3l2-1" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
+                                <rect x="5" y="2" width="18" height="24" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <circle cx="14" cy="18" r="1" fill="#ff6e42"/>
+                                <path d="M10 7h8M10 10h5" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3 class="psa-card__title">Network Assessment</h3>
-                        <p class="psa-card__text">Comprehensive security audit identifying vulnerabilities, misconfigurations, and compliance gaps across your infrastructure.</p>
+                        <h3 class="mxdr-pillar-card__title">Endpoint Telemetry</h3>
+                        <p class="mxdr-pillar-card__text">Behavioral analysis of every endpoint process, file, and network connection for real-time threat detection.</p>
                     </div>
 
-                    <div class="psa-card">
-                        <div class="psa-card__icon" aria-hidden="true">
+                    <div class="mxdr-pillar-card">
+                        <div class="mxdr-pillar-card__icon" aria-hidden="true">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <path d="M6 14h4l3-7 4 14 3-7h4" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M3 8h4M21 8h4M3 20h4M21 20h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                                <path d="M4 14h6l3-7 4 14 3-7h4" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3 class="psa-card__title">Migration Services</h3>
-                        <p class="psa-card__text">Seamless upgrade from legacy firewalls with zero-downtime migration planning, policy conversion, and validation testing.</p>
+                        <h3 class="mxdr-pillar-card__title">Network Detection</h3>
+                        <p class="mxdr-pillar-card__text">Deep packet inspection and flow analysis across all firewall telemetry to identify lateral movement and data exfiltration.</p>
                     </div>
 
-                    <div class="psa-card">
-                        <div class="psa-card__icon" aria-hidden="true">
+                    <div class="mxdr-pillar-card">
+                        <div class="mxdr-pillar-card__icon" aria-hidden="true">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <rect x="4" y="6" width="20" height="16" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <path d="M10 12l3 3 5-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 16c0-2 1-4 3-5 1-3 4-5 7-5h0c3 0 5 2 6 5 2 1 3 3 3 5 0 3-3 6-6 6H14c-4 0-6-3-6-6z" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <path d="M14 14v4M18 12v6" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3 class="psa-card__title">Custom Configuration</h3>
-                        <p class="psa-card__text">Expert setup for complex deployments including HA clusters, SD-WAN, multi-site VPN, and advanced security policies.</p>
+                        <h3 class="mxdr-pillar-card__title">Cloud Workload Monitoring</h3>
+                        <p class="mxdr-pillar-card__text">Continuous monitoring of AWS, Azure, and GCP environments with automated posture assessment and threat alerting.</p>
                     </div>
 
-                    <div class="psa-card">
-                        <div class="psa-card__icon" aria-hidden="true">
+                    <div class="mxdr-pillar-card">
+                        <div class="mxdr-pillar-card__icon" aria-hidden="true">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <path d="M14 4l3 6h7l-5.5 4.5 2 7L14 17l-6.5 4.5 2-7L4 10h7z" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <rect x="3" y="6" width="22" height="16" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <path d="M3 10h22M8 15h6M8 18h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3 class="psa-card__title">Training & Certification</h3>
-                        <p class="psa-card__text">On-site and virtual training programs covering SonicWall administration, threat analysis, and security best practices.</p>
+                        <h3 class="mxdr-pillar-card__title">Email Threat Analysis</h3>
+                        <p class="mxdr-pillar-card__text">Block phishing, BEC, and malware delivery with AI-powered email inspection and automated quarantine.</p>
+                    </div>
+
+                    <div class="mxdr-pillar-card">
+                        <div class="mxdr-pillar-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M15 5l-1 7h6l-7 11 1-7H8l7-11z" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="mxdr-pillar-card__title">Automated Response</h3>
+                        <p class="mxdr-pillar-card__text">SOAR-powered playbooks that isolate threats, contain breaches, and restore systems within minutes, not hours.</p>
+                    </div>
+
+                    <div class="mxdr-pillar-card">
+                        <div class="mxdr-pillar-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <circle cx="14" cy="14" r="10" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <circle cx="14" cy="14" r="4" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                                <circle cx="14" cy="14" r="1" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="mxdr-pillar-card__title">Capture Labs Intelligence</h3>
+                        <p class="mxdr-pillar-card__text">Real-time threat intelligence from SonicWall's global sensor network, delivering actionable data on emerging attack vectors.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. Testimonial -->
-        <section class="testimonials-section" aria-label="Customer testimonial">
-            <div class="testimonials-section__background" aria-hidden="true">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt33ac55839b3321bf/68000d8c1930db6a36e26f7e/Testimonial_bg.png" alt="" loading="lazy">
-            </div>
+        <!-- 5. STATS SECTION -->
+        <section class="mxdr-stats-section" aria-label="Managed XDR statistics">
             <div class="container">
-                <div class="testimonial">
-                    <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6c0a7b2bdc2b15c9/690378d34630ec6095bc41a5/Quotation-mark.svg" alt="" class="testimonial__quote-mark" aria-hidden="true" loading="lazy">
-                    <blockquote class="testimonial__text">
-                        SonicWall's managed XDR team detected a sophisticated supply chain attack at 2 AM on a Saturday. By the time our IT team arrived Monday morning, it had already been contained and remediated. That's the value of 24/7 expert monitoring.
-                    </blockquote>
-                    <cite class="testimonial__author">&mdash; Sarah Chen, CISO, Regional Healthcare Network</cite>
-                </div>
-
-                <div class="testimonial__dots" role="tablist" aria-label="Testimonial navigation">
-                    <span class="dot dot--active" role="tab" aria-selected="true" aria-label="Testimonial 1" tabindex="0"></span>
-                    <span class="dot" role="tab" aria-selected="false" aria-label="Testimonial 2" tabindex="0"></span>
-                    <span class="dot" role="tab" aria-selected="false" aria-label="Testimonial 3" tabindex="0"></span>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. Stats Section -->
-        <section class="stats-section" aria-label="Managed services statistics">
-            <div class="container">
-                <h2 class="section-title section-title--white">Managed Services By The Numbers</h2>
-
-                <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
-                    <div class="stat-item">
-                        <div class="stat-item__number">&lt; 15 min</div>
-                        <div class="stat-item__desc">Mean time to respond to critical security incidents.</div>
+                <div class="mxdr-stats-grid">
+                    <div class="mxdr-stat">
+                        <div class="mxdr-stat__number">&lt; 15 min</div>
+                        <div class="mxdr-stat__label">Mean Time to Respond</div>
                     </div>
-
-                    <div class="stat-item">
-                        <div class="stat-item__number">24/7/365</div>
-                        <div class="stat-item__desc">Continuous SOC monitoring by certified security analysts.</div>
+                    <div class="mxdr-stat">
+                        <div class="mxdr-stat__number">24/7/365</div>
+                        <div class="mxdr-stat__label">SOC Analyst Coverage</div>
                     </div>
-
-                    <div class="stat-item">
-                        <div class="stat-item__number">99.7%</div>
-                        <div class="stat-item__desc">Threat detection rate across managed XDR deployments.</div>
+                    <div class="mxdr-stat">
+                        <div class="mxdr-stat__number">99.7%</div>
+                        <div class="mxdr-stat__label">Threat Detection Rate</div>
                     </div>
-
-                    <div class="stat-item">
-                        <div class="stat-item__number">68 Days</div>
-                        <div class="stat-item__desc">Average reduction in breach containment time for customers.</div>
+                    <div class="mxdr-stat">
+                        <div class="mxdr-stat__number">68 Days</div>
+                        <div class="mxdr-stat__label">Avg. Containment Reduction</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 9. CTA Section -->
-        <section class="managed-cta-section" aria-label="Get started with managed security">
-            <div class="managed-cta-section__background" aria-hidden="true">
+        <!-- 6. CTA SECTION -->
+        <section class="mxdr-cta-section" aria-label="Managed XDR call to action">
+            <div class="mxdr-cta-section__background" aria-hidden="true">
                 <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
             </div>
-            <div class="managed-cta">
-                <h2 class="managed-cta__headline">Ready to upgrade your security posture?</h2>
-                <div class="managed-cta__buttons">
-                    <button class="btn btn--primary btn--large">Start with Managed XDR &rarr;</button>
-                    <button class="btn btn--secondary btn--large">Talk to an Expert</button>
+            <div class="mxdr-cta">
+                <h2 class="mxdr-cta__headline">Ready to upgrade your security posture?</h2>
+                <p class="mxdr-cta__text">Stop drowning in alerts. Let SonicWall's expert security analysts handle detection, investigation, and response 24/7 while your team focuses on the business.</p>
+                <div class="mxdr-cta__buttons">
+                    <a href="#" class="btn btn--modern btn--primary btn--large">Contact Sales</a>
+                    <a href="#" class="btn btn--modern btn--secondary btn--large">Request a Demo</a>
                 </div>
             </div>
         </section>
@@ -1496,7 +1065,6 @@
         <div class="footer__back-to-top">
             <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
         </div>
-
         <div class="footer__main">
             <div class="container">
                 <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
@@ -1512,7 +1080,6 @@
                             <li><a href="#">Amazon Science</a></li>
                         </ul>
                     </div>
-
                     <div class="footer__column">
                         <h3 class="footer__column-title">Make Money with Us</h3>
                         <ul class="footer__links">
@@ -1525,7 +1092,6 @@
                             <li><a href="#">Host an Amazon Hub</a></li>
                         </ul>
                     </div>
-
                     <div class="footer__column">
                         <h3 class="footer__column-title">Amazon Payment Products</h3>
                         <ul class="footer__links">
@@ -1535,7 +1101,6 @@
                             <li><a href="#">Amazon Currency Converter</a></li>
                         </ul>
                     </div>
-
                     <div class="footer__column">
                         <h3 class="footer__column-title">Let Us Help You</h3>
                         <ul class="footer__links">
@@ -1552,7 +1117,6 @@
                 </div>
             </div>
         </div>
-
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-content">
@@ -1566,7 +1130,6 @@
                 <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
             </div>
         </div>
-
         <div class="footer__sonicwall">
             <div class="container">
                 <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SonicWall Switches and Wireless Access Points - Secure network infrastructure built to integrate seamlessly with SonicWall firewalls.">
+    <meta name="description" content="SonicWall Networking & Access - Switches, wireless access points, secure mobile access, and cloud-based network management for the modern enterprise.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="SonicWall">
-    <meta property="og:title" content="SonicWall | Networking - Switches & Wireless Access Points">
-    <meta property="og:description" content="Managed switches, PoE+ switches, and WiFi 6 access points with seamless SonicWall firewall integration.">
+    <meta property="og:title" content="SonicWall | Networking & Access - Switches, Wireless, Secure Access">
+    <meta property="og:description" content="High-speed switches, Wi-Fi 6 access points, secure mobile access, and cloud wireless management from SonicWall.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
-    <title>SonicWall | Networking - Switches & Wireless Access Points</title>
+    <title>Networking & Access | SonicWall Official Store on Amazon</title>
     <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
 
     <style>
         /* ============================================
-           NETWORKING PAGE - SPECIFIC STYLES
+           NETWORKING & ACCESS LANDING PAGE STYLES
            ============================================ */
 
         /* Hero Section */
@@ -89,70 +89,115 @@
             max-width: 560px;
         }
 
-        /* Product Category Cards */
+        /* Category Cards Grid */
         .net-categories {
             padding: 60px 0 80px;
-            background: var(--color-bg-light);
+            background: var(--color-bg-light, #f7f8fa);
             font-family: 'Inter', sans-serif;
+        }
+        .net-categories__intro {
+            max-width: 640px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+        .net-categories__intro p {
+            font-size: 15px;
+            color: var(--color-text-tertiary, #6b7280);
+            line-height: 1.7;
+            margin-top: 12px;
         }
         .net-categories__grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            margin-top: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 0;
+        }
+        .net-categories__grid--bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            margin-top: 28px;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .net-cat-card {
             background: #fff;
             border-radius: 12px;
-            padding: 48px 40px;
+            padding: 0;
             text-align: center;
-            border: 1px solid var(--color-border);
+            border: 1px solid var(--color-border, #e5e7eb);
             transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         .net-cat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
         }
-        .net-cat-card__icon {
-            width: 80px; height: 80px;
-            margin: 0 auto 24px;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(255,110,66,0.08);
-            border-radius: 50%;
-        }
-        .net-cat-card__title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: #1f2929;
-            margin-bottom: 12px;
-        }
-        .net-cat-card__desc {
-            font-size: 14px;
-            color: var(--color-text-tertiary);
-            line-height: 1.6;
-            margin-bottom: 24px;
-            max-width: 360px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Switch/AP product image placeholder */
-        .net-product-icon {
+        .net-cat-card__image {
             width: 100%;
-            height: 180px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #f7f8fa 0%, #eef0f4 100%);
-            border-radius: 8px;
-            margin-bottom: 0;
+            overflow: hidden;
+        }
+        .net-cat-card__image img {
+            max-width: 80%;
+            max-height: 160px;
+            object-fit: contain;
+        }
+        .net-cat-card__body {
+            padding: 28px 32px 36px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .net-cat-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 10px;
+        }
+        .net-cat-card__desc {
+            font-size: 14px;
+            color: var(--color-text-tertiary, #6b7280);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex: 1;
+        }
+        .net-cat-card__cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            background: #ff6e42;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+            align-self: center;
+        }
+        .net-cat-card__cta:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,110,66,0.3);
         }
 
         /* Integration Benefits */
         .net-benefits {
             padding: 80px 0;
-            background: var(--color-bg-light);
+            background: #fff;
             font-family: 'Inter', sans-serif;
         }
         .net-benefits__grid {
@@ -162,16 +207,16 @@
             margin-top: 40px;
         }
         .net-benefit-card {
-            background: #fff;
+            background: var(--color-bg-light, #f7f8fa);
             border-radius: 12px;
             padding: 36px 28px;
             text-align: center;
-            border: 1px solid var(--color-border);
+            border: 1px solid var(--color-border, #e5e7eb);
             transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
         }
         .net-benefit-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
         }
         .net-benefit-card__icon {
             width: 56px; height: 56px;
@@ -187,7 +232,7 @@
         }
         .net-benefit-card__text {
             font-size: 13px;
-            color: var(--color-text-tertiary);
+            color: var(--color-text-tertiary, #6b7280);
             line-height: 1.6;
         }
 
@@ -262,10 +307,10 @@
         }
         .net-arch__endpoints {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 16px;
             margin-top: 24px;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -273,12 +318,20 @@
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 10px;
-            padding: 20px 16px;
+            padding: 20px 12px;
             text-align: center;
+        }
+        .net-arch__endpoint a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .net-arch__endpoint:hover {
+            border-color: rgba(255,110,66,0.4);
+            background: rgba(255,110,66,0.06);
         }
         .net-arch__endpoint-icon { margin-bottom: 8px; }
         .net-arch__endpoint-label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: rgba(255,255,255,0.8);
         }
@@ -301,36 +354,7 @@
             padding: 12px 0;
         }
 
-        /* Networking Stats */
-        .net-stats {
-            padding: 60px 0;
-            background: #fff;
-            font-family: 'Inter', sans-serif;
-        }
-        .net-stats__grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-        }
-        .net-stat {
-            text-align: center;
-            padding: 32px 16px;
-        }
-        .net-stat__number {
-            font-family: 'Oswald', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: #ff6e42;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-        .net-stat__label {
-            font-size: 13px;
-            color: var(--color-text-tertiary);
-            line-height: 1.5;
-        }
-
-        /* Networking CTA */
+        /* CTA Section */
         .net-cta {
             padding: 80px 0;
             background: linear-gradient(135deg, #1f2929 0%, #1a1a2e 100%);
@@ -357,29 +381,29 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .net-hero__title { font-size: 44px; }
+            .net-categories__grid { grid-template-columns: repeat(2, 1fr); }
+            .net-categories__grid--bottom { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
             .net-benefits__grid { grid-template-columns: repeat(2, 1fr); }
-            .net-stats__grid { grid-template-columns: repeat(2, 1fr); }
-            .net-arch__endpoints { grid-template-columns: repeat(2, 1fr); }
+            .net-arch__endpoints { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 768px) {
             .net-hero { min-height: 400px; }
             .net-hero__title { font-size: 36px; }
             .net-hero__content { padding: 60px 0; }
             .net-categories__grid { grid-template-columns: 1fr; }
-            .net-cat-card { padding: 36px 28px; }
+            .net-categories__grid--bottom { grid-template-columns: 1fr; }
             .net-benefits__grid { grid-template-columns: 1fr; }
             .net-arch__flow-row { flex-direction: column; }
             .net-arch__arrow { transform: rotate(90deg); padding: 8px 0; }
             .net-arch__endpoints { grid-template-columns: 1fr 1fr; }
-            .net-stats__grid { grid-template-columns: 1fr 1fr; }
-            .net-stat__number { font-size: 40px; }
+            .net-cat-card__image { height: 160px; }
         }
         @media (max-width: 480px) {
             .net-hero__title { font-size: 28px; }
             .net-hero__sub { font-size: 15px; }
-            .net-stats__grid { grid-template-columns: 1fr; }
             .net-arch__endpoints { grid-template-columns: 1fr; }
             .net-cta__title { font-size: 28px; }
+            .net-cat-card__body { padding: 20px 20px 28px; }
         }
     </style>
 </head>
@@ -476,14 +500,63 @@
                 </div>
             </div>
         </div>
+
         <nav class="brand-header__nav" aria-label="SonicWall store navigation">
             <div class="brand-header__container">
                 <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
-                <a href="firewalls.html" class="brand-nav__tab" data-section="firewalls">FIREWALLS</a>
-                <a href="networking.html" class="brand-nav__tab brand-nav__tab--active" data-section="networking">NETWORKING</a>
-                <a href="security-services.html" class="brand-nav__tab" data-section="security-services">SECURITY SERVICES</a>
-                <a href="cloud-edge.html" class="brand-nav__tab" data-section="cloud-edge">CLOUD & EDGE</a>
-                <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MORE</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab brand-nav__tab--active" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
@@ -496,13 +569,13 @@
                     <li class="breadcrumb__item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb__item"><a href="#">Electronics</a></li>
                     <li class="breadcrumb__item"><a href="#">Networking Products</a></li>
-                    <li class="breadcrumb__item" aria-current="page">SonicWall Networking</li>
+                    <li class="breadcrumb__item" aria-current="page">Networking & Access</li>
                 </ol>
             </div>
         </nav>
 
         <!-- 1. Hero Section -->
-        <section class="net-hero" aria-label="Networking hero banner">
+        <section class="net-hero" aria-label="Networking & Access hero banner">
             <div class="net-hero__bg">
                 <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
             </div>
@@ -510,448 +583,91 @@
             <div class="net-hero__grid" aria-hidden="true"></div>
             <div class="container">
                 <div class="net-hero__content">
-                    <span class="net-hero__label">SonicWall Networking</span>
-                    <h1 class="net-hero__title">Network Infrastructure</h1>
-                    <p class="net-hero__sub">Secure switches and wireless access points built to work seamlessly with SonicWall firewalls</p>
-                    <a href="#switches" class="btn btn--modern btn--primary btn--large">Explore Solutions &rarr;</a>
+                    <span class="net-hero__label">SonicWall Networking & Access</span>
+                    <h1 class="net-hero__title">Networking & Access</h1>
+                    <p class="net-hero__sub">Secure switches, wireless access points, remote access gateways, and cloud network management built to integrate seamlessly with SonicWall firewalls.</p>
+                    <a href="#solutions" class="btn btn--modern btn--primary btn--large">Explore Solutions &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <!-- 2. Product Categories -->
-        <section class="net-categories" aria-label="Product categories">
+        <!-- 2. Product Category Cards -->
+        <section id="solutions" class="net-categories" aria-label="Networking & Access product categories">
             <div class="container">
-                <h2 class="section-title">Networking Product Lines</h2>
+                <div class="net-categories__intro">
+                    <h2 class="section-title">Networking & Access Solutions</h2>
+                    <p>From high-speed switching and Wi-Fi 6 wireless to zero-trust remote access and cloud-based management, SonicWall delivers a unified networking stack purpose-built for security.</p>
+                </div>
+
+                <!-- Top row: 3 cards -->
                 <div class="net-categories__grid">
-                    <div class="net-cat-card">
-                        <div class="net-cat-card__icon">
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-                                <rect x="4" y="14" width="36" height="16" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <circle cx="11" cy="22" r="2" fill="#ff6e42"/><circle cx="17" cy="22" r="2" fill="#ff6e42"/><circle cx="23" cy="22" r="2" fill="#ff6e42"/><circle cx="29" cy="22" r="2" fill="#ff6e42"/><circle cx="35" cy="22" r="2" fill="#ff6e42"/>
-                                <path d="M11 14V10M17 14V10M23 14V10M29 14V10M35 14V10" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
+                    <!-- Switches -->
+                    <article class="net-cat-card">
+                        <div class="net-cat-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltc60619921269a90c/68b1d28bf82700670c84d410/SonicWall_Icon_Switches_Icon_v2.png" alt="SonicWall Switches" loading="lazy">
                         </div>
-                        <h3 class="net-cat-card__title">SonicWall Switches</h3>
-                        <p class="net-cat-card__desc">Managed and unmanaged PoE+ switches engineered for high-performance, secure networks. 8 to 48 ports with Layer 2/3 switching and centralized SonicWall management.</p>
-                        <a href="#switches" class="btn btn--modern btn--amazon btn--small">Shop Switches &rarr;</a>
-                    </div>
-                    <div class="net-cat-card">
-                        <div class="net-cat-card__icon">
-                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-                                <circle cx="22" cy="24" r="10" stroke="#ff6e42" stroke-width="2" fill="none"/>
-                                <circle cx="22" cy="24" r="3" fill="#ff6e42"/>
-                                <path d="M14 16a12 12 0 0 1 16 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M10 12a18 18 0 0 1 24 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                        <div class="net-cat-card__body">
+                            <h3 class="net-cat-card__title">Switches</h3>
+                            <p class="net-cat-card__desc">High-speed switching with SD-Branch ready performance for the modern business. Managed and PoE+ models from 8 to 48 ports with centralized SonicWall management.</p>
+                            <a href="switches.html" class="net-cat-card__cta">Explore Switches &rarr;</a>
                         </div>
-                        <h3 class="net-cat-card__title">Wireless Access Points</h3>
-                        <p class="net-cat-card__desc">Indoor and outdoor WiFi 6 and WiFi 6E access points with seamless SonicWall firewall integration, cloud management, and advanced RF optimization.</p>
-                        <a href="#access-points" class="btn btn--modern btn--amazon btn--small">Shop Access Points &rarr;</a>
-                    </div>
+                    </article>
+
+                    <!-- Access Points -->
+                    <article class="net-cat-card">
+                        <div class="net-cat-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0c99d1c4df4ed532/68b1d278aa7a28302c39d2fc/SonicWall_Icon_AccessPoints_Icon_v2.png" alt="SonicWave Indoor Access Points" loading="lazy">
+                        </div>
+                        <div class="net-cat-card__body">
+                            <h3 class="net-cat-card__title">Access Points</h3>
+                            <p class="net-cat-card__desc">SonicWave 600 Series Wi-Fi 6 indoor access points with dedicated security radio. Advanced threat protection scans wireless traffic in real time.</p>
+                            <a href="access-points.html" class="net-cat-card__cta">Explore Access Points &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Outdoor Access Points -->
+                    <article class="net-cat-card">
+                        <div class="net-cat-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt36e6ca5b394eb6e2/68b1d29e7bd5e2650891f8fd/SonicWall_Icon_OutdoorAccessPoints_Icon_v2.png" alt="SonicWave Outdoor Access Points" loading="lazy">
+                        </div>
+                        <div class="net-cat-card__body">
+                            <h3 class="net-cat-card__title">Outdoor Access Points</h3>
+                            <p class="net-cat-card__desc">SonicWave 400 Series ruggedized outdoor wireless for harsh environments. IP67-rated with extended temperature range and advanced mesh networking.</p>
+                            <a href="outdoor-access-points.html" class="net-cat-card__cta">Explore Outdoor APs &rarr;</a>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </section>
 
-        <!-- 3. Switches Section -->
-        <section id="switches" class="featured-products" aria-label="SonicWall Switches">
-            <div class="category-banner">
-                <div class="category-banner__text">
-                    <h2 class="category-banner__title">SONICWALL SWITCHES</h2>
-                    <p class="category-banner__subtitle">Managed and PoE+ switches for secure, high-performance networks</p>
-                    <p class="category-banner__desc">SonicWall switches deliver enterprise-grade switching with integrated security management. Deploy, monitor, and manage your entire network from a single pane of glass alongside your SonicWall firewalls.</p>
-                    <a href="#" class="btn btn--modern btn--outline-light">Explore SonicWall Switches &rarr;</a>
-                </div>
-                <div class="category-banner__image">
-                    <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltc60619921269a90c/68b1d28bf82700670c84d410/SonicWall_Icon_Switches_Icon_v2.png" alt="SonicWall Switches" loading="lazy">
-                </div>
-            </div>
-            <div class="container">
-                <div class="product-grid">
-                    <!-- SWS12-8 -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
-                                    <rect x="5" y="15" width="110" height="30" rx="4" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="20" cy="30" r="3" fill="#ff6e42"/><circle cx="30" cy="30" r="3" fill="#ff6e42"/><circle cx="40" cy="30" r="3" fill="#ff6e42"/><circle cx="50" cy="30" r="3" fill="#ff6e42"/>
-                                    <circle cx="60" cy="30" r="3" fill="#ccc"/><circle cx="70" cy="30" r="3" fill="#ccc"/><circle cx="80" cy="30" r="3" fill="#ccc"/><circle cx="90" cy="30" r="3" fill="#ccc"/>
-                                    <rect x="100" y="23" width="10" height="14" rx="2" stroke="#1f2929" stroke-width="1.5" fill="none"/>
-                                </svg>
-                            </div>
+                <!-- Bottom row: 2 cards, centered -->
+                <div class="net-categories__grid--bottom">
+                    <!-- SMA 1000 Series -->
+                    <article class="net-cat-card">
+                        <div class="net-cat-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt2ab39fed7eb1879e/68b1d2b0f82700670c84d416/SonicWall_Icon_SMA1000_Icon_v2.png" alt="SonicWall SMA 1000 Series" loading="lazy">
                         </div>
-                        <h3 class="product-card__name">SonicWall SWS12-8</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.3 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="47 customer reviews">47</a>
+                        <div class="net-cat-card__body">
+                            <h3 class="net-cat-card__title">SMA 1000 Series</h3>
+                            <p class="net-cat-card__desc">Secure Mobile Access for zero-trust remote and hybrid workforce connectivity. Granular policy-based access control with multi-factor authentication.</p>
+                            <a href="sma-1000.html" class="net-cat-card__cta">Explore SMA 1000 &rarr;</a>
                         </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">199</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
 
-                    <!-- SWS12-8POE -->
-                    <article class="product-card">
-                        <span class="product-card__badge product-card__badge--bestseller">Best Seller</span>
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
-                                    <rect x="5" y="15" width="110" height="30" rx="4" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="20" cy="30" r="3" fill="#ff6e42"/><circle cx="30" cy="30" r="3" fill="#ff6e42"/><circle cx="40" cy="30" r="3" fill="#ff6e42"/><circle cx="50" cy="30" r="3" fill="#ff6e42"/>
-                                    <circle cx="60" cy="30" r="3" fill="#ff6e42"/><circle cx="70" cy="30" r="3" fill="#ff6e42"/><circle cx="80" cy="30" r="3" fill="#ff6e42"/><circle cx="90" cy="30" r="3" fill="#ff6e42"/>
-                                    <rect x="100" y="23" width="10" height="14" rx="2" stroke="#1f2929" stroke-width="1.5" fill="none"/>
-                                    <text x="60" y="52" text-anchor="middle" font-size="7" fill="#ff6e42" font-family="Inter, sans-serif" font-weight="600">PoE+</text>
-                                </svg>
-                            </div>
+                    <!-- Wireless Network Manager -->
+                    <article class="net-cat-card">
+                        <div class="net-cat-card__image">
+                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt28e0bb2c1e12e3ca/68b1d2c2aa7a28302c39d302/SonicWall_Icon_WirelessNetworkManager_Icon_v2.png" alt="SonicWall Wireless Network Manager" loading="lazy">
                         </div>
-                        <h3 class="product-card__name">SonicWall SWS12-8POE</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.5 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="63 customer reviews">63</a>
+                        <div class="net-cat-card__body">
+                            <h3 class="net-cat-card__title">Wireless Network Manager</h3>
+                            <p class="net-cat-card__desc">Cloud-based wireless management for SonicWave access points and SonicWall switches. Centralized monitoring, configuration, and troubleshooting from any browser.</p>
+                            <a href="wireless-network-manager.html" class="net-cat-card__cta">Explore WNM &rarr;</a>
                         </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">349</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SWS14-24 -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
-                                    <rect x="2" y="12" width="116" height="36" rx="4" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="12" cy="25" r="2.5" fill="#ff6e42"/><circle cx="20" cy="25" r="2.5" fill="#ff6e42"/><circle cx="28" cy="25" r="2.5" fill="#ff6e42"/><circle cx="36" cy="25" r="2.5" fill="#ff6e42"/><circle cx="44" cy="25" r="2.5" fill="#ff6e42"/><circle cx="52" cy="25" r="2.5" fill="#ff6e42"/>
-                                    <circle cx="60" cy="25" r="2.5" fill="#ff6e42"/><circle cx="68" cy="25" r="2.5" fill="#ff6e42"/><circle cx="76" cy="25" r="2.5" fill="#ff6e42"/><circle cx="84" cy="25" r="2.5" fill="#ff6e42"/><circle cx="92" cy="25" r="2.5" fill="#ff6e42"/><circle cx="100" cy="25" r="2.5" fill="#ff6e42"/>
-                                    <circle cx="12" cy="37" r="2.5" fill="#ccc"/><circle cx="20" cy="37" r="2.5" fill="#ccc"/><circle cx="28" cy="37" r="2.5" fill="#ccc"/><circle cx="36" cy="37" r="2.5" fill="#ccc"/><circle cx="44" cy="37" r="2.5" fill="#ccc"/><circle cx="52" cy="37" r="2.5" fill="#ccc"/>
-                                    <circle cx="60" cy="37" r="2.5" fill="#ccc"/><circle cx="68" cy="37" r="2.5" fill="#ccc"/><circle cx="76" cy="37" r="2.5" fill="#ccc"/><circle cx="84" cy="37" r="2.5" fill="#ccc"/><circle cx="92" cy="37" r="2.5" fill="#ccc"/><circle cx="100" cy="37" r="2.5" fill="#ccc"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWall SWS14-24</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.4 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="38 customer reviews">38</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">499</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SWS14-24FPOE -->
-                    <article class="product-card">
-                        <span class="product-card__badge product-card__badge--choice">Amazon's Choice</span>
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
-                                    <rect x="2" y="12" width="116" height="36" rx="4" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="12" cy="25" r="2.5" fill="#ff6e42"/><circle cx="20" cy="25" r="2.5" fill="#ff6e42"/><circle cx="28" cy="25" r="2.5" fill="#ff6e42"/><circle cx="36" cy="25" r="2.5" fill="#ff6e42"/><circle cx="44" cy="25" r="2.5" fill="#ff6e42"/><circle cx="52" cy="25" r="2.5" fill="#ff6e42"/>
-                                    <circle cx="60" cy="25" r="2.5" fill="#ff6e42"/><circle cx="68" cy="25" r="2.5" fill="#ff6e42"/><circle cx="76" cy="25" r="2.5" fill="#ff6e42"/><circle cx="84" cy="25" r="2.5" fill="#ff6e42"/><circle cx="92" cy="25" r="2.5" fill="#ff6e42"/><circle cx="100" cy="25" r="2.5" fill="#ff6e42"/>
-                                    <circle cx="12" cy="37" r="2.5" fill="#ff6e42"/><circle cx="20" cy="37" r="2.5" fill="#ff6e42"/><circle cx="28" cy="37" r="2.5" fill="#ff6e42"/><circle cx="36" cy="37" r="2.5" fill="#ff6e42"/><circle cx="44" cy="37" r="2.5" fill="#ff6e42"/><circle cx="52" cy="37" r="2.5" fill="#ff6e42"/>
-                                    <circle cx="60" cy="37" r="2.5" fill="#ff6e42"/><circle cx="68" cy="37" r="2.5" fill="#ff6e42"/><circle cx="76" cy="37" r="2.5" fill="#ff6e42"/><circle cx="84" cy="37" r="2.5" fill="#ff6e42"/><circle cx="92" cy="37" r="2.5" fill="#ff6e42"/><circle cx="100" cy="37" r="2.5" fill="#ff6e42"/>
-                                    <text x="60" y="56" text-anchor="middle" font-size="7" fill="#ff6e42" font-family="Inter, sans-serif" font-weight="600">Full PoE+</text>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWall SWS14-24FPOE</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.6 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="52 customer reviews">52</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">799</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SWS14-48 -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
-                                    <rect x="2" y="10" width="116" height="40" rx="4" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="8" cy="22" r="2" fill="#ff6e42"/><circle cx="14" cy="22" r="2" fill="#ff6e42"/><circle cx="20" cy="22" r="2" fill="#ff6e42"/><circle cx="26" cy="22" r="2" fill="#ff6e42"/><circle cx="32" cy="22" r="2" fill="#ff6e42"/><circle cx="38" cy="22" r="2" fill="#ff6e42"/><circle cx="44" cy="22" r="2" fill="#ff6e42"/><circle cx="50" cy="22" r="2" fill="#ff6e42"/>
-                                    <circle cx="56" cy="22" r="2" fill="#ff6e42"/><circle cx="62" cy="22" r="2" fill="#ff6e42"/><circle cx="68" cy="22" r="2" fill="#ff6e42"/><circle cx="74" cy="22" r="2" fill="#ff6e42"/><circle cx="80" cy="22" r="2" fill="#ccc"/><circle cx="86" cy="22" r="2" fill="#ccc"/><circle cx="92" cy="22" r="2" fill="#ccc"/><circle cx="98" cy="22" r="2" fill="#ccc"/>
-                                    <circle cx="8" cy="34" r="2" fill="#ccc"/><circle cx="14" cy="34" r="2" fill="#ccc"/><circle cx="20" cy="34" r="2" fill="#ccc"/><circle cx="26" cy="34" r="2" fill="#ccc"/><circle cx="32" cy="34" r="2" fill="#ccc"/><circle cx="38" cy="34" r="2" fill="#ccc"/><circle cx="44" cy="34" r="2" fill="#ccc"/><circle cx="50" cy="34" r="2" fill="#ccc"/>
-                                    <circle cx="56" cy="34" r="2" fill="#ccc"/><circle cx="62" cy="34" r="2" fill="#ccc"/><circle cx="68" cy="34" r="2" fill="#ccc"/><circle cx="74" cy="34" r="2" fill="#ccc"/><circle cx="80" cy="34" r="2" fill="#ccc"/><circle cx="86" cy="34" r="2" fill="#ccc"/><circle cx="92" cy="34" r="2" fill="#ccc"/><circle cx="98" cy="34" r="2" fill="#ccc"/>
-                                    <rect x="104" y="18" width="10" height="24" rx="2" stroke="#1f2929" stroke-width="1.5" fill="none"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWall SWS14-48</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.4 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="29 customer reviews">29</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">999</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SWS14-48FPOE -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
-                                    <rect x="2" y="10" width="116" height="40" rx="4" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="8" cy="22" r="2" fill="#ff6e42"/><circle cx="14" cy="22" r="2" fill="#ff6e42"/><circle cx="20" cy="22" r="2" fill="#ff6e42"/><circle cx="26" cy="22" r="2" fill="#ff6e42"/><circle cx="32" cy="22" r="2" fill="#ff6e42"/><circle cx="38" cy="22" r="2" fill="#ff6e42"/><circle cx="44" cy="22" r="2" fill="#ff6e42"/><circle cx="50" cy="22" r="2" fill="#ff6e42"/>
-                                    <circle cx="56" cy="22" r="2" fill="#ff6e42"/><circle cx="62" cy="22" r="2" fill="#ff6e42"/><circle cx="68" cy="22" r="2" fill="#ff6e42"/><circle cx="74" cy="22" r="2" fill="#ff6e42"/><circle cx="80" cy="22" r="2" fill="#ff6e42"/><circle cx="86" cy="22" r="2" fill="#ff6e42"/><circle cx="92" cy="22" r="2" fill="#ff6e42"/><circle cx="98" cy="22" r="2" fill="#ff6e42"/>
-                                    <circle cx="8" cy="34" r="2" fill="#ff6e42"/><circle cx="14" cy="34" r="2" fill="#ff6e42"/><circle cx="20" cy="34" r="2" fill="#ff6e42"/><circle cx="26" cy="34" r="2" fill="#ff6e42"/><circle cx="32" cy="34" r="2" fill="#ff6e42"/><circle cx="38" cy="34" r="2" fill="#ff6e42"/><circle cx="44" cy="34" r="2" fill="#ff6e42"/><circle cx="50" cy="34" r="2" fill="#ff6e42"/>
-                                    <circle cx="56" cy="34" r="2" fill="#ff6e42"/><circle cx="62" cy="34" r="2" fill="#ff6e42"/><circle cx="68" cy="34" r="2" fill="#ff6e42"/><circle cx="74" cy="34" r="2" fill="#ff6e42"/><circle cx="80" cy="34" r="2" fill="#ff6e42"/><circle cx="86" cy="34" r="2" fill="#ff6e42"/><circle cx="92" cy="34" r="2" fill="#ff6e42"/><circle cx="98" cy="34" r="2" fill="#ff6e42"/>
-                                    <rect x="104" y="18" width="10" height="24" rx="2" stroke="#1f2929" stroke-width="1.5" fill="none"/>
-                                    <text x="55" y="56" text-anchor="middle" font-size="7" fill="#ff6e42" font-family="Inter, sans-serif" font-weight="600">Full PoE+ 740W</text>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWall SWS14-48FPOE</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.5 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="34 customer reviews">34</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">1,499</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- 4. Wireless Access Points Section -->
-        <section id="access-points" class="featured-products featured-products--nsa" aria-label="Wireless Access Points">
-            <div class="category-banner">
-                <div class="category-banner__text">
-                    <h2 class="category-banner__title">WIRELESS ACCESS POINTS</h2>
-                    <p class="category-banner__subtitle">Indoor and outdoor WiFi 6 access points with seamless SonicWall integration</p>
-                    <p class="category-banner__desc">SonicWave access points deliver secure, high-speed wireless connectivity with built-in security services, advanced analytics, and zero-touch deployment through SonicWall firewalls.</p>
-                    <a href="#" class="btn btn--modern btn--outline-light">Explore SonicWave Series &rarr;</a>
-                </div>
-                <div class="category-banner__image">
-                    <div style="display:flex;align-items:center;justify-content:center;height:100%;padding:40px;">
-                        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true">
-                            <circle cx="90" cy="100" r="40" stroke="rgba(255,255,255,0.8)" stroke-width="2.5" fill="rgba(255,255,255,0.05)"/>
-                            <circle cx="90" cy="100" r="12" fill="rgba(255,110,66,0.9)"/>
-                            <path d="M62 72a40 40 0 0 1 56 0" stroke="rgba(255,110,66,0.7)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                            <path d="M50 60a56 56 0 0 1 80 0" stroke="rgba(255,110,66,0.5)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                            <path d="M38 48a72 72 0 0 1 104 0" stroke="rgba(255,110,66,0.3)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="product-grid">
-                    <!-- SonicWave 224w -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                                    <circle cx="50" cy="55" r="28" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="50" cy="55" r="8" fill="#ff6e42"/>
-                                    <path d="M36 41a20 20 0 0 1 28 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M30 35a28 28 0 0 1 40 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWave 224w</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.3 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="41 customer reviews">41</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">299</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SonicWave 231c -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                                    <circle cx="50" cy="55" r="22" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="50" cy="55" r="6" fill="#ff6e42"/>
-                                    <path d="M38 43a17 17 0 0 1 24 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M33 38a24 24 0 0 1 34 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWave 231c</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.4 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="36 customer reviews">36</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">249</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SonicWave 432i -->
-                    <article class="product-card">
-                        <span class="product-card__badge product-card__badge--bestseller">Best Seller</span>
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                                    <circle cx="50" cy="55" r="28" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="50" cy="55" r="8" fill="#ff6e42"/>
-                                    <path d="M36 41a20 20 0 0 1 28 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M30 35a28 28 0 0 1 40 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                                    <text x="50" y="92" text-anchor="middle" font-size="8" fill="#ff6e42" font-family="Inter, sans-serif" font-weight="600">WiFi 6</text>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWave 432i</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.5 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="58 customer reviews">58</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">499</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SonicWave 432o -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                                    <rect x="25" y="35" width="50" height="40" rx="6" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="50" cy="55" r="8" fill="#ff6e42"/>
-                                    <path d="M36 30a20 20 0 0 1 28 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M30 24a28 28 0 0 1 40 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                                    <text x="50" y="90" text-anchor="middle" font-size="7" fill="#1f2929" font-family="Inter, sans-serif" font-weight="600">OUTDOOR</text>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWave 432o</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.4 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="27 customer reviews">27</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">699</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SonicWave 641 -->
-                    <article class="product-card">
-                        <span class="product-card__badge product-card__badge--choice">Amazon's Choice</span>
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                                    <circle cx="50" cy="55" r="30" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="50" cy="55" r="10" fill="#ff6e42"/>
-                                    <path d="M34 39a22 22 0 0 1 32 0" stroke="#ff6e42" stroke-width="2.5" stroke-linecap="round"/>
-                                    <path d="M27 32a32 32 0 0 1 46 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-                                    <path d="M21 26a40 40 0 0 1 58 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
-                                    <text x="50" y="95" text-anchor="middle" font-size="8" fill="#ff6e42" font-family="Inter, sans-serif" font-weight="700">WiFi 6E</text>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWave 641</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.6 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="44 customer reviews">44</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">799</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-
-                    <!-- SonicWave 681 -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <div class="net-product-icon">
-                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                                    <rect x="22" y="33" width="56" height="44" rx="6" stroke="#1f2929" stroke-width="2" fill="#f0f2f5"/>
-                                    <circle cx="50" cy="55" r="10" fill="#ff6e42"/>
-                                    <path d="M34 28a22 22 0 0 1 32 0" stroke="#ff6e42" stroke-width="2.5" stroke-linecap="round"/>
-                                    <path d="M27 21a32 32 0 0 1 46 0" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-                                    <path d="M21 15a40 40 0 0 1 58 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
-                                    <text x="50" y="90" text-anchor="middle" font-size="7" fill="#1f2929" font-family="Inter, sans-serif" font-weight="600">OUTDOOR 6E</text>
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="product-card__name">SonicWave 681</h3>
-                        <div class="product-card__rating">
-                            <span class="stars" role="img" aria-label="4.5 out of 5 stars"><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-filled"></span><span class="star-half"></span></span>
-                            <a href="#" class="rating-count" aria-label="19 customer reviews">19</a>
-                        </div>
-                        <span class="product-card__price">
-                            <span class="product-card__price-symbol">$</span>
-                            <span class="product-card__price-whole">999</span>
-                            <span class="product-card__price-fraction">.99</span>
-                        </span>
-                        <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
-                        </span>
-                        <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Integration Benefits -->
+        <!-- 3. Why SonicWall Networking -->
         <section class="net-benefits" aria-label="Integration benefits">
             <div class="container">
                 <h2 class="section-title">Why SonicWall Networking?</h2>
@@ -976,8 +692,19 @@
                                 <circle cx="20" cy="20" r="2" fill="#ff6e42"/>
                             </svg>
                         </div>
-                        <h3 class="net-benefit-card__title">Auto-Provisioning</h3>
-                        <p class="net-benefit-card__text">Zero-touch deployment with SonicWall firewall integration. Switches and APs automatically discover, configure, and secure themselves.</p>
+                        <h3 class="net-benefit-card__title">Zero-Touch Deployment</h3>
+                        <p class="net-benefit-card__text">Auto-provisioning with SonicWall firewall integration. Switches and APs automatically discover, configure, and secure themselves on connection.</p>
+                    </div>
+                    <div class="net-benefit-card">
+                        <div class="net-benefit-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                                <path d="M20 4l14 8v16l-14 8-14-8V12l14-8z" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                                <path d="M20 20v16M20 20l14-8M20 20L6 12" stroke="#ff6e42" stroke-width="1.5" opacity="0.5"/>
+                                <circle cx="20" cy="20" r="3" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="net-benefit-card__title">Zero-Trust Architecture</h3>
+                        <p class="net-benefit-card__text">Enforce zero-trust network access across wired, wireless, and remote connections. Verify every user and device before granting access.</p>
                     </div>
                     <div class="net-benefit-card">
                         <div class="net-benefit-card__icon">
@@ -987,26 +714,14 @@
                                 <circle cx="32" cy="12" r="3" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
                             </svg>
                         </div>
-                        <h3 class="net-benefit-card__title">SD-WAN Ready</h3>
-                        <p class="net-benefit-card__text">Built-in SD-WAN capabilities for distributed networks. Optimize traffic routing, reduce costs, and improve application performance.</p>
-                    </div>
-                    <div class="net-benefit-card">
-                        <div class="net-benefit-card__icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                                <path d="M20 8v6" stroke="#ff6e42" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M14 16h12v14H14z" stroke="#ff6e42" stroke-width="2" fill="none" rx="2"/>
-                                <path d="M18 30v4M22 30v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="20" cy="12" r="2" fill="#ff6e42"/>
-                            </svg>
-                        </div>
-                        <h3 class="net-benefit-card__title">PoE+ Power</h3>
-                        <p class="net-benefit-card__text">Power access points and IP cameras directly from switches. Up to 740W PoE budget eliminates the need for separate power infrastructure.</p>
+                        <h3 class="net-benefit-card__title">Cloud-Based Management</h3>
+                        <p class="net-benefit-card__text">Monitor, configure, and troubleshoot your entire network from the cloud. Real-time analytics, alerts, and firmware management from any browser.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 6. Network Architecture Diagram -->
+        <!-- 4. Network Architecture Diagram -->
         <section class="net-arch" aria-label="Network architecture">
             <div class="container">
                 <h2 class="net-arch__title">SonicWall Network Architecture</h2>
@@ -1049,145 +764,54 @@
 
                     <div class="net-arch__endpoints">
                         <div class="net-arch__endpoint">
-                            <div class="net-arch__endpoint-icon">
-                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="16" r="8" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/><circle cx="14" cy="16" r="3" fill="#ff6e42"/><path d="M8 10a8 8 0 0 1 12 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
-                            </div>
-                            <div class="net-arch__endpoint-label">Wireless APs</div>
+                            <a href="access-points.html">
+                                <div class="net-arch__endpoint-icon">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="16" r="8" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/><circle cx="14" cy="16" r="3" fill="#ff6e42"/><path d="M8 10a8 8 0 0 1 12 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="net-arch__endpoint-label">Indoor APs</div>
+                            </a>
+                        </div>
+                        <div class="net-arch__endpoint">
+                            <a href="outdoor-access-points.html">
+                                <div class="net-arch__endpoint-icon">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="8" width="16" height="14" rx="3" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/><circle cx="14" cy="15" r="3" fill="#ff6e42"/><path d="M9 5a7 7 0 0 1 10 0" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                                </div>
+                                <div class="net-arch__endpoint-label">Outdoor APs</div>
+                            </a>
+                        </div>
+                        <div class="net-arch__endpoint">
+                            <a href="sma-1000.html">
+                                <div class="net-arch__endpoint-icon">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4l10 6v8l-10 6-10-6V10l10-6z" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/><circle cx="14" cy="14" r="3" fill="#ff6e42"/></svg>
+                                </div>
+                                <div class="net-arch__endpoint-label">SMA Gateway</div>
+                            </a>
+                        </div>
+                        <div class="net-arch__endpoint">
+                            <a href="wireless-network-manager.html">
+                                <div class="net-arch__endpoint-icon">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 8h16v12H6z" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none" rx="2"/><circle cx="14" cy="6" r="2" fill="#ff6e42"/><path d="M14 8V6" stroke="#ff6e42" stroke-width="1.5"/></svg>
+                                </div>
+                                <div class="net-arch__endpoint-label">Cloud Mgmt</div>
+                            </a>
                         </div>
                         <div class="net-arch__endpoint">
                             <div class="net-arch__endpoint-icon">
                                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="6" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/><path d="M8 24h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/><path d="M14 20v4" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/></svg>
                             </div>
-                            <div class="net-arch__endpoint-label">Workstations</div>
-                        </div>
-                        <div class="net-arch__endpoint">
-                            <div class="net-arch__endpoint-icon">
-                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="12" r="6" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/><circle cx="14" cy="12" r="2" fill="#ff6e42"/><path d="M10 22h8M14 18v4" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg>
-                            </div>
-                            <div class="net-arch__endpoint-label">IP Cameras</div>
-                        </div>
-                        <div class="net-arch__endpoint">
-                            <div class="net-arch__endpoint-icon">
-                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="8" y="4" width="12" height="20" rx="3" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/><circle cx="14" cy="8" r="1.5" fill="#ff6e42"/><path d="M11 14h6M11 17h6" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-linecap="round"/></svg>
-                            </div>
-                            <div class="net-arch__endpoint-label">VoIP Phones</div>
+                            <div class="net-arch__endpoint-label">Endpoints</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. Comparison Table -->
-        <section class="comparison-section" aria-label="Switch comparison">
-            <div class="container">
-                <h2 class="section-title">Compare SonicWall Switches</h2>
-                <p class="section-subtitle">Find the right switch for your network size and power requirements</p>
-
-                <div class="comparison-table-wrapper">
-                    <table class="comparison-table">
-                        <thead class="comparison-table__head">
-                            <tr class="comparison-table__header-row">
-                                <th class="comparison-table__header comparison-table__header--feature" scope="col">Feature</th>
-                                <th class="comparison-table__header comparison-table__header--product" scope="col">
-                                    <span class="comparison-table__product-name">SWS12-8</span>
-                                    <span class="comparison-table__subtitle">Compact Office</span>
-                                </th>
-                                <th class="comparison-table__header comparison-table__header--product comparison-table__header--highlight" scope="col">
-                                    <span class="comparison-table__product-name">SWS14-24</span>
-                                    <span class="comparison-table__subtitle">Mid-Size Network</span>
-                                </th>
-                                <th class="comparison-table__header comparison-table__header--product" scope="col">
-                                    <span class="comparison-table__product-name">SWS14-48</span>
-                                    <span class="comparison-table__subtitle">Large Network</span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="comparison-table__body">
-                            <tr class="comparison-table__row">
-                                <th scope="row" class="comparison-table__cell comparison-table__cell--label"><strong>Ports</strong></th>
-                                <td class="comparison-table__cell">8</td>
-                                <td class="comparison-table__cell comparison-table__cell--highlight">24</td>
-                                <td class="comparison-table__cell">48</td>
-                            </tr>
-                            <tr class="comparison-table__row comparison-table__row--alt">
-                                <th scope="row" class="comparison-table__cell comparison-table__cell--label"><strong>PoE+ Ports</strong></th>
-                                <td class="comparison-table__cell">8 (POE model)</td>
-                                <td class="comparison-table__cell comparison-table__cell--highlight">24 (FPOE model)</td>
-                                <td class="comparison-table__cell">48 (FPOE model)</td>
-                            </tr>
-                            <tr class="comparison-table__row">
-                                <th scope="row" class="comparison-table__cell comparison-table__cell--label"><strong>PoE Budget</strong></th>
-                                <td class="comparison-table__cell">130W</td>
-                                <td class="comparison-table__cell comparison-table__cell--highlight">370W</td>
-                                <td class="comparison-table__cell">740W</td>
-                            </tr>
-                            <tr class="comparison-table__row comparison-table__row--alt">
-                                <th scope="row" class="comparison-table__cell comparison-table__cell--label"><strong>Throughput</strong></th>
-                                <td class="comparison-table__cell">20 Gbps</td>
-                                <td class="comparison-table__cell comparison-table__cell--highlight">56 Gbps</td>
-                                <td class="comparison-table__cell">176 Gbps</td>
-                            </tr>
-                            <tr class="comparison-table__row">
-                                <th scope="row" class="comparison-table__cell comparison-table__cell--label"><strong>Managed</strong></th>
-                                <td class="comparison-table__cell">Yes</td>
-                                <td class="comparison-table__cell comparison-table__cell--highlight">Yes</td>
-                                <td class="comparison-table__cell">Yes</td>
-                            </tr>
-                            <tr class="comparison-table__row comparison-table__row--alt">
-                                <th scope="row" class="comparison-table__cell comparison-table__cell--label"><strong>Layer 3</strong></th>
-                                <td class="comparison-table__cell">No</td>
-                                <td class="comparison-table__cell comparison-table__cell--highlight">Yes</td>
-                                <td class="comparison-table__cell">Yes</td>
-                            </tr>
-                            <tr class="comparison-table__row comparison-table__row--price">
-                                <th scope="row" class="comparison-table__cell comparison-table__cell--label"><strong>Price</strong></th>
-                                <td class="comparison-table__cell comparison-table__cell--price"><strong>$199.99</strong></td>
-                                <td class="comparison-table__cell comparison-table__cell--price comparison-table__cell--highlight"><strong>$499.99</strong></td>
-                                <td class="comparison-table__cell comparison-table__cell--price"><strong>$999.99</strong></td>
-                            </tr>
-                            <tr class="comparison-table__row comparison-table__row--cta">
-                                <td class="comparison-table__cell"></td>
-                                <td class="comparison-table__cell"><button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button></td>
-                                <td class="comparison-table__cell comparison-table__cell--highlight"><button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button></td>
-                                <td class="comparison-table__cell"><button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. Stats Section -->
-        <section class="stats-section" aria-label="Networking statistics">
-            <div class="container">
-                <h2 class="section-title section-title--white">Networking By The Numbers</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-item__number">99.99%</div>
-                        <div class="stat-item__desc">Network uptime with SonicWall switch infrastructure.</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-item__number">48</div>
-                        <div class="stat-item__desc">Maximum PoE+ ports on a single SonicWall switch.</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-item__number">740W</div>
-                        <div class="stat-item__desc">Maximum PoE budget to power your network devices.</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-item__number">176 Gbps</div>
-                        <div class="stat-item__desc">Maximum switching capacity for high-throughput networks.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. CTA Section -->
+        <!-- 5. CTA Section -->
         <section class="net-cta" aria-label="Contact and consultation">
             <div class="container">
                 <h2 class="net-cta__title">Need help designing your network?</h2>
-                <p class="net-cta__text">Talk to a SonicWall network architect. Get personalized recommendations for switches, access points, and firewall integration based on your specific requirements.</p>
-                <a href="#" class="btn btn--modern btn--primary btn--large">Get a Free Network Assessment &rarr;</a>
+                <p class="net-cta__text">Talk to a SonicWall network architect. Get personalized recommendations for switches, access points, and remote access based on your specific requirements.</p>
+                <a href="#" class="btn btn--modern btn--primary btn--large">Contact Sales &rarr;</a>
             </div>
         </section>
     </main>

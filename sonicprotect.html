@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicProtect Subscription - One subscription for complete protection. Bundle your SonicWall firewall with essential security services, support, and cloud management.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicProtect Subscription | SonicWall Official Store on Amazon">
+    <meta property="og:description" content="One subscription. Complete protection. Bundle firewall hardware, security services, support, and management into a single predictable payment.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicProtect Subscription | SonicWall Official Store on Amazon">
+    <meta name="twitter:description" content="One subscription. Complete protection. Bundle firewall hardware, security services, support, and management.">
+    <title>SonicProtect Subscription | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* ============================================
+           SONICPROTECT PAGE - HERO
+           ============================================ */
+
+        .sp-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .sp-hero__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .sp-hero__bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sp-hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.93) 0%, rgba(31, 41, 41, 0.89) 50%, rgba(22, 33, 62, 0.86) 100%);
+        }
+
+        .sp-hero__pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L55 17.5V42.5L30 55L5 42.5V17.5L30 5z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+
+        .sp-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            padding: 80px 0;
+        }
+
+        .sp-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 110, 66, 0.15);
+            border: 1px solid rgba(255, 110, 66, 0.3);
+            color: #ff6e42;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .sp-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .sp-hero__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            max-width: 580px;
+        }
+
+        .sp-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sp-hero__cta:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+
+        .sp-hero__graphic {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            opacity: 0.08;
+        }
+
+        @media (max-width: 1024px) {
+            .sp-hero__title { font-size: 42px; }
+            .sp-hero__graphic { display: none; }
+            .sp-hero { min-height: 440px; }
+        }
+
+        @media (max-width: 768px) {
+            .sp-hero__title { font-size: 34px; }
+            .sp-hero__subtitle { font-size: 17px; }
+            .sp-hero__content { padding: 60px 0; }
+            .sp-hero { min-height: 380px; }
+        }
+
+        @media (max-width: 480px) {
+            .sp-hero__title { font-size: 28px; }
+            .sp-hero__subtitle { font-size: 15px; }
+        }
+
+        /* ============================================
+           OVERVIEW
+           ============================================ */
+
+        .sp-overview {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .sp-overview__content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sp-overview__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        /* ============================================
+           WHAT'S INCLUDED (6 CARDS)
+           ============================================ */
+
+        .sp-included {
+            padding: 80px 0;
+            background: #f7f8fa;
+        }
+
+        .sp-included__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .sp-included__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .sp-included-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 36px 28px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sp-included-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .sp-included-card__icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 12px;
+        }
+
+        .sp-included-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+        }
+
+        .sp-included-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .sp-included__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .sp-included__grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           SUBSCRIPTION TIERS (3 CARDS)
+           ============================================ */
+
+        .sp-tiers {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .sp-tiers__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .sp-tiers__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1120px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .sp-tier-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 40px 32px;
+            position: relative;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sp-tier-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .sp-tier-card--featured {
+            border: 2px solid #ff6e42;
+            transform: scale(1.03);
+            box-shadow: 0 8px 32px rgba(255, 110, 66, 0.15);
+        }
+
+        .sp-tier-card--featured:hover {
+            transform: scale(1.03) translateY(-4px);
+            box-shadow: 0 12px 40px rgba(255, 110, 66, 0.2);
+        }
+
+        .sp-tier-card__popular {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 20px;
+            border-radius: 50px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .sp-tier-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .sp-tier-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            min-height: 42px;
+        }
+
+        .sp-tier-card__divider {
+            width: 100%;
+            height: 1px;
+            background: #e5e7eb;
+            margin-bottom: 24px;
+        }
+
+        .sp-tier-card__features-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #020817;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+        }
+
+        .sp-tier-card__features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px 0;
+        }
+
+        .sp-tier-card__features li {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #2b333f;
+            line-height: 1.5;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .sp-tier-card__features li:last-child {
+            border-bottom: none;
+        }
+
+        .sp-tier-card__features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23f0fdf4'/%3E%3Cpath d='M6 9l2 2 4-4' stroke='%2322c55e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center center;
+            background-size: contain;
+        }
+
+        .sp-tier-card__cta {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            text-decoration: none;
+        }
+
+        .sp-tier-card__cta--primary {
+            background: #ff6e42;
+            color: #ffffff;
+        }
+
+        .sp-tier-card__cta--primary:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 110, 66, 0.3);
+        }
+
+        .sp-tier-card__cta--secondary {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #ffffff;
+        }
+
+        .sp-tier-card__cta--secondary:hover {
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25);
+        }
+
+        @media (max-width: 1024px) {
+            .sp-tiers__grid { grid-template-columns: 1fr; max-width: 480px; }
+            .sp-tier-card--featured { transform: none; }
+            .sp-tier-card--featured:hover { transform: translateY(-4px); }
+        }
+
+        /* ============================================
+           BENEFITS (4 CARDS)
+           ============================================ */
+
+        .sp-benefits {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .sp-benefits__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .sp-benefits__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sp-benefits__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(31, 41, 41, 0.93) 100%);
+        }
+
+        .sp-benefits__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sp-benefits__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .sp-benefits__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .sp-benefits__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .sp-benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .sp-benefits__card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(4px);
+        }
+
+        .sp-benefits__card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sp-benefits__card-icon {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.15);
+            border-radius: 12px;
+        }
+
+        .sp-benefits__card-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+            line-height: 1.3;
+        }
+
+        .sp-benefits__card-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .sp-benefits__grid { grid-template-columns: repeat(2, 1fr); }
+            .sp-benefits__title { font-size: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            .sp-benefits__grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           STATS BAR
+           ============================================ */
+
+        .sp-stats {
+            padding: 60px 0;
+            background: #f7f8fa;
+        }
+
+        .sp-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sp-stat {
+            padding: 0 16px;
+        }
+
+        .sp-stat__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .sp-stat__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .sp-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+
+        @media (max-width: 480px) {
+            .sp-stats__grid { grid-template-columns: 1fr; }
+            .sp-stat__number { font-size: 36px; }
+        }
+
+        /* ============================================
+           CONTACT CTA
+           ============================================ */
+
+        .sp-cta {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .sp-cta__content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sp-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .sp-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 540px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .sp-cta__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .sp-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sp-cta__btn--primary {
+            background: #ff6e42;
+            color: #ffffff;
+        }
+
+        .sp-cta__btn--primary:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+
+        .sp-cta__btn--secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .sp-cta__btn--secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab brand-nav__tab--active" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">SonicWall</a></li>
+                    <li class="breadcrumb__item" aria-current="page">SonicProtect</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. HERO SECTION -->
+        <section class="sp-hero" aria-label="SonicProtect hero">
+            <div class="sp-hero__background">
+                <img class="sp-hero__bg-image" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <div class="sp-hero__overlay"></div>
+                <div class="sp-hero__pattern" aria-hidden="true"></div>
+            </div>
+            <div class="sp-hero__graphic" aria-hidden="true">
+                <svg width="320" height="380" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M160 10L300 70V190C300 290 240 350 160 370C80 350 20 290 20 190V70L160 10Z" stroke="#ffffff" stroke-width="2" fill="none"/>
+                    <path d="M160 50L270 100V190C270 270 220 320 160 340C100 320 50 270 50 190V100L160 50Z" stroke="#ffffff" stroke-width="1" fill="none"/>
+                    <path d="M120 190L150 220L210 160" stroke="#ff6e42" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="sp-hero__content">
+                    <span class="sp-hero__badge">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L9 5h4l-3 2.5 1 4.5L7 9l-4 3 1-4.5L1 5h4z" fill="currentColor"/></svg>
+                        All-Inclusive Subscription
+                    </span>
+                    <h1 class="sp-hero__title">SONICPROTECT SUBSCRIPTION</h1>
+                    <p class="sp-hero__subtitle">One subscription. Complete protection. Bundle your SonicWall firewall with essential security services, support, and cloud management.</p>
+                    <a href="#tiers" class="sp-hero__cta">
+                        View Subscription Tiers
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. OVERVIEW -->
+        <section class="sp-overview" aria-label="SonicProtect overview">
+            <div class="container">
+                <div class="sp-overview__content">
+                    <h2 class="section-title">One Subscription. Everything You Need.</h2>
+                    <p class="sp-overview__text">SonicProtect is SonicWall's all-inclusive subscription that bundles firewall hardware, security services, support, and management into a single predictable payment. Simplify procurement and ensure continuous protection. No surprise renewal costs, no lapsed coverage, no piecemeal licensing. One SKU covers your firewall, every security service, 24/7 support, and cloud management through Network Security Manager.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. WHAT'S INCLUDED -->
+        <section class="sp-included" aria-label="What is included">
+            <div class="container">
+                <div class="sp-included__header">
+                    <h2 class="section-title">What's Included</h2>
+                    <p class="section-subtitle">Every SonicProtect subscription bundles these essential components</p>
+                </div>
+
+                <div class="sp-included__grid">
+                    <!-- NGFW Hardware -->
+                    <div class="sp-included-card">
+                        <div class="sp-included-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="8" width="22" height="14" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M7 12h3M7 16h3M7 20h3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/><circle cx="22" cy="15" r="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/></svg>
+                        </div>
+                        <h3 class="sp-included-card__name">Next-Gen Firewall Hardware</h3>
+                        <p class="sp-included-card__desc">Your choice of SonicWall TZ, NSa, or NSsp series firewall appliance included in the subscription. Hardware is replaced at no additional cost during the subscription term.</p>
+                    </div>
+
+                    <!-- Essential Protection -->
+                    <div class="sp-included-card">
+                        <div class="sp-included-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L24 7v7c0 7-4.5 11-10 13C8.5 25 4 21 4 14V7L14 3z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M10 14l3 3 5-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="sp-included-card__name">Essential Protection Service Suite</h3>
+                        <p class="sp-included-card__desc">Gateway anti-virus, anti-spyware, intrusion prevention, and content filtering. All the core threat prevention services active from day one.</p>
+                    </div>
+
+                    <!-- 24/7 Support -->
+                    <div class="sp-included-card">
+                        <div class="sp-included-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M14 8v6l4 2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="sp-included-card__name">24/7 Technical Support</h3>
+                        <p class="sp-included-card__desc">Around-the-clock access to SonicWall support engineers via phone, email, and web portal. Includes hardware replacement with advance exchange.</p>
+                    </div>
+
+                    <!-- NSM -->
+                    <div class="sp-included-card">
+                        <div class="sp-included-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M4 10h20" stroke="#ff6e42" stroke-width="2"/><path d="M10 10v14" stroke="#ff6e42" stroke-width="2"/><circle cx="7" cy="7" r="1" fill="#ff6e42"/></svg>
+                        </div>
+                        <h3 class="sp-included-card__name">Network Security Manager</h3>
+                        <p class="sp-included-card__desc">Cloud-based centralized management included at no additional cost. Monitor, configure, and manage your firewall from anywhere through NSM SaaS.</p>
+                    </div>
+
+                    <!-- Firmware Updates -->
+                    <div class="sp-included-card">
+                        <div class="sp-included-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v10" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><path d="M10 10l4 4 4-4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18v4a2 2 0 002 2h16a2 2 0 002-2v-4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><circle cx="21" cy="21" r="1" fill="#ff6e42"/></svg>
+                        </div>
+                        <h3 class="sp-included-card__name">Firmware Updates &amp; Upgrades</h3>
+                        <p class="sp-included-card__desc">Continuous firmware updates, security patches, and feature upgrades for the lifetime of your subscription. Always running the latest protection.</p>
+                    </div>
+
+                    <!-- Cyber Warranty -->
+                    <div class="sp-included-card">
+                        <div class="sp-included-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L24 7v7c0 7-4.5 11-10 13C8.5 25 4 21 4 14V7L14 3z" stroke="#ff6e42" stroke-width="2" fill="none"/><text x="9" y="18" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#ff6e42">$1M</text></svg>
+                        </div>
+                        <h3 class="sp-included-card__name">$1M Cyber Warranty</h3>
+                        <p class="sp-included-card__desc">Qualifying SonicProtect subscriptions include breach cost coverage up to $1 million. Real financial commitment backing real protection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SUBSCRIPTION TIERS -->
+        <section id="tiers" class="sp-tiers" aria-label="Subscription tiers">
+            <div class="container">
+                <div class="sp-tiers__header">
+                    <h2 class="section-title">Choose Your Tier</h2>
+                    <p class="section-subtitle">Three subscription levels designed to match your organization's security requirements</p>
+                </div>
+
+                <div class="sp-tiers__grid">
+                    <!-- Essential -->
+                    <div class="sp-tier-card">
+                        <h3 class="sp-tier-card__name">SonicProtect Essential</h3>
+                        <p class="sp-tier-card__desc">Core protection for small offices and branch locations with essential threat prevention.</p>
+                        <div class="sp-tier-card__divider"></div>
+                        <p class="sp-tier-card__features-title">What's Included</p>
+                        <ul class="sp-tier-card__features">
+                            <li>Next-Gen Firewall Hardware</li>
+                            <li>Gateway Anti-Virus &amp; Anti-Spyware</li>
+                            <li>Intrusion Prevention Service</li>
+                            <li>Content Filtering Service</li>
+                            <li>24/7 Technical Support</li>
+                            <li>Network Security Manager</li>
+                            <li>Firmware Updates</li>
+                        </ul>
+                        <a href="#" class="sp-tier-card__cta sp-tier-card__cta--secondary">Contact Sales &rarr;</a>
+                    </div>
+
+                    <!-- Advanced (Featured) -->
+                    <div class="sp-tier-card sp-tier-card--featured">
+                        <span class="sp-tier-card__popular">Most Popular</span>
+                        <h3 class="sp-tier-card__name">SonicProtect Advanced</h3>
+                        <p class="sp-tier-card__desc">Multi-layered defense with ATP sandboxing, content filtering, and application control.</p>
+                        <div class="sp-tier-card__divider"></div>
+                        <p class="sp-tier-card__features-title">Everything in Essential, Plus</p>
+                        <ul class="sp-tier-card__features">
+                            <li>Capture ATP Sandboxing</li>
+                            <li>Application Control &amp; Intelligence</li>
+                            <li>Comprehensive Anti-Spam</li>
+                            <li>Cloud App Security (CASB)</li>
+                            <li>RTDMI Threat Detection</li>
+                            <li>Priority Support Response</li>
+                            <li>$1M Cyber Warranty</li>
+                        </ul>
+                        <a href="#" class="sp-tier-card__cta sp-tier-card__cta--primary">Contact Sales &rarr;</a>
+                    </div>
+
+                    <!-- Plus -->
+                    <div class="sp-tier-card">
+                        <h3 class="sp-tier-card__name">SonicProtect Plus</h3>
+                        <p class="sp-tier-card__desc">Everything included plus MPSS managed services for hands-off enterprise security.</p>
+                        <div class="sp-tier-card__divider"></div>
+                        <p class="sp-tier-card__features-title">Everything in Advanced, Plus</p>
+                        <ul class="sp-tier-card__features">
+                            <li>MPSS Managed Security Services</li>
+                            <li>Dedicated Security Operations</li>
+                            <li>Network Visibility &amp; Analytics</li>
+                            <li>WiFi Cloud Management</li>
+                            <li>Proactive Threat Monitoring</li>
+                            <li>Configuration Backup &amp; Recovery</li>
+                            <li>Executive Security Reporting</li>
+                        </ul>
+                        <a href="#" class="sp-tier-card__cta sp-tier-card__cta--secondary">Contact Sales &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BENEFITS -->
+        <section class="sp-benefits" aria-label="SonicProtect benefits">
+            <div class="sp-benefits__background" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="lazy">
+                <div class="sp-benefits__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="sp-benefits__content">
+                    <div class="sp-benefits__header">
+                        <h2 class="sp-benefits__title">Why SonicProtect</h2>
+                        <p class="sp-benefits__subtitle">The business case for all-inclusive security subscriptions</p>
+                    </div>
+
+                    <div class="sp-benefits__grid">
+                        <!-- Predictable Costs -->
+                        <div class="sp-benefits__card">
+                            <div class="sp-benefits__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="4" y="4" width="18" height="18" rx="3" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M13 8v10M10 12h6" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/><circle cx="13" cy="13" r="5" stroke="#ff6e42" stroke-width="1" fill="none"/></svg>
+                            </div>
+                            <h3 class="sp-benefits__card-title">Predictable Costs</h3>
+                            <p class="sp-benefits__card-text">Shift from CapEx to OpEx with a single, predictable monthly or annual payment. No surprise renewal costs or unexpected hardware expenses.</p>
+                        </div>
+
+                        <!-- Simplified Procurement -->
+                        <div class="sp-benefits__card">
+                            <div class="sp-benefits__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="6" y="3" width="14" height="20" rx="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M10 8h6M10 12h6M10 16h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            </div>
+                            <h3 class="sp-benefits__card-title">Simplified Procurement</h3>
+                            <p class="sp-benefits__card-text">One SKU. One purchase order. One renewal date. Eliminate the complexity of managing separate hardware, software, and support contracts.</p>
+                        </div>
+
+                        <!-- Continuous Updates -->
+                        <div class="sp-benefits__card">
+                            <div class="sp-benefits__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 13a9 9 0 0117.4-3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/><path d="M22 13a9 9 0 01-17.4 3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/><path d="M21 7v3h-3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 19v-3h3" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <h3 class="sp-benefits__card-title">Continuous Updates</h3>
+                            <p class="sp-benefits__card-text">Security services, firmware, and threat intelligence stay current for the entire subscription term. Your protection never lapses or falls behind.</p>
+                        </div>
+
+                        <!-- Cyber Warranty -->
+                        <div class="sp-benefits__card">
+                            <div class="sp-benefits__card-icon" aria-hidden="true">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3L23 7v6c0 6-4 10-10 12C7 23 3 19 3 13V7L13 3z" stroke="#ff6e42" stroke-width="1.5" fill="none"/><path d="M9 13l3 3 5-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <h3 class="sp-benefits__card-title">Cyber Warranty</h3>
+                            <p class="sp-benefits__card-text">$1M breach coverage with qualifying subscriptions. SonicWall stands behind its protection with real financial accountability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. STATS BAR -->
+        <section class="sp-stats" aria-label="SonicProtect statistics">
+            <div class="container">
+                <div class="sp-stats__grid">
+                    <div class="sp-stat">
+                        <div class="sp-stat__number">$1M</div>
+                        <p class="sp-stat__label">Cyber Warranty</p>
+                    </div>
+                    <div class="sp-stat">
+                        <div class="sp-stat__number">One</div>
+                        <p class="sp-stat__label">Subscription</p>
+                    </div>
+                    <div class="sp-stat">
+                        <div class="sp-stat__number">24/7</div>
+                        <p class="sp-stat__label">Support Included</p>
+                    </div>
+                    <div class="sp-stat">
+                        <div class="sp-stat__number">Zero</div>
+                        <p class="sp-stat__label">Upfront Hardware Cost</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT CTA -->
+        <section class="sp-cta" aria-label="Get started with SonicProtect">
+            <div class="container">
+                <div class="sp-cta__content">
+                    <h2 class="sp-cta__title">Get Started with SonicProtect</h2>
+                    <p class="sp-cta__text">Simplify your security with one subscription that covers everything. Talk to our team to find the right tier for your organization.</p>
+                    <div class="sp-cta__buttons">
+                        <a href="#" class="sp-cta__btn sp-cta__btn--primary">
+                            Contact Sales
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="firewalls.html" class="sp-cta__btn sp-cta__btn--secondary">
+                            View Firewalls
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

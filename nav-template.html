@@ -1,0 +1,234 @@
+<!--
+  SHARED NAVIGATION TEMPLATE
+  Copy this into every page. Set the appropriate data-active-category on the brand-header__nav element.
+  Categories: home, network-security, email-security, networking-access, security-service-edge, managed-xdr
+-->
+
+<!-- Amazon Header Bar -->
+<header class="amazon-header" role="banner">
+    <div class="amazon-header__top">
+        <div class="amazon-header__container">
+            <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+            </a>
+            <div class="amazon-header__deliver">
+                <span class="amazon-header__deliver-label">Deliver to</span>
+                <span class="amazon-header__deliver-location">New York 10001</span>
+            </div>
+            <div class="amazon-header__search" role="search">
+                <select class="amazon-header__search-category" aria-label="Search category">
+                    <option>All Departments</option>
+                    <option>Electronics</option>
+                    <option>Computers</option>
+                    <option>Office Products</option>
+                </select>
+                <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="amazon-header__nav-right">
+                <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                    <span class="amazon-header__nav-label">EN</span>
+                </a>
+                <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                    <span class="amazon-header__nav-top">Hello, Sign in</span>
+                    <span class="amazon-header__nav-bottom">Account & Lists</span>
+                </a>
+                <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                    <span class="amazon-header__nav-top">Returns</span>
+                    <span class="amazon-header__nav-bottom">& Orders</span>
+                </a>
+                <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                    <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                        <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                    </svg>
+                    <span class="amazon-header__cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="amazon-header__subnav" aria-label="Amazon departments">
+        <div class="amazon-header__container">
+            <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+            <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+            <a href="#" class="amazon-subnav__item">Medical Care</a>
+            <a href="#" class="amazon-subnav__item">Best Sellers</a>
+            <a href="#" class="amazon-subnav__item">Prime</a>
+            <a href="#" class="amazon-subnav__item">New Releases</a>
+            <a href="#" class="amazon-subnav__item">Music</a>
+            <a href="#" class="amazon-subnav__item">Today's Deals</a>
+            <a href="#" class="amazon-subnav__item">Customer Service</a>
+        </div>
+    </nav>
+</header>
+
+<!-- SonicWall Brand Header -->
+<div class="brand-header">
+    <div class="brand-header__top">
+        <div class="brand-header__container">
+            <div class="brand-header__left">
+                <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                <button class="brand-header__follow" aria-label="Follow SonicWall">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Follow
+                </button>
+                <button class="brand-header__share" aria-label="Share this store">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Share
+                </button>
+            </div>
+            <div class="brand-header__search" role="search">
+                <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                <button aria-label="Search SonicWall store">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+        <div class="brand-header__container">
+            <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+            <div class="brand-nav__dropdown">
+                <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <div class="brand-nav__dropdown-menu">
+                    <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                    <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                    <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                    <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                    <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                    <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                    <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                </div>
+            </div>
+
+            <div class="brand-nav__dropdown">
+                <a href="hosted-email-security.html" class="brand-nav__tab" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <div class="brand-nav__dropdown-menu">
+                    <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                    <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                </div>
+            </div>
+
+            <div class="brand-nav__dropdown">
+                <a href="networking.html" class="brand-nav__tab" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <div class="brand-nav__dropdown-menu">
+                    <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                    <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                    <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                    <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                    <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                </div>
+            </div>
+
+            <div class="brand-nav__dropdown">
+                <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <div class="brand-nav__dropdown-menu">
+                    <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                    <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                    <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                </div>
+            </div>
+
+            <div class="brand-nav__dropdown">
+                <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <div class="brand-nav__dropdown-menu">
+                    <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                    <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                    <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                    <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                    <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                    <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- FOOTER TEMPLATE -->
+<!-- Copy this footer into every page -->
+<footer class="footer" role="contentinfo">
+    <div class="footer__back-to-top">
+        <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+    </div>
+    <div class="footer__main">
+        <div class="container">
+            <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Get to Know Us</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About Amazon</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Amazon Devices</a></li>
+                        <li><a href="#">Amazon Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Make Money with Us</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Sell products on Amazon</a></li>
+                        <li><a href="#">Sell on Amazon Business</a></li>
+                        <li><a href="#">Sell apps on Amazon</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Self-Publish with Us</a></li>
+                        <li><a href="#">Host an Amazon Hub</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Amazon Payment Products</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Amazon Business Card</a></li>
+                        <li><a href="#">Shop with Points</a></li>
+                        <li><a href="#">Reload Your Balance</a></li>
+                        <li><a href="#">Amazon Currency Converter</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Let Us Help You</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Amazon and COVID-19</a></li>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Manage Your Content and Devices</a></li>
+                        <li><a href="#">Amazon Assistant</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__bottom-content">
+                <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                <div class="footer__bottom-links">
+                    <a href="#">Conditions of Use</a>
+                    <a href="#">Privacy Notice</a>
+                    <a href="#">Your Ads Privacy Choices</a>
+                </div>
+            </div>
+            <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </div>
+    <div class="footer__sonicwall">
+        <div class="container">
+            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+        </div>
+    </div>
+</footer>

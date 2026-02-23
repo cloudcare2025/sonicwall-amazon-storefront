@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWall On-Prem Email Security - Hardware-based email security appliance for organizations requiring on-premises data sovereignty, compliance control, and air-gapped protection.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicWall On-Prem Email Security | Official Store on Amazon">
+    <meta property="og:description" content="Hardware-based email security appliance for on-premises data sovereignty and compliance control. Multi-layer anti-spam, Capture ATP, encryption, and DLP.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicWall On-Prem Email Security | Official Store on Amazon">
+    <meta name="twitter:description" content="Hardware-based email security appliance for on-premises data sovereignty and compliance control.">
+    <title>On-Prem Email Security | SonicWall Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* ============================================
+           ON-PREM EMAIL SECURITY - PAGE STYLES
+           ============================================ */
+
+        /* Hero Section */
+        .opes-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .opes-hero__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .opes-hero__bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .opes-hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.93) 0%, rgba(31, 41, 41, 0.90) 50%, rgba(22, 33, 62, 0.87) 100%);
+        }
+
+        .opes-hero__pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L55 17.5V42.5L30 55L5 42.5V17.5L30 5z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+
+        .opes-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            padding: 80px 0;
+        }
+
+        .opes-hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 110, 66, 0.15);
+            border: 1px solid rgba(255, 110, 66, 0.3);
+            color: #ff6e42;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .opes-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .opes-hero__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            margin-bottom: 36px;
+            max-width: 580px;
+        }
+
+        .opes-hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 36px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .opes-hero__cta:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+
+        .opes-hero__shield {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            opacity: 0.08;
+        }
+
+        @media (max-width: 1024px) {
+            .opes-hero__title { font-size: 42px; }
+            .opes-hero__shield { display: none; }
+            .opes-hero { min-height: 440px; }
+        }
+
+        @media (max-width: 768px) {
+            .opes-hero__title { font-size: 34px; }
+            .opes-hero__subtitle { font-size: 17px; }
+            .opes-hero__content { padding: 60px 0; }
+            .opes-hero { min-height: 380px; }
+        }
+
+        @media (max-width: 480px) {
+            .opes-hero__title { font-size: 28px; }
+            .opes-hero__subtitle { font-size: 15px; }
+        }
+
+        /* ============================================
+           OVERVIEW SECTION
+           ============================================ */
+
+        .opes-overview {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .opes-overview__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .opes-overview__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* ============================================
+           KEY CAPABILITIES
+           ============================================ */
+
+        .opes-capabilities {
+            padding: 80px 0;
+            background: #f7f8fa;
+        }
+
+        .opes-capabilities__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .opes-capabilities__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .opes-cap-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .opes-cap-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .opes-cap-card__icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 12px;
+        }
+
+        .opes-cap-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 10px;
+            letter-spacing: 0.2px;
+        }
+
+        .opes-cap-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .opes-capabilities__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .opes-capabilities__grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           APPLIANCE OPTIONS
+           ============================================ */
+
+        .opes-appliances {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .opes-appliances__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .opes-appliances__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1060px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .opes-appliance-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 40px 28px;
+            position: relative;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .opes-appliance-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .opes-appliance-card--featured {
+            border: 2px solid #ff6e42;
+            box-shadow: 0 8px 32px rgba(255, 110, 66, 0.12);
+        }
+
+        .opes-appliance-card__badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 20px;
+            border-radius: 50px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .opes-appliance-card__icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 16px;
+        }
+
+        .opes-appliance-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+            text-align: center;
+        }
+
+        .opes-appliance-card__capacity {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ff6e42;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .opes-appliance-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .opes-appliance-card__features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .opes-appliance-card__features li {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #2b333f;
+            line-height: 1.5;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .opes-appliance-card__features li:last-child {
+            border-bottom: none;
+        }
+
+        .opes-appliance-card__features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8' fill='%23f0fdf4'/%3E%3Cpath d='M6 9l2 2 4-4' stroke='%2322c55e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center center;
+            background-size: contain;
+        }
+
+        @media (max-width: 1024px) {
+            .opes-appliances__grid { grid-template-columns: 1fr; max-width: 480px; }
+        }
+
+        /* ============================================
+           FEATURES GRID
+           ============================================ */
+
+        .opes-features {
+            padding: 80px 0;
+            background: #f7f8fa;
+        }
+
+        .opes-features__header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .opes-features__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .opes-feature-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px 24px;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .opes-feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .opes-feature-card__icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 10px;
+        }
+
+        .opes-feature-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 8px;
+            letter-spacing: 0.2px;
+        }
+
+        .opes-feature-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .opes-features__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .opes-features__grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           DEPLOYMENT OPTIONS
+           ============================================ */
+
+        .opes-deployment {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .opes-deployment__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .opes-deployment__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .opes-deploy-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 36px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .opes-deploy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ff6e42;
+        }
+
+        .opes-deploy-card__icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 110, 66, 0.08);
+            border-radius: 16px;
+        }
+
+        .opes-deploy-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #020817;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .opes-deploy-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .opes-deployment__grid { grid-template-columns: 1fr; max-width: 400px; }
+        }
+
+        /* ============================================
+           STATS BAR
+           ============================================ */
+
+        .opes-stats {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .opes-stats__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .opes-stats__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .opes-stats__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(31, 41, 41, 0.93) 100%);
+        }
+
+        .opes-stats__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .opes-stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .opes-stat {
+            text-align: center;
+            padding: 32px 16px;
+        }
+
+        .opes-stat__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .opes-stat__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+        }
+
+        @media (max-width: 1024px) {
+            .opes-stats__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .opes-stats__grid { grid-template-columns: 1fr; }
+            .opes-stat__number { font-size: 40px; }
+        }
+
+        /* ============================================
+           CONTACT CTA
+           ============================================ */
+
+        .opes-cta {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .opes-cta__content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .opes-cta__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .opes-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 540px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .opes-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .opes-cta__btn:hover {
+            background: #e55a30;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 110, 66, 0.35);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                </a>
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab" data-section="home">HOME</a>
+
+                <div class="brand-nav__dropdown">
+                    <a href="firewalls.html" class="brand-nav__tab" data-section="network-security">NETWORK SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="firewalls.html" class="brand-nav__dropdown-item">Next-Gen Firewall (NGFW)</a>
+                        <a href="firewalls.html#hybrid-mesh" class="brand-nav__dropdown-item">Hybrid Mesh Firewall</a>
+                        <a href="managed-firewall.html" class="brand-nav__dropdown-item">Managed Firewall</a>
+                        <a href="secure-sd-wan.html" class="brand-nav__dropdown-item">Secure SD-WAN</a>
+                        <a href="security-services.html" class="brand-nav__dropdown-item">Security Services</a>
+                        <a href="network-security-manager.html" class="brand-nav__dropdown-item">Network Security Manager</a>
+                        <a href="sonicprotect.html" class="brand-nav__dropdown-item">SonicProtect Subscription</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="hosted-email-security.html" class="brand-nav__tab brand-nav__tab--active" data-section="email-security">EMAIL SECURITY <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="hosted-email-security.html" class="brand-nav__dropdown-item">Hosted Email Security</a>
+                        <a href="onprem-email-security.html" class="brand-nav__dropdown-item">On-Prem Email Security</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="networking.html" class="brand-nav__tab" data-section="networking-access">NETWORKING & ACCESS <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="switches.html" class="brand-nav__dropdown-item">Switches</a>
+                        <a href="access-points.html" class="brand-nav__dropdown-item">Access Points</a>
+                        <a href="outdoor-access-points.html" class="brand-nav__dropdown-item">Outdoor Access Points</a>
+                        <a href="sma-1000.html" class="brand-nav__dropdown-item">SMA 1000 Series</a>
+                        <a href="wireless-network-manager.html" class="brand-nav__dropdown-item">Wireless Network Manager</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="cloud-edge.html" class="brand-nav__tab" data-section="security-service-edge">SECURITY SERVICE EDGE <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="cloud-secure-edge.html" class="brand-nav__dropdown-item">Cloud Secure Edge</a>
+                        <a href="secure-private-access.html" class="brand-nav__dropdown-item">Secure Private Access</a>
+                        <a href="secure-internet-access.html" class="brand-nav__dropdown-item">Secure Internet Access</a>
+                    </div>
+                </div>
+
+                <div class="brand-nav__dropdown">
+                    <a href="more.html" class="brand-nav__tab" data-section="managed-xdr">MANAGED XDR <svg class="brand-nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown-menu">
+                        <a href="sonicsentry-mxdr.html" class="brand-nav__dropdown-item">SonicSentry MXDR</a>
+                        <a href="sonicsentry-mdr.html" class="brand-nav__dropdown-item">SonicSentry MDR</a>
+                        <a href="sonicsentry-mdr-cloud.html" class="brand-nav__dropdown-item">MDR for Cloud</a>
+                        <a href="sonicsentry-mdr-network.html" class="brand-nav__dropdown-item">MDR for Network</a>
+                        <a href="capture-client.html" class="brand-nav__dropdown-item">Capture Client</a>
+                        <a href="capture-atp.html" class="brand-nav__dropdown-item">Capture ATP</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Security</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">SonicWall</a></li>
+                    <li class="breadcrumb__item" aria-current="page">On-Prem Email Security</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. HERO SECTION -->
+        <section class="opes-hero" aria-label="On-Prem Email Security hero">
+            <div class="opes-hero__background">
+                <img class="opes-hero__bg-image" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <div class="opes-hero__overlay"></div>
+                <div class="opes-hero__pattern" aria-hidden="true"></div>
+            </div>
+            <div class="opes-hero__shield" aria-hidden="true">
+                <svg width="320" height="380" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M160 10L300 70V190C300 290 240 350 160 370C80 350 20 290 20 190V70L160 10Z" stroke="#ffffff" stroke-width="2" fill="none"/>
+                    <path d="M160 50L270 100V190C270 270 220 320 160 340C100 320 50 270 50 190V100L160 50Z" stroke="#ffffff" stroke-width="1" fill="none"/>
+                    <rect x="110" y="140" width="100" height="70" rx="6" stroke="#ffffff" stroke-width="2" fill="none"/>
+                    <rect x="120" y="155" width="80" height="10" rx="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                    <rect x="120" y="172" width="80" height="10" rx="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                    <circle cx="130" cy="160" r="3" fill="#ff6e42"/>
+                    <circle cx="130" cy="177" r="3" fill="#ff6e42"/>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="opes-hero__content">
+                    <span class="opes-hero__badge">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L9 5h4l-3 2.5 1 4.5L7 9l-4 3 1-4.5L1 5h4z" fill="currentColor"/></svg>
+                        Hardware Appliance
+                    </span>
+                    <h1 class="opes-hero__title">ON-PREM EMAIL SECURITY</h1>
+                    <p class="opes-hero__subtitle">Hardware-based email security appliance for organizations requiring on-premises data sovereignty and compliance control.</p>
+                    <a href="#appliances" class="opes-hero__cta">
+                        View Appliance Options
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. OVERVIEW -->
+        <section class="opes-overview" aria-label="Product overview">
+            <div class="container">
+                <div class="opes-overview__header">
+                    <h2 class="section-title">Enterprise On-Premises Email Protection</h2>
+                    <p class="section-subtitle">Data sovereignty meets enterprise-grade security</p>
+                </div>
+                <p class="opes-overview__text">SonicWall Email Security Appliance delivers enterprise-grade email protection deployed on-premises. Ideal for organizations with strict data residency requirements, compliance mandates, or air-gapped environments. All email scanning, quarantine, and policy enforcement happens within your own infrastructure — giving you complete control over your email security stack.</p>
+            </div>
+        </section>
+
+        <!-- 3. KEY CAPABILITIES -->
+        <section class="opes-capabilities" aria-label="Key capabilities">
+            <div class="container">
+                <div class="opes-capabilities__header">
+                    <h2 class="section-title">Key Capabilities</h2>
+                    <p class="section-subtitle">Comprehensive email defense deployed entirely on your infrastructure</p>
+                </div>
+                <div class="opes-capabilities__grid">
+                    <!-- Multi-Layer Anti-Spam -->
+                    <div class="opes-cap-card">
+                        <div class="opes-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M22 12h-6l-2 3h-4l-2-3H2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-cap-card__name">Multi-Layer Anti-Spam</h3>
+                        <p class="opes-cap-card__desc">Connection-level filtering, reputation analysis, content inspection, and Bayesian learning combine to block 99%+ of spam before it reaches mailboxes.</p>
+                    </div>
+                    <!-- Advanced Threat Protection -->
+                    <div class="opes-cap-card">
+                        <div class="opes-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-cap-card__name">Advanced Threat Protection</h3>
+                        <p class="opes-cap-card__desc">Capture ATP integration provides cloud-based multi-engine sandbox analysis for suspicious attachments, catching zero-day malware and ransomware.</p>
+                    </div>
+                    <!-- Encryption & DLP -->
+                    <div class="opes-cap-card">
+                        <div class="opes-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="16" r="1.5" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-cap-card__name">Encryption & DLP</h3>
+                        <p class="opes-cap-card__desc">Policy-based TLS encryption and data loss prevention scanning ensure sensitive data never leaves your organization unprotected.</p>
+                    </div>
+                    <!-- Compliance & Archiving -->
+                    <div class="opes-cap-card">
+                        <div class="opes-cap-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-cap-card__name">Compliance & Archiving</h3>
+                        <p class="opes-cap-card__desc">Built-in email journaling, archiving, and audit-ready reporting help meet HIPAA, PCI-DSS, SOX, and other regulatory compliance requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. APPLIANCE OPTIONS -->
+        <section id="appliances" class="opes-appliances" aria-label="Appliance options">
+            <div class="container">
+                <div class="opes-appliances__header">
+                    <h2 class="section-title">Appliance Options</h2>
+                    <p class="section-subtitle">Sized for your organization's email volume and user count</p>
+                </div>
+                <div class="opes-appliances__grid">
+                    <!-- ES 5000 -->
+                    <div class="opes-appliance-card">
+                        <div class="opes-appliance-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="7" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="2" y="14" width="20" height="7" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <circle cx="6" cy="6.5" r="1" fill="#ff6e42"/>
+                                <circle cx="6" cy="17.5" r="1" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-appliance-card__name">ES 5000</h3>
+                        <div class="opes-appliance-card__capacity">Up to 1,000 Users</div>
+                        <p class="opes-appliance-card__desc">Purpose-built appliance for small-to-mid-size organizations. Compact form factor with full threat protection capabilities.</p>
+                        <ul class="opes-appliance-card__features">
+                            <li>Multi-layer anti-spam engine</li>
+                            <li>Capture ATP integration</li>
+                            <li>Policy-based encryption</li>
+                            <li>LDAP/AD integration</li>
+                            <li>Centralized reporting</li>
+                        </ul>
+                    </div>
+                    <!-- ES 9000 -->
+                    <div class="opes-appliance-card opes-appliance-card--featured">
+                        <div class="opes-appliance-card__badge">Most Popular</div>
+                        <div class="opes-appliance-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="1" y="2" width="22" height="6" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="1" y="10" width="22" height="6" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="1" y="18" width="22" height="4" rx="1" stroke="#ff6e42" stroke-width="1.5"/>
+                                <circle cx="5" cy="5" r="1" fill="#ff6e42"/>
+                                <circle cx="5" cy="13" r="1" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-appliance-card__name">ES 9000</h3>
+                        <div class="opes-appliance-card__capacity">Up to 5,000 Users</div>
+                        <p class="opes-appliance-card__desc">Enterprise-grade appliance for large organizations with high email volumes and advanced compliance requirements.</p>
+                        <ul class="opes-appliance-card__features">
+                            <li>High-throughput scanning engine</li>
+                            <li>Capture ATP with RTDMI</li>
+                            <li>Advanced DLP policies</li>
+                            <li>Clustering & high availability</li>
+                            <li>Compliance archiving</li>
+                            <li>Delegated administration</li>
+                        </ul>
+                    </div>
+                    <!-- Virtual Appliance -->
+                    <div class="opes-appliance-card">
+                        <div class="opes-appliance-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M2 17l10 5 10-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12l10 5 10-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 2l10 5-10 5L2 7l10-5z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-appliance-card__name">Virtual Appliance</h3>
+                        <div class="opes-appliance-card__capacity">VMware / Hyper-V</div>
+                        <p class="opes-appliance-card__desc">Software-based deployment for virtualized environments. Same protection as hardware appliances with the flexibility of your hypervisor.</p>
+                        <ul class="opes-appliance-card__features">
+                            <li>VMware ESXi support</li>
+                            <li>Microsoft Hyper-V support</li>
+                            <li>Scalable resource allocation</li>
+                            <li>Snapshot & backup friendly</li>
+                            <li>Full feature parity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FEATURES GRID -->
+        <section class="opes-features" aria-label="Detailed features">
+            <div class="container">
+                <div class="opes-features__header">
+                    <h2 class="section-title">Features</h2>
+                    <p class="section-subtitle">Enterprise capabilities for complete on-premises email protection</p>
+                </div>
+                <div class="opes-features__grid">
+                    <!-- Capture ATP Integration -->
+                    <div class="opes-feature-card">
+                        <div class="opes-feature-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-feature-card__name">Capture ATP Integration</h3>
+                        <p class="opes-feature-card__desc">Suspicious attachments are sent to the Capture ATP cloud sandbox for multi-engine analysis, providing zero-day threat detection with RTDMI technology.</p>
+                    </div>
+                    <!-- Policy-Based Encryption -->
+                    <div class="opes-feature-card">
+                        <div class="opes-feature-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-feature-card__name">Policy-Based Encryption</h3>
+                        <p class="opes-feature-card__desc">Automatically encrypt outbound messages based on content, sender, recipient, or keyword policies. TLS enforcement ensures secure transport.</p>
+                    </div>
+                    <!-- Data Loss Prevention -->
+                    <div class="opes-feature-card">
+                        <div class="opes-feature-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-feature-card__name">Data Loss Prevention</h3>
+                        <p class="opes-feature-card__desc">Outbound scanning identifies PII, financial data, healthcare records, and custom-defined sensitive content before it leaves the organization.</p>
+                    </div>
+                    <!-- Anti-Spoofing -->
+                    <div class="opes-feature-card">
+                        <div class="opes-feature-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="7" r="4" stroke="#ff6e42" stroke-width="2"/>
+                                <path d="M2 2l20 20" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-feature-card__name">Anti-Spoofing</h3>
+                        <p class="opes-feature-card__desc">SPF, DKIM, and DMARC validation combined with header analysis and sender reputation scoring blocks impersonation and spoofing attempts.</p>
+                    </div>
+                    <!-- LDAP/AD Integration -->
+                    <div class="opes-feature-card">
+                        <div class="opes-feature-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9" cy="7" r="4" stroke="#ff6e42" stroke-width="2"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-feature-card__name">LDAP/AD Integration</h3>
+                        <p class="opes-feature-card__desc">Native integration with Active Directory and LDAP for automatic user provisioning, group-based policies, and directory-harvesting attack prevention.</p>
+                    </div>
+                    <!-- Centralized Management -->
+                    <div class="opes-feature-card">
+                        <div class="opes-feature-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="9" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="14" y="3" width="7" height="5" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="14" y="12" width="7" height="9" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="3" y="16" width="7" height="5" rx="1" stroke="#ff6e42" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-feature-card__name">Centralized Management</h3>
+                        <p class="opes-feature-card__desc">Single-pane management console for multi-appliance environments. Unified policy, reporting, and quarantine management across all nodes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. DEPLOYMENT OPTIONS -->
+        <section class="opes-deployment" aria-label="Deployment options">
+            <div class="container">
+                <div class="opes-deployment__header">
+                    <h2 class="section-title">Deployment Options</h2>
+                    <p class="section-subtitle">Flexible deployment to match your infrastructure requirements</p>
+                </div>
+                <div class="opes-deployment__grid">
+                    <!-- Physical Appliance -->
+                    <div class="opes-deploy-card">
+                        <div class="opes-deploy-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="7" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <rect x="2" y="14" width="20" height="7" rx="2" stroke="#ff6e42" stroke-width="2"/>
+                                <circle cx="6" cy="6.5" r="1" fill="#ff6e42"/>
+                                <circle cx="6" cy="17.5" r="1" fill="#ff6e42"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-deploy-card__name">Physical Appliance</h3>
+                        <p class="opes-deploy-card__desc">Rack-mountable hardware appliances (ES 5000, ES 9000) for dedicated on-premises deployment with maximum throughput and reliability.</p>
+                    </div>
+                    <!-- Virtual Appliance -->
+                    <div class="opes-deploy-card">
+                        <div class="opes-deploy-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M2 17l10 5 10-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12l10 5 10-5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 2l10 5-10 5L2 7l10-5z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-deploy-card__name">Virtual Appliance</h3>
+                        <p class="opes-deploy-card__desc">Deploy on VMware ESXi or Microsoft Hyper-V with full feature parity. Scale resources on-demand within your existing virtualization platform.</p>
+                    </div>
+                    <!-- Hybrid -->
+                    <div class="opes-deploy-card">
+                        <div class="opes-deploy-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="opes-deploy-card__name">Hybrid with Cloud</h3>
+                        <p class="opes-deploy-card__desc">Combine on-premises appliances with SonicWall Hosted Email Security for a layered approach — pre-filtering in the cloud, deep inspection on-prem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. STATS -->
+        <section class="opes-stats" aria-label="Performance statistics">
+            <div class="opes-stats__background">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="lazy">
+                <div class="opes-stats__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="opes-stats__content">
+                    <div class="opes-stats__grid">
+                        <div class="opes-stat">
+                            <div class="opes-stat__number">5,000+</div>
+                            <div class="opes-stat__label">Users Supported</div>
+                        </div>
+                        <div class="opes-stat">
+                            <div class="opes-stat__number">On-Prem</div>
+                            <div class="opes-stat__label">Data Sovereignty</div>
+                        </div>
+                        <div class="opes-stat">
+                            <div class="opes-stat__number">Multi-Layer</div>
+                            <div class="opes-stat__label">Protection</div>
+                        </div>
+                        <div class="opes-stat">
+                            <div class="opes-stat__number">Compliance</div>
+                            <div class="opes-stat__label">Ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA -->
+        <section class="opes-cta" aria-label="Contact sales">
+            <div class="container">
+                <div class="opes-cta__content">
+                    <h2 class="opes-cta__title">Deploy On-Prem Email Security</h2>
+                    <p class="opes-cta__text">Talk to a SonicWall specialist about the right email security appliance for your organization's compliance, capacity, and infrastructure requirements.</p>
+                    <a href="#" class="opes-cta__btn">
+                        Contact Sales
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
