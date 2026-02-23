@@ -889,13 +889,8 @@ ul {
     .brand-header__container {
       display: flex;
       gap: 40px;
-      overflow-x: auto;
-      scrollbar-width: none;
+      overflow: visible;
       justify-content: center;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
     }
   }
 }
