@@ -19,7 +19,7 @@ interface CategoryMapping {
 
 type ScrollTargetResolver = () => HTMLElement | null;
 
-type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Parameters<T>) => void;
+type DebouncedFunction<T extends (...args: never[]) => void> = (...args: Parameters<T>) => void;
 
 // ============================================================================
 // IIFE — Keeps all state private, identical runtime behavior to original JS
@@ -31,7 +31,6 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
   // STATE & CONFIGURATION
   // ==========================================================================
 
-  let isScrolling: boolean = false;
   let currentTestimonialIndex: number = 0;
   let testimonialInterval: ReturnType<typeof setInterval> | null = null;
   let touchStartX: number = 0;
@@ -49,26 +48,39 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
   // Store observers for cleanup
   const observers: IntersectionObserver[] = [];
 
-  // Detect reduced motion preference
-  const prefersReducedMotion: boolean = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Detect reduced motion preference (live — updates if user changes setting)
+  let prefersReducedMotion: boolean = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motionQuery: MediaQueryList = window.matchMedia('(prefers-reduced-motion: reduce)');
+  motionQuery.addEventListener('change', (e: MediaQueryListEvent): void => {
+    prefersReducedMotion = e.matches;
+  });
 
   // ==========================================================================
   // UTILITY FUNCTIONS
   // ==========================================================================
 
-  function throttle(callback: () => void): void {
-    if (isScrolling) return;
-    isScrolling = true;
-    requestAnimationFrame((): void => {
-      callback();
-      isScrolling = false;
-    });
+  /**
+   * Returns a scoped rAF-based throttle function.
+   * Each call to createThrottle() produces an independent gate,
+   * so multiple consumers (sticky header, comparison table, etc.)
+   * never block each other.
+   */
+  function createThrottle(): (callback: () => void) => void {
+    let ticking: boolean = false;
+    return function throttle(callback: () => void): void {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame((): void => {
+        callback();
+        ticking = false;
+      });
+    };
   }
 
   function smoothScrollTo(element: Element, offset: number = STICKY_HEADER_HEIGHT): void {
     if (!element) return;
 
-    const elementPosition: number = element.getBoundingClientRect().top + window.pageYOffset;
+    const elementPosition: number = element.getBoundingClientRect().top + window.scrollY;
     const offsetPosition: number = elementPosition - offset;
 
     window.scrollTo({
@@ -77,7 +89,7 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
     });
   }
 
-  function debounce<T extends (...args: unknown[]) => void>(func: T, wait: number): DebouncedFunction<T> {
+  function debounce<T extends (...args: never[]) => void>(func: T, wait: number): DebouncedFunction<T> {
     let timeout: ReturnType<typeof setTimeout> | undefined;
     return function executedFunction(this: unknown, ...args: Parameters<T>): void {
       const later = (): void => {
@@ -95,14 +107,25 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
   function initTabNavigation(): void {
     const tabs: NodeListOf<Element> = document.querySelectorAll('.brand-nav__tab');
-    const sections: NodeListOf<Element> = document.querySelectorAll('[data-section]');
+    // Only observe actual page sections, not nav elements that happen to have data-section
+    const sections: NodeListOf<Element> = document.querySelectorAll(
+      'section[data-section], div[data-section]:not(.brand-nav__tab):not(.brand-nav__dropdown-link)'
+    );
 
     if (!tabs.length) return;
 
-    // Add keyboard navigation support
+    // Add tablist role to the container
+    const tabContainer: HTMLElement | null = document.querySelector('.brand-header__nav, .brand-nav');
+    if (tabContainer) {
+      tabContainer.setAttribute('role', 'tablist');
+    }
+
+    // Add keyboard navigation support with roving tabindex
     tabs.forEach((tab: Element, index: number): void => {
       tab.setAttribute('role', 'tab');
-      tab.setAttribute('tabindex', '0');
+      // Only the active tab (or first tab if none active) gets tabindex 0
+      const isActive: boolean = tab.classList.contains('brand-nav__tab--active');
+      tab.setAttribute('tabindex', isActive || (index === 0 && !document.querySelector('.brand-nav__tab--active')) ? '0' : '-1');
 
       // Click handler
       tab.addEventListener('click', (e: Event): void => {
@@ -118,15 +141,19 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
           activateTab(tab);
         }
 
-        // Arrow key navigation
+        // Arrow key navigation with roving tabindex
         if (keyEvent.key === 'ArrowRight') {
           keyEvent.preventDefault();
           const nextTab: Element = tabs[index + 1] || tabs[0];
+          tab.setAttribute('tabindex', '-1');
+          nextTab.setAttribute('tabindex', '0');
           (nextTab as HTMLElement).focus();
         }
         if (keyEvent.key === 'ArrowLeft') {
           keyEvent.preventDefault();
           const prevTab: Element = tabs[index - 1] || tabs[tabs.length - 1];
+          tab.setAttribute('tabindex', '-1');
+          prevTab.setAttribute('tabindex', '0');
           (prevTab as HTMLElement).focus();
         }
       });
@@ -135,18 +162,24 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
     function activateTab(tab: Element): void {
       const targetSection: string | null = tab.getAttribute('data-section');
 
-      // Update active tab
+      // Update active tab with roving tabindex
       tabs.forEach((t: Element): void => {
         t.classList.remove('brand-nav__tab--active');
         t.setAttribute('aria-selected', 'false');
+        t.setAttribute('tabindex', '-1');
       });
       tab.classList.add('brand-nav__tab--active');
       tab.setAttribute('aria-selected', 'true');
+      tab.setAttribute('tabindex', '0');
 
-      // Scroll to section
-      const section: Element | null = document.querySelector(`[data-section="${targetSection}"]`);
-      if (section && section.tagName !== 'BUTTON') {
-        smoothScrollTo(section);
+      // Scroll to section (use specific selector to avoid matching nav elements)
+      if (targetSection) {
+        const section: Element | null = document.querySelector(
+          `section[data-section="${targetSection}"], div[data-section="${targetSection}"]:not(.brand-nav__tab)`
+        );
+        if (section) {
+          smoothScrollTo(section);
+        }
       }
     }
 
@@ -164,9 +197,11 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
               tabs.forEach((t: Element): void => {
                 t.classList.remove('brand-nav__tab--active');
                 t.setAttribute('aria-selected', 'false');
+                t.setAttribute('tabindex', '-1');
               });
               activeTab.classList.add('brand-nav__tab--active');
               activeTab.setAttribute('aria-selected', 'true');
+              activeTab.setAttribute('tabindex', '0');
             }
           }
         });
@@ -178,9 +213,7 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
     );
 
     sections.forEach((section: Element): void => {
-      if (section.tagName !== 'BUTTON') {
-        sectionObserver.observe(section);
-      }
+      sectionObserver.observe(section);
     });
 
     observers.push(sectionObserver);
@@ -195,8 +228,6 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
         let maxVisibility: number = 0;
 
         sections.forEach((section: Element): void => {
-          if (section.tagName === 'BUTTON') return;
-
           const rect: DOMRect = section.getBoundingClientRect();
           const viewportHeight: number = window.innerHeight;
           const visibleHeight: number = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
@@ -218,9 +249,11 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
             tabs.forEach((t: Element): void => {
               t.classList.remove('brand-nav__tab--active');
               t.setAttribute('aria-selected', 'false');
+              t.setAttribute('tabindex', '-1');
             });
             correspondingTab.classList.add('brand-nav__tab--active');
             correspondingTab.setAttribute('aria-selected', 'true');
+            correspondingTab.setAttribute('tabindex', '0');
           }
         }
       }
@@ -255,8 +288,8 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
       button.setAttribute('aria-expanded', 'false');
       button.setAttribute('aria-controls', containerId);
 
-      // Debounced click handler
-      const handleToggle = debounce((): void => {
+      // Click handler — isAnimating guard prevents double-fire (no debounce needed)
+      const handleToggle = (): void => {
         if (isAnimating) return;
         isAnimating = true;
 
@@ -265,19 +298,25 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
         (button as HTMLButtonElement).disabled = true; // Disable during animation
 
         if (isExpanded) {
-          // Show products with grid-aware staggered animation
+          // Batch all display changes first to avoid layout thrashing
           gen7Products.forEach((card: Element): void => {
-            const htmlCard = card as HTMLElement;
-            htmlCard.style.display = 'block';
+            (card as HTMLElement).style.display = 'block';
+          });
 
-            // Calculate grid column position (typically 3-5 columns)
-            const parent: HTMLElement | null = htmlCard.parentElement;
-            const visibleCards: Element[] = parent
-              ? Array.from(parent.children).filter(
-                  (c: Element): boolean => window.getComputedStyle(c).display !== 'none'
-                )
-              : [];
-            const columnIndex: number = visibleCards.indexOf(card) % 5; // 5-column grid max
+          // Read layout ONCE after all display changes are applied
+          const parent: HTMLElement | null = gen7Products.length
+            ? (gen7Products[0] as HTMLElement).parentElement
+            : null;
+          const computedStyle: CSSStyleDeclaration | null = parent
+            ? window.getComputedStyle(parent)
+            : null;
+          const colString: string = computedStyle?.gridTemplateColumns || '';
+          const gridCols: number = colString ? colString.split(' ').length : 5;
+
+          // Show products with grid-aware staggered animation
+          gen7Products.forEach((card: Element, cardIndex: number): void => {
+            const htmlCard = card as HTMLElement;
+            const columnIndex: number = cardIndex % gridCols;
 
             setTimeout((): void => {
               if (prefersReducedMotion) {
@@ -291,19 +330,26 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
           button.textContent = 'Show fewer products';
 
-          // Re-enable button after animation
+          // Re-enable button after all column animations finish
+          const maxDelay: number = ((gridCols - 1) * PRODUCT_STAGGER_DELAY) + 400;
           setTimeout((): void => {
             isAnimating = false;
             (button as HTMLButtonElement).disabled = false;
-          }, PRODUCT_STAGGER_DELAY * 5 + 400);
+          }, maxDelay);
 
         } else {
           // Hide products with reverse stagger
+          const totalCards: number = gen7Products.length;
+          const lastCardDelay: number = (totalCards - 1) * 40;
+
           gen7Products.forEach((card: Element, index: number): void => {
             const htmlCard = card as HTMLElement;
             setTimeout((): void => {
               htmlCard.classList.remove('visible');
               if (prefersReducedMotion) {
+                // Reset inline styles set during expand
+                htmlCard.style.opacity = '';
+                htmlCard.style.transform = '';
                 htmlCard.style.display = 'none';
               }
             }, index * 40);
@@ -311,16 +357,21 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
           button.textContent = 'See more products';
 
-          // Re-enable button after animation
+          // Re-enable AFTER all individual card animations complete
+          const hideDelay: number = Math.max(lastCardDelay + 300, 500);
           setTimeout((): void => {
             gen7Products.forEach((card: Element): void => {
-              (card as HTMLElement).style.display = 'none';
+              const htmlCard = card as HTMLElement;
+              htmlCard.style.display = 'none';
+              // Reset stale inline styles so next expand starts clean
+              htmlCard.style.opacity = '';
+              htmlCard.style.transform = '';
             });
             isAnimating = false;
             (button as HTMLButtonElement).disabled = false;
-          }, 500);
+          }, hideDelay);
         }
-      }, 100);
+      };
 
       button.addEventListener('click', handleToggle);
     });
@@ -347,34 +398,41 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
       return;
     }
 
-    // Calculate grid-aware stagger delays based on column position
+    // WRITE PASS: add fade-in-up class to all elements first
     animatedElements.forEach((element: Element): void => {
-      const htmlEl = element as HTMLElement;
-      htmlEl.classList.add('fade-in-up');
+      (element as HTMLElement).classList.add('fade-in-up');
+    });
 
-      const parent: HTMLElement | null = htmlEl.parentElement;
-      if (parent?.classList.contains('story-cards') ||
-          parent?.classList.contains('category-grid') ||
-          parent?.classList.contains('product-grid') ||
-          parent?.classList.contains('stats-grid') ||
-          parent?.classList.contains('from-manufacturer__grid') ||
-          parent?.classList.contains('certifications-bar__badges')) {
+    // READ PASS: calculate grid-aware stagger delays (separated to prevent layout thrashing)
+    requestAnimationFrame((): void => {
+      animatedElements.forEach((element: Element): void => {
+        const htmlEl = element as HTMLElement;
+        const parent: HTMLElement | null = htmlEl.parentElement;
 
-        // Get all visible siblings (not display:none)
-        const siblings: Element[] = Array.from(parent.children).filter((child: Element): boolean => {
-          return window.getComputedStyle(child).display !== 'none';
-        });
+        if (parent?.classList.contains('story-cards') ||
+            parent?.classList.contains('category-grid') ||
+            parent?.classList.contains('product-grid') ||
+            parent?.classList.contains('stats-grid') ||
+            parent?.classList.contains('from-manufacturer__grid') ||
+            parent?.classList.contains('certifications-bar__badges')) {
 
-        const siblingIndex: number = siblings.indexOf(element);
+          // Get all visible siblings (not display:none)
+          const siblings: Element[] = Array.from(parent.children).filter((child: Element): boolean => {
+            return window.getComputedStyle(child).display !== 'none';
+          });
 
-        // Calculate column position for responsive grids
-        const computedStyle: CSSStyleDeclaration = window.getComputedStyle(parent);
-        const gridCols: number = computedStyle.gridTemplateColumns?.split(' ').length || 3;
-        const columnIndex: number = siblingIndex % gridCols;
+          const siblingIndex: number = siblings.indexOf(element);
 
-        // Stagger by column position (not total index)
-        htmlEl.style.transitionDelay = `${columnIndex * 0.08}s`;
-      }
+          // Calculate column position for responsive grids
+          const computedStyle: CSSStyleDeclaration = window.getComputedStyle(parent);
+          const colString: string = computedStyle.gridTemplateColumns || '';
+          const gridCols: number = colString ? colString.split(' ').length : 3;
+          const columnIndex: number = siblingIndex % gridCols;
+
+          // Stagger by column position (not total index)
+          htmlEl.style.transitionDelay = `${columnIndex * 0.08}s`;
+        }
+      });
     });
 
     // IntersectionObserver for triggering animations
@@ -420,10 +478,12 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
     if (!brandHeaderEl || !amazonHeader) return;
     const brandHeader: HTMLElement = brandHeaderEl;
 
-    // Cache measurements to avoid layout thrashing
-    const stickyThreshold: number = amazonHeader.offsetHeight;
-    const brandHeaderHeight: number = brandHeader.offsetHeight;
+    // Cache measurements — recalculated on resize
+    let stickyThreshold: number = amazonHeader.offsetHeight;
+    let brandHeaderHeight: number = brandHeader.offsetHeight;
     let isSticky: boolean = false;
+
+    const throttle = createThrottle();
 
     // Apply sticky styles via JS since no CSS rule exists for brand-header--sticky
     function applySticky(): void {
@@ -464,6 +524,16 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
+    // Recalculate cached measurements on resize
+    const handleResize = debounce((): void => {
+      const wasSticky: boolean = isSticky;
+      if (wasSticky) removeSticky();
+      stickyThreshold = amazonHeader.offsetHeight;
+      brandHeaderHeight = brandHeader.offsetHeight;
+      if (wasSticky && window.scrollY > stickyThreshold) applySticky();
+    }, 200);
+    window.addEventListener('resize', handleResize as EventListener, { passive: true });
+
     // Check on init in case page loaded already scrolled
     if (window.scrollY > stickyThreshold) {
       applySticky();
@@ -491,12 +561,19 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
   function initCartCounter(): void {
     const cartCount: HTMLElement | null = document.querySelector('.amazon-header__cart-count');
-    // FIX: Correct selector - buttons use .btn--amazon class
-    const optionButtons: NodeListOf<Element> = document.querySelectorAll('.btn--amazon');
+    // Only target "Add to Cart" buttons in product cards and FBT,
+    // NOT the comparison table "See options" buttons
+    const optionButtons: NodeListOf<Element> = document.querySelectorAll(
+      '.product-card .btn--amazon, .fbt-pricing > .btn--amazon'
+    );
 
     if (!cartCount || !optionButtons.length) return;
 
     let currentCount: number = parseInt(cartCount.textContent ?? '0', 10) || 0;
+
+    // Provide a live region for screen readers
+    cartCount.setAttribute('aria-live', 'polite');
+    cartCount.setAttribute('aria-atomic', 'true');
 
     optionButtons.forEach((button: Element): void => {
       button.addEventListener('click', (e: Event): void => {
@@ -535,17 +612,24 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
     if (!dots.length) return;
 
-    // Add ARIA attributes
+    // Add ARIA attributes -- dots act as tab-like controls
+    const dotsContainer: HTMLElement | null = document.querySelector('.dots-container, .testimonial-dots');
+    if (dotsContainer) {
+      dotsContainer.setAttribute('role', 'tablist');
+      dotsContainer.setAttribute('aria-label', 'Testimonial navigation');
+    }
+
     dots.forEach((dot: Element, index: number): void => {
-      dot.setAttribute('role', 'button');
+      dot.setAttribute('role', 'tab');
       dot.setAttribute('aria-label', `Show testimonial ${index + 1}`);
-      dot.setAttribute('tabindex', '0');
+      dot.setAttribute('tabindex', index === 0 ? '0' : '-1');
     });
 
     function updateActiveDot(index: number): void {
       dots.forEach((dot: Element, i: number): void => {
         dot.classList.toggle('dot--active', i === index);
         dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        dot.setAttribute('tabindex', i === index ? '0' : '-1');
       });
     }
 
@@ -583,6 +667,23 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
           keyEvent.preventDefault();
           currentTestimonialIndex = index;
           updateActiveDot(index);
+          resetInterval();
+        }
+        // Arrow key navigation between dots
+        if (keyEvent.key === 'ArrowRight') {
+          keyEvent.preventDefault();
+          const nextIndex: number = (index + 1) % dots.length;
+          (dots[nextIndex] as HTMLElement).focus();
+          currentTestimonialIndex = nextIndex;
+          updateActiveDot(nextIndex);
+          resetInterval();
+        }
+        if (keyEvent.key === 'ArrowLeft') {
+          keyEvent.preventDefault();
+          const prevIndex: number = (index - 1 + dots.length) % dots.length;
+          (dots[prevIndex] as HTMLElement).focus();
+          currentTestimonialIndex = prevIndex;
+          updateActiveDot(prevIndex);
           resetInterval();
         }
       });
@@ -647,6 +748,7 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
     // Add loading state handler for iframe
     const loadingIndicator: HTMLDivElement = document.createElement('div');
     loadingIndicator.className = 'video-loading';
+    loadingIndicator.setAttribute('aria-hidden', 'true');
     loadingIndicator.style.cssText = `
       position: absolute;
       top: 50%;
@@ -800,12 +902,14 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
     if (!brandNav) return;
 
-    const navContainer: HTMLElement | null = brandNav.querySelector('.brand-header__container');
-    if (!navContainer) return;
+    const navContainerMaybe: HTMLElement | null = brandNav.querySelector('.brand-header__container');
+    if (!navContainerMaybe) return;
+    const navContainer: HTMLElement = navContainerMaybe;
 
     // Create visual scroll indicators
     const leftIndicator: HTMLDivElement = document.createElement('div');
     leftIndicator.className = 'nav-scroll-indicator nav-scroll-indicator--left';
+    leftIndicator.setAttribute('aria-hidden', 'true');
     leftIndicator.style.cssText = `
       position: absolute;
       left: 0;
@@ -821,6 +925,7 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
     const rightIndicator: HTMLDivElement = document.createElement('div');
     rightIndicator.className = 'nav-scroll-indicator nav-scroll-indicator--right';
+    rightIndicator.setAttribute('aria-hidden', 'true');
     rightIndicator.style.cssText = `
       position: absolute;
       right: 0;
@@ -838,7 +943,10 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
     brandNav.appendChild(leftIndicator);
     brandNav.appendChild(rightIndicator);
 
-    const updateScrollIndicators = debounce((): void => {
+    // Use rAF-based throttle for smooth indicator updates during scroll
+    const scrollThrottle = createThrottle();
+
+    function updateScrollIndicators(): void {
       const isScrollable: boolean = navContainer.scrollWidth > navContainer.clientWidth;
       const scrollLeft: number = navContainer.scrollLeft;
       const maxScroll: number = navContainer.scrollWidth - navContainer.clientWidth;
@@ -853,15 +961,18 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
         leftIndicator.style.opacity = '0';
         rightIndicator.style.opacity = '0';
       }
-    }, 50);
+    }
 
-    navContainer.addEventListener('scroll', updateScrollIndicators, { passive: true });
-    window.addEventListener('resize', updateScrollIndicators, { passive: true });
+    navContainer.addEventListener('scroll', (): void => {
+      scrollThrottle(updateScrollIndicators);
+    }, { passive: true });
 
-    // Initial check
-    requestAnimationFrame((): void => {
-      updateScrollIndicators();
-    });
+    window.addEventListener('resize', (): void => {
+      scrollThrottle(updateScrollIndicators);
+    }, { passive: true });
+
+    // Initial check -- call directly, no delay needed
+    requestAnimationFrame(updateScrollIndicators);
   }
 
   // ==========================================================================
@@ -939,7 +1050,8 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
       const currentTransition: string = window.getComputedStyle(htmlButton).transition;
       if (currentTransition && currentTransition !== 'none' && currentTransition !== 'all 0s ease 0s') return;
 
-      htmlButton.style.transition = `all 0.2s ${EASING_SMOOTH}`;
+      // Only animate visual properties -- avoid 'all' which can cause layout jank
+      htmlButton.style.transition = `opacity 0.2s ${EASING_SMOOTH}, box-shadow 0.2s ${EASING_SMOOTH}, background-color 0.2s ${EASING_SMOOTH}, color 0.2s ${EASING_SMOOTH}, border-color 0.2s ${EASING_SMOOTH}`;
     });
   }
 
@@ -973,7 +1085,6 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
 
     // --- Column hover highlighting ---
     const allRows: NodeListOf<HTMLTableRowElement> = table.querySelectorAll('tr');
-    const columnCount: number = thead.querySelectorAll('th').length;
 
     // Add/remove highlight class on all cells in a column
     function highlightColumn(colIndex: number, active: boolean): void {
@@ -1008,8 +1119,9 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
     const wrapper: HTMLElement | null = document.querySelector('.comparison-table-wrapper');
 
     if (wrapper && thead) {
+      const tableThrottle = createThrottle();
       wrapper.addEventListener('scroll', function (): void {
-        throttle(function (): void {
+        tableThrottle(function (): void {
           const scrollTop: number = wrapper.scrollTop;
           if (scrollTop > 0) {
             thead.style.position = 'sticky';
@@ -1088,6 +1200,9 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
       prices.push(match ? parseFloat(match[1].replace(',', '')) : 0);
     });
 
+    // Cache plus signs once -- they don't change
+    const plusSigns: NodeListOf<Element> = container.querySelectorAll('.fbt-plus');
+
     function updateFBT(): void {
       let total: number = 0;
       let checkedCount: number = 0;
@@ -1114,20 +1229,18 @@ type DebouncedFunction<T extends (...args: unknown[]) => void> = (...args: Param
             htmlProduct.style.transition = 'opacity 0.3s ease, filter 0.3s ease';
           }
         }
+      });
 
-        // Also dim/brighten the "+" separator between products
-        const plusSigns: NodeListOf<Element> = container.querySelectorAll('.fbt-plus');
-        plusSigns.forEach(function (plus: Element, plusIndex: number): void {
-          // Show plus as dimmed if either adjacent product is unchecked
-          const leftChecked: boolean = checkboxes[plusIndex] ? checkboxes[plusIndex].checked : false;
-          const rightChecked: boolean = checkboxes[plusIndex + 1] ? checkboxes[plusIndex + 1].checked : false;
+      // Update plus-sign opacity ONCE (outside the checkbox loop)
+      plusSigns.forEach(function (plus: Element, plusIndex: number): void {
+        const leftChecked: boolean = checkboxes[plusIndex] ? checkboxes[plusIndex].checked : false;
+        const rightChecked: boolean = checkboxes[plusIndex + 1] ? checkboxes[plusIndex + 1].checked : false;
 
-          if (leftChecked && rightChecked) {
-            (plus as HTMLElement).style.opacity = '1';
-          } else {
-            (plus as HTMLElement).style.opacity = '0.3';
-          }
-        });
+        if (leftChecked && rightChecked) {
+          (plus as HTMLElement).style.opacity = '1';
+        } else {
+          (plus as HTMLElement).style.opacity = '0.3';
+        }
       });
 
       // Update total price

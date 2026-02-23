@@ -1,6 +1,27 @@
 .DS_Store
-screenshots/
 node_modules/
 dist/
-# Only ignore the original uncompressed video
+
+# Compiled JS output (generated from script.ts)
+script.js
+
+# Uncompressed source video
 hero-video.mp4
+
+# Environment and secrets
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS artifacts
+Thumbs.db
+screenshots/

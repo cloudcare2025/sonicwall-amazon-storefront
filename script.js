@@ -238,6 +238,7 @@
           // Show products with grid-aware staggered animation
           gen7Products.forEach((card, index) => {
             card.style.display = 'block';
+            card.setAttribute('aria-hidden', 'false');
 
             // Calculate grid column position (typically 3-5 columns)
             const parent = card.parentElement;
@@ -281,6 +282,7 @@
           setTimeout(() => {
             gen7Products.forEach(card => {
               card.style.display = 'none';
+              card.setAttribute('aria-hidden', 'true');
             });
             isAnimating = false;
             button.disabled = false;
@@ -495,12 +497,8 @@
 
     if (!dots.length) return;
 
-    // Add ARIA attributes
-    dots.forEach((dot, index) => {
-      dot.setAttribute('role', 'button');
-      dot.setAttribute('aria-label', `Show testimonial ${index + 1}`);
-      dot.setAttribute('tabindex', '0');
-    });
+    // ARIA attributes are set in HTML (role="tab", aria-label, tabindex)
+    // No need to re-set them here
 
     function updateActiveDot(index) {
       dots.forEach((dot, i) => {

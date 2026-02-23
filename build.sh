@@ -8,36 +8,46 @@ rm -rf "$DIST"
 mkdir -p "$DIST"
 mkdir -p "$DIST/logos"
 
-# Compile TypeScript (outputs script.js alongside script.ts in root)
-npx tsc
+# ---------- Compile ----------
 
-# Compile SCSS to CSS
+# Compile TypeScript -> JavaScript
+echo "Compiling TypeScript..."
+npx tsc
+if [ ! -f script.js ]; then
+  echo "ERROR: TypeScript compilation failed -- script.js not found" >&2
+  exit 1
+fi
+
+# Compile SCSS -> CSS (compressed, no source map for production)
+echo "Compiling SCSS..."
 npx sass styles.scss "$DIST/styles.css" --style=compressed --no-source-map
 
-# Copy compiled JS
+# ---------- Copy assets ----------
+
+# Compiled JS
 cp script.js "$DIST/"
 
-# Copy static assets
+# HTML files
 cp index.html "$DIST/"
-cp nginx.conf "$DIST/"
-
-# Copy videos if they exist
-for f in *.mp4; do
-  [ -e "$f" ] && cp "$f" "$DIST/"
-done
-
-# Copy logos directory
-cp -r logos/* "$DIST/logos/" 2>/dev/null || true
-
-# Copy any other HTML files (proposal, etc.)
 for f in *.html; do
   [ "$f" = "index.html" ] && continue
   [ -e "$f" ] && cp "$f" "$DIST/"
 done
 
-# Copy PDF files if they exist
+# Nginx config (used as template in Docker)
+cp nginx.conf "$DIST/"
+
+# Video files
+for f in *.mp4; do
+  [ -e "$f" ] && cp "$f" "$DIST/"
+done
+
+# PDF files
 for f in *.pdf; do
   [ -e "$f" ] && cp "$f" "$DIST/"
 done
+
+# Logo assets
+cp -r logos/* "$DIST/logos/" 2>/dev/null || true
 
 echo "Build complete. Output in $DIST/"

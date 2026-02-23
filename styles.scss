@@ -27,6 +27,8 @@ $brand-colors: (
   'orange-light': #ffb399,
   'dark':         #1f2929,
   'dark-alt':     #1a2332,
+  'modern-dark':  #1a1a2e,
+  'modern-dark-alt': #16213e,
 );
 
 $amazon-colors: (
@@ -62,6 +64,22 @@ $ui-colors: (
   'border':         #e5e7eb,
   'border-mid':     #d1d5db,
   'border-dark':    #9ca3af,
+  'muted':          #cccccc,
+  'input-bg':       #f3f3f3,
+  'input-text':     #555555,
+  'input-border':   #cdcdcd,
+  'footer-link':    #dddddd,
+  'footer-copy':    #999999,
+  'stock-green':    #007600,
+  'price-red':      #b12704,
+  'verified':       #c45500,
+  'deal-red':       #cc0c39,
+  'stock-low':      #cc5a00,
+  'hover-warm':     #fff8f5,
+  'hover-light':    #f5f5f5,
+  'bar-bg':         #f0f0f0,
+  'hover-subtle':   #f9fafb,
+  'dropdown-text':  #333333,
 );
 
 // Spacing Scale (SCSS map for utility generation)
@@ -170,7 +188,7 @@ $utility-spacing: (
 // Amazon nav item hover border pattern
 @mixin amazon-nav-hover {
   border: 1px solid transparent;
-  transition: border var(--transition-base);
+  transition: border-color var(--transition-base);
 
   &:hover {
     border-color: var(--color-text-white);
@@ -187,8 +205,10 @@ $utility-spacing: (
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base), color var(--transition-base);
   font-family: $font-stack-body;
+
+  @include focus-visible-outline;
 }
 
 // Container mixin
@@ -209,6 +229,8 @@ $utility-spacing: (
   --color-brand-orange-light: #{map.get($brand-colors, 'orange-light')};
   --color-brand-dark: #{map.get($brand-colors, 'dark')};
   --color-brand-dark-alt: #{map.get($brand-colors, 'dark-alt')};
+  --color-brand-modern-dark: #{map.get($brand-colors, 'modern-dark')};
+  --color-brand-modern-dark-alt: #{map.get($brand-colors, 'modern-dark-alt')};
 
   // Amazon Colors
   @each $name, $value in $amazon-colors {
@@ -227,6 +249,22 @@ $utility-spacing: (
   --color-border: #{map.get($ui-colors, 'border')};
   --color-border-mid: #{map.get($ui-colors, 'border-mid')};
   --color-border-dark: #{map.get($ui-colors, 'border-dark')};
+  --color-muted: #{map.get($ui-colors, 'muted')};
+  --color-input-bg: #{map.get($ui-colors, 'input-bg')};
+  --color-input-text: #{map.get($ui-colors, 'input-text')};
+  --color-input-border: #{map.get($ui-colors, 'input-border')};
+  --color-footer-link: #{map.get($ui-colors, 'footer-link')};
+  --color-footer-copy: #{map.get($ui-colors, 'footer-copy')};
+  --color-stock-green: #{map.get($ui-colors, 'stock-green')};
+  --color-price-red: #{map.get($ui-colors, 'price-red')};
+  --color-verified: #{map.get($ui-colors, 'verified')};
+  --color-deal-red: #{map.get($ui-colors, 'deal-red')};
+  --color-stock-low: #{map.get($ui-colors, 'stock-low')};
+  --color-hover-warm: #{map.get($ui-colors, 'hover-warm')};
+  --color-hover-light: #{map.get($ui-colors, 'hover-light')};
+  --color-bar-bg: #{map.get($ui-colors, 'bar-bg')};
+  --color-hover-subtle: #{map.get($ui-colors, 'hover-subtle')};
+  --color-dropdown-text: #{map.get($ui-colors, 'dropdown-text')};
 
   // Spacing Scale
   @each $name, $value in $spacing-scale {
@@ -310,6 +348,10 @@ $utility-spacing: (
 
 html {
   scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -362,7 +404,7 @@ ul {
   font-family: $font-stack-body;
   font-weight: var(--font-weight-semibold);
   border-radius: var(--radius-md);
-  transition: all var(--transition-base);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base), color var(--transition-base), border-color var(--transition-base);
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -389,6 +431,7 @@ ul {
 
     &:active {
       transform: translateY(0);
+      box-shadow: none;
     }
   }
 
@@ -401,6 +444,10 @@ ul {
     &:hover {
       background: var(--color-text-white);
       color: var(--color-text-primary);
+    }
+
+    &:active {
+      transform: translateY(0);
     }
 
     &:focus-visible {
@@ -445,20 +492,27 @@ ul {
     }
   }
 
+  // Amazon button -- modern dark gradient style (consolidated, single source of truth)
   &--amazon {
-    background: var(--color-amazon-yellow);
-    color: var(--color-amazon-text-primary);
-    border: 1px solid var(--color-amazon-yellow-border);
-    border-radius: 20px;
-    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--color-brand-modern-dark) 0%, var(--color-brand-modern-dark-alt) 100%);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 24px;
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-regular);
-    transition: background var(--transition-base), border-color var(--transition-base);
-    box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+    font-weight: var(--font-weight-semibold);
+    font-family: $font-stack-body;
+    letter-spacing: 0.3px;
+    box-shadow: none;
 
     &:hover {
-      background: #f7ca00;
-      border-color: #f2c200;
+      background: linear-gradient(135deg, var(--color-brand-modern-dark-alt) 0%, var(--color-brand-modern-dark) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25);
+    }
+
+    &:active {
+      transform: translateY(0);
       box-shadow: none;
     }
 
@@ -572,7 +626,7 @@ ul {
   &__deliver-label {
     font-family: $font-stack-arial;
     font-size: 12px;
-    color: #ccc;
+    color: var(--color-muted);
     line-height: var(--line-height-snug);
   }
 
@@ -600,15 +654,15 @@ ul {
   }
 
   &__search-category {
-    background: #f3f3f3;
-    color: #555;
+    background: var(--color-input-bg);
+    color: var(--color-input-text);
     padding: 10px 12px;
     font-family: $font-stack-arial;
     font-size: 12px;
     border: none;
-    border-right: 1px solid #cdcdcd;
+    border-right: 1px solid var(--color-input-border);
     cursor: pointer;
-    outline: none;
+    // Focus handled by parent :focus-within
   }
 
   &__search-input {
@@ -617,7 +671,7 @@ ul {
     padding: 10px 12px;
     font-family: $font-stack-arial;
     font-size: 14px;
-    outline: none;
+    // Focus handled by parent :focus-within
   }
 
   &__search-btn {
@@ -667,7 +721,7 @@ ul {
   &__nav-top {
     font-family: $font-stack-arial;
     font-size: 12px;
-    color: #ccc;
+    color: var(--color-muted);
     line-height: var(--line-height-snug);
   }
 
@@ -716,36 +770,6 @@ ul {
   }
 }
 
-// Amazon logo (standalone usage)
-.amazon-logo {
-  font-family: $font-stack-arial;
-  font-style: italic;
-  font-weight: bold;
-  color: var(--color-text-white);
-  font-size: 24px;
-  margin-right: var(--space-xs);
-  letter-spacing: -0.5px;
-  position: relative;
-  padding-bottom: 2px;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 15%;
-    height: 3px;
-    background: var(--color-amazon-orange);
-    border-radius: 2px;
-  }
-
-  &:focus-visible {
-    outline: 3px solid var(--color-text-white);
-    outline-offset: 2px;
-    border-radius: var(--radius-sm);
-  }
-}
-
 // Amazon subnav items
 .amazon-subnav__item {
   color: var(--color-text-white);
@@ -753,7 +777,7 @@ ul {
   font-size: 13px;
   padding: 6px var(--space-xs);
   border-radius: var(--radius-sm);
-  transition: border var(--transition-base), text-decoration var(--transition-fast);
+  transition: border-color var(--transition-base), text-decoration var(--transition-fast);
   border: 1px solid transparent;
   white-space: nowrap;
 
@@ -815,13 +839,17 @@ ul {
     background: var(--color-bg-white);
     color: var(--color-text-secondary);
     border-radius: var(--radius-sm);
-    transition: all var(--transition-base);
+    transition: background var(--transition-base), border-color var(--transition-base), color var(--transition-base);
     font-weight: var(--font-weight-semibold);
     min-height: 44px;
 
     &:hover {
-      background: #f9fafb;
+      background: var(--color-hover-subtle);
       border-color: var(--color-border-dark);
+    }
+
+    &:active {
+      transform: translateY(0);
     }
 
     &:focus-visible {
@@ -843,7 +871,7 @@ ul {
       font-family: $font-stack-arial;
       font-size: 14px;
       outline: none;
-      transition: border-color var(--transition-base);
+      transition: border-color var(--transition-base), box-shadow var(--transition-base);
       min-height: 44px;
 
       &:focus {
@@ -861,7 +889,6 @@ ul {
       display: flex;
       gap: 40px;
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       justify-content: center;
 
@@ -881,7 +908,7 @@ ul {
   color: var(--color-text-tertiary);
   padding: var(--space-sm) 4px;
   border-bottom: 3px solid transparent;
-  transition: all var(--transition-base);
+  transition: color var(--transition-base), border-color var(--transition-base);
   white-space: nowrap;
 
   &:hover {
@@ -931,11 +958,16 @@ ul {
 
     a {
       color: var(--color-amazon-link);
-      transition: color var(--transition-fast), text-decoration var(--transition-fast);
+      transition: color var(--transition-fast);
 
       &:hover {
         color: var(--color-amazon-link-hover);
         text-decoration: underline;
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--color-brand-orange);
+        outline-offset: 2px;
       }
     }
 
@@ -1253,7 +1285,7 @@ ul {
 }
 
 // ============================================
-//   PRODUCT GRID & CARDS
+//   PRODUCT GRID & CARDS (Consolidated -- single source of truth)
 // ============================================
 
 .product-grid {
@@ -1266,16 +1298,17 @@ ul {
 .product-card {
   background: var(--color-bg-white);
   border: 1px solid var(--color-amazon-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: var(--space-md);
   text-align: center;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
 
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
   }
 
   &:focus-within {
@@ -1284,22 +1317,22 @@ ul {
   }
 
   &__image {
-    height: 200px;
+    height: 220px;
     @include flex-center;
     margin-bottom: var(--space-sm);
     background: var(--color-bg-white);
-    padding: var(--space-sm);
+    padding: var(--space-md);
 
     img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      transition: transform var(--transition-base);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
   &:hover &__image img {
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 
   &__name {
@@ -1310,11 +1343,16 @@ ul {
     margin-bottom: var(--space-xs);
     min-height: 42px;
     line-height: var(--line-height-relaxed);
-    transition: color var(--transition-fast), text-decoration var(--transition-fast);
+    transition: color var(--transition-fast);
 
     &:hover {
       color: var(--color-amazon-link-hover);
       text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brand-orange);
+      outline-offset: 2px;
     }
   }
 
@@ -1327,19 +1365,45 @@ ul {
   }
 
   &__price {
+    display: inline-flex;
+    align-items: flex-start;
+    line-height: 1;
     font-family: $font-stack-arial;
-    font-size: 21px;
-    font-weight: var(--font-weight-regular);
     color: var(--color-amazon-text-primary);
     margin-bottom: var(--space-xs);
-    line-height: 1.3;
   }
 
   &__price-currency,
-  &__price-cents {
+  &__price-symbol {
     font-size: 13px;
-    vertical-align: super;
-    line-height: 0;
+    font-weight: var(--font-weight-regular);
+    margin-top: 2px;
+    vertical-align: baseline;
+    line-height: 1;
+  }
+
+  &__price-whole {
+    font-size: 28px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+
+  &__price-cents,
+  &__price-fraction {
+    font-size: 13px;
+    font-weight: var(--font-weight-regular);
+    margin-top: 2px;
+    vertical-align: baseline;
+    line-height: 1;
+  }
+
+  &__price-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 6px;
   }
 
   &__badge {
@@ -1373,17 +1437,23 @@ ul {
 
   &__shipping {
     font-family: $font-stack-arial;
-    font-size: 12px;
-    color: var(--color-amazon-text-primary);
-    margin-top: 4px;
+    font-size: 11px;
+    color: var(--color-text-light);
+    margin-top: 2px;
     line-height: 1.4;
+    font-weight: var(--font-weight-regular);
 
     strong {
-      font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-secondary);
     }
   }
 
   &__prime {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    vertical-align: middle;
     margin-bottom: 8px;
     line-height: 1.5;
   }
@@ -1391,22 +1461,26 @@ ul {
   &__stock {
     font-family: $font-stack-arial;
     font-size: 12px;
-    color: #007600;
-    font-weight: var(--font-weight-bold);
+    color: var(--color-stock-green);
+    font-weight: var(--font-weight-semibold);
     margin-bottom: 4px;
+
+    &--low {
+      color: var(--color-stock-low);
+    }
   }
 
   &__seller {
     font-family: $font-stack-arial;
-    font-size: 11px;
-    color: var(--color-amazon-gray-text);
+    font-size: 10px;
+    color: var(--color-text-light);
     margin-bottom: 4px;
     line-height: 1.4;
   }
 
   &__returns {
     font-family: $font-stack-arial;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--color-amazon-link);
     margin-bottom: var(--space-sm);
     cursor: pointer;
@@ -1414,6 +1488,11 @@ ul {
     &:hover {
       color: var(--color-amazon-link-hover);
       text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brand-orange);
+      outline-offset: 2px;
     }
   }
 
@@ -1449,16 +1528,22 @@ ul {
   color: var(--color-amazon-link);
   font-size: var(--font-size-sm);
   margin-left: 6px;
-  transition: color var(--transition-base), text-decoration var(--transition-fast);
+  transition: color var(--transition-base);
   cursor: pointer;
 
   &:hover {
     color: var(--color-amazon-link-hover);
     text-decoration: underline;
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-brand-orange);
+    outline-offset: 2px;
+  }
 }
 
 .prime-badge {
+  display: inline-block;
   color: var(--color-amazon-link);
   font-weight: var(--font-weight-bold);
   font-size: 12px;
@@ -1533,6 +1618,11 @@ ul {
     &:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-lg);
+    }
+
+    &:focus-within {
+      outline: 3px solid var(--color-brand-orange);
+      outline-offset: 2px;
     }
   }
 }
@@ -1670,7 +1760,7 @@ ul {
   }
 }
 
-// Dots (carousel indicators)
+// Dots (carousel indicators) -- 44px touch target via padding
 .dot {
   display: inline-block;
   width: 10px;
@@ -1681,12 +1771,14 @@ ul {
   cursor: pointer;
   transition: background var(--transition-base), transform var(--transition-base);
   border: none;
-  padding: 0;
-  min-height: auto;
-  min-width: auto;
+  padding: 17px;
+  background-clip: content-box;
+  min-height: 44px;
+  min-width: 44px;
 
   &:hover {
     background: rgba(255, 255, 255, 0.6);
+    background-clip: content-box;
     transform: scale(1.2);
   }
 
@@ -1694,6 +1786,7 @@ ul {
 
   &--active {
     background: var(--color-brand-orange);
+    background-clip: content-box;
     transform: scale(1.2);
   }
 }
@@ -1877,7 +1970,7 @@ ul {
     }
 
     a {
-      color: #ddd;
+      color: var(--color-footer-link);
       font-family: $font-stack-arial;
       font-size: 13px;
       text-decoration: none;
@@ -1917,7 +2010,7 @@ ul {
     justify-content: center;
 
     a {
-      color: #ddd;
+      color: var(--color-footer-link);
       font-family: $font-stack-arial;
       font-size: 11px;
       margin: 0 var(--space-sm);
@@ -1936,7 +2029,7 @@ ul {
   }
 
   &__copyright {
-    color: #999;
+    color: var(--color-footer-copy);
     font-family: $font-stack-arial;
     font-size: 11px;
     margin-top: var(--space-xs);
@@ -2081,7 +2174,6 @@ ul {
 
   .brand-header__nav .container {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   .brand-nav__tab {
@@ -2140,6 +2232,11 @@ ul {
     width: 100%;
     max-width: 300px;
   }
+
+  .product-card__image {
+    height: 180px;
+    padding: var(--space-sm);
+  }
 }
 
 // ============================================
@@ -2156,7 +2253,7 @@ ul {
     padding: var(--space-sm);
 
     &__image {
-      height: 140px;
+      height: 150px;
     }
 
     &__name {
@@ -2169,8 +2266,14 @@ ul {
     }
 
     &__price-currency,
-    &__price-cents {
+    &__price-symbol,
+    &__price-cents,
+    &__price-fraction {
       font-size: 11px;
+    }
+
+    &__price-whole {
+      font-size: 22px;
     }
 
     .btn--amazon {
@@ -2288,6 +2391,14 @@ ul {
       margin: 0;
     }
   }
+
+  .reviews-highlight__content {
+    flex-direction: column;
+  }
+
+  .reviews-highlight__summary {
+    width: 100%;
+  }
 }
 
 // ============================================
@@ -2312,9 +2423,9 @@ ul {
   display: none;
 }
 
-.visible {
-  display: block;
-}
+// .visible is intentionally omitted as a standalone utility to avoid
+// conflicting with .fade-in-up.visible which needs to preserve the
+// element's original display type (flex, grid, etc).
 
 // ============================================
 //   PRINT STYLES
@@ -2339,10 +2450,24 @@ ul {
 }
 
 // ============================================
-//   REDUCED MOTION
+//   REDUCED MOTION (comprehensive)
 // ============================================
 
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+  }
+
   .hero__bg-video {
     animation: none;
   }
@@ -2397,7 +2522,7 @@ ul {
 
   &__badge {
     display: inline-block;
-    background: #cc0c39;
+    background: var(--color-deal-red);
     color: var(--color-text-white);
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-bold);
@@ -2522,11 +2647,16 @@ ul {
     padding: 10px 24px;
     border: 2px solid var(--color-amazon-link);
     border-radius: 20px;
-    transition: all var(--transition-base);
+    transition: background var(--transition-base), color var(--transition-base);
 
     &:hover {
       background: var(--color-amazon-link);
       color: var(--color-text-white);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--color-brand-orange);
+      outline-offset: 2px;
     }
   }
 }
@@ -2701,12 +2831,12 @@ ul {
 .fbt-price-amount {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-xl);
-  color: #b12704;
+  color: var(--color-price-red);
 }
 
 .fbt-savings {
   font-size: var(--font-size-xs);
-  color: #007600;
+  color: var(--color-stock-green);
   font-weight: var(--font-weight-medium);
 }
 
@@ -2818,12 +2948,17 @@ ul {
       text-decoration: underline;
       color: var(--color-amazon-link-hover);
     }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brand-orange);
+      outline-offset: 2px;
+    }
   }
 
   &__bar {
     flex: 1;
     height: 20px;
-    background: #f0f0f0;
+    background: var(--color-bar-bg);
     border-radius: 3px;
     overflow: hidden;
     min-width: 150px;
@@ -2846,6 +2981,11 @@ ul {
     &:hover {
       text-decoration: underline;
       color: var(--color-amazon-link-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brand-orange);
+      outline-offset: 2px;
     }
   }
 }
@@ -2884,7 +3024,7 @@ ul {
 
   &__verified {
     font-size: var(--font-size-xs);
-    color: #c45500;
+    color: var(--color-verified);
     font-weight: var(--font-weight-semibold);
   }
 
@@ -2931,9 +3071,19 @@ ul {
     background: var(--color-bg-white);
     cursor: pointer;
     transition: background var(--transition-base);
+    min-height: 44px;
 
     &:hover {
       background: var(--color-bg-light);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brand-orange);
+      outline-offset: 2px;
     }
   }
 
@@ -2941,14 +3091,6 @@ ul {
     font-size: var(--font-size-xs);
     color: var(--color-text-light);
   }
-}
-
-// Late override for product-card returns (duplicate in original)
-.product-card__returns {
-  font-family: $font-stack-arial;
-  font-size: 11px;
-  color: var(--color-amazon-link);
-  margin-bottom: var(--space-xs);
 }
 
 // ============================================
@@ -2973,7 +3115,6 @@ ul {
 
 .comparison-table-wrapper {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   margin-top: var(--space-lg);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
@@ -3069,7 +3210,7 @@ ul {
       }
 
       .comparison-table__cell--price {
-        color: #b12704;
+        color: var(--color-price-red);
         font-weight: var(--font-weight-bold);
       }
     }
@@ -3121,7 +3262,7 @@ ul {
   }
 
   tbody tr:hover {
-    background: #fff8f5;
+    background: var(--color-hover-warm);
   }
 }
 
@@ -3174,12 +3315,15 @@ ul {
 
   &__card {
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-xl);
     padding: var(--space-lg);
     transition: transform var(--transition-base), background var(--transition-base);
+
+    @supports (backdrop-filter: blur(8px)) {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
 
     &:hover {
       transform: translateY(-2px);
@@ -3219,8 +3363,11 @@ ul {
     border-left: 4px solid var(--color-brand-orange);
     border-radius: var(--radius-lg);
     padding: var(--space-md) var(--space-lg);
-    backdrop-filter: blur(4px);
     transition: background var(--transition-base), transform var(--transition-base);
+
+    @supports (backdrop-filter: blur(4px)) {
+      backdrop-filter: blur(4px);
+    }
 
     &:hover {
       background: rgba(255, 255, 255, 0.12);
@@ -3406,94 +3553,39 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: var(--color-bg-white);
   min-width: 220px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
+  border-radius: var(--radius-lg);
   padding: 8px 0;
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
 }
 
 .brand-nav__dropdown-link {
   display: block;
   padding: 10px 20px;
-  color: #333;
+  color: var(--color-dropdown-text);
   font-size: 14px;
   text-decoration: none;
-  transition: background 0.15s ease;
+  transition: background var(--transition-fast), color var(--transition-fast);
   font-family: $font-stack-body;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   letter-spacing: 0;
   text-transform: none;
 
   &:hover {
-    background: #f5f5f5;
+    background: var(--color-hover-light);
     color: var(--color-brand-orange);
   }
-}
 
-// ============================================
-//   AMAZON PRICE FORMAT (HPE/AMAZON EXACT)
-// ============================================
-
-.product-card__price {
-  display: inline-flex;
-  align-items: flex-start;
-  line-height: 1;
-  font-family: $font-stack-arial;
-  color: var(--color-amazon-text-primary);
-  margin-bottom: var(--space-xs);
-}
-
-.product-card__price-currency,
-.product-card__price-symbol {
-  font-size: 13px;
-  font-weight: 400;
-  margin-top: 2px;
-  vertical-align: baseline;
-  line-height: 1;
-}
-
-.product-card__price-whole {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1;
-}
-
-.product-card__price-cents,
-.product-card__price-fraction {
-  font-size: 13px;
-  font-weight: 400;
-  margin-top: 2px;
-  vertical-align: baseline;
-  line-height: 1;
-}
-
-// ============================================
-//   PRIME BADGE STYLING
-// ============================================
-
-.product-card__prime {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 6px;
-  vertical-align: middle;
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-.prime-badge {
-  display: inline-block;
-  color: var(--color-amazon-link);
-  font-weight: var(--font-weight-bold);
-  font-size: 12px;
-  font-family: $font-stack-arial;
-  text-transform: lowercase;
+  &:focus-visible {
+    outline: 2px solid var(--color-brand-orange);
+    outline-offset: -2px;
+  }
 }
 
 // ============================================
@@ -3503,8 +3595,8 @@ ul {
 .btn--modern {
   @include pill-button-base;
   border: none;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--color-brand-modern-dark) 0%, var(--color-brand-modern-dark-alt) 100%);
+  color: var(--color-text-white);
   letter-spacing: 0.3px;
   position: relative;
   overflow: hidden;
@@ -3516,6 +3608,7 @@ ul {
 
   &:active {
     transform: translateY(0);
+    box-shadow: none;
   }
 
   .btn-arrow {
@@ -3529,28 +3622,37 @@ ul {
 
 .btn--outline-light {
   @include pill-button-base;
-  border: 2px solid white;
+  border: 2px solid var(--color-text-white);
   background: transparent;
-  color: white;
+  color: var(--color-text-white);
 
   &:hover {
-    background: white;
-    color: #1a1a2e;
+    background: var(--color-text-white);
+    color: var(--color-brand-modern-dark);
     transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 
 .btn--outline-dark {
   @include pill-button-base;
-  border: 2px solid #1a1a2e;
+  border: 2px solid var(--color-brand-modern-dark);
   background: transparent;
-  color: #1a1a2e;
+  color: var(--color-brand-modern-dark);
 
   &:hover {
-    background: #1a1a2e;
-    color: white;
+    background: var(--color-brand-modern-dark);
+    color: var(--color-text-white);
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(26, 26, 46, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
   }
 }
 
@@ -3558,37 +3660,20 @@ ul {
   @include pill-button-base;
   padding: 14px 32px;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   border: none;
   background: linear-gradient(135deg, #ff6b35 0%, #ff9900 100%);
-  color: white;
+  color: var(--color-text-white);
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
   }
-}
 
-// Override old .btn--amazon yellow to modern style
-.btn--amazon {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 24px;
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  font-family: $font-stack-body;
-  letter-spacing: 0.3px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: none;
-
-  &:hover {
-    background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
-    border-color: transparent;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(26, 26, 46, 0.25);
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
   }
 }
 
@@ -3601,12 +3686,17 @@ ul {
   grid-template-columns: 1fr 1fr;
   min-height: 300px;
   overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 32px;
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-lg);
+
+  &:focus-within {
+    outline: 3px solid var(--color-brand-orange);
+    outline-offset: 2px;
+  }
 
   &__text {
-    background: #1a1a2e;
-    color: white;
+    background: var(--color-brand-modern-dark);
+    color: var(--color-text-white);
     padding: 48px 40px;
     display: flex;
     flex-direction: column;
@@ -3616,7 +3706,7 @@ ul {
   &__title {
     font-family: $font-stack-display;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     font-style: italic;
     margin-bottom: 12px;
@@ -3625,11 +3715,11 @@ ul {
   }
 
   &__subtitle {
-    font-size: 16px;
+    font-size: var(--font-size-lg);
     font-family: $font-stack-body;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 24px;
-    line-height: 1.5;
+    margin-bottom: var(--space-md);
+    line-height: var(--line-height-loose);
   }
 
   &__image {
@@ -3646,102 +3736,6 @@ ul {
 
   &:hover &__image img {
     transform: scale(1.03);
-  }
-}
-
-// ============================================
-//   PRODUCT CARD CLEANUP - HPE MINIMALISM
-// ============================================
-
-.product-card {
-  background: var(--color-bg-white);
-  border: 1px solid var(--color-amazon-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  text-align: center;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  position: relative;
-
-  &:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transform: translateY(-4px);
-  }
-
-  &__image {
-    height: 220px;
-    @include flex-center;
-    margin-bottom: var(--space-sm);
-    background: var(--color-bg-white);
-    padding: var(--space-md);
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-  }
-
-  &:hover &__image img {
-    transform: scale(1.05);
-  }
-
-  &__price-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 6px;
-  }
-
-  &__stock {
-    font-family: $font-stack-arial;
-    font-size: 12px;
-    color: #007600;
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: 4px;
-
-    &--low {
-      color: #cc5a00;
-    }
-  }
-
-  &__shipping {
-    font-family: $font-stack-arial;
-    font-size: 11px;
-    color: var(--color-text-light);
-    margin-top: 2px;
-    line-height: 1.4;
-    font-weight: 400;
-
-    strong {
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-text-secondary);
-    }
-  }
-
-  &__seller {
-    font-family: $font-stack-arial;
-    font-size: 10px;
-    color: var(--color-text-light);
-    margin-bottom: 4px;
-    line-height: 1.4;
-  }
-
-  &__returns {
-    font-family: $font-stack-arial;
-    font-size: 11px;
-    color: var(--color-amazon-link);
-    margin-bottom: var(--space-sm);
-  }
-
-  .btn--amazon {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    display: block;
   }
 }
 
@@ -3839,11 +3833,6 @@ ul {
     justify-content: center;
     padding: 14px 28px;
   }
-
-  .product-card__image {
-    height: 180px;
-    padding: var(--space-sm);
-  }
 }
 
 @include respond-to('mobile') {
@@ -3878,24 +3867,6 @@ ul {
   .brand-nav__dropdown-link {
     padding: 10px 12px;
     font-size: 13px;
-  }
-
-  .product-card__image {
-    height: 150px;
-  }
-
-  .product-card__price-currency,
-  .product-card__price-symbol {
-    font-size: 11px;
-  }
-
-  .product-card__price-whole {
-    font-size: 22px;
-  }
-
-  .product-card__price-cents,
-  .product-card__price-fraction {
-    font-size: 11px;
   }
 }
 

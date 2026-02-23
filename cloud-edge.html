@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SonicWall Cloud & Edge Security - Virtual firewalls (NSv Series) for AWS, Azure, GCP and Cloud Secure Edge zero-trust network access for the modern workforce.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SonicWall">
+    <meta property="og:title" content="SonicWall | Cloud & Edge Security">
+    <meta property="og:description" content="Virtual firewalls and zero-trust access for cloud workloads and remote workforce security.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SonicWall | Cloud & Edge Security">
+    <meta name="twitter:description" content="Virtual firewalls and zero-trust access for cloud workloads and remote workforce security.">
+    <title>SonicWall | Cloud & Edge Security - Official Store on Amazon</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.sonicwall.com/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-Specific Styles -->
+    <style>
+        /* ============================================
+           CLOUD & EDGE - PAGE-SPECIFIC STYLES
+           ============================================ */
+
+        /* HERO - Cloud Mesh */
+        .cloud-hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .cloud-hero__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .cloud-hero__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cloud-hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse 600px 400px at 20% 50%, rgba(255, 110, 66, 0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 500px 350px at 80% 30%, rgba(255, 110, 66, 0.06) 0%, transparent 70%),
+                radial-gradient(circle 3px at 15% 25%, rgba(255, 110, 66, 0.35) 0%, transparent 100%),
+                radial-gradient(circle 2px at 30% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+                radial-gradient(circle 2.5px at 50% 20%, rgba(255, 110, 66, 0.3) 0%, transparent 100%),
+                radial-gradient(circle 2px at 70% 60%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+                radial-gradient(circle 3px at 85% 35%, rgba(255, 110, 66, 0.25) 0%, transparent 100%),
+                radial-gradient(circle 1.5px at 40% 45%, rgba(255, 255, 255, 0.2) 0%, transparent 100%),
+                radial-gradient(circle 2px at 60% 80%, rgba(255, 110, 66, 0.2) 0%, transparent 100%),
+                radial-gradient(circle 1.5px at 25% 55%, rgba(255, 255, 255, 0.15) 0%, transparent 100%),
+                radial-gradient(circle 2px at 75% 15%, rgba(255, 110, 66, 0.2) 0%, transparent 100%),
+                radial-gradient(circle 1.5px at 90% 75%, rgba(255, 255, 255, 0.12) 0%, transparent 100%),
+                linear-gradient(180deg, rgba(26, 26, 46, 0.92) 0%, rgba(31, 41, 41, 0.95) 100%);
+        }
+
+        .cloud-hero__content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 80px 20px;
+        }
+
+        .cloud-hero__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cloud-hero__title span {
+            color: #ff6e42;
+        }
+
+        .cloud-hero__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            max-width: 620px;
+            margin: 0 auto 36px;
+        }
+
+        .cloud-hero__ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* TWO PILLARS */
+        .pillars-section {
+            padding: 80px 0;
+            background: var(--color-bg-light);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pillar-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #ff6e42 0%, #1a1a2e 50%, #ff6e42 100%);
+            border-radius: 18px;
+            z-index: -1;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(255, 110, 66, 0.15);
+        }
+
+        .pillar-card__icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, rgba(255, 110, 66, 0.1) 0%, rgba(26, 26, 46, 0.05) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 16px;
+            letter-spacing: 0.3px;
+        }
+
+        .pillar-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .pillar-card__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+
+        /* NSv SECTION */
+        .nsv-section {
+            padding: 0 0 80px;
+        }
+
+        .nsv-hero-image {
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .nsv-hero-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .nsv-product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .nsv-product-card {
+            background: #ffffff;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nsv-product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .nsv-product-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 12px;
+        }
+
+        .nsv-product-card__platform {
+            display: inline-flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .nsv-product-card__badge {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 50px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .nsv-product-card__badge--aws {
+            background: #ff9900;
+            color: #1f2929;
+        }
+
+        .nsv-product-card__badge--azure {
+            background: #0078d4;
+            color: #ffffff;
+        }
+
+        .nsv-product-card__badge--gcp {
+            background: #4285f4;
+            color: #ffffff;
+        }
+
+        .nsv-product-card__badge--vmware {
+            background: #696566;
+            color: #ffffff;
+        }
+
+        .nsv-product-card__desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .nsv-product-card__price {
+            font-family: 'Inter', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2929;
+            margin-bottom: 4px;
+        }
+
+        .nsv-product-card__price-period {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        /* PLATFORM COMPATIBILITY */
+        .platforms-section {
+            background: #1a1a2e;
+            padding: 48px 0;
+        }
+
+        .platforms-section__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        .platforms-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .platform-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 12px 24px;
+            transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .platform-badge:hover {
+            background: rgba(255, 110, 66, 0.08);
+            border-color: rgba(255, 110, 66, 0.3);
+        }
+
+        .platform-badge__icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .platform-badge__name {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* CSE SECTION */
+        .cse-section {
+            background: linear-gradient(180deg, #1f2929 0%, #1a1a2e 100%);
+            padding: 80px 0;
+        }
+
+        .cse-section__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .cse-section__subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cse-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .cse-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 36px 28px;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cse-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 110, 66, 0.3);
+        }
+
+        .cse-card__icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cse-card__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        .cse-card__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.6;
+        }
+
+        /* ARCHITECTURE DIAGRAM */
+        .architecture-section {
+            background: #1f2929;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .architecture-section__title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 48px;
+            letter-spacing: 0.5px;
+        }
+
+        .architecture-diagram {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .arch-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .arch-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 20px 28px;
+            text-align: center;
+            min-width: 180px;
+            transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .arch-box:hover {
+            border-color: rgba(255, 110, 66, 0.4);
+        }
+
+        .arch-box--highlight {
+            background: rgba(255, 110, 66, 0.08);
+            border-color: rgba(255, 110, 66, 0.3);
+        }
+
+        .arch-box__label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.3px;
+        }
+
+        .arch-box__sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 4px;
+        }
+
+        .arch-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 12px;
+            min-width: 60px;
+        }
+
+        .arch-arrow svg {
+            flex-shrink: 0;
+        }
+
+        .arch-divider {
+            text-align: center;
+            padding: 8px 0;
+        }
+
+        .arch-divider__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 110, 66, 0.6);
+        }
+
+        /* PRICING SECTION */
+        .cloud-pricing-section {
+            padding: 80px 0;
+            background: var(--color-bg-light);
+        }
+
+        .cloud-pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .pricing-card {
+            background: #ffffff;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 36px 24px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .pricing-card--featured {
+            border-color: #ff6e42;
+            box-shadow: 0 4px 16px rgba(255, 110, 66, 0.12);
+        }
+
+        .pricing-card--featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6e42;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-card__name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1f2929;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card__price {
+            font-family: 'Inter', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #1f2929;
+            margin-bottom: 4px;
+        }
+
+        .pricing-card__price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #6b7280;
+        }
+
+        .pricing-card__billing {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .pricing-card__divider {
+            width: 100%;
+            height: 1px;
+            background: var(--color-border);
+            margin-bottom: 24px;
+        }
+
+        .pricing-card__features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 28px;
+            text-align: left;
+        }
+
+        .pricing-card__features li {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #4b5563;
+            line-height: 1.5;
+            padding: 6px 0;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .pricing-card__features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 14px;
+            height: 14px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M3.5 7l2.5 2.5L10.5 5' stroke='%23ff6e42' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        /* CLOUD STATS */
+        .cloud-stats-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #1f2929 100%);
+            padding: 64px 0;
+        }
+
+        .cloud-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .cloud-stat {
+            padding: 20px 16px;
+        }
+
+        .cloud-stat__number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ff6e42;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .cloud-stat__label {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+        }
+
+        /* MIGRATION CTA */
+        .migration-cta-section {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .migration-cta-section__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .migration-cta-section__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .migration-cta-section__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(31, 41, 41, 0.92) 100%);
+        }
+
+        .migration-cta {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .migration-cta__headline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .migration-cta__text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+
+        @media (max-width: 1024px) {
+            .cloud-hero__title {
+                font-size: 48px;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+
+            .nsv-product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cse-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cloud-pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cloud-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .arch-row {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .arch-arrow {
+                min-width: 40px;
+                padding: 0 6px;
+            }
+
+            .arch-box {
+                min-width: 150px;
+                padding: 16px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cloud-hero {
+                min-height: 420px;
+            }
+
+            .cloud-hero__title {
+                font-size: 36px;
+            }
+
+            .cloud-hero__subtitle {
+                font-size: 16px;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nsv-product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cse-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cloud-pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cloud-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .architecture-section__title {
+                font-size: 28px;
+            }
+
+            .arch-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .arch-arrow {
+                transform: rotate(90deg);
+            }
+
+            .arch-box {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .cse-section__title {
+                font-size: 32px;
+            }
+
+            .migration-cta__headline {
+                font-size: 32px;
+            }
+
+            .platforms-bar {
+                gap: 10px;
+            }
+
+            .platform-badge {
+                padding: 10px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cloud-hero__title {
+                font-size: 28px;
+            }
+
+            .cloud-hero__content {
+                padding: 60px 16px;
+            }
+
+            .cloud-hero__ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cloud-stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .cloud-stat__number {
+                font-size: 36px;
+            }
+
+            .pricing-card__price {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:8px 16px;background:#1f2929;color:#fff;font-size:14px;text-decoration:none;font-family:Inter,Arial,sans-serif;" onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
+
+    <!-- Amazon Header Bar -->
+    <header class="amazon-header" role="banner">
+        <div class="amazon-header__top">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
+                    <svg class="amazon-logo-svg" width="108" height="33" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M66.8 25.6c-6.2 4.6-15.2 7-22.9 7-10.8 0-20.6-4-28-10.7-.6-.5-.1-1.2.6-.8 8 4.6 17.8 7.4 28 7.4 6.9 0 14.4-1.4 21.3-4.4 1-.5 1.9.7.9 1.5z" fill="#FF9900"/>
+                        <path d="M69.4 22.6c-.8-1-5.2-.5-7.2-.2-.6.1-.7-.5-.2-.8 3.5-2.5 9.3-1.8 10-.9.7.8-.2 6.6-3.5 9.3-.5.4-1 .2-.8-.4.7-1.8 2.4-5.9 1.6-7z" fill="#FF9900"/>
+                        <path d="M62.4 3.5V1.2c0-.3.3-.6.6-.6h10c.3 0 .6.3.6.6v2c0 .3-.3.8-.8 1.4l-5.2 7.4c1.9 0 3.9.2 5.7 1.2.4.2.5.6.5.9v2.5c0 .3-.4.7-.7.5-3.1-1.6-7.2-1.8-10.6 0-.3.2-.7-.2-.7-.5V14c0-.4 0-1 .4-1.5l6-8.6h-5.2c-.3 0-.6-.2-.6-.5zM22.7 18.1h-3c-.3 0-.5-.2-.6-.5V1.2c0-.3.3-.6.6-.6h2.8c.3 0 .5.2.6.5v2.1h.1c.8-2 2.3-3 4.3-3 2.1 0 3.4 1 4.3 3 .8-2 2.6-3 4.6-3 1.4 0 2.9.6 3.8 1.9 1 1.5.8 3.6.8 5.5v10c0 .3-.3.6-.6.6h-3c-.3 0-.5-.3-.6-.6V8.8c0-.7.1-2.6-.1-3.3-.3-.9-1-1.2-2-1.2-.8 0-1.7.6-2 1.5-.3.9-.3 2.4-.3 3v8.8c0 .3-.3.6-.6.6h-3c-.3 0-.5-.3-.6-.6l0-8.8c0-1.9.3-4.7-2.1-4.7-2.5 0-2.4 2.7-2.4 4.7v8.8c0 .3-.3.6-.6.6zM80.3.2c4.5 0 7 3.9 7 8.8 0 4.7-2.7 8.5-7 8.5-4.4 0-6.8-3.9-6.8-8.7 0-4.8 2.4-8.6 6.8-8.6zm0 3.2c-2.3 0-2.4 3.1-2.4 5 0 2 0 6.1 2.4 6.1 2.3 0 2.5-3.4 2.5-5.4 0-1.3-.1-2.9-.4-4.2-.3-1.1-1-1.5-2-1.5zM93.5 18.1h-3c-.3 0-.5-.3-.6-.6V1.1c0-.3.3-.5.6-.5h2.8c.3 0 .5.2.5.5v2.5h.1c.9-2.2 2.1-3.3 4.2-3.3 1.5 0 3 .5 3.9 2.1.9 1.4.9 3.9.9 5.6v9.8c0 .3-.3.5-.6.5h-3c-.3 0-.5-.2-.6-.5V8.5c0-1.9.2-4.6-2.2-4.6-.8 0-1.6.6-2 1.4-.5 1.1-.6 2.2-.6 3.3v9c-.1.3-.3.5-.6.5zM52.8 10.3c0 1.3 0 2.4-.7 3.6-.5.9-1.4 1.5-2.3 1.5-1.3 0-2-.9-2-2.3 0-2.8 2.5-3.3 5-3.3v.5zm3.4 8.2c-.2.2-.5.2-.7.1-.7-.6-1.5-1.8-2.1-2.9-2 2.1-3.4 2.7-6.1 2.7-3.1 0-5.5-1.9-5.5-5.8 0-3 1.6-5.1 3.9-6.1 2-.8 4.8-1 7-.8v-.7c0-.6 0-1.4-.3-2-.3-.5-.9-.7-1.6-.7-1.1 0-2 .5-2.3 1.7-.1.3-.3.5-.6.5l-2.9-.3c-.3-.1-.5-.2-.5-.6C45 1.7 48 .2 50.8.2c1.4 0 3.2.4 4.3 1.4 1.4 1.3 1.3 3.1 1.3 5v4.5c0 1.4.6 2 1.1 2.7.2.3.2.6 0 .8l-1.3 1.1v-.2zM7 10.3c0 1.3 0 2.4-.7 3.6-.5.9-1.4 1.5-2.3 1.5-1.3 0-2-.9-2-2.3 0-2.8 2.5-3.3 5-3.3v.5zm3.4 8.2c-.2.2-.5.2-.7.1-.7-.6-1.5-1.8-2.1-2.9-2 2.1-3.4 2.7-6.1 2.7C-1.6 18.4-4 16.5-4 12.6c0-3 1.6-5.1 3.9-6.1 2-.8 4.8-1 7-.8v-.7c0-.6 0-1.4-.3-2-.3-.5-.9-.7-1.6-.7-1.1 0-2 .5-2.3 1.7-.1.3-.3.5-.6.5l-2.9-.3c-.3-.1-.5-.2-.5-.6C-.7 1.7 2.3.2 5.1.2c1.4 0 3.2.4 4.3 1.4 1.4 1.3 1.3 3.1 1.3 5v4.5c0 1.4.6 2 1.1 2.7.2.3.2.6 0 .8l-1.3 1.1-.1-.2z" fill="#FFFFFF"/>
+                    </svg>
+                </a>
+
+                <div class="amazon-header__deliver">
+                    <span class="amazon-header__deliver-label">Deliver to</span>
+                    <span class="amazon-header__deliver-location">New York 10001</span>
+                </div>
+
+                <div class="amazon-header__search" role="search">
+                    <select class="amazon-header__search-category" aria-label="Search category">
+                        <option>All Departments</option>
+                        <option>Electronics</option>
+                        <option>Computers</option>
+                        <option>Office Products</option>
+                    </select>
+                    <input type="text" class="amazon-header__search-input" placeholder="Search Amazon" aria-label="Search">
+                    <button class="amazon-header__search-btn" aria-label="Search Amazon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="amazon-header__nav-right">
+                    <a href="#" class="amazon-header__nav-item" aria-label="Choose language: English">
+                        <span class="amazon-header__nav-label">EN</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Hello, Sign in. Account and Lists">
+                        <span class="amazon-header__nav-top">Hello, Sign in</span>
+                        <span class="amazon-header__nav-bottom">Account & Lists</span>
+                    </a>
+                    <a href="#" class="amazon-header__nav-item" aria-label="Returns and Orders">
+                        <span class="amazon-header__nav-top">Returns</span>
+                        <span class="amazon-header__nav-bottom">& Orders</span>
+                    </a>
+                    <a href="#" class="amazon-header__cart" aria-label="Shopping cart, 0 items">
+                        <svg width="40" height="32" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+                            <path d="M30 24c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-18 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-.5-18L14 18h17l4-12H11.5zM31 20H13l-1-3H8l-3-9H2V6h5l8 18h16v-4z" fill="currentColor"/>
+                        </svg>
+                        <span class="amazon-header__cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="amazon-header__subnav" aria-label="Amazon departments">
+            <div class="amazon-header__container">
+                <a href="#" class="amazon-subnav__item amazon-subnav__item--menu">All</a>
+                <a href="#" class="amazon-subnav__item">Amazon Haul</a>
+                <a href="#" class="amazon-subnav__item">Medical Care</a>
+                <a href="#" class="amazon-subnav__item">Best Sellers</a>
+                <a href="#" class="amazon-subnav__item">Prime</a>
+                <a href="#" class="amazon-subnav__item">New Releases</a>
+                <a href="#" class="amazon-subnav__item">Music</a>
+                <a href="#" class="amazon-subnav__item">Today's Deals</a>
+                <a href="#" class="amazon-subnav__item">Customer Service</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SonicWall Brand Header -->
+    <div class="brand-header">
+        <div class="brand-header__top">
+            <div class="brand-header__container">
+                <div class="brand-header__left">
+                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <button class="brand-header__follow" aria-label="Follow SonicWall">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Follow
+                    </button>
+                    <button class="brand-header__share" aria-label="Share this store">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+
+                <div class="brand-header__search" role="search">
+                    <input type="text" placeholder="Search this store" aria-label="Search SonicWall store">
+                    <button aria-label="Search SonicWall store">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="brand-header__nav" aria-label="SonicWall store navigation">
+            <div class="brand-header__container">
+                <a href="index.html" class="brand-nav__tab">HOME</a>
+                <div class="brand-nav__tab-wrapper">
+                    <a href="firewalls.html" class="brand-nav__tab brand-nav__tab--has-dropdown">FIREWALLS <svg class="brand-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown">
+                        <a href="firewalls.html" class="brand-nav__dropdown-link">TZ Series</a>
+                        <a href="firewalls.html" class="brand-nav__dropdown-link">NSa Series</a>
+                        <a href="firewalls.html" class="brand-nav__dropdown-link">NSsp Series</a>
+                    </div>
+                </div>
+                <div class="brand-nav__tab-wrapper">
+                    <a href="networking.html" class="brand-nav__tab brand-nav__tab--has-dropdown">NETWORKING <svg class="brand-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown">
+                        <a href="networking.html" class="brand-nav__dropdown-link">Switches</a>
+                        <a href="networking.html" class="brand-nav__dropdown-link">Wireless Access Points</a>
+                    </div>
+                </div>
+                <a href="security-services.html" class="brand-nav__tab">SECURITY SERVICES</a>
+                <div class="brand-nav__tab-wrapper">
+                    <a href="cloud-edge.html" class="brand-nav__tab brand-nav__tab--active brand-nav__tab--has-dropdown">CLOUD & EDGE <svg class="brand-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown">
+                        <a href="cloud-edge.html" class="brand-nav__dropdown-link">Virtual Firewalls</a>
+                        <a href="cloud-edge.html" class="brand-nav__dropdown-link">Cloud Secure Edge</a>
+                    </div>
+                </div>
+                <div class="brand-nav__tab-wrapper">
+                    <a href="more.html" class="brand-nav__tab brand-nav__tab--has-dropdown">MORE <svg class="brand-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <div class="brand-nav__dropdown">
+                        <a href="more.html" class="brand-nav__dropdown-link">Managed XDR</a>
+                        <a href="more.html" class="brand-nav__dropdown-link">Support Services</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main id="main-content" class="main-content">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb__item"><a href="#">Electronics</a></li>
+                    <li class="breadcrumb__item"><a href="#">Computers & Accessories</a></li>
+                    <li class="breadcrumb__item"><a href="#">Networking Products</a></li>
+                    <li class="breadcrumb__item"><a href="index.html">SonicWall Official Store</a></li>
+                    <li class="breadcrumb__item" aria-current="page">Cloud & Edge Security</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- 1. HERO SECTION -->
+        <section class="cloud-hero" aria-label="Cloud and Edge Security hero">
+            <div class="cloud-hero__background" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <div class="cloud-hero__overlay"></div>
+            </div>
+            <div class="cloud-hero__content">
+                <h1 class="cloud-hero__title">Cloud & Edge <span>Security</span></h1>
+                <p class="cloud-hero__subtitle">Secure your cloud workloads and remote workforce with virtual firewalls and zero-trust access</p>
+                <div class="cloud-hero__ctas">
+                    <a href="#nsv-section" class="btn btn--modern btn--primary btn--large">Virtual Firewalls</a>
+                    <a href="#cse-section" class="btn btn--modern btn--secondary btn--large">Cloud Secure Edge</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TWO PILLARS SECTION -->
+        <section class="pillars-section" aria-label="Cloud security pillars">
+            <div class="container">
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-card__icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M8 24c0-2 1-4 3-5 1-3 4-5 7-5h4c3 0 6 2 7 5 2 1 3 3 3 5 0 4-3 7-7 7H15c-4 0-7-3-7-7z" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <path d="M16 22v6M20 20v8M24 22v6" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-card__title">Virtual Firewalls (NSv Series)</h3>
+                        <p class="pillar-card__desc">Deploy SonicWall protection in AWS, Azure, GCP, and VMware environments</p>
+                        <p class="pillar-card__sub">Same enterprise-grade security, virtualized for the cloud</p>
+                        <a href="#nsv-section" class="btn btn--modern btn--amazon">Explore NSv Series &rarr;</a>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-card__icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 6l-12 6v10c0 7 5 13 12 15 7-2 12-8 12-15V12L20 6z" stroke="#ff6e42" stroke-width="2" fill="none"/>
+                                <path d="M14 24c0-1.5.8-3 2-4 .8-2 2.5-3.5 4.5-3.5h0c2 0 3.7 1.5 4.5 3.5 1.2 1 2 2.5 2 4 0 2.5-2 4.5-4.5 4.5h-4c-2.5 0-4.5-2-4.5-4.5z" stroke="#ff6e42" stroke-width="1.5" fill="none"/>
+                                <path d="M15 15l2 2M25 15l-2 2" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="pillar-card__title">Cloud Secure Edge</h3>
+                        <p class="pillar-card__desc">Zero-trust network access for the modern workforce</p>
+                        <p class="pillar-card__sub">Secure access to applications from anywhere, on any device</p>
+                        <a href="#cse-section" class="btn btn--modern btn--amazon">Explore CSE &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NSv VIRTUAL FIREWALLS SECTION -->
+        <section id="nsv-section" class="nsv-section" aria-label="NSv Virtual Firewalls">
+            <!-- Category Banner -->
+            <div class="category-banner" style="margin-bottom: 48px;">
+                <div class="category-banner__text">
+                    <span class="category-banner__series">VIRTUAL FIREWALLS</span>
+                    <h2 class="category-banner__title">NSv VIRTUAL FIREWALLS</h2>
+                    <p class="category-banner__subtitle">Enterprise firewall protection for cloud and virtual environments</p>
+                </div>
+                <div class="category-banner__image">
+                    <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt3229f152b9b7360d/67ec3c96207d79c2640f2908/NSv.webp" alt="SonicWall NSv Virtual Firewalls" loading="lazy">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="nsv-product-grid">
+                    <!-- NSv 270 Cloud -->
+                    <article class="nsv-product-card">
+                        <h3 class="nsv-product-card__name">NSv 270</h3>
+                        <div class="nsv-product-card__platform">
+                            <span class="nsv-product-card__badge nsv-product-card__badge--aws">AWS</span>
+                            <span class="nsv-product-card__badge nsv-product-card__badge--azure">Azure</span>
+                            <span class="nsv-product-card__badge nsv-product-card__badge--gcp">GCP</span>
+                        </div>
+                        <p class="nsv-product-card__desc">Up to 2 Gbps throughput. Ideal for small cloud deployments and branch office virtualization.</p>
+                        <div class="nsv-product-card__price">$999.99</div>
+                        <p class="nsv-product-card__price-period">per year</p>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe Now &rarr;</button>
+                    </article>
+
+                    <!-- NSv 470 Cloud -->
+                    <article class="nsv-product-card">
+                        <h3 class="nsv-product-card__name">NSv 470</h3>
+                        <div class="nsv-product-card__platform">
+                            <span class="nsv-product-card__badge nsv-product-card__badge--aws">AWS</span>
+                            <span class="nsv-product-card__badge nsv-product-card__badge--azure">Azure</span>
+                            <span class="nsv-product-card__badge nsv-product-card__badge--gcp">GCP</span>
+                        </div>
+                        <p class="nsv-product-card__desc">Up to 4 Gbps throughput. Built for mid-size cloud workloads with advanced threat protection.</p>
+                        <div class="nsv-product-card__price">$2,499.99</div>
+                        <p class="nsv-product-card__price-period">per year</p>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe Now &rarr;</button>
+                    </article>
+
+                    <!-- NSv 870 Cloud -->
+                    <article class="nsv-product-card">
+                        <h3 class="nsv-product-card__name">NSv 870</h3>
+                        <div class="nsv-product-card__platform">
+                            <span class="nsv-product-card__badge nsv-product-card__badge--aws">AWS</span>
+                            <span class="nsv-product-card__badge nsv-product-card__badge--azure">Azure</span>
+                            <span class="nsv-product-card__badge nsv-product-card__badge--gcp">GCP</span>
+                        </div>
+                        <p class="nsv-product-card__desc">Up to 8 Gbps throughput. Enterprise-scale cloud security with full TLS/SSL inspection.</p>
+                        <div class="nsv-product-card__price">$4,999.99</div>
+                        <p class="nsv-product-card__price-period">per year</p>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe Now &rarr;</button>
+                    </article>
+
+                    <!-- NSv 270 VMware -->
+                    <article class="nsv-product-card">
+                        <h3 class="nsv-product-card__name">NSv 270 for VMware</h3>
+                        <div class="nsv-product-card__platform">
+                            <span class="nsv-product-card__badge nsv-product-card__badge--vmware">VMware</span>
+                        </div>
+                        <p class="nsv-product-card__desc">Up to 2 Gbps throughput. On-premises virtual firewall for VMware ESXi environments.</p>
+                        <div class="nsv-product-card__price">$999.99</div>
+                        <p class="nsv-product-card__price-period">per year</p>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe Now &rarr;</button>
+                    </article>
+
+                    <!-- NSv 470 VMware -->
+                    <article class="nsv-product-card">
+                        <h3 class="nsv-product-card__name">NSv 470 for VMware</h3>
+                        <div class="nsv-product-card__platform">
+                            <span class="nsv-product-card__badge nsv-product-card__badge--vmware">VMware</span>
+                        </div>
+                        <p class="nsv-product-card__desc">Up to 4 Gbps throughput. Mid-range virtual firewall for larger VMware deployments.</p>
+                        <div class="nsv-product-card__price">$2,499.99</div>
+                        <p class="nsv-product-card__price-period">per year</p>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe Now &rarr;</button>
+                    </article>
+
+                    <!-- NSv 870 VMware -->
+                    <article class="nsv-product-card">
+                        <h3 class="nsv-product-card__name">NSv 870 for VMware</h3>
+                        <div class="nsv-product-card__platform">
+                            <span class="nsv-product-card__badge nsv-product-card__badge--vmware">VMware</span>
+                        </div>
+                        <p class="nsv-product-card__desc">Up to 8 Gbps throughput. High-performance virtual firewall for enterprise VMware infrastructure.</p>
+                        <div class="nsv-product-card__price">$4,999.99</div>
+                        <p class="nsv-product-card__price-period">per year</p>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe Now &rarr;</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CLOUD PLATFORM COMPATIBILITY -->
+        <section class="platforms-section" aria-label="Supported cloud platforms">
+            <div class="container">
+                <h2 class="platforms-section__title">Cloud Platform Compatibility</h2>
+                <div class="platforms-bar">
+                    <div class="platform-badge">
+                        <div class="platform-badge__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4l8 5v10l-8 5-8-5V9l8-5z" stroke="#ff9900" stroke-width="1.5" fill="none"/><path d="M14 14l8-5M14 14v10M14 14l-8-5" stroke="#ff9900" stroke-width="1" opacity="0.5"/></svg>
+                        </div>
+                        <span class="platform-badge__name">Amazon Web Services</span>
+                    </div>
+                    <div class="platform-badge">
+                        <div class="platform-badge__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="9" height="9" fill="#0078d4" rx="1"/><rect x="15" y="4" width="9" height="9" fill="#0078d4" rx="1"/><rect x="4" y="15" width="9" height="9" fill="#0078d4" rx="1"/><rect x="15" y="15" width="9" height="9" fill="#0078d4" rx="1"/></svg>
+                        </div>
+                        <span class="platform-badge__name">Microsoft Azure</span>
+                    </div>
+                    <div class="platform-badge">
+                        <div class="platform-badge__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="8" stroke="#4285f4" stroke-width="1.5" fill="none"/><path d="M14 6v16M6 14h16" stroke="#4285f4" stroke-width="1" opacity="0.4"/><circle cx="14" cy="14" r="3" fill="#4285f4"/></svg>
+                        </div>
+                        <span class="platform-badge__name">Google Cloud Platform</span>
+                    </div>
+                    <div class="platform-badge">
+                        <div class="platform-badge__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14l10-10 10 10-10 10L4 14z" stroke="#696566" stroke-width="1.5" fill="none"/><path d="M9 14l5-5 5 5-5 5-5-5z" stroke="#696566" stroke-width="1" fill="none"/></svg>
+                        </div>
+                        <span class="platform-badge__name">VMware ESXi</span>
+                    </div>
+                    <div class="platform-badge">
+                        <div class="platform-badge__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="8" width="16" height="12" rx="2" stroke="#0078d4" stroke-width="1.5" fill="none"/><path d="M10 14h8M14 11v6" stroke="#0078d4" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <span class="platform-badge__name">Hyper-V</span>
+                    </div>
+                    <div class="platform-badge">
+                        <div class="platform-badge__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#e05d44" stroke-width="1.5" fill="none"/><path d="M10 10l8 8M18 10l-8 8" stroke="#e05d44" stroke-width="1" opacity="0.3"/><circle cx="14" cy="14" r="4" stroke="#e05d44" stroke-width="1" fill="none"/></svg>
+                        </div>
+                        <span class="platform-badge__name">KVM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CLOUD SECURE EDGE (CSE) SECTION -->
+        <section id="cse-section" class="cse-section" aria-label="Cloud Secure Edge features">
+            <div class="container">
+                <h2 class="cse-section__title">Cloud Secure Edge: Zero-Trust Network Access</h2>
+                <p class="cse-section__subtitle">Secure, seamless access to corporate applications for every user, everywhere</p>
+
+                <div class="cse-grid">
+                    <div class="cse-card">
+                        <div class="cse-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4l-12 6v10c0 7 5 13 12 15 7-2 12-8 12-15V10L18 4z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M13 18l3.5 3.5L23 15" stroke="#ff6e42" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="cse-card__title">Zero-Trust Access</h3>
+                        <p class="cse-card__text">Verify every user and device before granting access. No implicit trust, regardless of network location or prior authentication.</p>
+                    </div>
+
+                    <div class="cse-card">
+                        <div class="cse-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M6 18h8M22 18h8" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/><path d="M14 12v12l8-6-8-6z" stroke="#ff6e42" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="4" cy="18" r="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/><circle cx="32" cy="18" r="2" stroke="#ff6e42" stroke-width="1.5" fill="none"/></svg>
+                        </div>
+                        <h3 class="cse-card__title">Split Tunneling</h3>
+                        <p class="cse-card__text">Optimize bandwidth by routing only business traffic through the secure tunnel. Personal traffic goes direct for better performance.</p>
+                    </div>
+
+                    <div class="cse-card">
+                        <div class="cse-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 6C11 6 6 11 6 18s5 12 12 12 12-5 12-12S25 6 18 6z" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M18 12v6l4 2" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="18" r="2" fill="#ff6e42"/></svg>
+                        </div>
+                        <h3 class="cse-card__title">Always-On VPN</h3>
+                        <p class="cse-card__text">Seamless, persistent connectivity for remote workers. Automatic reconnection ensures zero gaps in security coverage.</p>
+                    </div>
+
+                    <div class="cse-card">
+                        <div class="cse-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="8" y="6" width="20" height="24" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/><circle cx="18" cy="16" r="4" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M13 25c0-3 2-5 5-5s5 2 5 5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="cse-card__title">Device Posture Check</h3>
+                        <p class="cse-card__text">Ensure endpoints meet security requirements before access. Validate OS patches, antivirus, disk encryption, and more.</p>
+                    </div>
+
+                    <div class="cse-card">
+                        <div class="cse-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="6" y="10" width="24" height="16" rx="3" stroke="#ff6e42" stroke-width="2" fill="none"/><path d="M6 16h24" stroke="#ff6e42" stroke-width="2"/><circle cx="12" cy="22" r="2" fill="#ff6e42"/><circle cx="18" cy="22" r="2" fill="#ff6e42"/><circle cx="24" cy="22" r="2" fill="#ff6e42"/></svg>
+                        </div>
+                        <h3 class="cse-card__title">Multi-Factor Authentication</h3>
+                        <p class="cse-card__text">Built-in MFA for every connection. Time-based OTP, push notifications, and hardware key support included at no extra cost.</p>
+                    </div>
+
+                    <div class="cse-card">
+                        <div class="cse-card__icon" aria-hidden="true">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="12" stroke="#ff6e42" stroke-width="2" fill="none"/><circle cx="18" cy="18" r="5" stroke="#ff6e42" stroke-width="1.5" fill="none"/><circle cx="18" cy="18" r="1.5" fill="#ff6e42"/><path d="M18 6v4M18 26v4M6 18h4M26 18h4" stroke="#ff6e42" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3 class="cse-card__title">Global PoPs</h3>
+                        <p class="cse-card__text">Low-latency access from 30+ global points of presence. Intelligent routing ensures the fastest path to your applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CLOUD SECURITY ARCHITECTURE -->
+        <section class="architecture-section" aria-label="Cloud security architecture diagram">
+            <div class="container">
+                <h2 class="architecture-section__title">Cloud Security Architecture</h2>
+
+                <div class="architecture-diagram">
+                    <!-- Row 1: Remote Workers Path -->
+                    <div class="arch-divider">
+                        <span class="arch-divider__text">Remote Workforce Path</span>
+                    </div>
+                    <div class="arch-row">
+                        <div class="arch-box">
+                            <div class="arch-box__label">Remote Workers</div>
+                            <div class="arch-box__sub">Laptops, Mobile, BYOD</div>
+                        </div>
+                        <div class="arch-arrow" aria-hidden="true">
+                            <svg width="36" height="16" viewBox="0 0 36 16" fill="none"><path d="M0 8h28M28 8l-6-5M28 8l-6 5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="arch-box arch-box--highlight">
+                            <div class="arch-box__label">Cloud Secure Edge</div>
+                            <div class="arch-box__sub">ZTNA + MFA + Posture</div>
+                        </div>
+                        <div class="arch-arrow" aria-hidden="true">
+                            <svg width="36" height="16" viewBox="0 0 36 16" fill="none"><path d="M0 8h28M28 8l-6-5M28 8l-6 5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="arch-box">
+                            <div class="arch-box__label">Corporate Apps</div>
+                            <div class="arch-box__sub">SaaS, Private Apps, Data</div>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="arch-divider">
+                        <span class="arch-divider__text">Branch / Data Center Path</span>
+                    </div>
+
+                    <!-- Row 2: Branch Offices Path -->
+                    <div class="arch-row">
+                        <div class="arch-box">
+                            <div class="arch-box__label">Branch Offices</div>
+                            <div class="arch-box__sub">On-Premise Networks</div>
+                        </div>
+                        <div class="arch-arrow" aria-hidden="true">
+                            <svg width="36" height="16" viewBox="0 0 36 16" fill="none"><path d="M0 8h28M28 8l-6-5M28 8l-6 5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="arch-box arch-box--highlight">
+                            <div class="arch-box__label">SonicWall Firewalls</div>
+                            <div class="arch-box__sub">TZ / NSa / NSsp Series</div>
+                        </div>
+                        <div class="arch-arrow" aria-hidden="true">
+                            <svg width="36" height="16" viewBox="0 0 36 16" fill="none"><path d="M0 8h28M28 8l-6-5M28 8l-6 5" stroke="#ff6e42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="arch-box">
+                            <div class="arch-box__label">Cloud Workloads</div>
+                            <div class="arch-box__sub">AWS / Azure / GCP + NSv</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CLOUD PRICING SECTION -->
+        <section class="cloud-pricing-section" aria-label="Cloud pricing plans">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center;">Cloud Security Pricing</h2>
+                <p class="section-subtitle" style="text-align: center; margin-bottom: 48px;">Predictable annual subscriptions. No hidden costs. No per-appliance licensing.</p>
+
+                <div class="cloud-pricing-grid">
+                    <!-- NSv 270 -->
+                    <div class="pricing-card">
+                        <h3 class="pricing-card__name">NSv 270</h3>
+                        <div class="pricing-card__price">$83.33<span>/mo</span></div>
+                        <p class="pricing-card__billing">Billed annually at $999.99</p>
+                        <div class="pricing-card__divider"></div>
+                        <ul class="pricing-card__features">
+                            <li>Up to 2 Gbps firewall throughput</li>
+                            <li>Threat prevention for cloud VPCs</li>
+                            <li>AWS, Azure, GCP, VMware</li>
+                            <li>Centralized cloud management</li>
+                            <li>Real-Time Deep Memory Inspection</li>
+                        </ul>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe &rarr;</button>
+                    </div>
+
+                    <!-- NSv 470 -->
+                    <div class="pricing-card pricing-card--featured">
+                        <h3 class="pricing-card__name">NSv 470</h3>
+                        <div class="pricing-card__price">$208.33<span>/mo</span></div>
+                        <p class="pricing-card__billing">Billed annually at $2,499.99</p>
+                        <div class="pricing-card__divider"></div>
+                        <ul class="pricing-card__features">
+                            <li>Up to 4 Gbps firewall throughput</li>
+                            <li>Advanced threat prevention</li>
+                            <li>Full TLS/SSL deep inspection</li>
+                            <li>SD-WAN for multi-cloud routing</li>
+                            <li>Gateway anti-virus + anti-spyware</li>
+                        </ul>
+                        <button class="btn btn--modern btn--primary btn--small">Subscribe &rarr;</button>
+                    </div>
+
+                    <!-- NSv 870 -->
+                    <div class="pricing-card">
+                        <h3 class="pricing-card__name">NSv 870</h3>
+                        <div class="pricing-card__price">$416.67<span>/mo</span></div>
+                        <p class="pricing-card__billing">Billed annually at $4,999.99</p>
+                        <div class="pricing-card__divider"></div>
+                        <ul class="pricing-card__features">
+                            <li>Up to 8 Gbps firewall throughput</li>
+                            <li>Enterprise-scale cloud security</li>
+                            <li>Capture ATP sandboxing</li>
+                            <li>Content filtering + app control</li>
+                            <li>24/7 firmware support included</li>
+                        </ul>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe &rarr;</button>
+                    </div>
+
+                    <!-- CSE Per-User -->
+                    <div class="pricing-card">
+                        <h3 class="pricing-card__name">CSE Per-User</h3>
+                        <div class="pricing-card__price">$5<span>/user/mo</span></div>
+                        <p class="pricing-card__billing">Minimum 25 users</p>
+                        <div class="pricing-card__divider"></div>
+                        <ul class="pricing-card__features">
+                            <li>Zero-trust network access</li>
+                            <li>Built-in multi-factor auth</li>
+                            <li>Device posture checking</li>
+                            <li>Split tunneling + always-on VPN</li>
+                            <li>30+ global points of presence</li>
+                        </ul>
+                        <button class="btn btn--modern btn--amazon btn--small">Subscribe &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. STATS SECTION -->
+        <section class="cloud-stats-section" aria-label="Cloud security statistics">
+            <div class="container">
+                <div class="cloud-stats-grid">
+                    <div class="cloud-stat">
+                        <div class="cloud-stat__number">30+</div>
+                        <div class="cloud-stat__label">Global Points of Presence</div>
+                    </div>
+                    <div class="cloud-stat">
+                        <div class="cloud-stat__number">99.999%</div>
+                        <div class="cloud-stat__label">Uptime SLA</div>
+                    </div>
+                    <div class="cloud-stat">
+                        <div class="cloud-stat__number">&lt; 10ms</div>
+                        <div class="cloud-stat__label">Average Latency</div>
+                    </div>
+                    <div class="cloud-stat">
+                        <div class="cloud-stat__number">Zero</div>
+                        <div class="cloud-stat__label">Trust Assumptions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. MIGRATION CTA -->
+        <section class="migration-cta-section" aria-label="Cloud migration call to action">
+            <div class="migration-cta-section__background" aria-hidden="true">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
+                <div class="migration-cta-section__overlay"></div>
+            </div>
+            <div class="container">
+                <div class="migration-cta">
+                    <h2 class="migration-cta__headline">Moving to the cloud? Take your security with you.</h2>
+                    <p class="migration-cta__text">Talk to a cloud security expert. Get a personalized architecture review, migration roadmap, and deployment plan tailored to your environment.</p>
+                    <a href="#" class="btn btn--modern btn--primary btn--large">Schedule a Cloud Assessment &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__back-to-top">
+            <a href="#" class="footer__back-to-top-link" aria-label="Back to top of page">Back to top</a>
+        </div>
+
+        <div class="footer__main">
+            <div class="container">
+                <h2 class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Site footer navigation</h2>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Get to Know Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Amazon Devices</a></li>
+                            <li><a href="#">Amazon Science</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Make Money with Us</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                            <li><a href="#">Host an Amazon Hub</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Amazon Payment Products</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__column">
+                        <h3 class="footer__column-title">Let Us Help You</h3>
+                        <ul class="footer__links">
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Manage Your Content and Devices</a></li>
+                            <li><a href="#">Amazon Assistant</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <svg class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24" viewBox="0 0 108 33" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M66.8 25.6c-6.2 4.6-15.2 7-22.9 7-10.8 0-20.6-4-28-10.7-.6-.5-.1-1.2.6-.8 8 4.6 17.8 7.4 28 7.4 6.9 0 14.4-1.4 21.3-4.4 1-.5 1.9.7.9 1.5z" fill="#FF9900"/>
+                        <path d="M69.4 22.6c-.8-1-5.2-.5-7.2-.2-.6.1-.7-.5-.2-.8 3.5-2.5 9.3-1.8 10-.9.7.8-.2 6.6-3.5 9.3-.5.4-1 .2-.8-.4.7-1.8 2.4-5.9 1.6-7z" fill="#FF9900"/>
+                        <path d="M62.4 3.5V1.2c0-.3.3-.6.6-.6h10c.3 0 .6.3.6.6v2c0 .3-.3.8-.8 1.4l-5.2 7.4c1.9 0 3.9.2 5.7 1.2.4.2.5.6.5.9v2.5c0 .3-.4.7-.7.5-3.1-1.6-7.2-1.8-10.6 0-.3.2-.7-.2-.7-.5V14c0-.4 0-1 .4-1.5l6-8.6h-5.2c-.3 0-.6-.2-.6-.5zM22.7 18.1h-3c-.3 0-.5-.2-.6-.5V1.2c0-.3.3-.6.6-.6h2.8c.3 0 .5.2.6.5v2.1h.1c.8-2 2.3-3 4.3-3 2.1 0 3.4 1 4.3 3 .8-2 2.6-3 4.6-3 1.4 0 2.9.6 3.8 1.9 1 1.5.8 3.6.8 5.5v10c0 .3-.3.6-.6.6h-3c-.3 0-.5-.3-.6-.6V8.8c0-.7.1-2.6-.1-3.3-.3-.9-1-1.2-2-1.2-.8 0-1.7.6-2 1.5-.3.9-.3 2.4-.3 3v8.8c0 .3-.3.6-.6.6h-3c-.3 0-.5-.3-.6-.6l0-8.8c0-1.9.3-4.7-2.1-4.7-2.5 0-2.4 2.7-2.4 4.7v8.8c0 .3-.3.6-.6.6zM80.3.2c4.5 0 7 3.9 7 8.8 0 4.7-2.7 8.5-7 8.5-4.4 0-6.8-3.9-6.8-8.7 0-4.8 2.4-8.6 6.8-8.6zm0 3.2c-2.3 0-2.4 3.1-2.4 5 0 2 0 6.1 2.4 6.1 2.3 0 2.5-3.4 2.5-5.4 0-1.3-.1-2.9-.4-4.2-.3-1.1-1-1.5-2-1.5zM93.5 18.1h-3c-.3 0-.5-.3-.6-.6V1.1c0-.3.3-.5.6-.5h2.8c.3 0 .5.2.5.5v2.5h.1c.9-2.2 2.1-3.3 4.2-3.3 1.5 0 3 .5 3.9 2.1.9 1.4.9 3.9.9 5.6v9.8c0 .3-.3.5-.6.5h-3c-.3 0-.5-.2-.6-.5V8.5c0-1.9.2-4.6-2.2-4.6-.8 0-1.6.6-2 1.4-.5 1.1-.6 2.2-.6 3.3v9c-.1.3-.3.5-.6.5zM52.8 10.3c0 1.3 0 2.4-.7 3.6-.5.9-1.4 1.5-2.3 1.5-1.3 0-2-.9-2-2.3 0-2.8 2.5-3.3 5-3.3v.5zm3.4 8.2c-.2.2-.5.2-.7.1-.7-.6-1.5-1.8-2.1-2.9-2 2.1-3.4 2.7-6.1 2.7-3.1 0-5.5-1.9-5.5-5.8 0-3 1.6-5.1 3.9-6.1 2-.8 4.8-1 7-.8v-.7c0-.6 0-1.4-.3-2-.3-.5-.9-.7-1.6-.7-1.1 0-2 .5-2.3 1.7-.1.3-.3.5-.6.5l-2.9-.3c-.3-.1-.5-.2-.5-.6C45 1.7 48 .2 50.8.2c1.4 0 3.2.4 4.3 1.4 1.4 1.3 1.3 3.1 1.3 5v4.5c0 1.4.6 2 1.1 2.7.2.3.2.6 0 .8l-1.3 1.1v-.2zM7 10.3c0 1.3 0 2.4-.7 3.6-.5.9-1.4 1.5-2.3 1.5-1.3 0-2-.9-2-2.3 0-2.8 2.5-3.3 5-3.3v.5zm3.4 8.2c-.2.2-.5.2-.7.1-.7-.6-1.5-1.8-2.1-2.9-2 2.1-3.4 2.7-6.1 2.7C-1.6 18.4-4 16.5-4 12.6c0-3 1.6-5.1 3.9-6.1 2-.8 4.8-1 7-.8v-.7c0-.6 0-1.4-.3-2-.3-.5-.9-.7-1.6-.7-1.1 0-2 .5-2.3 1.7-.1.3-.3.5-.6.5l-2.9-.3c-.3-.1-.5-.2-.5-.6C-.7 1.7 2.3.2 5.1.2c1.4 0 3.2.4 4.3 1.4 1.4 1.3 1.3 3.1 1.3 5v4.5c0 1.4.6 2 1.1 2.7.2.3.2.6 0 .8l-1.3 1.1-.1-.2z" fill="#FFFFFF"/>
+                    </svg>
+                    <div class="footer__bottom-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                </div>
+                <p class="footer__copyright">&copy; 1996-2026, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+
+        <div class="footer__sonicwall">
+            <div class="container">
+                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
