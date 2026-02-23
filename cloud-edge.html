@@ -219,21 +219,23 @@
 
         .nsv-product-card {
             background: #ffffff;
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
+            border: none;
+            border-radius: var(--card-radius, 12px);
             padding: 28px 24px;
             text-align: center;
-            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+            overflow: hidden;
         }
 
         .nsv-product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12), 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .nsv-product-card__name {
             font-family: 'Oswald', sans-serif;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 600;
             color: #1f2929;
             margin-bottom: 12px;
@@ -258,23 +260,27 @@
         }
 
         .nsv-product-card__badge--aws {
-            background: #ff9900;
+            background: rgba(255, 153, 0, 0.9);
             color: #1f2929;
+            box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3);
         }
 
         .nsv-product-card__badge--azure {
-            background: #0078d4;
+            background: rgba(0, 120, 212, 0.9);
             color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 120, 212, 0.3);
         }
 
         .nsv-product-card__badge--gcp {
-            background: #4285f4;
+            background: rgba(66, 133, 244, 0.9);
             color: #ffffff;
+            box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
         }
 
         .nsv-product-card__badge--vmware {
-            background: #696566;
+            background: rgba(105, 101, 102, 0.9);
             color: #ffffff;
+            box-shadow: 0 2px 8px rgba(105, 101, 102, 0.3);
         }
 
         .nsv-product-card__desc {
@@ -287,10 +293,11 @@
 
         .nsv-product-card__price {
             font-family: 'Inter', sans-serif;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             color: #1f2929;
             margin-bottom: 4px;
+            letter-spacing: -0.75px;
         }
 
         .nsv-product-card__price-period {
