@@ -129,6 +129,15 @@ type DebouncedFunction<T extends (...args: never[]) => void> = (...args: Paramet
 
       // Click handler
       tab.addEventListener('click', (e: Event): void => {
+        const href: string | null = (tab as HTMLAnchorElement).getAttribute('href');
+        // If href points to another page, allow default browser navigation
+        if (href && !href.startsWith('#')) {
+          const currentPage: string = window.location.pathname.split('/').pop() || 'index.html';
+          const linkPage: string = href.split('#')[0];
+          if (linkPage && linkPage !== currentPage) {
+            return; // Allow navigation to other page
+          }
+        }
         e.preventDefault();
         activateTab(tab);
       });
@@ -1348,16 +1357,25 @@ type DebouncedFunction<T extends (...args: never[]) => void> = (...args: Paramet
           }
         });
 
-        // Dropdown link clicks -- scroll to section and close
+        // Dropdown link clicks -- navigate to page or scroll to section
         link.addEventListener('click', (e: Event): void => {
-          e.preventDefault();
-          const targetSection: string | null = link.getAttribute('data-section');
-          if (targetSection) {
-            const section: Element | null = document.querySelector(
-              `section[data-section="${targetSection}"], [data-section="${targetSection}"]`
-            );
-            if (section && section.tagName !== 'A' && section.tagName !== 'BUTTON') {
-              smoothScrollTo(section);
+          const href: string | null = link.getAttribute('href');
+          if (href) {
+            const currentPage: string = window.location.pathname.split('/').pop() || 'index.html';
+            const [linkPage, hash] = href.split('#');
+            // If link points to another page, allow default navigation
+            if (linkPage && linkPage !== currentPage) {
+              closeAllDropdowns();
+              return; // Allow browser navigation
+            }
+            // Same-page hash link -- scroll to section
+            if (hash) {
+              e.preventDefault();
+              const section: Element | null = document.getElementById(hash)
+                || document.querySelector(`section[data-section="${hash}"], [data-section="${hash}"]`);
+              if (section && section.tagName !== 'A' && section.tagName !== 'BUTTON') {
+                smoothScrollTo(section);
+              }
             }
           }
           closeAllDropdowns();
