@@ -149,7 +149,7 @@
            PAGE SECTIONS
            ======================================== */
         .page-section {
-            padding: 80px 60px;
+            padding: 60px 60px;
             page-break-before: always;
         }
 
@@ -927,22 +927,136 @@
         @media print {
             body {
                 background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
-            .page-section {
-                page-break-before: always;
+            @page {
+                size: letter;
+                margin: 0;
+            }
+
+            .container {
+                max-width: 100%;
             }
 
             .cover-page {
                 page-break-after: always;
+                min-height: auto;
+                height: 100vh;
+            }
+
+            .page-section {
+                page-break-before: always;
+                padding: 50px 50px;
+            }
+
+            /* Prevent splitting inside cards and grids */
+            .opportunity-card,
+            .solution-card,
+            .pillar-card,
+            .dashboard-card,
+            .benefit-card,
+            .step-card,
+            .stat-box,
+            .stat-card,
+            .why-now-stat,
+            .approach-box,
+            .content-box,
+            .quote-box,
+            .callout-box,
+            .guarantees-box,
+            .cta-box,
+            .final-quote,
+            .product-portfolio,
+            .product-category,
+            .case-study-header,
+            .results-list,
+            .pillar-banner,
+            .pillar-banner-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* Keep grids together when possible */
+            .stat-row,
+            .stats-row,
+            .why-now-stats,
+            .approach-boxes,
+            .content-comparison,
+            .pillar-banner {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* Keep headings with their content */
+            .section-number,
+            .section-heading,
+            h2, h3, h4 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            /* Keep comparison table together */
+            .comparison-table {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                font-size: 12px;
+            }
+
+            .comparison-table td,
+            .comparison-table th {
+                padding: 10px 12px;
+            }
+
+            /* Compact spacing for print */
+            .section-heading {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            .intro-text {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .opportunity-grid,
+            .solution-grid,
+            .benefit-grid,
+            .steps-grid {
+                gap: 16px;
+                margin-bottom: 30px;
+            }
+
+            .opportunity-card,
+            .solution-card,
+            .benefit-card,
+            .step-card {
+                padding: 20px;
+            }
+
+            .dashboard-grid,
+            .pillar-grid {
+                gap: 16px;
+            }
+
+            .dashboard-card,
+            .pillar-card {
+                padding: 20px;
+            }
+
+            .callout-box {
+                margin-top: 30px;
+                padding: 24px;
+            }
+
+            .operations-grid {
+                break-inside: avoid;
+                page-break-inside: avoid;
             }
 
             .no-print {
                 display: none;
-            }
-
-            @page {
-                margin: 0.5in;
             }
         }
 
@@ -1001,7 +1115,7 @@
                             <img src="logos/cloudcare-logo.svg" alt="Cloud Care">
                         </div>
                         <div class="sonicwall-logo">
-                            <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall">
+                            <img src="logos/sonicwall-logo.svg" alt="SonicWall">
                         </div>
                     </div>
 
