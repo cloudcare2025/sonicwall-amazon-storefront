@@ -690,7 +690,8 @@ ul {
   border-bottom: 1px solid var(--color-border);
 }
 
-.brand-header__nav .container {
+.brand-header__nav .container,
+.brand-header__nav .brand-header__container {
   display: flex;
   gap: 40px;
   overflow-x: auto;
@@ -699,7 +700,8 @@ ul {
   justify-content: center;
 }
 
-.brand-header__nav .container::-webkit-scrollbar {
+.brand-header__nav .container::-webkit-scrollbar,
+.brand-header__nav .brand-header__container::-webkit-scrollbar {
   display: none;
 }
 
@@ -1986,7 +1988,8 @@ ul {
     padding: 0 var(--space-sm);
   }
 
-  .brand-header__nav .container {
+  .brand-header__nav .container,
+  .brand-header__nav .brand-header__container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
