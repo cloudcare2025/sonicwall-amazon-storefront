@@ -885,7 +885,8 @@ ul {
     background: var(--color-bg-white);
     border-bottom: 1px solid var(--color-border);
 
-    .container {
+    .container,
+    .brand-header__container {
       display: flex;
       gap: 40px;
       overflow-x: auto;
@@ -2172,7 +2173,8 @@ ul {
     padding: 0 var(--space-sm);
   }
 
-  .brand-header__nav .container {
+  .brand-header__nav .container,
+  .brand-header__nav .brand-header__container {
     overflow-x: auto;
   }
 
@@ -3522,63 +3524,71 @@ ul {
 }
 
 // ============================================
-//   DROPDOWN NAV STYLING (HPE-INSPIRED)
+//   DROPDOWN NAV STRUCTURE
+//   .brand-nav__dropdown > .brand-nav__tab + .brand-nav__dropdown-menu
 // ============================================
 
-.brand-nav__tab-wrapper,
-.brand-nav__tab--dropdown {
+.brand-nav__dropdown {
   position: relative;
+  display: inline-flex;
+  align-items: center;
 
-  .brand-nav__chevron {
-    width: 10px;
-    height: 10px;
-    margin-left: 4px;
-    transition: transform 0.2s ease;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  &:hover .brand-nav__chevron {
-    transform: rotate(180deg);
-  }
-
-  &:hover .brand-nav__dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  > .brand-nav__tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
   }
 }
 
-.brand-nav__dropdown {
+.brand-nav__caret {
+  width: 10px;
+  height: 6px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.brand-nav__dropdown:hover .brand-nav__caret {
+  transform: rotate(180deg);
+}
+
+.brand-nav__dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  background: var(--color-bg-white);
-  min-width: 220px;
+  background: white;
+  min-width: 240px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  border-radius: var(--radius-lg);
+  border-radius: 8px;
   padding: 8px 0;
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
-  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
 }
 
-.brand-nav__dropdown-link {
+.brand-nav__dropdown:hover .brand-nav__dropdown-menu,
+.brand-nav__dropdown.active .brand-nav__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.brand-nav__dropdown-item {
   display: block;
   padding: 10px 20px;
-  color: var(--color-dropdown-text);
+  color: #333;
   font-size: 14px;
   text-decoration: none;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition: background 0.15s ease;
   font-family: $font-stack-body;
-  font-weight: var(--font-weight-regular);
+  font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
+  white-space: nowrap;
 
   &:hover {
-    background: var(--color-hover-light);
+    background: #f5f5f5;
     color: var(--color-brand-orange);
   }
 
@@ -3767,36 +3777,31 @@ ul {
 }
 
 @include respond-to('tablet-portrait') {
-  // Dropdown nav becomes accordion-style
-  .brand-nav__dropdown {
+  // Dropdown nav responsive
+  .brand-header__nav .brand-header__container {
+    flex-wrap: wrap;
+  }
+
+  .brand-nav__dropdown-menu {
     position: static;
     box-shadow: none;
     border-radius: 0;
-    background: var(--color-bg-light);
-    min-width: 100%;
     padding: 0;
-    max-height: 0;
-    overflow: hidden;
     opacity: 1;
     visibility: visible;
     transform: none;
-    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+    min-width: 100%;
+    background: #f5f5f5;
   }
 
-  .brand-nav__tab-wrapper:hover .brand-nav__dropdown,
-  .brand-nav__tab--dropdown:hover .brand-nav__dropdown {
-    max-height: 300px;
-    transform: none;
+  .brand-nav__dropdown:hover .brand-nav__dropdown-menu,
+  .brand-nav__dropdown.active .brand-nav__dropdown-menu {
+    display: block;
   }
 
-  .brand-nav__dropdown-link {
-    padding: 8px 16px;
-    font-size: 12px;
-    border-bottom: 1px solid var(--color-border);
-
-    &:last-child {
-      border-bottom: none;
-    }
+  .brand-nav__dropdown-item {
+    padding: 10px 24px;
   }
 
   // Category banners stack vertically
