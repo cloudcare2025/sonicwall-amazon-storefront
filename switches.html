@@ -19,6 +19,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- SonicWall CDN resource hints -->
+    <link rel="dns-prefetch" href="https://images-cms.sonicwall.com">
+    <link rel="preconnect" href="https://images-cms.sonicwall.com" crossorigin>
+    <!-- LCP: Preload hero image -->
+    <link rel="preload" as="image" href="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" fetchpriority="high">
+    <!-- Deferred JS -->
+    <script src="script.js" defer></script>
     <style>
         /* ============================================
            SWITCHES PAGE - SPECIFIC STYLES
@@ -442,7 +449,7 @@
         <div class="amazon-header__top">
             <div class="amazon-header__container">
                 <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
-                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
                 </a>
                 <div class="amazon-header__deliver">
                     <span class="amazon-header__deliver-label">Deliver to</span>
@@ -503,7 +510,7 @@
         <div class="brand-header__top">
             <div class="brand-header__container">
                 <div class="brand-header__left">
-                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <img width="200" height="40" loading="lazy" src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
                     <button class="brand-header__follow" aria-label="Follow SonicWall">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                             <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -605,7 +612,7 @@
         <!-- 1. Hero Section -->
         <section class="sw-hero" aria-label="Switches hero banner">
             <div class="sw-hero__bg">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <img width="1920" height="1080" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager" fetchpriority="high">
             </div>
             <div class="sw-hero__overlay"></div>
             <div class="sw-hero__grid" aria-hidden="true"></div>
@@ -630,7 +637,7 @@
                     <article class="product-card">
                         <div class="product-card__image">
                             <div class="sw-product-img">
-                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltca74fe7500fe45c5/6677cc429f54af42f5f174a7/SWS_12_8POE_Front-1.png" alt="SonicWall SWS12-8 Compact Switch" loading="lazy">
+                                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltca74fe7500fe45c5/6677cc429f54af42f5f174a7/SWS_12_8POE_Front-1.png" alt="SonicWall SWS12-8 Compact Switch" loading="lazy">
                             </div>
                         </div>
                         <h3 class="product-card__name">SonicWall SWS12-8</h3>
@@ -653,7 +660,7 @@
                     <article class="product-card">
                         <div class="product-card__image">
                             <div class="sw-product-img">
-                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltca74fe7500fe45c5/6677cc429f54af42f5f174a7/SWS_12_8POE_Front-1.png" alt="SonicWall SWS12-8POE PoE Switch" loading="lazy">
+                                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltca74fe7500fe45c5/6677cc429f54af42f5f174a7/SWS_12_8POE_Front-1.png" alt="SonicWall SWS12-8POE PoE Switch" loading="lazy">
                             </div>
                         </div>
                         <h3 class="product-card__name">SonicWall SWS12-8POE</h3>
@@ -680,7 +687,7 @@
                     <article class="product-card">
                         <div class="product-card__image">
                             <div class="sw-product-img">
-                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt450a3eebff0a8c02/6677cc4babd83648090f0192/SWS_12_10FPOE_Front-1.png" alt="SonicWall SWS12-10FPOE Full PoE Switch" loading="lazy">
+                                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt450a3eebff0a8c02/6677cc4babd83648090f0192/SWS_12_10FPOE_Front-1.png" alt="SonicWall SWS12-10FPOE Full PoE Switch" loading="lazy">
                             </div>
                         </div>
                         <h3 class="product-card__name">SonicWall SWS12-10FPOE</h3>
@@ -707,7 +714,7 @@
                     <article class="product-card">
                         <div class="product-card__image">
                             <div class="sw-product-img">
-                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb5395ff84a6eae55/6677cc3d5cfc948c43a65565/SWS_14_24_Front.png" alt="SonicWall SWS14-24 Managed Switch" loading="lazy">
+                                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb5395ff84a6eae55/6677cc3d5cfc948c43a65565/SWS_14_24_Front.png" alt="SonicWall SWS14-24 Managed Switch" loading="lazy">
                             </div>
                         </div>
                         <h3 class="product-card__name">SonicWall SWS14-24</h3>
@@ -730,7 +737,7 @@
                     <article class="product-card">
                         <div class="product-card__image">
                             <div class="sw-product-img">
-                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltdcf297786f83a443/6677cc398328141f7c6ea931/SWS_14_24FPOE_Front.png" alt="SonicWall SWS14-24FPOE Full PoE Managed Switch" loading="lazy">
+                                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltdcf297786f83a443/6677cc398328141f7c6ea931/SWS_14_24FPOE_Front.png" alt="SonicWall SWS14-24FPOE Full PoE Managed Switch" loading="lazy">
                             </div>
                         </div>
                         <h3 class="product-card__name">SonicWall SWS14-24FPOE</h3>
@@ -757,7 +764,7 @@
                     <article class="product-card">
                         <div class="product-card__image">
                             <div class="sw-product-img">
-                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt90a3ec6dda6ce184/6677cc3394c67f00facafc78/SWS_14_48_Front.png" alt="SonicWall SWS14-48 Managed Switch" loading="lazy">
+                                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt90a3ec6dda6ce184/6677cc3394c67f00facafc78/SWS_14_48_Front.png" alt="SonicWall SWS14-48 Managed Switch" loading="lazy">
                             </div>
                         </div>
                         <h3 class="product-card__name">SonicWall SWS14-48</h3>
@@ -780,7 +787,7 @@
                     <article class="product-card">
                         <div class="product-card__image">
                             <div class="sw-product-img">
-                                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt7d2b558533698364/6677cc2f0a774855225db5c9/SWS_14_48FPOE_Front.png" alt="SonicWall SWS14-48FPOE Full PoE Managed Switch" loading="lazy">
+                                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt7d2b558533698364/6677cc2f0a774855225db5c9/SWS_14_48FPOE_Front.png" alt="SonicWall SWS14-48FPOE Full PoE Managed Switch" loading="lazy">
                             </div>
                         </div>
                         <h3 class="product-card__name">SonicWall SWS14-48FPOE</h3>
@@ -1123,7 +1130,7 @@
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-content">
-                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
                     <div class="footer__bottom-links">
                         <a href="#">Conditions of Use</a>
                         <a href="#">Privacy Notice</a>
@@ -1135,11 +1142,10 @@
         </div>
         <div class="footer__sonicwall">
             <div class="container">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+                <img width="200" height="40" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>

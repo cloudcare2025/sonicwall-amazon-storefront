@@ -78,7 +78,7 @@
     function initTabNavigation() {
         const tabs = document.querySelectorAll('.brand-nav__tab');
         // Only observe actual page sections, not nav elements that happen to have data-section
-        const sections = document.querySelectorAll('section[data-section], div[data-section]:not(.brand-nav__tab):not(.brand-nav__dropdown-item)');
+        const sections = document.querySelectorAll('section[data-section], div[data-section]:not(.brand-nav__tab):not(.brand-nav__dropdown-link)');
         if (!tabs.length)
             return;
         // Add tablist role to the container
@@ -887,12 +887,32 @@
     // HERO VIDEO BACKGROUND -- Auto-playing looping video
     // ==========================================================================
     function initHeroVideo() {
-        const video = document.querySelector('.hero__bg-video');
-        if (!video)
+        const videoEl = document.querySelector('.hero__bg-video');
+        if (!videoEl)
             return;
-        // Ensure video plays (some browsers block autoplay)
-        video.play().catch(() => {
-            // Autoplay blocked -- poster image shown as fallback
+        const video = videoEl;
+        // Deferred video loading: wait 3s or first user interaction, whichever comes first.
+        // Video has preload="none" so the poster image shows immediately without competing bandwidth.
+        function loadAndPlay() {
+            if (video.preload !== 'none')
+                return; // Already loaded
+            video.preload = 'auto';
+            video.load();
+            video.play().catch(() => {
+                // Autoplay blocked -- poster image shown as fallback
+            });
+        }
+        const timer = setTimeout(loadAndPlay, 3000);
+        const interactionEvents = ['scroll', 'mousemove', 'touchstart', 'keydown'];
+        function onInteraction() {
+            clearTimeout(timer);
+            interactionEvents.forEach((evt) => {
+                window.removeEventListener(evt, onInteraction);
+            });
+            loadAndPlay();
+        }
+        interactionEvents.forEach((evt) => {
+            window.addEventListener(evt, onInteraction, { once: true, passive: true });
         });
     }
     // ==========================================================================
@@ -1073,12 +1093,12 @@
     // DROPDOWN NAVIGATION -- Keyboard, touch & accessibility support
     // ==========================================================================
     function initDropdownNavigation() {
-        const dropdownWrappers = document.querySelectorAll('.brand-nav__dropdown');
+        const dropdownWrappers = document.querySelectorAll('.brand-nav__tab-wrapper');
         if (!dropdownWrappers.length)
             return;
         dropdownWrappers.forEach((wrapper) => {
-            const tab = wrapper.querySelector('.brand-nav__tab');
-            const dropdown = wrapper.querySelector('.brand-nav__dropdown-menu');
+            const tab = wrapper.querySelector('.brand-nav__tab--has-dropdown');
+            const dropdown = wrapper.querySelector('.brand-nav__dropdown');
             if (!tab || !dropdown)
                 return;
             // Set ARIA attributes
@@ -1092,7 +1112,7 @@
                 closeAllDropdowns();
                 if (!isOpen) {
                     tab.setAttribute('aria-expanded', 'true');
-                    wrapper.classList.add('active');
+                    wrapper.classList.add('brand-nav__tab-wrapper--open');
                 }
             });
             // Keyboard: Enter/Space toggles, Escape closes, ArrowDown enters dropdown
@@ -1105,9 +1125,9 @@
                     closeAllDropdowns();
                     if (!isOpen) {
                         tab.setAttribute('aria-expanded', 'true');
-                        wrapper.classList.add('active');
-                        // Focus first dropdown item
-                        const firstLink = dropdown.querySelector('.brand-nav__dropdown-item');
+                        wrapper.classList.add('brand-nav__tab-wrapper--open');
+                        // Focus first dropdown link
+                        const firstLink = dropdown.querySelector('.brand-nav__dropdown-link');
                         if (firstLink)
                             firstLink.focus();
                     }
@@ -1115,14 +1135,14 @@
                 if (keyEvent.key === 'ArrowDown') {
                     keyEvent.preventDefault();
                     tab.setAttribute('aria-expanded', 'true');
-                    wrapper.classList.add('active');
-                    const firstLink = dropdown.querySelector('.brand-nav__dropdown-item');
+                    wrapper.classList.add('brand-nav__tab-wrapper--open');
+                    const firstLink = dropdown.querySelector('.brand-nav__dropdown-link');
                     if (firstLink)
                         firstLink.focus();
                 }
             });
             // Arrow key navigation within dropdown items
-            const links = dropdown.querySelectorAll('.brand-nav__dropdown-item');
+            const links = dropdown.querySelectorAll('.brand-nav__dropdown-link');
             links.forEach((link, linkIndex) => {
                 link.addEventListener('keydown', (e) => {
                     const keyEvent = e;
@@ -1141,7 +1161,7 @@
                         tab.focus();
                     }
                 });
-                // Dropdown item clicks -- navigate to page or scroll to section
+                // Dropdown link clicks -- navigate to page or scroll to section
                 link.addEventListener('click', (e) => {
                     const href = link.getAttribute('href');
                     if (href) {
@@ -1169,16 +1189,16 @@
         // Close all dropdowns
         function closeAllDropdowns() {
             dropdownWrappers.forEach((wrapper) => {
-                const tab = wrapper.querySelector('.brand-nav__tab');
+                const tab = wrapper.querySelector('.brand-nav__tab--has-dropdown');
                 if (tab)
                     tab.setAttribute('aria-expanded', 'false');
-                wrapper.classList.remove('active');
+                wrapper.classList.remove('brand-nav__tab-wrapper--open');
             });
         }
         // Close on outside click
         document.addEventListener('click', (e) => {
             const mouseEvent = e;
-            if (!mouseEvent.target?.closest('.brand-nav__dropdown')) {
+            if (!mouseEvent.target?.closest('.brand-nav__tab-wrapper')) {
                 closeAllDropdowns();
             }
         });

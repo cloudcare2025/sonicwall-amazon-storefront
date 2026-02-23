@@ -1069,12 +1069,34 @@ type DebouncedFunction<T extends (...args: never[]) => void> = (...args: Paramet
   // ==========================================================================
 
   function initHeroVideo(): void {
-    const video: HTMLVideoElement | null = document.querySelector('.hero__bg-video');
-    if (!video) return;
+    const videoEl: HTMLVideoElement | null = document.querySelector('.hero__bg-video');
+    if (!videoEl) return;
+    const video: HTMLVideoElement = videoEl;
 
-    // Ensure video plays (some browsers block autoplay)
-    video.play().catch((): void => {
-      // Autoplay blocked -- poster image shown as fallback
+    // Deferred video loading: wait 3s or first user interaction, whichever comes first.
+    // Video has preload="none" so the poster image shows immediately without competing bandwidth.
+    function loadAndPlay(): void {
+      if (video.preload !== 'none') return; // Already loaded
+      video.preload = 'auto';
+      video.load();
+      video.play().catch((): void => {
+        // Autoplay blocked -- poster image shown as fallback
+      });
+    }
+
+    const timer: ReturnType<typeof setTimeout> = setTimeout(loadAndPlay, 3000);
+
+    const interactionEvents: readonly string[] = ['scroll', 'mousemove', 'touchstart', 'keydown'];
+    function onInteraction(): void {
+      clearTimeout(timer);
+      interactionEvents.forEach((evt: string): void => {
+        window.removeEventListener(evt, onInteraction);
+      });
+      loadAndPlay();
+    }
+
+    interactionEvents.forEach((evt: string): void => {
+      window.addEventListener(evt, onInteraction, { once: true, passive: true });
     });
   }
 

@@ -23,6 +23,13 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <!-- SonicWall CDN resource hints -->
+    <link rel="dns-prefetch" href="https://images-cms.sonicwall.com">
+    <link rel="preconnect" href="https://images-cms.sonicwall.com" crossorigin>
+    <!-- LCP: Preload hero image -->
+    <link rel="preload" as="image" href="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" fetchpriority="high">
+    <!-- Deferred JS -->
+    <script src="script.js" defer></script>
 
     <!-- Page-Specific Styles -->
     <style>
@@ -547,7 +554,7 @@
         <div class="amazon-header__top">
             <div class="amazon-header__container">
                 <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
-                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
                 </a>
                 <div class="amazon-header__deliver">
                     <span class="amazon-header__deliver-label">Deliver to</span>
@@ -608,7 +615,7 @@
         <div class="brand-header__top">
             <div class="brand-header__container">
                 <div class="brand-header__left">
-                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <img width="200" height="40" loading="lazy" src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
                     <button class="brand-header__follow" aria-label="Follow SonicWall">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                             <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -710,7 +717,7 @@
         <!-- 1. HERO SECTION -->
         <section class="sse-hero" aria-label="Security Service Edge hero">
             <div class="sse-hero__background" aria-hidden="true">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <img width="1920" height="1080" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager" fetchpriority="high">
                 <div class="sse-hero__overlay"></div>
             </div>
             <div class="sse-hero__content">
@@ -742,7 +749,7 @@
                     <!-- Cloud Secure Edge -->
                     <article class="sse-category-card">
                         <div class="sse-category-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Cloud Secure Edge" loading="lazy">
+                            <img width="1920" height="1080" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Cloud Secure Edge" loading="lazy">
                             <div class="sse-category-card__image-icon" aria-hidden="true">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                                     <path d="M18 4l-12 6v10c0 7 5 13 12 15 7-2 12-8 12-15V10L18 4z" stroke="#ff6e42" stroke-width="2" fill="none"/>
@@ -770,7 +777,7 @@
                     <!-- Secure Private Access -->
                     <article class="sse-category-card">
                         <div class="sse-category-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Secure Private Access" loading="lazy">
+                            <img width="1920" height="1080" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Secure Private Access" loading="lazy">
                             <div class="sse-category-card__image-icon" aria-hidden="true">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                                     <rect x="10" y="14" width="16" height="14" rx="2" stroke="#ff6e42" stroke-width="2" fill="none"/>
@@ -799,7 +806,7 @@
                     <!-- Secure Internet Access -->
                     <article class="sse-category-card">
                         <div class="sse-category-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Secure Internet Access" loading="lazy">
+                            <img width="1920" height="1080" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="SonicWall Secure Internet Access" loading="lazy">
                             <div class="sse-category-card__image-icon" aria-hidden="true">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                                     <circle cx="18" cy="18" r="12" stroke="#ff6e42" stroke-width="2" fill="none"/>
@@ -933,7 +940,7 @@
         <!-- 6. CTA SECTION -->
         <section class="sse-cta-section" aria-label="Security Service Edge call to action">
             <div class="sse-cta-section__background" aria-hidden="true">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
+                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
                 <div class="sse-cta-section__overlay"></div>
             </div>
             <div class="container">
@@ -1009,7 +1016,7 @@
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-content">
-                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
                     <div class="footer__bottom-links">
                         <a href="#">Conditions of Use</a>
                         <a href="#">Privacy Notice</a>
@@ -1021,11 +1028,10 @@
         </div>
         <div class="footer__sonicwall">
             <div class="container">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+                <img width="200" height="40" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>

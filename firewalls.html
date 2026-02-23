@@ -19,6 +19,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- SonicWall CDN resource hints -->
+    <link rel="dns-prefetch" href="https://images-cms.sonicwall.com">
+    <link rel="preconnect" href="https://images-cms.sonicwall.com" crossorigin>
+    <!-- LCP: Preload hero image -->
+    <link rel="preload" as="image" href="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" fetchpriority="high">
+    <!-- Deferred JS -->
+    <script src="script.js" defer></script>
     <style>
         .fw-hero {
             position: relative;
@@ -232,7 +239,7 @@
         <div class="amazon-header__top">
             <div class="amazon-header__container">
                 <a href="#" class="amazon-header__logo" aria-label="Amazon Home">
-                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg" width="108" height="33">
                 </a>
                 <div class="amazon-header__deliver">
                     <span class="amazon-header__deliver-label">Deliver to</span>
@@ -292,7 +299,7 @@
         <div class="brand-header__top">
             <div class="brand-header__container">
                 <div class="brand-header__left">
-                    <img src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
+                    <img width="200" height="40" loading="lazy" src="https://www.sonicwall.com/assets/images/logo.svg" alt="SonicWall Logo" class="brand-header__logo">
                     <button class="brand-header__follow" aria-label="Follow SonicWall">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                             <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -392,7 +399,7 @@
         <!-- Hero Section -->
         <section class="fw-hero" aria-label="Firewalls hero banner">
             <div class="fw-hero__bg">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager">
+                <img width="1920" height="1080" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltb761b8b27dbfd07b/6800ef5c15d4c53d8f922b0d/Hero_homepage.png" alt="" loading="eager" fetchpriority="high">
             </div>
             <div class="fw-hero__overlay"></div>
             <div class="fw-hero__content">
@@ -410,7 +417,7 @@
                 <div class="fw-series-grid">
                     <div class="fw-series-card">
                         <div class="fw-series-card__img">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0fd8bc4cbf2b129f/6900cd944e9e41411ba5ec61/Gen_8_TZ_Series_SonicWall-1.png" alt="TZ Series Firewalls" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0fd8bc4cbf2b129f/6900cd944e9e41411ba5ec61/Gen_8_TZ_Series_SonicWall-1.png" alt="TZ Series Firewalls" loading="lazy">
                         </div>
                         <h3 class="fw-series-card__name">TZ Series</h3>
                         <p class="fw-series-card__tagline">Entry-level next-gen security for small business and branch offices</p>
@@ -419,7 +426,7 @@
                     </div>
                     <div class="fw-series-card">
                         <div class="fw-series-card__img">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0b46c96b6edb9956/695fc6d899fbf7589e7676f1/Gen_8_NSa_Series_SonicWall-5.png" alt="NSa Series Firewalls" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0b46c96b6edb9956/695fc6d899fbf7589e7676f1/Gen_8_NSa_Series_SonicWall-5.png" alt="NSa Series Firewalls" loading="lazy">
                         </div>
                         <h3 class="fw-series-card__name">NSa Series</h3>
                         <p class="fw-series-card__tagline">Mid-range next-gen firewalls for growing enterprises</p>
@@ -466,7 +473,7 @@
                     <a href="#" class="btn btn--modern btn--outline-light">Explore SonicWall TZ Series &rarr;</a>
                 </div>
                 <div class="category-banner__image">
-                    <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0fd8bc4cbf2b129f/6900cd944e9e41411ba5ec61/Gen_8_TZ_Series_SonicWall-1.png" alt="TZ Series Firewalls" loading="lazy">
+                    <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0fd8bc4cbf2b129f/6900cd944e9e41411ba5ec61/Gen_8_TZ_Series_SonicWall-1.png" alt="TZ Series Firewalls" loading="lazy">
                 </div>
             </div>
 
@@ -482,7 +489,7 @@
                     <article class="product-card">
                         <span class="product-card__badge product-card__badge--bestseller">Best Seller</span>
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte8ce16afcc66dec2/6904b5f1529fa05cac5b85dd/TZ_280W-FRONT-20240719.0.png" alt="SonicWall TZ280W" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte8ce16afcc66dec2/6904b5f1529fa05cac5b85dd/TZ_280W-FRONT-20240719.0.png" alt="SonicWall TZ280W" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ280W</h3>
                         <div class="product-card__rating">
@@ -495,7 +502,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -503,7 +510,7 @@
                     <!-- Gen 8: TZ380 -->
                     <article class="product-card">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt7d8901c91cbddad4/687694db0262c309481c80dc/tz380front.png" alt="SonicWall TZ380" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt7d8901c91cbddad4/687694db0262c309481c80dc/tz380front.png" alt="SonicWall TZ380" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ380</h3>
                         <div class="product-card__rating">
@@ -516,7 +523,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -525,7 +532,7 @@
                     <article class="product-card">
                         <span class="product-card__badge product-card__badge--choice">Amazon's Choice</span>
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt79ba848e813c1799/687657ed403040e895921279/tz480front.png" alt="SonicWall TZ480" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt79ba848e813c1799/687657ed403040e895921279/tz480front.png" alt="SonicWall TZ480" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ480</h3>
                         <div class="product-card__rating">
@@ -538,7 +545,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -546,7 +553,7 @@
                     <!-- Gen 8: TZ580 -->
                     <article class="product-card">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt40bd2554c8a3af39/68765491011d6362d9706c13/tz580front.png" alt="SonicWall TZ580" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt40bd2554c8a3af39/68765491011d6362d9706c13/tz580front.png" alt="SonicWall TZ580" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ580</h3>
                         <div class="product-card__rating">
@@ -559,7 +566,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -567,7 +574,7 @@
                     <!-- Gen 8: TZ680 -->
                     <article class="product-card">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt1f41c4a88160adac/68764c1a2ad48977c7145a9a/tz680front.png" alt="SonicWall TZ680" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt1f41c4a88160adac/68764c1a2ad48977c7145a9a/tz680front.png" alt="SonicWall TZ680" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ680</h3>
                         <div class="product-card__rating">
@@ -580,7 +587,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -588,7 +595,7 @@
                     <!-- Gen 7: TZ270W -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltea2f575c3a4d9de6/6677cc2ad51224c6c7a5d4ed/TZ_Priority_TZ270W_Front.png" alt="SonicWall TZ270W" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltea2f575c3a4d9de6/6677cc2ad51224c6c7a5d4ed/TZ_Priority_TZ270W_Front.png" alt="SonicWall TZ270W" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ270W</h3>
                         <div class="product-card__rating">
@@ -601,7 +608,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -609,7 +616,7 @@
                     <!-- Gen 7: TZ370W -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt046dab060fc4fcfa/6677cc1c2fbcd71dc962d781/TZ_Priority_TZ370W_Front.png" alt="SonicWall TZ370W" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt046dab060fc4fcfa/6677cc1c2fbcd71dc962d781/TZ_Priority_TZ370W_Front.png" alt="SonicWall TZ370W" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ370W</h3>
                         <div class="product-card__rating">
@@ -622,7 +629,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -630,7 +637,7 @@
                     <!-- Gen 7: TZ470 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte26246248bf5c039/6677cc12ca7ee1038a2bbbd1/TZ_470_Front.png" alt="SonicWall TZ470" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte26246248bf5c039/6677cc12ca7ee1038a2bbbd1/TZ_470_Front.png" alt="SonicWall TZ470" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ470</h3>
                         <div class="product-card__rating">
@@ -643,7 +650,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -651,7 +658,7 @@
                     <!-- Gen 7: TZ570 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt846313799afa382b/6677cc092239833cafc73e4e/TZ570_Front-1080px-4.png" alt="SonicWall TZ570" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt846313799afa382b/6677cc092239833cafc73e4e/TZ570_Front-1080px-4.png" alt="SonicWall TZ570" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ570</h3>
                         <div class="product-card__rating">
@@ -664,7 +671,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -672,7 +679,7 @@
                     <!-- Gen 7: TZ670 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt990fbfdef92c018f/68892cff05d8c31e68aa0dc4/TZ670_Front.png" alt="SonicWall TZ670" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt990fbfdef92c018f/68892cff05d8c31e68aa0dc4/TZ670_Front.png" alt="SonicWall TZ670" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall TZ670</h3>
                         <div class="product-card__rating">
@@ -685,7 +692,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -693,7 +700,7 @@
                     <!-- Gen 7: SOHO 250 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltc3187a788a89e29c/6677cc55832814deff6ea935/SOHO_250_Front-1-1.png" alt="SonicWall SOHO 250" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltc3187a788a89e29c/6677cc55832814deff6ea935/SOHO_250_Front-1-1.png" alt="SonicWall SOHO 250" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall SOHO 250</h3>
                         <div class="product-card__rating">
@@ -706,7 +713,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -724,7 +731,7 @@
                     <a href="#" class="btn btn--modern btn--outline-light">Explore SonicWall NSa Series &rarr;</a>
                 </div>
                 <div class="category-banner__image">
-                    <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0b46c96b6edb9956/695fc6d899fbf7589e7676f1/Gen_8_NSa_Series_SonicWall-5.png" alt="NSa Series Firewalls" loading="lazy">
+                    <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt0b46c96b6edb9956/695fc6d899fbf7589e7676f1/Gen_8_NSa_Series_SonicWall-5.png" alt="NSa Series Firewalls" loading="lazy">
                 </div>
             </div>
 
@@ -740,7 +747,7 @@
                     <article class="product-card">
                         <span class="product-card__badge product-card__badge--bestseller">Best Seller</span>
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt1c2eb8e5d004e563/68063c80a090556a5d7f02c9/NSa_2800-FRONT-20240718.0.png" alt="SonicWall NSa 2800" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt1c2eb8e5d004e563/68063c80a090556a5d7f02c9/NSa_2800-FRONT-20240718.0.png" alt="SonicWall NSa 2800" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 2800</h3>
                         <div class="product-card__rating">
@@ -753,7 +760,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -762,7 +769,7 @@
                     <article class="product-card">
                         <span class="product-card__badge product-card__badge--choice">Amazon's Choice</span>
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt1281d7e5efee114c/68063caa95f40f80d0995146/NSa_3800-FRONT-20240720.0.png" alt="SonicWall NSa 3800" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt1281d7e5efee114c/68063caa95f40f80d0995146/NSa_3800-FRONT-20240720.0.png" alt="SonicWall NSa 3800" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 3800</h3>
                         <div class="product-card__rating">
@@ -775,7 +782,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -783,7 +790,7 @@
                     <!-- Gen 8: NSa 4800 -->
                     <article class="product-card">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6a678eed28ac20c2/6876d9d4a2509f5a5633fd98/nsa4800front.png" alt="SonicWall NSa 4800" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6a678eed28ac20c2/6876d9d4a2509f5a5633fd98/nsa4800front.png" alt="SonicWall NSa 4800" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 4800</h3>
                         <div class="product-card__rating">
@@ -796,7 +803,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -804,7 +811,7 @@
                     <!-- Gen 8: NSa 5800 -->
                     <article class="product-card">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte64243129a9a7b62/6876dcb5b315efd9d2d26347/nsa5800front.png" alt="SonicWall NSa 5800" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blte64243129a9a7b62/6876dcb5b315efd9d2d26347/nsa5800front.png" alt="SonicWall NSa 5800" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 5800</h3>
                         <div class="product-card__rating">
@@ -817,7 +824,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -825,7 +832,7 @@
                     <!-- Gen 8: NSa 6800 -->
                     <article class="product-card">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blta536529df03f7fb3/69319957eabd9e3558e30c5b/NSa_6800-FRONT-20240720.0.png" alt="SonicWall NSa 6800" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blta536529df03f7fb3/69319957eabd9e3558e30c5b/NSa_6800-FRONT-20240720.0.png" alt="SonicWall NSa 6800" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 6800</h3>
                         <div class="product-card__rating">
@@ -838,7 +845,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -846,7 +853,7 @@
                     <!-- Gen 7: NSa 2700 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt4591309fbc80ec0b/6677cd0438586603e801c0cc/NSa2700_Front.png" alt="SonicWall NSa 2700" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt4591309fbc80ec0b/6677cd0438586603e801c0cc/NSa2700_Front.png" alt="SonicWall NSa 2700" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 2700</h3>
                         <div class="product-card__rating">
@@ -859,7 +866,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -867,7 +874,7 @@
                     <!-- Gen 7: NSa 3700 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltabc683d22471d5cd/6677ccff61434752472e3e09/NSa3700_Front.png" alt="SonicWall NSa 3700" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/bltabc683d22471d5cd/6677ccff61434752472e3e09/NSa3700_Front.png" alt="SonicWall NSa 3700" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 3700</h3>
                         <div class="product-card__rating">
@@ -880,7 +887,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -888,7 +895,7 @@
                     <!-- Gen 7: NSa 4700 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt24775ac4122fbda9/6677ccfa2fbcd77ee562d789/NSa_4700_Front.png" alt="SonicWall NSa 4700" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt24775ac4122fbda9/6677ccfa2fbcd77ee562d789/NSa_4700_Front.png" alt="SonicWall NSa 4700" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 4700</h3>
                         <div class="product-card__rating">
@@ -901,7 +908,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -909,7 +916,7 @@
                     <!-- Gen 7: NSa 5700 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt2429193163518b6d/6677ccf62fbcd77ee562d789/NSa5700_Front-2.png" alt="SonicWall NSa 5700" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt2429193163518b6d/6677ccf62fbcd77ee562d789/NSa5700_Front-2.png" alt="SonicWall NSa 5700" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 5700</h3>
                         <div class="product-card__rating">
@@ -922,7 +929,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -930,7 +937,7 @@
                     <!-- Gen 7: NSa 6700 -->
                     <article class="product-card product-card--gen7" style="display: none;" aria-hidden="true">
                         <div class="product-card__image">
-                            <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt9337ad6f8d9a8b3a/6677ccf1223983d08cc73e60/NSa_6700_Front-2.png" alt="SonicWall NSa 6700" loading="lazy">
+                            <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt9337ad6f8d9a8b3a/6677ccf1223983d08cc73e60/NSa_6700_Front-2.png" alt="SonicWall NSa 6700" loading="lazy">
                         </div>
                         <h3 class="product-card__name">SonicWall NSa 6700</h3>
                         <div class="product-card__rating">
@@ -943,7 +950,7 @@
                             <span class="product-card__price-fraction">.99</span>
                         </span>
                         <span class="product-card__prime">
-                            <img src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
+                            <img width="200" height="40" loading="lazy" src="logos/prime-badge.avif" alt="Prime" class="prime-badge" height="18">
                         </span>
                         <button class="btn btn--modern btn--amazon btn--small">View Details &rarr;</button>
                     </article>
@@ -1263,7 +1270,7 @@
         <!-- Contact CTA Section -->
         <section class="contact-cta-section" aria-label="Contact and consultation">
             <div class="contact-cta-section__background" aria-hidden="true">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
+                <img width="400" height="300" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt935f723182ca089d/6807ceb6e8bf0d59d7f05592/Home-Contact-Block.png" alt="" loading="lazy">
             </div>
             <div class="container">
                 <div class="contact-cta">
@@ -1335,7 +1342,7 @@
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-content">
-                    <img src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
+                    <img loading="lazy" src="logos/amazon-logo-white.svg" alt="Amazon" class="amazon-logo-svg amazon-logo-svg--footer" width="80" height="24">
                     <div class="footer__bottom-links">
                         <a href="#">Conditions of Use</a>
                         <a href="#">Privacy Notice</a>
@@ -1347,11 +1354,10 @@
         </div>
         <div class="footer__sonicwall">
             <div class="container">
-                <img src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
+                <img width="200" height="40" src="https://images-cms.sonicwall.com/v3/assets/blt281ecbfc2563bf9b/blt6cd34f954a2454fc/6812892c4433cb6a830d9592/Logo-SonicWall-White-Registered.png" alt="SonicWall - Official Amazon Brand Store" class="footer__sonicwall-logo" loading="lazy">
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
