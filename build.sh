@@ -66,6 +66,20 @@ done
 # Logo assets
 cp -r logos/* "$DIST/logos/" 2>/dev/null || true
 
+# Image assets (MUST exist - if missing, Dockerfile is probably missing COPY images/)
+if [ -d "images" ]; then
+  echo "Copying images..."
+  cp -r images "$DIST/"
+  img_count=$(find "$DIST/images" -type f | wc -l | tr -d ' ')
+  echo "  Copied $img_count image files to $DIST/images/"
+  if [ "$img_count" -eq 0 ]; then
+    echo "WARNING: images/ directory exists but contains 0 files!" >&2
+  fi
+else
+  echo "ERROR: images/ directory not found! All images will 404 in production." >&2
+  echo "  If running inside Docker, check that Dockerfile has: COPY images/ ./images/" >&2
+fi
+
 # ---------- Pre-compress for gzip_static ----------
 echo "Pre-compressing assets..."
 for f in "$DIST"/*.html "$DIST"/*.css "$DIST"/*.js; do

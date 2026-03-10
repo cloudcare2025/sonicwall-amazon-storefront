@@ -20,6 +20,7 @@ COPY *.pdf ./
 
 # Copy static assets
 COPY logos/ ./logos/
+COPY images/ ./images/
 
 # Copy video files last (largest files, least likely to change)
 COPY *.mp4 ./
